@@ -1,0 +1,6 @@
+@font-face {
+  font-family: "FreeSerif Medium";
+  font-style: normal;
+  font-weight: normal;
+  src: local("FreeSerif Medium"), url("FreeSerif.woff") format("woff");
+}
