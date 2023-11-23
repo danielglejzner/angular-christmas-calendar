@@ -24,6 +24,7 @@ import { PomHatComponent } from './pom-hat/pom-hat.component';
 import { ToyTrainComponent } from './toy-train/toy-train.component';
 import { JingleBellsComponent } from './jingle-bells/jingle-bells.component';
 import { ReindeerComponent } from './reindeer/reindeer.component';
+import { ChristmasTreeComponent } from './christmas-tree/christmas-tree.component';
 
 export const christmasCardsFactoryMap: Record<ChristmasCardType, Type<ChristmasCard>> = {
   [ChristmasCardType.GingerbreadMan]: GingerbreadManCardComponent,
@@ -49,7 +50,7 @@ export const christmasCardsFactoryMap: Record<ChristmasCardType, Type<ChristmasC
   [ChristmasCardType.ToyTrain]: ToyTrainComponent,
   [ChristmasCardType.JingleBells]: JingleBellsComponent,
   [ChristmasCardType.Reindeer]: ReindeerComponent,
-  [ChristmasCardType.ChristmasTree]: NotImplementedComponent,
+  [ChristmasCardType.ChristmasTree]: ChristmasTreeComponent,
 };
 
 @Directive({
