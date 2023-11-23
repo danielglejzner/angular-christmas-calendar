@@ -1,4 +1,4 @@
-import { ComponentRef, Directive, Input, OnInit, Type, ViewContainerRef, inject } from '@angular/core';
+import { Directive, Input, OnInit, Type, ViewContainerRef, inject } from '@angular/core';
 import { ChristmasCard, ChristmasCardType } from './christmas-card';
 import { GingerbreadManCardComponent } from './gingerbread-man-card/gingerbread-man-card.component';
 import { SnowflakeComponent } from './snowflake/snowflake.component';
@@ -61,16 +61,9 @@ export class CalendarCardFactoryDirective implements OnInit {
 
   private readonly container = inject(ViewContainerRef);
 
-  private cardComponent?: ComponentRef<ChristmasCard>;
-
   ngOnInit(): void {
     const cardType: Type<ChristmasCard> = christmasCardsFactoryMap[this.type];
 
-    if (this.cardComponent) {
-      this.container.clear();
-      this.cardComponent = undefined;
-    }
-
-    this.cardComponent = this.container.createComponent(cardType);
+    this.container.createComponent(cardType);
   }
 }
