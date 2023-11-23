@@ -1,0 +1,23 @@
+<div class="title">
+  <h1>
+    <span class="title-1">Angular</span>
+    <span class="title-2">Christmas</span>
+    <span class="title-3">Calendar</span>
+  </h1>
+</div>
+@for (day of days; track $index) {
+  <div class="day day-{{$index + 1}}">
+    <label>
+      <input type="checkbox"/>
+      <div class="door">
+        <div class="front">{{ $index + 1 }}</div>
+        <div class="back"></div>
+      </div>
+      <div class="inside">
+        <ng-template [appCalendarCardFactory] [type]="day"></ng-template>
+      </div>
+      <div class="title-container"><a href="https://codepen.io/johnnyfekete/pen/ZEpGerj" target="_blank" title="Link to source code">Gingerbread cookie</a>
+      </div>
+    </label>
+  </div>
+}

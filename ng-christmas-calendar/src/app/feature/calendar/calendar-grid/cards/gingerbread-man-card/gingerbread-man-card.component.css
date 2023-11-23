@@ -1,0 +1,317 @@
+.gingerbread-man-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: repeating-linear-gradient(
+      75deg,
+      transparent,
+      transparent 20px,
+      #9e1628 10px,
+      #9e1628 40px
+    ),
+    linear-gradient(to bottom, #b11e31, #c23446);
+}
+
+.gingerbread-man-container::after {
+  content: "";
+  display: block;
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: radial-gradient(
+    circle at center,
+    rgba(0, 0, 0, 0.5) 25%,
+    rgba(0, 0, 0, 0) 50%
+  );
+}
+.gingerbread-man {
+  --ginger-color: #c5753d;
+  --dark-ginger-color: #974919;
+  --white-color: #f0e5d9;
+  --green-color: #50af52;
+  --red-color: #b22922;
+
+  transform: scale(0.46) translateY(-6.5rem);
+  position: relative;
+}
+
+@media only screen and (min-width: 576px) {
+  .gingerbread-man {
+    transform: scale(0.56) translateY(-3.7rem);
+  }
+}
+
+.gingerbread-man .head {
+  width: 5rem;
+  height: 5rem;
+  position: relative;
+}
+
+.gingerbread-man .head::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 5rem;
+  height: 5rem;
+  background-color: var(--ginger-color);
+  border-radius: 2.2rem;
+  transform: rotate(-15deg);
+}
+
+.gingerbread-man .eye {
+  width: 0.8rem;
+  height: 0.8rem;
+  border-radius: 50%;
+  background-color: var(--white-color);
+  box-shadow: -1px 1px 1px 0 rgba(0, 0, 0, 0.5);
+  position: absolute;
+  z-index: 2;
+}
+
+.gingerbread-man .eye.eye--left {
+  left: 22%;
+  top: 45%;
+}
+
+.gingerbread-man .eye.eye--right {
+  right: 25%;
+  top: 40%;
+}
+
+.gingerbread-man .eyebrow {
+  position: absolute;
+  z-index: 2;
+  height: 0.3rem;
+  border-radius: 0.3rem;
+  background-color: var(--green-color);
+  box-shadow: -1px 1px 1px 0 rgba(0, 0, 0, 0.5),
+    inset -1px 1px 1px 0 rgba(255, 255, 255, 0.5);
+}
+
+.gingerbread-man .eyebrow.eyebrow--left {
+  top: 1.6rem;
+  left: 0.8rem;
+  transform: rotate(-35deg);
+  width: 0.9rem;
+  height: 0.25rem;
+}
+
+.gingerbread-man .eyebrow.eyebrow--right {
+  top: 1.35rem;
+  right: 1.32rem;
+  transform: rotate(10deg);
+  width: 0.9rem;
+  height: 0.3rem;
+}
+
+.gingerbread-man .mouth {
+  position: absolute;
+  z-index: 2;
+  width: 3rem;
+  height: 3rem;
+  top: 1.7rem;
+  left: 1rem;
+  transform-origin: center center;
+  transform: rotate(-150deg);
+}
+
+.gingerbread-man .mouth div {
+  box-sizing: border-box;
+  position: absolute;
+}
+
+.gingerbread-man .mouth__lower-lip {
+  width: 1.5rem;
+  height: 1.5rem;
+  overflow: hidden;
+}
+
+.gingerbread-man .mouth__lower-lip::after {
+  content: "";
+  display: block;
+  width: 3rem;
+  height: 3rem;
+  border: 3px solid var(--red-color);
+  border-radius: 50%;
+}
+
+.gingerbread-man .mouth__left-lip {
+  width: 0.75rem;
+  height: 1.5rem;
+  overflow: hidden;
+  left: 1.5rem;
+  top: 0rem;
+}
+
+.gingerbread-man .mouth__left-lip::after {
+  content: "";
+  display: block;
+  width: 0.75rem;
+  height: 0.75rem;
+  margin-left: -0.5rem;
+  border: 3px solid var(--red-color);
+  border-radius: 50%;
+}
+
+.gingerbread-man .mouth__right-lip {
+  width: 1rem;
+  height: 0.5rem;
+  overflow: hidden;
+  left: 0rem;
+  top: 1.5rem;
+}
+
+.gingerbread-man .mouth__right-lip::after {
+  content: "";
+  display: block;
+  width: 0.5rem;
+  height: 0.5rem;
+  margin-top: -0.4rem;
+  border: 3px solid var(--red-color);
+  border-radius: 50%;
+}
+
+.gingerbread-man .mouth__upper-lip {
+  width: 0.8rem;
+  height: 0.7rem;
+  overflow: hidden;
+  left: 0.7rem;
+  top: 0.8rem;
+}
+
+.gingerbread-man .mouth__upper-lip::after {
+  content: "";
+  display: block;
+  width: 1.8rem;
+  height: 1rem;
+  margin-top: 0.1rem;
+  border: 3px solid var(--red-color);
+  border-radius: 50%;
+}
+
+.gingerbread-man .body {
+  position: relative;
+  width: 5rem;
+  height: 8rem;
+}
+
+.gingerbread-man .arm {
+  width: 5rem;
+  height: 2.2rem;
+  background-color: var(--ginger-color);
+  background: linear-gradient(
+    to right,
+    var(--dark-ginger-color) 0%,
+    var(--ginger-color) 50%
+  );
+  border-radius: 1rem;
+  position: absolute;
+}
+
+.gingerbread-man .arm::after {
+  content: "\00a0\00a0\00a0\00a0\00a0";
+  width: 2.2rem;
+  height: 1rem;
+  overflow: hidden;
+  display: block;
+  font-size: 2rem;
+  line-height: 0;
+  -webkit-text-decoration: underline white wavy;
+  text-decoration: underline white wavy;
+  transform: rotate(90deg) translateX(0.6rem) translateY(-0.5rem);
+  transform-origin: center center;
+}
+
+.gingerbread-man .arm.arm--left {
+  transform: rotate(-35deg) translateX(-1.5rem) translateY(-0.8rem);
+}
+
+.gingerbread-man .arm.arm--right {
+  transform: rotate(-145deg) translateX(-1.5rem) translateY(1rem);
+}
+
+.gingerbread-man .leg {
+  width: 2.2rem;
+  height: 8rem;
+  background-color: var(--ginger-color);
+  background: linear-gradient(
+    to top,
+    var(--dark-ginger-color) 0%,
+    var(--ginger-color) 40%
+  );
+  border-radius: 1rem;
+  position: absolute;
+}
+
+.gingerbread-man .leg::after {
+  content: "\00a0\00a0\00a0\00a0\00a0";
+  width: 2.2rem;
+  height: 1rem;
+  overflow: hidden;
+  display: block;
+  font-size: 2rem;
+  line-height: 0;
+  -webkit-text-decoration: underline white wavy;
+  text-decoration: underline white wavy;
+  position: absolute;
+  bottom: 1.2rem;
+}
+
+.gingerbread-man .leg.leg--left {
+  transform: rotate(10deg) translateX(0.5rem) translateY(0rem);
+}
+
+.gingerbread-man .leg.leg--right {
+  transform: rotate(-10deg) translateX(2.4rem) translateY(0.4rem);
+}
+
+.gingerbread-man .belt::after {
+  content: "\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0";
+  width: 4.1rem;
+  height: 2rem;
+  overflow: hidden;
+  display: block;
+  font-size: 1.8rem;
+  line-height: 0;
+  -webkit-text-decoration: underline white wavy;
+  text-decoration: underline white wavy;
+  position: absolute;
+  top: 3.3rem;
+  left: 0.5rem;
+  z-index: 3;
+  transform: rotate(4deg);
+}
+
+.gingerbread-man .button {
+  position: absolute;
+  width: 1.2rem;
+  height: 1.1rem;
+  border-radius: 50%;
+  background-color: var(--white-color);
+}
+
+.gingerbread-man .button::after {
+  content: "";
+  display: block;
+  width: 0.9rem;
+  height: 0.9rem;
+  border-radius: 50%;
+  background: var(--green-color);
+  box-shadow: -1px 1px 1px 0 rgba(0, 0, 0, 0.3),
+    inset -3px 3px 5px 0 rgba(255, 255, 255, 0.2);
+  margin-left: 0.15rem;
+}
+
+.gingerbread-man .button.button--top {
+  left: 2rem;
+  top: 0.3rem;
+}
+
+.gingerbread-man .button.button--bottom {
+  left: 2.1rem;
+  top: 2.1rem;
+  transform: rotate(145deg);
+}

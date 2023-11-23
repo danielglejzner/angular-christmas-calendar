@@ -1,0 +1,447 @@
+:host {
+  display: grid;
+  width: 94%;
+  max-width: 900px;
+  margin: 3% auto 2rem auto;
+
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  grid-gap: 1rem;
+
+  transform: translate3d(0px, 0px, 0px);
+
+  grid-template-areas:
+    "title  title  title"
+    "day22  day3   day8"
+    "day9   day18  day11"
+    "day2   day24  day13"
+    "day12  day10  day4"
+    "day20  day1   day7"
+    "day5   day14  day17"
+    "day16  day23  day6"
+    "day15  day21  day19";
+
+  /* media query */
+  @media only screen and (min-width: 576px) {
+      grid-template-columns: repeat(6, 1fr);
+      grid-template-areas:
+        "title  title  title  day5   day17  day15"
+        "title  title  title  day11  day20  day16"
+        "title  title  title  day1   day18  day12"
+        "day6   day22  day14  day24  day24  day4  "
+        "day10  day21  day2   day24  day24  day8"
+        "day3   day9   day7   day13  day23  day19";
+    
+  }
+}
+
+.title {
+  grid-area: title;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title h1 {
+  font-size: 2rem;
+  text-align: center;
+  text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.2);
+  display: flex;
+  flex-direction: row;
+}
+
+.title-1 {
+  color: #9c163f;
+  display: block;
+  transform: rotate(-10deg);
+  margin-right: 1rem;
+}
+
+.title-2 {
+  color: #413486;
+  display: block;
+  transform: rotate(5deg);
+  margin-right: 1rem;
+}
+
+.title-3 {
+  display: block;
+  transform: rotate(-5deg);
+}
+
+.day {
+  transform: translate3d(0px, 0px, 0px);
+  position: relative;
+  background: #0000001c;
+}
+
+input {
+  display: none;
+}
+
+label {
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  cursor: pointer;
+  display: flex;
+  min-height: 100%;
+  width: 100%;
+  height: calc(85vw / 3);
+  position: relative;
+}
+
+@media only screen and (min-width: 576px) {
+  label {
+    height: 136px;
+  }
+}
+
+.door {
+  width: 100%;
+  transform-style: preserve-3d;
+  transition: all 300ms;
+  border: 2px dashed rgba(0, 0, 0, 0.2);
+  border-radius: 0.6rem;
+  transform-origin: 0% 50%;
+}
+
+.door div {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 0.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #10303c;
+  font-size: 3em;
+  font-weight: bold;
+  text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.door .back {
+  background: linear-gradient(to right, #384044, #2e454f);
+  transform: rotateY(-180deg);
+}
+
+label:hover .door {
+  border-color: #10303c;
+}
+
+:checked + .door {
+  transform: rotateY(-180deg);
+  border-color: #10303c;
+  border-style: solid;
+}
+
+.title-container {
+  opacity: 0;
+  transform: translateY(-1rem);
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  z-index: 1000;
+  bottom: -3.7rem;
+  left: -10rem;
+  right: -10rem;
+  transition: all 400ms ease-in-out;
+}
+
+:checked ~ .title-container {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: all;
+}
+
+.title-container a {
+  position: relative;
+  display: inline-block;
+  border-radius: 0.25rem;
+  padding: 0.5rem 1rem;
+  background-color: #1d3557;
+  color: #f1faee;
+  font-size: 1.2rem;
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+.title-container a::before {
+  content: "";
+  display: block;
+  border-radius: 0.75rem;
+  background: repeating-linear-gradient(
+    -45deg,
+    #f1faee 0,
+    #f1faee 0.5rem,
+    #e63946 0.5rem,
+    #e63946 1rem
+  );
+  background-size: 1.44rem 1.44rem;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.5);
+  position: absolute;
+  z-index: -1;
+  top: -0.5rem;
+  right: -0.5rem;
+  bottom: -0.5rem;
+  left: -0.5rem;
+  -webkit-animation: calendar-item-link 0.6s infinite linear;
+  animation: calendar-item-link 0.6s infinite linear;
+  -webkit-animation-play-state: paused;
+  animation-play-state: paused;
+}
+
+.title-container a:hover::before {
+  -webkit-animation-play-state: running;
+  animation-play-state: running;
+}
+
+@-webkit-keyframes calendar-item-link {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 1.44rem 0;
+  }
+}
+
+@keyframes calendar-item-link {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 1.44rem 0;
+  }
+}
+
+.inside {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 0.6rem;
+  overflow: hidden;
+  opacity: 0;
+  transition: opacity 300ms ease-in-out;
+}
+
+.inside-empty {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #2f4f8c;
+  color: #ffffff;
+}
+
+:checked ~ .inside {
+  opacity: 1;
+}
+
+/* Calendar day positions and z-indexes */
+.day-1 {
+  grid-area: day1;
+  z-index: 11;
+}
+.day-2 {
+  grid-area: day2;
+  z-index: 16;
+}
+.day-3 {
+  grid-area: day3;
+  z-index: 23;
+}
+.day-4 {
+  grid-area: day4;
+  z-index: 15;
+}
+.day-5 {
+  grid-area: day5;
+  z-index: 7;
+}
+.day-6 {
+  grid-area: day6;
+  z-index: 6;
+}
+.day-7 {
+  grid-area: day7;
+  z-index: 12;
+}
+.day-8 {
+  grid-area: day8;
+  z-index: 24;
+}
+.day-9 {
+  grid-area: day9;
+  z-index: 19;
+}
+.day-10 {
+  grid-area: day10;
+  z-index: 14;
+}
+.day-11 {
+  grid-area: day11;
+  z-index: 21;
+}
+.day-12 {
+  grid-area: day12;
+  z-index: 13;
+}
+.day-13 {
+  grid-area: day13;
+  z-index: 18;
+}
+.day-14 {
+  grid-area: day14;
+  z-index: 8;
+}
+.day-15 {
+  grid-area: day15;
+  z-index: 1;
+}
+.day-16 {
+  grid-area: day16;
+  z-index: 4;
+}
+.day-17 {
+  grid-area: day17;
+  z-index: 9;
+}
+.day-18 {
+  grid-area: day18;
+  z-index: 20;
+}
+.day-19 {
+  grid-area: day19;
+  z-index: 3;
+}
+.day-20 {
+  grid-area: day20;
+  z-index: 10;
+}
+.day-21 {
+  grid-area: day21;
+  z-index: 2;
+}
+.day-22 {
+  grid-area: day22;
+  z-index: 22;
+}
+.day-23 {
+  grid-area: day23;
+  z-index: 5;
+}
+.day-24 {
+  grid-area: day24;
+  z-index: 17;
+}
+
+@media only screen and (min-width: 576px) {
+  .day-1 {
+    z-index: 16;
+  }
+  .day-2 {
+    z-index: 9;
+  }
+  .day-3 {
+    z-index: 1;
+  }
+  .day-4 {
+    z-index: 15;
+  }
+  .day-5 {
+    z-index: 22;
+  }
+  .day-6 {
+    z-index: 11;
+  }
+  .day-7 {
+    z-index: 3;
+  }
+  .day-8 {
+    z-index: 10;
+  }
+  .day-9 {
+    z-index: 2;
+  }
+  .day-10 {
+    z-index: 7;
+  }
+  .day-11 {
+    z-index: 19;
+  }
+  .day-12 {
+    z-index: 18;
+  }
+  .day-13 {
+    z-index: 4;
+  }
+  .day-14 {
+    z-index: 13;
+  }
+  .day-15 {
+    z-index: 24;
+  }
+  .day-16 {
+    z-index: 21;
+  }
+  .day-17 {
+    z-index: 23;
+  }
+  .day-18 {
+    z-index: 17;
+  }
+  .day-19 {
+    z-index: 6;
+  }
+  .day-20 {
+    z-index: 20;
+  }
+  .day-21 {
+    z-index: 8;
+  }
+  .day-22 {
+    z-index: 12;
+  }
+  .day-23 {
+    z-index: 5;
+  }
+  .day-24 {
+    z-index: 14;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .day-2 .title-container,
+  .day-5 .title-container,
+  .day-9 .title-container,
+  .day-12 .title-container,
+  .day-15 .title-container,
+  .day-16 .title-container,
+  .day-20 .title-container,
+  .day-22 .title-container {
+    left: 0;
+    right: auto;
+  }
+
+  .day-4 .title-container,
+  .day-6 .title-container,
+  .day-7 .title-container,
+  .day-8 .title-container,
+  .day-11 .title-container,
+  .day-13 .title-container,
+  .day-17 .title-container,
+  .day-19 .title-container {
+    left: auto;
+    right: 0;
+  }
+}
