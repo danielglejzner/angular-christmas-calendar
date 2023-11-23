@@ -1,0 +1,233 @@
+/**
+ * Day 19 - animated Christmas sparkler
+ * https://codepen.io/johnnyfekete/pen/MWjveNj
+ */
+.sparkler-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #577399;
+  height: 100%;
+}
+
+.sparkler {
+  --sparkler-stick: #dee2e6;
+  --sparkler-gun-powder: #706677;
+  --sparkler-burnt: #252525;
+  --sparkler-ember: #ff9f1c;
+
+  position: relative;
+  margin-top: 2rem;
+  height: 16rem;
+  transform: scale(0.4) translateX(-0.5rem) translateY(-1.5rem) rotate(55deg);
+}
+
+@media only screen and (min-width: 576px) {
+  .sparkler {
+    transform: scale(0.5) translateX(-0.5rem) translateY(-1.5rem) rotate(55deg);
+  }
+}
+
+.sparkler .stick {
+  position: absolute;
+  top: 10rem;
+  margin-left: -0.1rem;
+  width: 0.2rem;
+  height: 6rem;
+  background-color: var(--sparkler-stick);
+  border-radius: 0.5rem;
+}
+
+.sparkler .gun-powder {
+  position: absolute;
+  margin-left: -0.2rem;
+  bottom: 6rem;
+  width: 0.4rem;
+  height: 10rem;
+  background-color: var(--sparkler-burnt);
+  border-radius: 0.5rem;
+}
+
+.sparkler .gun-powder::before {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  width: 0.4rem;
+  height: 10rem;
+  background: linear-gradient(
+    to bottom,
+    var(--sparkler-ember) 0.3rem,
+    var(--sparkler-gun-powder) 0.4rem
+  );
+  border-radius: 0.5rem;
+  -webkit-animation: sparkler-burn-anim 20s infinite;
+  animation: sparkler-burn-anim 20s infinite;
+}
+
+.sparkler .sparkler-light {
+  position: absolute;
+  width: 9rem;
+  height: 9rem;
+  margin-left: -4.4rem;
+  margin-top: -1.4rem;
+  -webkit-animation: sparkler-light-anim 20s infinite;
+  animation: sparkler-light-anim 20s infinite;
+}
+
+.sparkler .sparkler-light::after {
+  content: "";
+  display: block;
+  border-radius: 50%;
+  width: 9rem;
+  height: 9rem;
+  background-color: rgba(255, 255, 230, 0.05);
+  -webkit-animation: sparkler-light-pulsating 2s infinite linear;
+  animation: sparkler-light-pulsating 2s infinite linear;
+}
+
+.sparkler .spark {
+  position: absolute;
+  width: 0.1rem;
+  height: 0.1rem;
+  bottom: 4.3rem;
+  left: 4.35rem;
+  transform: rotate(var(--spark-rotate));
+}
+
+.sparkler .spark::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  width: 0.1rem;
+  height: 2rem;
+  border-radius: 0.1rem;
+  opacity: 0;
+  background-color: white;
+  transform-origin: bottom center;
+  -webkit-animation: sparkler-sparkle 0.5s infinite linear;
+  animation: sparkler-sparkle 0.5s infinite linear;
+  -webkit-animation-delay: var(--spark-delay);
+  animation-delay: var(--spark-delay);
+}
+
+@-webkit-keyframes sparkler-burn-anim {
+  0% {
+    height: 10rem;
+  }
+  100% {
+    height: 0;
+  }
+}
+
+@keyframes sparkler-burn-anim {
+  0% {
+    height: 10rem;
+  }
+  100% {
+    height: 0;
+  }
+}
+
+@-webkit-keyframes sparkler-light-anim {
+  0% {
+    bottom: 11.5rem;
+  }
+  100% {
+    bottom: 1.5rem;
+  }
+}
+
+@keyframes sparkler-light-anim {
+  0% {
+    bottom: 11.5rem;
+  }
+  100% {
+    bottom: 1.5rem;
+  }
+}
+
+@-webkit-keyframes sparkler-light-pulsating {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.1);
+  }
+  75% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes sparkler-light-pulsating {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.1);
+  }
+  75% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@-webkit-keyframes sparkler-sparkle {
+  0% {
+    transform: translateY(-0.5rem) scaleY(0.25);
+    opacity: 0;
+  }
+  10% {
+    transform: translateY(-1rem) scaleY(0.5);
+    opacity: 0.35;
+  }
+  30% {
+    transform: translateY(-2rem) scaleY(0.5);
+    opacity: 0.7;
+  }
+  50% {
+    transform: translateY(-4rem) scaleY(1.5);
+    opacity: 0.7;
+  }
+  51% {
+    opacity: 0;
+    transform: translateY(-4rem) scaleY(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(0) scaleY(0.25);
+  }
+}
+
+@keyframes sparkler-sparkle {
+  0% {
+    transform: translateY(-0.5rem) scaleY(0.25);
+    opacity: 0;
+  }
+  10% {
+    transform: translateY(-1rem) scaleY(0.5);
+    opacity: 0.35;
+  }
+  30% {
+    transform: translateY(-2rem) scaleY(0.5);
+    opacity: 0.7;
+  }
+  50% {
+    transform: translateY(-4rem) scaleY(1.5);
+    opacity: 0.7;
+  }
+  51% {
+    opacity: 0;
+    transform: translateY(-4rem) scaleY(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(0) scaleY(0.25);
+  }
+}

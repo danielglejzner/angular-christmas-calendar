@@ -1,0 +1,169 @@
+/**
+ * Day 17 - shooting start
+ * https://codepen.io/johnnyfekete/pen/vYXZPJj
+ */
+.shooting-star-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #001122;
+  background: repeating-radial-gradient(
+      circle at 1rem 1rem,
+      rgba(255, 255, 255, 0.3) 0,
+      transparent 0.2rem,
+      transparent 100%
+    ),
+    repeating-radial-gradient(
+      circle at 4rem 2rem,
+      rgba(255, 255, 255, 0.5) 0,
+      transparent 0.1rem,
+      transparent 100%
+    ),
+    repeating-radial-gradient(
+      circle at 9rem 7rem,
+      rgba(255, 255, 255, 0.5) 0,
+      transparent 0.1rem,
+      transparent 100%
+    ),
+    repeating-radial-gradient(
+      circle at 7rem 4.5rem,
+      rgba(255, 255, 255, 0.5) 0,
+      transparent 0.15rem,
+      transparent 100%
+    ),
+    repeating-radial-gradient(
+      circle at 3rem 9rem,
+      rgba(255, 255, 255, 0.5) 0,
+      transparent 0.1rem,
+      transparent 100%
+    ),
+    repeating-radial-gradient(
+      circle at 12rem 2.5rem,
+      rgba(255, 255, 255, 0.5) 0,
+      transparent 0.25rem,
+      transparent 100%
+    ),
+    repeating-radial-gradient(
+      circle at 11rem 8rem,
+      rgba(255, 255, 255, 0.2) 0,
+      transparent 0.25rem,
+      transparent 100%
+    ),
+    repeating-radial-gradient(
+      circle at 2rem 5rem,
+      rgba(255, 255, 255, 0.2) 0,
+      transparent 0.25rem,
+      transparent 100%
+    ),
+    #001122;
+  background-size: 14rem 10rem;
+  height: 100%;
+  margin: 0;
+}
+
+.shooting-star {
+  --shooting-star: #f4d35e;
+  --shooting-star-tail-1: #9b5de5;
+  --shooting-star-tail-2: #00f5d4;
+  --shooting-star-tail-3: #f15bb5;
+
+  position: relative;
+  width: 12rem;
+  height: 10rem;
+  filter: drop-shadow(1px 1px 3px rgba(255, 255, 255, 0.5))
+    drop-shadow(1px -1px 3px rgba(255, 255, 255, 0.5));
+  transform: scale(0.5) translateX(-0.7rem) translateY(2.5rem);
+}
+
+@media only screen and (min-width: 576px) {
+  .shooting-star {
+    transform: scale(0.7) translateX(0.5rem) translateY(2.5rem);
+  }
+}
+
+.shooting-star .shooting-star__star {
+  position: absolute;
+  width: 3rem;
+  height: 3rem;
+  transform-origin: center center;
+  transform: rotate(-25deg);
+}
+
+.shooting-star .shooting-star__star span {
+  position: absolute;
+  display: block;
+  transform-origin: 50% 90%;
+  transform: scaleX(0.6);
+}
+
+.shooting-star .shooting-star__star span::before {
+  content: "";
+  display: block;
+  width: 2rem;
+  height: 2rem;
+  background-color: var(--shooting-star);
+  border-radius: 0.25rem 0.25rem 1rem 0.25rem;
+  transform: rotate(45deg);
+}
+
+.shooting-star .shooting-star__star span:nth-child(2) {
+  transform: rotate(72deg) scaleX(0.6);
+}
+
+.shooting-star .shooting-star__star span:nth-child(3) {
+  transform: rotate(144deg) scaleX(0.6);
+}
+
+.shooting-star .shooting-star__star span:nth-child(4) {
+  transform: rotate(216deg) scaleX(0.6);
+}
+
+.shooting-star .shooting-star__star span:nth-child(5) {
+  transform: rotate(-72deg) scaleX(0.6);
+}
+
+.shooting-star .shooting-star__tail {
+  position: absolute;
+  top: 1.3rem;
+  left: 1rem;
+  width: 8rem;
+  height: 8rem;
+  background-color: rgba(255, 0, 0, 0.2);
+  background: radial-gradient(
+    circle at 0 100%,
+    transparent 0,
+    transparent 5rem,
+    var(--shooting-star-tail-1) 5rem,
+    var(--shooting-star-tail-1) 6rem,
+    var(--shooting-star-tail-2) 6rem,
+    var(--shooting-star-tail-2) 7rem,
+    var(--shooting-star-tail-3) 7rem,
+    var(--shooting-star-tail-3) 8rem,
+    transparent 8.05rem
+  );
+  transform-origin: top left;
+  transform: scale(0.8) rotate(-10deg) scaleY(0.6);
+}
+
+.shooting-star .shooting-star__tail span {
+  position: absolute;
+  margin-top: -0.1rem;
+  width: 1rem;
+  height: 0.75rem;
+  border-radius: 0 0 1rem 1rem / 0 0 1rem 1rem;
+}
+
+.shooting-star .shooting-star__tail span:nth-child(1) {
+  transform: translateX(5rem) translateY(8rem);
+  background-color: var(--shooting-star-tail-1);
+}
+
+.shooting-star .shooting-star__tail span:nth-child(2) {
+  transform: translateX(6rem) translateY(8rem);
+  background-color: var(--shooting-star-tail-2);
+}
+
+.shooting-star .shooting-star__tail span:nth-child(3) {
+  transform: translateX(7rem) translateY(8rem);
+  background-color: var(--shooting-star-tail-3);
+}

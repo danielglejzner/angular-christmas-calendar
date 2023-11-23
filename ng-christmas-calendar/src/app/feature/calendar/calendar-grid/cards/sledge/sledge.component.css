@@ -1,0 +1,143 @@
+/**
+ * Day 5 - Sledge in the snow
+ * https://codepen.io/johnnyfekete/pen/wvzGoRr
+ */
+.sledge-container {
+  background: linear-gradient(-20deg, #f8f9fa 60%, #3d405b 60%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sledge {
+  --sledge-runner: #6c757d;
+  --sledge-wood-light: #9c6644;
+  --sledge-wood-dark: #7f5539;
+  --sledge-edge: #2d1e14;
+
+  width: 20rem;
+  height: 10rem;
+  position: relative;
+  transform: rotate(-16deg) scale(0.25) translateX(-7rem) translateY(-5rem);
+}
+
+@media only screen and (min-width: 576px) {
+  .sledge {
+    transform: rotate(-16deg) scale(0.3) translateX(-7rem);
+  }
+}
+
+.sledge .sledge-runner__front {
+  width: 4rem;
+  height: 4rem;
+  overflow: hidden;
+  position: absolute;
+  top: 6rem;
+}
+.sledge .sledge-runner__front::after {
+  content: "";
+  display: block;
+  margin-top: -4rem;
+  width: 8rem;
+  height: 8rem;
+  background: radial-gradient(
+    closest-side,
+    transparent 75%,
+    var(--sledge-runner) 27%,
+    var(--sledge-runner) 99%,
+    transparent 100%
+  );
+}
+
+.sledge .sledge-runner__front--top {
+  transform-origin: top right;
+  transform: rotate(30deg);
+}
+
+.sledge .sledge-runner {
+  position: absolute;
+  width: 16rem;
+  height: 1rem;
+  background-color: var(--sledge-runner);
+  top: 9rem;
+  left: 4rem;
+}
+
+.sledge .sledge-runner__left-leg {
+  position: absolute;
+  width: 3rem;
+  height: 1rem;
+  background-color: var(--sledge-runner);
+  transform: rotate(120deg);
+  bottom: 1.2rem;
+  left: 1rem;
+}
+
+.sledge .sledge-runner__right-leg {
+  position: absolute;
+  width: 3rem;
+  height: 1rem;
+  background-color: var(--sledge-runner);
+  transform: rotate(60deg);
+  bottom: 1.2rem;
+  left: 8rem;
+}
+
+.sledge .sledge-runner__back {
+  position: absolute;
+  transform: scaleY(0.8) scaleX(0.95) translateX(3rem) translateY(-2rem);
+}
+
+.sledge .sledge-seat {
+  position: absolute;
+  z-index: 2;
+  top: 1.5rem;
+  left: 5rem;
+}
+
+.sledge .sledge-top {
+  transform: skewX(-40deg);
+}
+
+.sledge .sledge-top__piece {
+  box-sizing: border-box;
+  width: 15rem;
+  height: 0.8rem;
+  background: linear-gradient(
+    to bottom,
+    var(--sledge-wood-light) 0%,
+    var(--sledge-wood-dark) 100%
+  );
+  border: 1.5px solid var(--sledge-edge);
+}
+
+.sledge .sledge-back {
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: skewY(-50deg) rotate(90deg) scaleX(1.8) scaleY(0.85)
+    translateX(0.6rem) translateY(-0.4rem);
+}
+
+.sledge .sledge-back__piece {
+  box-sizing: border-box;
+  width: 0.8rem;
+  height: 0.8rem;
+  background: linear-gradient(
+    to bottom,
+    var(--sledge-wood-light) 0%,
+    var(--sledge-wood-dark) 100%
+  );
+  border: 1.5px solid var(--sledge-edge);
+}
+
+.sledge .sledge-side {
+  position: absolute;
+  left: -2rem;
+  margin-top: -0.05rem;
+  box-sizing: border-box;
+  width: 14.95rem;
+  height: 1.45rem;
+  background-color: var(--sledge-wood-dark);
+  border: 1.5px solid var(--sledge-edge);
+}

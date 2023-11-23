@@ -1,0 +1,212 @@
+/**
+ * Day 20 - pom hat with a single div
+ * https://codepen.io/johnnyfekete/pen/KKgvrJK
+ */
+.pom-hat-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #b8f2e6;
+  height: 100%;
+}
+
+.pom-hat {
+  --pom-hat-pink: #f28482;
+  --pom-hat-green: #84a59d;
+  --pom-hat-purple: #6d597a;
+
+  position: absolute;
+  width: 8rem;
+  height: 10rem;
+  border-radius: 4rem 4rem 0 0;
+  background: linear-gradient(135deg, var(--pom-hat-green) 25%, transparent 25%) -0.5rem
+      0,
+    linear-gradient(225deg, var(--pom-hat-green) 25%, transparent 25%) -0.5rem 0,
+    linear-gradient(315deg, var(--pom-hat-green) 25%, transparent 25%),
+    linear-gradient(45deg, var(--pom-hat-green) 25%, transparent 25%);
+  background-size: 1rem 1rem;
+  background-color: var(--pom-hat-pink);
+  transform: scale(0.5) translateY(1rem);
+}
+
+.pom-hat::before {
+  content: "";
+  display: block;
+  width: 8rem;
+  height: 10rem;
+  border-radius: 4rem 4rem 0 0;
+  background: linear-gradient(
+    to bottom,
+    var(--pom-hat-pink) 0,
+    var(--pom-hat-pink) 1.8rem,
+    var(--pom-hat-green) 1.8rem,
+    var(--pom-hat-green) 2.1rem,
+    var(--pom-hat-pink) 2.1rem,
+    var(--pom-hat-pink) 2.6rem,
+    var(--pom-hat-green) 2.6rem,
+    var(--pom-hat-green) 2.9rem,
+    var(--pom-hat-pink) 2.9rem,
+    var(--pom-hat-pink) 4.5rem,
+    transparent 4.5rem,
+    transparent 6.5rem,
+    var(--pom-hat-pink) 6.5rem
+  );
+}
+
+.pom-hat::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: -1rem;
+  top: -2.8rem;
+  width: 10rem;
+  height: 13.8rem;
+
+  background: radial-gradient(
+      circle at 5rem 1.7rem,
+      white 0,
+      white 1.5rem,
+      transparent 1.5rem,
+      transparent 100%
+    ),
+    radial-gradient(
+      circle at 1rem 10.5rem,
+      var(--pom-hat-purple) 0,
+      var(--pom-hat-purple) 0.5rem,
+      transparent 0.5rem,
+      transparent 100%
+    ),
+    radial-gradient(
+      circle at 1rem 11rem,
+      var(--pom-hat-purple) 0,
+      var(--pom-hat-purple) 0.5rem,
+      transparent 0.5rem,
+      transparent 100%
+    ),
+    radial-gradient(
+      circle at 1rem 11.5rem,
+      var(--pom-hat-purple) 0,
+      var(--pom-hat-purple) 0.5rem,
+      transparent 0.5rem,
+      transparent 100%
+    ),
+    radial-gradient(
+      circle at 1rem 12rem,
+      var(--pom-hat-purple) 0,
+      var(--pom-hat-purple) 0.5rem,
+      transparent 0.5rem,
+      transparent 100%
+    ),
+    radial-gradient(
+      circle at 1rem 12.5rem,
+      var(--pom-hat-purple) 0,
+      var(--pom-hat-purple) 0.5rem,
+      transparent 0.5rem,
+      transparent 100%
+    ),
+    radial-gradient(
+      circle at 9rem 10.5rem,
+      var(--pom-hat-purple) 0,
+      var(--pom-hat-purple) 0.5rem,
+      transparent 0.5rem,
+      transparent 100%
+    ),
+    radial-gradient(
+      circle at 9rem 11rem,
+      var(--pom-hat-purple) 0,
+      var(--pom-hat-purple) 0.5rem,
+      transparent 0.5rem,
+      transparent 100%
+    ),
+    radial-gradient(
+      circle at 9rem 11.5rem,
+      var(--pom-hat-purple) 0,
+      var(--pom-hat-purple) 0.5rem,
+      transparent 0.5rem,
+      transparent 100%
+    ),
+    radial-gradient(
+      circle at 9rem 12rem,
+      var(--pom-hat-purple) 0,
+      var(--pom-hat-purple) 0.5rem,
+      transparent 0.5rem,
+      transparent 100%
+    ),
+    radial-gradient(
+      circle at 9rem 12.5rem,
+      var(--pom-hat-purple) 0,
+      var(--pom-hat-purple) 0.5rem,
+      transparent 0.5rem,
+      transparent 100%
+    ),
+    radial-gradient(
+      circle at 1.5rem 10.5rem,
+      var(--pom-hat-purple) 0,
+      var(--pom-hat-purple) 0.5rem,
+      transparent 0.5rem,
+      transparent 100%
+    ),
+    radial-gradient(
+      circle at 1.5rem 12.2rem,
+      var(--pom-hat-purple) 0,
+      var(--pom-hat-purple) 0.8rem,
+      transparent 0.8rem,
+      transparent 100%
+    ),
+    radial-gradient(
+      circle at 8.5rem 10.5rem,
+      var(--pom-hat-purple) 0,
+      var(--pom-hat-purple) 0.5rem,
+      transparent 0.5rem,
+      transparent 100%
+    ),
+    radial-gradient(
+      circle at 8.5rem 12.2rem,
+      var(--pom-hat-purple) 0,
+      var(--pom-hat-purple) 0.8rem,
+      transparent 0.8rem,
+      transparent 100%
+    ),
+    radial-gradient(
+      circle at 2.5rem 11.4rem,
+      var(--pom-hat-purple) 0,
+      var(--pom-hat-purple) 1.5rem,
+      transparent 1.5rem,
+      transparent 100%
+    ),
+    radial-gradient(
+      circle at 3.5rem 11.4rem,
+      var(--pom-hat-purple) 0,
+      var(--pom-hat-purple) 1.5rem,
+      transparent 1.5rem,
+      transparent 100%
+    ),
+    radial-gradient(
+      circle at 4.5rem 11.4rem,
+      var(--pom-hat-purple) 0,
+      var(--pom-hat-purple) 1.5rem,
+      transparent 1.5rem,
+      transparent 100%
+    ),
+    radial-gradient(
+      circle at 5.5rem 11.4rem,
+      var(--pom-hat-purple) 0,
+      var(--pom-hat-purple) 1.5rem,
+      transparent 1.5rem,
+      transparent 100%
+    ),
+    radial-gradient(
+      circle at 6.5rem 11.4rem,
+      var(--pom-hat-purple) 0,
+      var(--pom-hat-purple) 1.5rem,
+      transparent 1.5rem,
+      transparent 100%
+    ),
+    radial-gradient(
+      circle at 7.5rem 11.4rem,
+      var(--pom-hat-purple) 0,
+      var(--pom-hat-purple) 1.5rem,
+      transparent 1.5rem,
+      transparent 100%
+    );
+}

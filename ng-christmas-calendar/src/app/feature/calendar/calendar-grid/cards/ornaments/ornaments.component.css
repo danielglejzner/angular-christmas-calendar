@@ -1,0 +1,235 @@
+/**
+ * Day 14 - Christmas tree branch with ornaments
+ * https://codepen.io/johnnyfekete/pen/qBarZVj
+ */
+.ornaments-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(
+    circle at 100%,
+    #6930c3 0%,
+    #56cfe1 40%,
+    #72efdd 70%,
+    #80ffdb 100%
+  );
+  height: 100%;
+  margin: 0;
+}
+
+.ornaments {
+  --ornaments-branch: #9d6b53;
+  --ornaments-branch-light: #cd9777;
+  --ornament-1: #f83b17;
+  --ornament-1-light: #fb8f7a;
+  --ornament-2: #02c39a;
+  --ornament-2-light: #50fdd8;
+  --ornament-3: #c77dff;
+  --ornament-3-light: #e0aaff;
+
+  position: relative;
+  width: 40rem;
+  height: 24rem;
+  transform: scale(0.15) translateX(-16rem);
+}
+
+@media only screen and (min-width: 576px) {
+  .ornaments {
+    transform: scale(0.2) translateX(-15rem);
+  }
+}
+
+.ornaments .branch {
+  position: absolute;
+  width: 20rem;
+  height: 0.3rem;
+  top: 4rem;
+  border-radius: 0 50% 50% 0;
+  background-color: var(--ornaments-branch);
+}
+
+.ornaments .branch.branch-1 {
+  transform: rotate(-10deg);
+  top: 7rem;
+}
+
+.branch.branch-2 {
+  transform: rotate(-6deg);
+  top: 11rem;
+  left: 12rem;
+}
+
+.ornaments .branch::before {
+  content: "";
+  display: block;
+  border-radius: 50%;
+  position: absolute;
+  top: -0.15rem;
+  left: -0.1rem;
+  width: 0.8rem;
+  height: 0.6rem;
+  background-color: var(--ornaments-branch);
+}
+
+.ornaments .spikes-upper {
+  position: absolute;
+  top: -4rem;
+  left: 4rem;
+  width: 17rem;
+  height: 4rem;
+  background: repeating-linear-gradient(
+    to right,
+    #006600,
+    #006600 0.2rem,
+    transparent 0.2rem,
+    transparent 0.7rem
+  );
+  transform: skewX(-45deg);
+}
+.ornaments .spikes-lower {
+  position: absolute;
+  top: 0.3rem;
+  left: 4rem;
+  width: 17rem;
+  height: 4rem;
+  background: repeating-linear-gradient(
+    to right,
+    #006600,
+    #006600 0.2rem,
+    transparent 0.2rem,
+    transparent 0.7rem
+  );
+  transform: skewX(45deg);
+}
+
+.ornaments .spikes-end {
+  position: absolute;
+  top: -3rem;
+  left: 20.6rem;
+  width: 6.3rem;
+  height: 6.3rem;
+  overflow: hidden;
+  transform: rotate(135deg);
+  border-radius: 30% 10% 0 10%;
+}
+
+.ornaments .spikes-end::after {
+  position: absolute;
+  top: -0.8rem;
+  left: -0.8rem;
+  content: "";
+  display: block;
+  width: 14rem;
+  height: 14rem;
+  background: repeating-conic-gradient(
+    from 0deg,
+    #006600 0deg 2deg,
+    transparent 2deg 9deg
+  );
+}
+
+.ornaments .ornament {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+  font-size: 4rem;
+}
+
+.ornaments .ornament::before {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 3rem;
+  height: 2rem;
+  top: 1.75rem;
+  left: 0.5rem;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  transform: rotate(-60deg);
+}
+
+.ornaments .ornament::after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 6rem;
+  height: 6rem;
+  top: 0.4rem;
+  left: 0.5rem;
+  border-radius: 50%;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.5),
+    transparent 100%
+  );
+  transform: rotate(-20deg);
+}
+
+.ornament-1 {
+  top: 12.7rem;
+  left: 5rem;
+  background: radial-gradient(
+    circle at 75% 75%,
+    var(--ornament-1),
+    40%,
+    var(--ornament-1-light) 80%
+  );
+}
+
+.ornament-2 {
+  top: 16.8rem;
+  left: 15rem;
+  background: radial-gradient(
+    circle at 75% 75%,
+    var(--ornament-2),
+    40%,
+    var(--ornament-2-light) 80%
+  );
+}
+.ornament-3 {
+  top: 15.8rem;
+  left: 25rem;
+  background: radial-gradient(
+    circle at 75% 75%,
+    var(--ornament-3),
+    40%,
+    var(--ornament-3-light) 80%
+  );
+}
+
+.ornaments .hanger {
+  position: absolute;
+  width: 2rem;
+  height: 1rem;
+  background-image: linear-gradient(to right, white, lightgrey, white);
+  border-radius: 0.25rem 0.25rem 50% 50% / 0.25rem 0.25rem 10% 10%;
+  top: -0.75rem;
+}
+
+.ornaments .hanger::before {
+  position: absolute;
+  content: "";
+  display: block;
+  border-left: 0.1rem solid black;
+  height: 3rem;
+  top: -3rem;
+  left: 1rem;
+}
+
+.ornaments .hanger::after {
+  position: absolute;
+  content: "";
+  display: block;
+  border-left: 0.1rem solid black;
+  border-top: 0.1rem solid black;
+  border-right: 0.1rem solid black;
+  width: 0.6rem;
+  height: 2rem;
+  top: -5rem;
+  left: 1rem;
+  border-radius: 50% 50% 50% 0;
+}

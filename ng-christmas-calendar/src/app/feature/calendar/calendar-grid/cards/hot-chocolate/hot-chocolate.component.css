@@ -1,0 +1,201 @@
+/**
+ * Day 9 - hot chocolate with marshmallows
+ * https://codepen.io/johnnyfekete/pen/VwKKMKE
+ */
+.hot-chocolate-container {
+  background-color: #aa78a6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+
+.hot-chocolate {
+  --mug-dark: #727d71;
+  --mug-light: #abc4ab;
+  --mug-coffee: #6c584c;
+  --marshmallow: #d7fdf0;
+  --pink-marshmallow: #ffe4e2;
+
+  perspective: 400px;
+  transform: translateX(3rem) translateY(2rem);
+}
+
+@media only screen and (min-width: 576px) {
+  .hot-chocolate {
+    transform: scale(0.4);
+  }
+}
+
+.hot-chocolate .mug {
+  width: 10rem;
+  height: 10rem;
+  transform: rotateX(-30deg);
+  filter: drop-shadow(6px 6px 0 rgba(0, 0, 0, 0.1));
+}
+
+.hot-chocolate .mug__contents {
+  width: 10rem;
+  height: 10rem;
+  background-color: var(--mug-dark);
+  position: relative;
+}
+
+.hot-chocolate .mug__contents::before {
+  content: "";
+  display: block;
+  width: 10rem;
+  height: 3rem;
+  position: absolute;
+  top: 8.5rem;
+  background-color: var(--mug-dark);
+  border-radius: 50%;
+}
+
+.hot-chocolate .mug__contents::after {
+  content: "";
+  display: block;
+  width: 10rem;
+  height: 3rem;
+  position: absolute;
+  z-index: 3;
+  top: -1.5rem;
+  background-color: var(--mug-coffee);
+  border-radius: 50%;
+  box-sizing: border-box;
+  border: 0.25rem solid var(--mug-light);
+}
+
+.hot-chocolate .mug__grip {
+  position: absolute;
+  z-index: -1;
+  right: -2rem;
+  width: 4rem;
+  height: 6rem;
+  border: 0.75rem solid var(--mug-light);
+  border-bottom-width: 1rem;
+  border-radius: 2rem 1rem / 4rem 2rem;
+}
+
+.hot-chocolate .mug__background {
+  position: absolute;
+  width: 10rem;
+  height: 4rem;
+  background-color: var(--mug-light);
+  display: flex;
+}
+
+.hot-chocolate .mug__background-curve {
+  background-color: var(--mug-light);
+  width: calc(10rem / 7);
+  height: calc(10rem / 7);
+  border-radius: 50%;
+  margin-top: calc(4rem - 10rem / 14);
+}
+
+.hot-chocolate .mug__background-curve:nth-child(1),
+.hot-chocolate .mug__background-curve:nth-child(3),
+.hot-chocolate .mug__background-curve:nth-child(5),
+.hot-chocolate .mug__background-curve:nth-child(7) {
+  background-color: var(--mug-dark);
+}
+
+.hot-chocolate .mug__shine {
+  width: 10rem;
+  height: 10rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.3) 33%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+
+.hot-chocolate .mug__shine--bottom {
+  position: absolute;
+  z-index: 2;
+  top: 10rem;
+  width: 10rem;
+  height: 1.5rem;
+  overflow: hidden;
+}
+
+.hot-chocolate .mug__shine--bottom::before {
+  content: "";
+  display: block;
+  width: 10rem;
+  height: 3rem;
+  position: absolute;
+  top: -1.5rem;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.3) 33%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  border-radius: 50%;
+}
+
+.hot-chocolate .marshmallow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  width: 2.4rem;
+  height: 1.6rem;
+  border-radius: 0.8rem / 1.2rem;
+  background: radial-gradient(
+    circle at 0 0,
+    var(--marshmallow) 0%,
+    #ffffff 100%
+  );
+  box-shadow: 2px 2px 0 2px rgba(0, 0, 0, 0.3);
+}
+
+.hot-chocolate .marshmallow:nth-child(odd) {
+  background: radial-gradient(
+    circle at 0 0,
+    var(--pink-marshmallow) 0%,
+    #ffffff 100%
+  );
+}
+
+.hot-chocolate .marshmallow:nth-child(4) {
+  transform: scale(0.7) translateX(10.5rem) translateY(-1.8rem) rotate(24deg);
+}
+
+.hot-chocolate .marshmallow:nth-child(9) {
+  transform: scale(0.6) translateX(9.5rem) translateY(-1rem) rotate(-5deg);
+}
+
+.hot-chocolate .marshmallow:nth-child(8) {
+  transform: scale(0.65) translateX(6rem) translateY(-0.5rem) rotate(20deg);
+}
+
+.hot-chocolate .marshmallow:nth-child(7) {
+  transform: scale(0.7) translateX(7.5rem) translateY(-2.6rem) rotate(-30deg);
+}
+
+.hot-chocolate .marshmallow:nth-child(6) {
+  transform: scale(0.5) translateX(4.5rem) translateY(-3.5rem) rotate(-8deg);
+}
+
+.hot-chocolate .marshmallow:nth-child(5) {
+  transform: scale(0.5) translateX(7rem) translateY(-3.5rem) rotate(55deg);
+}
+
+.hot-chocolate .marshmallow:nth-child(3) {
+  transform: scale(0.6) translateX(1.7rem) translateY(-1rem) rotate(10deg);
+}
+
+.hot-chocolate .marshmallow:nth-child(1) {
+  transform: scale(0.6) translateX(4rem) translateY(-1rem) rotate(-35deg);
+}
+
+.hot-chocolate .marshmallow:nth-child(2) {
+  transform: scale(0.65) translateX(0.5rem) translateY(-2.5rem) rotate(-25deg);
+}
