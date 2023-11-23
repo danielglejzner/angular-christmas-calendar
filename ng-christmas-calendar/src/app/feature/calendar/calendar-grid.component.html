@@ -8,11 +8,14 @@
 @for (card of cards; track $index) {
   <div class="day day-{{card.day}}">
     <label>
-      <input type="checkbox"/>
-      <div class="door">
-        <div class="front">{{ card.day }}</div>
-        <div class="back"></div>
-      </div>
+      <input type="checkbox" [checked]="card.revealed" [disabled]="!card.canReveal"/>
+
+      @if (!card.revealed) {
+        <div class="door" [class.door--can-reveal]="card.canReveal">
+          <div class="front">{{ card.day }}</div>
+          <div class="back"></div>
+        </div>
+      }
       <div class="inside">
         <ng-template [xmasCalendarCardFactory] [type]="card.day"></ng-template>
       </div>

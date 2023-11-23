@@ -73,6 +73,7 @@
   transform: translate3d(0px, 0px, 0px);
   position: relative;
   background: #0000001c;
+  border-radius: 8px;
 }
 
 input {
@@ -103,6 +104,11 @@ label {
   border: 2px dashed rgba(0, 0, 0, 0.2);
   border-radius: 0.6rem;
   transform-origin: 0% 50%;
+}
+
+.door--can-reveal {
+  background: var(--red-to-pink-to-purple-horizontal-gradient);
+  border: none;
 }
 
 .door div {

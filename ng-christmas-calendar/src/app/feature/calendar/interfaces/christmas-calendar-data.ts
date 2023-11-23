@@ -11,3 +11,8 @@ export interface CalendarCard {
     description?: string;
   }
 }
+
+export interface UiCalendarCard extends CalendarCard {
+  revealed: boolean;
+  canReveal: boolean;
+}
