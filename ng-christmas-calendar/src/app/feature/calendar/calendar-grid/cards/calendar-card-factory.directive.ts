@@ -18,6 +18,7 @@ import { OrnamentsComponent } from './ornaments/ornaments.component';
 import { NorthPoleComponent } from './north-pole/north-pole.component';
 import { SkateComponent } from './skate/skate.component';
 import { ShootingStarComponent } from './shooting-star/shooting-star.component';
+import { DrumComponent } from './drum/drum.component';
 
 export const christmasCardsFactoryMap: Record<ChristmasCardType, Type<ChristmasCard>> = {
   [ChristmasCardType.GingerbreadMan]: GingerbreadManCardComponent,
@@ -37,7 +38,7 @@ export const christmasCardsFactoryMap: Record<ChristmasCardType, Type<ChristmasC
   [ChristmasCardType.NorthPole]: NorthPoleComponent,
   [ChristmasCardType.Skate]: SkateComponent,
   [ChristmasCardType.ShootingStar]: ShootingStarComponent,
-  [ChristmasCardType.Drum]: NotImplementedComponent,
+  [ChristmasCardType.Drum]: DrumComponent,
   [ChristmasCardType.Sparkler]: NotImplementedComponent,
   [ChristmasCardType.PomHat]: NotImplementedComponent,
   [ChristmasCardType.ToyTrain]: NotImplementedComponent,

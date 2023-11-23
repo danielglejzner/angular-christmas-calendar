@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { ChristmasCard, ChristmasCardType } from '../christmas-card';
 
 @Component({
   selector: 'app-drum',
   standalone: true,
-  imports: [CommonModule],
+  imports: [],
   templateUrl: './drum.component.html',
   styleUrl: './drum.component.css'
 })
-export class DrumComponent {
-
+export class DrumComponent implements ChristmasCard {
+  readonly type = ChristmasCardType.Drum;
 }
