@@ -1,7 +1,6 @@
 import { ComponentRef, Directive, Input, OnInit, Type, ViewContainerRef, inject } from '@angular/core';
 import { ChristmasCard, ChristmasCardType } from './christmas-card';
 import { GingerbreadManCardComponent } from './gingerbread-man-card/gingerbread-man-card.component';
-import { NotImplementedComponent } from './not-implemented/not-implemented.component';
 import { SnowflakeComponent } from './snowflake/snowflake.component';
 import { StockingComponent } from './stocking/stocking.component';
 import { GiftBoxComponent } from './gift-box/gift-box.component';

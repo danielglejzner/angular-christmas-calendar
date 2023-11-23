@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { ChristmasCard, ChristmasCardType } from '../christmas-card';
 
 @Component({
   selector: 'app-gingerbread-man-card',
   standalone: true,
-  imports: [CommonModule],
+  imports: [],
   templateUrl: './gingerbread-man-card.component.html',
   styleUrl: './gingerbread-man-card.component.css'
 })
