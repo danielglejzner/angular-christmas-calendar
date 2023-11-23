@@ -1,0 +1,198 @@
+.gift-box-day {
+  background: linear-gradient(
+    200deg,
+    #1d3557 33%,
+    #457b9d 33%,
+    #457b9d 66%,
+    #a8dadc 66%
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gift-box-container {
+  width: 200px;
+  height: 200px;
+  perspective: 400px;
+  transform: translateY(-40px) scale(0.3);
+}
+
+@media only screen and (min-width: 576px) {
+  .gift-box-container {
+    transform: translateY(-20px) scale(0.4);
+  }
+}
+
+.gift-box {
+  --gift-box-color: #e63946;
+  --gift-box-edge-color: #590b11;
+  --wrap-color: #f1faee;
+  --wrap-ribbon-color: #c0e4e6;
+  --wrap-top-color: #d8efef;
+
+  width: 200px;
+  height: 200px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+  -webkit-animation: rotation-3d 20s infinite linear;
+  animation: rotation-3d 20s infinite linear;
+}
+
+.gift-box .gift-box__side,
+.gift-box .gift-box__end {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border: 2px solid var(--gift-box-edge-color);
+}
+
+.gift-box .gift-box-lid__side {
+  position: absolute;
+  width: 220px;
+  height: 50px;
+  border: 2px solid var(--gift-box-edge-color);
+}
+
+.gift-box .gift-box-lid__end {
+  position: absolute;
+  width: 220px;
+  height: 220px;
+  border: 2px solid var(--gift-box-edge-color);
+}
+
+.gift-box .gift-box__side,
+.gift-box .gift-box-lid__side {
+  background: linear-gradient(
+    to right,
+    var(--gift-box-color) 40%,
+    var(--wrap-color) 40%,
+    var(--wrap-color) 60%,
+    var(--gift-box-color) 60%
+  );
+}
+.gift-box .gift-box__end,
+.gift-box .gift-box-lid__end {
+  background: linear-gradient(
+      to right,
+      transparent 40%,
+      var(--wrap-top-color) 40%,
+      var(--wrap-top-color) 60%,
+      transparent 60%
+    ),
+    linear-gradient(
+      to bottom,
+      var(--gift-box-color) 40%,
+      var(--wrap-color) 40%,
+      var(--wrap-color) 60%,
+      var(--gift-box-color) 60%
+    );
+}
+
+.gift-box .gift-box__side--front {
+  transform: rotateY(0deg) translateZ(100px);
+}
+.gift-box .gift-box__side--back {
+  transform: rotateY(180deg) translateZ(100px);
+}
+.gift-box .gift-box__side--left {
+  transform: rotateY(-90deg) translateZ(100px);
+}
+.gift-box .gift-box__side--right {
+  transform: rotateY(90deg) translateZ(100px);
+}
+.gift-box .gift-box__side--top {
+  transform: rotateX(90deg) translateZ(100px);
+}
+.gift-box .gift-box__side--bottom {
+  transform: rotateX(-90deg) translateZ(100px);
+}
+
+.gift-box .gift-box-lid__side--front {
+  transform: rotateY(0deg) translateZ(110px) translateX(-10px) translateY(-10px);
+}
+.gift-box .gift-box-lid__side--back {
+  transform: rotateY(180deg) translateZ(110px) translateX(10px)
+    translateY(-10px);
+}
+.gift-box .gift-box-lid__side--left {
+  transform: rotateY(-90deg) translateZ(120px) translateY(-10px);
+}
+.gift-box .gift-box-lid__side--right {
+  transform: rotateY(90deg) translateZ(100px) translateY(-10px);
+}
+.gift-box .gift-box-lid__side--top {
+  transform: rotateX(90deg) translateZ(120px) translateX(-10px) translateY(0);
+}
+
+.gift-box .ribbon-l {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  border: 2px solid var(--wrap-ribbon-color);
+  border-radius: 50% 50% 0 50%;
+  transform-style: preserve-3d;
+  transform-origin: 50% 50%;
+  transform: rotateX(75deg) rotateY(90deg)
+    /* use a CSS variable for the translate, defined in CSS */
+    translateZ(calc(80px - var(--gift-box-position))) translateX(-85px)
+    translateY(-75px) skewY(30deg);
+}
+
+.gift-box .ribbon-r {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  border: 2px solid var(--wrap-ribbon-color);
+  border-radius: 50% 50% 0 50%;
+  transform-style: preserve-3d;
+  transform-origin: 50% 50%;
+  transform: rotateX(-5deg) rotateY(90deg)
+    /* use a CSS variable for the translate, defined in CSS */
+    translateZ(calc(80px - var(--gift-box-position))) translateX(-30px)
+    translateY(-110px) skewY(30deg);
+}
+
+.ribbon-l-end {
+  position: absolute;
+  width: 40px;
+  height: 110px;
+  background: linear-gradient(45deg, var(--wrap-top-color) 72%, transparent 72%),
+    linear-gradient(-45deg, var(--wrap-top-color) 72%, transparent 72%);
+  border: 2px solid var(--gift-box-edge-color);
+  border-top: none;
+  border-bottom: none;
+  transform: rotateX(-70deg) translateX(80px) translateY(-80px)
+    translateZ(-60px);
+}
+
+.ribbon-r-end {
+  position: absolute;
+  width: 40px;
+  height: 110px;
+  background: linear-gradient(45deg, var(--wrap-top-color) 72%, transparent 72%),
+    linear-gradient(-45deg, var(--wrap-top-color) 72%, transparent 72%);
+  border: 2px solid var(--gift-box-edge-color);
+  border-top: none;
+  border-bottom: none;
+  transform: rotateX(80deg) translateX(80px) translateY(-80px) translateZ(60px);
+}
+
+@-webkit-keyframes rotation-3d {
+  from {
+    transform: translateZ(-100px) rotateY(50deg) rotateX(-5deg) rotateZ(-30deg);
+  }
+  to {
+    transform: translateZ(-100px) rotateY(409deg) rotateX(-5deg) rotateZ(-30deg);
+  }
+}
+
+@keyframes rotation-3d {
+  from {
+    transform: translateZ(-100px) rotateY(50deg) rotateX(-5deg) rotateZ(-30deg);
+  }
+  to {
+    transform: translateZ(-100px) rotateY(409deg) rotateX(-5deg) rotateZ(-30deg);
+  }
+}
