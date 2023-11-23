@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { ChristmasCard, ChristmasCardType } from '../christmas-card';
 
 @Component({
   selector: 'app-snowflake',
   standalone: true,
-  imports: [CommonModule],
+  imports: [],
   templateUrl: './snowflake.component.html',
   styleUrl: './snowflake.component.css'
 })
-export class SnowflakeComponent {
-
+export class SnowflakeComponent implements ChristmasCard {
+  readonly type = ChristmasCardType.Snowflake;
 }

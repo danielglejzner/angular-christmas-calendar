@@ -1,0 +1,129 @@
+.snowflake-container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at center, red 0, #002255 100%);
+}
+
+.snowflake-resize {
+  transform: scale(0.3);
+}
+@media only screen and (min-width: 576px) {
+  .snowflake-resize {
+    transform: scale(0.35);
+  }
+}
+
+.snowflake {
+  --snowflake-color: #ffffff;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: center center;
+  -webkit-animation: rotation 20s infinite linear;
+  animation: rotation 20s infinite linear;
+}
+
+.snowflake div {
+  position: absolute;
+  background-color: var(--snowflake-color);
+  width: 1rem;
+  border-radius: 0.5rem;
+}
+
+.snowflake .side {
+  bottom: -0.5rem;
+  left: -0.5rem;
+  height: 10rem;
+  transform-origin: 0.5rem 9.5rem;
+}
+
+.snowflake .side-l-1 {
+  bottom: 2.5rem;
+  left: 0rem;
+  height: 5rem;
+  transform-origin: 0.5rem 4.5rem;
+  transform: rotate(-60deg);
+}
+
+.snowflake .side-r-1 {
+  bottom: 2.5rem;
+  left: 0rem;
+  height: 5rem;
+  transform-origin: 0.5rem 4.5rem;
+  transform: rotate(60deg);
+}
+
+.snowflake .side-l-2 {
+  bottom: 6.5rem;
+  left: 0rem;
+  width: 0.8rem;
+  height: 3rem;
+  transform-origin: 0.4rem 2.5rem;
+  transform: rotate(-45deg);
+}
+
+.snowflake .side-r-2 {
+  bottom: 6.5rem;
+  left: 0.2rem;
+  width: 0.8rem;
+  height: 3rem;
+  border-radius: 0.5rem;
+  transform-origin: 0.4rem 2.5rem;
+  transform: rotate(45deg);
+}
+
+.snowflake .side-2 {
+  transform: rotate(60deg);
+}
+.snowflake .side-3 {
+  transform: rotate(120deg);
+}
+.snowflake .side-4 {
+  transform: rotate(180deg);
+}
+.snowflake .side-5 {
+  transform: rotate(240deg);
+}
+.snowflake .side-6 {
+  transform: rotate(300deg);
+}
+
+@-webkit-keyframes snowflake-rotation-large {
+  from {
+    transform: rotate(0deg) scale(0.35);
+  }
+  to {
+    transform: rotate(359deg) scale(0.35);
+  }
+}
+
+@keyframes snowflake-rotation-large {
+  from {
+    transform: rotate(0deg) scale(0.35);
+  }
+  to {
+    transform: rotate(359deg) scale(0.35);
+  }
+}
+
+@-webkit-keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}

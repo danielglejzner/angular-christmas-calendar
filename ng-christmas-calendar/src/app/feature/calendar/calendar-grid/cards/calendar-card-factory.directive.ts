@@ -2,10 +2,11 @@ import { ComponentRef, Directive, Input, OnInit, Type, ViewContainerRef, inject 
 import { ChristmasCard, ChristmasCardType } from './christmas-card';
 import { GingerbreadManCardComponent } from './gingerbread-man-card/gingerbread-man-card.component';
 import { NotImplementedComponent } from './not-implemented/not-implemented.component';
+import { SnowflakeComponent } from './snowflake/snowflake.component';
 
 export const christmasCardsFactoryMap: Record<ChristmasCardType, Type<ChristmasCard>> = {
   [ChristmasCardType.GingerbreadMan]: GingerbreadManCardComponent,
-  [ChristmasCardType.Snowflake]: NotImplementedComponent,
+  [ChristmasCardType.Snowflake]: SnowflakeComponent,
   [ChristmasCardType.Stocking]: NotImplementedComponent,
   [ChristmasCardType.GiftBox]: NotImplementedComponent,
   [ChristmasCardType.Sledge]: NotImplementedComponent,
