@@ -101,3 +101,11 @@ footer a {
   margin-left: 0.2rem;
   color: #ffffff;
 }
+
+app-calendar-grid {
+  :checked ~ .inside .jingle-bells .staff-lines,
+  :checked ~ .inside .jingle-bells .note {
+    -webkit-animation-play-state: running;
+    animation-play-state: running;
+  }
+}

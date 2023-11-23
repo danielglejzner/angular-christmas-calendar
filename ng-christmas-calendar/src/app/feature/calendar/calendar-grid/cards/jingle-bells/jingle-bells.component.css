@@ -1,0 +1,381 @@
+.jingle-bells-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-x: hidden;
+  background-color: #fefae0;
+  height: 100%;
+}
+
+.jingle-bells {
+  position: absolute;
+  left: 0;
+  width: 80%;
+  height: 10rem;
+  font-family: "FreeSerif Medium";
+  transform: scale(0.15) translateX(-40rem);
+}
+
+@media only screen and (min-width: 576px) {
+  .jingle-bells {
+    transform: scale(0.2) translateX(-35rem);
+  }
+}
+
+.jingle-bells .staff-lines {
+  display: flex;
+  height: 10rem;
+  margin-left: 55rem;
+  width: 700rem;
+  background: linear-gradient(
+    to bottom,
+    black 0,
+    black 2%,
+    transparent 2%,
+    transparent 24.5%,
+    black 24.5%,
+    black 26.5%,
+    transparent 26.5%,
+    transparent 49%,
+    black 49%,
+    black 51%,
+    transparent 51%,
+    transparent 73.5%,
+    black 73.5%,
+    black 75.5%,
+    transparent 75.5%,
+    transparent 98%,
+    black 98%,
+    black 100%
+  );
+
+  transform: translateX(-540rem);
+  -webkit-animation: jingle-bells-melody 23s linear;
+  animation: jingle-bells-melody 23s linear;
+  -webkit-animation-play-state: paused;
+  animation-play-state: paused;
+}
+
+.jingle-bells .clef {
+  margin-top: -9.5rem;
+  margin-right: 5rem;
+  font-size: 23.5rem;
+}
+
+.jingle-bells .bar {
+  position: relative;
+  display: flex;
+  min-width: 28rem;
+  height: 10rem;
+  margin-left: 2.5rem;
+  padding-right: 2rem;
+  border-right: 0.3rem solid black;
+}
+
+.jingle-bells .bar.bar--end::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: -1.5rem;
+  width: 0.8rem;
+  height: 10rem;
+  background-color: black;
+}
+
+.jingle-bells .note {
+  font-size: 13rem;
+  height: 13rem;
+  margin-right: 2rem;
+  min-width: 5.33rem;
+
+  -webkit-animation: jingle-bells-note 0.5s linear;
+
+  animation: jingle-bells-note 0.5s linear;
+  -webkit-animation-play-state: paused;
+  animation-play-state: paused;
+}
+
+.jingle-bells .note.note--full {
+  position: relative;
+  top: 1.3rem;
+}
+
+.jingle-bells .note.note--c {
+  margin-top: 1.2rem;
+  position: relative;
+}
+
+.jingle-bells .note.note--c::after {
+  content: "";
+  display: block;
+  position: absolute;
+  margin-top: -6.5rem;
+  width: 5.5rem;
+  border-bottom: 0.2rem solid black;
+}
+
+.jingle-bells .note.note--full.note--c::after {
+  margin-top: -7.8rem;
+}
+
+.jingle-bells .note.note--d {
+  margin-top: 0;
+}
+
+.jingle-bells .note.note--e {
+  margin-top: -1.5rem;
+}
+
+.jingle-bells .note.note--f {
+  margin-top: -2.75rem;
+}
+
+.jingle-bells .note.note--g {
+  margin-top: -4rem;
+}
+
+.jingle-bells .note.note--a1 {
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
+}
+.jingle-bells .note.note--a2 {
+  -webkit-animation-delay: 1.3s;
+  animation-delay: 1.3s;
+}
+.jingle-bells .note.note--a3 {
+  -webkit-animation-delay: 1.7s;
+  animation-delay: 1.7s;
+}
+.jingle-bells .note.note--a4 {
+  -webkit-animation-delay: 2.4s;
+  animation-delay: 2.4s;
+}
+.jingle-bells .note.note--a5 {
+  -webkit-animation-delay: 2.7s;
+  animation-delay: 2.7s;
+}
+.jingle-bells .note.note--a6 {
+  -webkit-animation-delay: 3.1s;
+  animation-delay: 3.1s;
+}
+.jingle-bells .note.note--a7 {
+  -webkit-animation-delay: 3.7s;
+  animation-delay: 3.7s;
+}
+.jingle-bells .note.note--a8 {
+  -webkit-animation-delay: 4s;
+  animation-delay: 4s;
+}
+.jingle-bells .note.note--a9 {
+  -webkit-animation-delay: 4.4s;
+  animation-delay: 4.4s;
+}
+.jingle-bells .note.note--a10 {
+  -webkit-animation-delay: 4.9s;
+  animation-delay: 4.9s;
+}
+.jingle-bells .note.note--a11 {
+  -webkit-animation-delay: 5.2s;
+  animation-delay: 5.2s;
+}
+.jingle-bells .note.note--a12 {
+  -webkit-animation-delay: 6.6s;
+  animation-delay: 6.6s;
+}
+.jingle-bells .note.note--a13 {
+  -webkit-animation-delay: 6.9s;
+  animation-delay: 6.9s;
+}
+.jingle-bells .note.note--a14 {
+  -webkit-animation-delay: 7.3s;
+  animation-delay: 7.3s;
+}
+.jingle-bells .note.note--a15 {
+  -webkit-animation-delay: 7.9s;
+  animation-delay: 7.9s;
+}
+.jingle-bells .note.note--a16 {
+  -webkit-animation-delay: 8.2s;
+  animation-delay: 8.2s;
+}
+.jingle-bells .note.note--a17 {
+  -webkit-animation-delay: 8.5s;
+  animation-delay: 8.5s;
+}
+.jingle-bells .note.note--a18 {
+  -webkit-animation-delay: 8.8s;
+  animation-delay: 8.8s;
+}
+.jingle-bells .note.note--a19 {
+  -webkit-animation-delay: 9s;
+  animation-delay: 9s;
+}
+.jingle-bells .note.note--a20 {
+  -webkit-animation-delay: 9.3s;
+  animation-delay: 9.3s;
+}
+.jingle-bells .note.note--a21 {
+  -webkit-animation-delay: 9.6s;
+  animation-delay: 9.6s;
+}
+.jingle-bells .note.note--a22 {
+  -webkit-animation-delay: 9.9s;
+  animation-delay: 9.9s;
+}
+.jingle-bells .note.note--a23 {
+  -webkit-animation-delay: 10.3s;
+  animation-delay: 10.3s;
+}
+.jingle-bells .note.note--a24 {
+  -webkit-animation-delay: 10.7s;
+  animation-delay: 10.7s;
+}
+.jingle-bells .note.note--a25 {
+  -webkit-animation-delay: 11.4s;
+  animation-delay: 11.4s;
+}
+.jingle-bells .note.note--a26 {
+  -webkit-animation-delay: 12.4s;
+  animation-delay: 12.4s;
+}
+.jingle-bells .note.note--a27 {
+  -webkit-animation-delay: 12.7s;
+  animation-delay: 12.7s;
+}
+.jingle-bells .note.note--a28 {
+  -webkit-animation-delay: 13.1s;
+  animation-delay: 13.1s;
+}
+.jingle-bells .note.note--a29 {
+  -webkit-animation-delay: 13.8s;
+  animation-delay: 13.8s;
+}
+.jingle-bells .note.note--a30 {
+  -webkit-animation-delay: 14.1s;
+  animation-delay: 14.1s;
+}
+.jingle-bells .note.note--a31 {
+  -webkit-animation-delay: 14.5s;
+  animation-delay: 14.5s;
+}
+.jingle-bells .note.note--a32 {
+  -webkit-animation-delay: 15.1s;
+  animation-delay: 15.1s;
+}
+.jingle-bells .note.note--a33 {
+  -webkit-animation-delay: 15.4s;
+  animation-delay: 15.4s;
+}
+.jingle-bells .note.note--a34 {
+  -webkit-animation-delay: 15.8s;
+  animation-delay: 15.8s;
+}
+.jingle-bells .note.note--a35 {
+  -webkit-animation-delay: 16.3s;
+  animation-delay: 16.3s;
+}
+.jingle-bells .note.note--a36 {
+  -webkit-animation-delay: 16.6s;
+  animation-delay: 16.6s;
+}
+.jingle-bells .note.note--a37 {
+  -webkit-animation-delay: 18s;
+  animation-delay: 18s;
+}
+.jingle-bells .note.note--a38 {
+  -webkit-animation-delay: 18.3s;
+  animation-delay: 18.3s;
+}
+.jingle-bells .note.note--a39 {
+  -webkit-animation-delay: 18.7s;
+  animation-delay: 18.7s;
+}
+.jingle-bells .note.note--a40 {
+  -webkit-animation-delay: 19.3s;
+  animation-delay: 19.3s;
+}
+.jingle-bells .note.note--a41 {
+  -webkit-animation-delay: 19.6s;
+  animation-delay: 19.6s;
+}
+.jingle-bells .note.note--a42 {
+  -webkit-animation-delay: 19.9s;
+  animation-delay: 19.9s;
+}
+.jingle-bells .note.note--a43 {
+  -webkit-animation-delay: 20.3s;
+  animation-delay: 20.3s;
+}
+.jingle-bells .note.note--a44 {
+  -webkit-animation-delay: 20.4s;
+  animation-delay: 20.4s;
+}
+.jingle-bells .note.note--a45 {
+  -webkit-animation-delay: 20.7s;
+  animation-delay: 20.7s;
+}
+.jingle-bells .note.note--a46 {
+  -webkit-animation-delay: 21s;
+  animation-delay: 21s;
+}
+.jingle-bells .note.note--a47 {
+  -webkit-animation-delay: 21.3s;
+  animation-delay: 21.3s;
+}
+.jingle-bells .note.note--a48 {
+  -webkit-animation-delay: 21.7s;
+  animation-delay: 21.7s;
+}
+.jingle-bells .note.note--a49 {
+  -webkit-animation-delay: 22.1s;
+  animation-delay: 22.1s;
+}
+
+@-webkit-keyframes jingle-bells-melody {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-540rem);
+  }
+}
+
+@keyframes jingle-bells-melody {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-540rem);
+  }
+}
+
+@-webkit-keyframes jingle-bells-note {
+  0% {
+    filter: drop-shadow(0 0 0 black);
+    transform: scale(1) translateY(0);
+  }
+  50% {
+    filter: drop-shadow(0 -1rem 1.3rem black);
+    transform: scale(1.2) translateY(-1.5rem);
+  }
+  100% {
+    filter: drop-shadow(0 -2rem 2rem transparent);
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes jingle-bells-note {
+  0% {
+    filter: drop-shadow(0 0 0 black);
+    transform: scale(1) translateY(0);
+  }
+  50% {
+    filter: drop-shadow(0 -1rem 1.3rem black);
+    transform: scale(1.2) translateY(-1.5rem);
+  }
+  100% {
+    filter: drop-shadow(0 -2rem 2rem transparent);
+    transform: scale(1) translateY(0);
+  }
+}
