@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { ChristmasCard, ChristmasCardType } from '../christmas-card';
 
 @Component({
   selector: 'app-elf-hat',
   standalone: true,
-  imports: [CommonModule],
+  imports: [],
   templateUrl: './elf-hat.component.html',
   styleUrl: './elf-hat.component.css'
 })
-export class ElfHatComponent {
-
+export class ElfHatComponent implements ChristmasCard {
+  readonly type = ChristmasCardType.ElfHat;
 }
