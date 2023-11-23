@@ -1,0 +1,333 @@
+.christmas-lights-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  background-color: #2b2d42;
+  height: 100%;
+  margin: 0;
+  position: relative;
+}
+
+.christmas-lights {
+  --christmas-lights-size: 90rem;
+  --christmas-lights-chord: #6b705c;
+  --christmas-lights-holder: #ced4da;
+  --christmas-lights-bulb-1: #f94144;
+  --christmas-lights-bulb-2: #90be6d;
+  --christmas-lights-bulb-3: #f9c74f;
+  --christmas-lights-bulb-4: #43aa8b;
+  --christmas-lights-bulb-5: #58b4d1;
+
+  height: 6rem;
+  transform: scale(0.1);
+}
+
+@media only screen and (min-width: 576px) {
+  .christmas-lights {
+    transform: scale(0.13) translateY(2rem);
+  }
+}
+
+.christmas-lights .chord {
+  width: var(--christmas-lights-size);
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.christmas-lights .chord::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: calc(var(--christmas-lights-size) * 3);
+  height: calc(var(--christmas-lights-size) * 3);
+  left: calc(var(--christmas-lights-size) * -1);
+  bottom: 0;
+  border-bottom: 2px solid var(--christmas-lights-chord);
+  border-radius: 50%;
+}
+
+.christmas-lights .bulb {
+  position: absolute;
+  z-index: 1;
+  width: 4rem;
+  height: 8rem;
+  background-color: red;
+  border-radius: 50% 50% 50% 50% / 30% 30% 60% 60%;
+  margin-top: 1rem;
+  left: calc(50% - 2rem);
+}
+
+.christmas-lights .bulb::before {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: -10;
+  width: 1.5rem;
+  height: 1.1rem;
+  background-color: var(--christmas-lights-holder);
+  border-radius: 0.25rem 0.25rem 0.25rem;
+  top: -0.9rem;
+  left: 1.25rem;
+}
+
+.christmas-lights .bulb::after {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: 1;
+  width: 1rem;
+  height: 1.8rem;
+  background-color: white;
+  border-radius: 50%;
+  top: 0.5rem;
+  left: 0.5rem;
+  transform: rotate(30deg);
+  opacity: 0.5;
+}
+
+.christmas-lights .bulb .light {
+  position: absolute;
+  top: -0.2rem;
+  left: -3rem;
+  z-index: -2;
+  width: 10rem;
+  height: 10rem;
+  background-color: white;
+  border-radius: 50%;
+  opacity: 0.2;
+  -webkit-animation: bulb-flicker-animation 1s infinite;
+  animation: bulb-flicker-animation 1s infinite;
+}
+
+.christmas-lights .bulb.bulb-1 {
+  transform: rotate(12deg);
+  background-color: var(--christmas-lights-bulb-1);
+  margin-left: -24rem;
+  margin-top: -1.2rem;
+}
+
+.christmas-lights .bulb.bulb-1 .light {
+  -webkit-animation-delay: 0.2s;
+  animation-delay: 0.2s;
+}
+
+.christmas-lights .bulb.bulb-2 {
+  transform: rotate(6deg);
+  background-color: var(--christmas-lights-bulb-2);
+  margin-left: -12rem;
+  margin-top: 0.35rem;
+}
+
+.christmas-lights .bulb.bulb-2 .light {
+  -webkit-animation-delay: 0.6s;
+  animation-delay: 0.6s;
+}
+
+.christmas-lights .bulb.bulb-3 {
+  background-color: var(--christmas-lights-bulb-3);
+}
+
+.christmas-lights .bulb.bulb-4 {
+  transform: rotate(-6deg);
+  background-color: var(--christmas-lights-bulb-4);
+  margin-left: 12rem;
+  margin-top: 0.35rem;
+  -webkit-animation: broken-bulb-animation 1s infinite;
+  animation: broken-bulb-animation 1s infinite;
+  -webkit-animation-delay: 0.3s;
+  animation-delay: 0.3s;
+}
+
+.christmas-lights .bulb.bulb-4 .light {
+  -webkit-animation: broken-bulb-flicker-animation 1s infinite;
+  animation: broken-bulb-flicker-animation 1s infinite;
+  -webkit-animation-delay: 0.3s;
+  animation-delay: 0.3s;
+}
+
+.christmas-lights .bulb.bulb-5 {
+  transform: rotate(-12deg);
+  background-color: var(--christmas-lights-bulb-5);
+  margin-left: 24rem;
+  margin-top: -1.2rem;
+}
+
+.christmas-lights .bulb.bulb-5 .light {
+  -webkit-animation-delay: 0.2s;
+  animation-delay: 0.2s;
+}
+
+@-webkit-keyframes bulb-flicker-animation {
+  0% {
+    opacity: 0.1;
+  }
+  20% {
+    opacity: 0.09;
+  }
+  30% {
+    opacity: 0.1;
+  }
+  40% {
+    opacity: 0.08;
+  }
+  50% {
+    opacity: 0.1;
+  }
+  60% {
+    opacity: 0.11;
+  }
+  70% {
+    opacity: 0.11;
+  }
+  80% {
+    opacity: 0.09;
+  }
+  90% {
+    opacity: 0.12;
+  }
+  100% {
+    opacity: 0.1;
+  }
+}
+
+@keyframes bulb-flicker-animation {
+  0% {
+    opacity: 0.1;
+  }
+  20% {
+    opacity: 0.09;
+  }
+  30% {
+    opacity: 0.1;
+  }
+  40% {
+    opacity: 0.08;
+  }
+  50% {
+    opacity: 0.1;
+  }
+  60% {
+    opacity: 0.11;
+  }
+  70% {
+    opacity: 0.11;
+  }
+  80% {
+    opacity: 0.09;
+  }
+  90% {
+    opacity: 0.12;
+  }
+  100% {
+    opacity: 0.1;
+  }
+}
+
+@-webkit-keyframes broken-bulb-animation {
+  0% {
+    opacity: 1;
+  }
+  20% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 0.4;
+  }
+  40% {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  60% {
+    opacity: 1;
+  }
+}
+
+@keyframes broken-bulb-animation {
+  0% {
+    opacity: 1;
+  }
+  20% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 0.4;
+  }
+  40% {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  60% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes broken-bulb-flicker-animation {
+  0% {
+    opacity: 0.1;
+  }
+  20% {
+    opacity: 0.09;
+  }
+  30% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.02;
+  }
+  50% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 0.11;
+  }
+  70% {
+    opacity: 0.11;
+  }
+  80% {
+    opacity: 0.09;
+  }
+  90% {
+    opacity: 0.12;
+  }
+  100% {
+    opacity: 0.1;
+  }
+}
+
+@keyframes broken-bulb-flicker-animation {
+  0% {
+    opacity: 0.1;
+  }
+  20% {
+    opacity: 0.09;
+  }
+  30% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.02;
+  }
+  50% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 0.11;
+  }
+  70% {
+    opacity: 0.11;
+  }
+  80% {
+    opacity: 0.09;
+  }
+  90% {
+    opacity: 0.12;
+  }
+  100% {
+    opacity: 0.1;
+  }
+}
