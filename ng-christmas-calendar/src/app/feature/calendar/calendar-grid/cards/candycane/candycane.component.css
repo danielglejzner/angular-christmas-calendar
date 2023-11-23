@@ -1,0 +1,79 @@
+.candycane-container {
+  --candycane-background: #1a535c;
+  --candycane-red: #ff0054;
+  --candycane-white: #ffffff;
+
+  background-color: var(--candycane-background);
+  margin: 0;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.candycane {
+  display: block;
+  position: relative;
+  width: 6rem;
+  height: 12rem;
+  background: repeating-linear-gradient(
+    40deg,
+    var(--candycane-white),
+    var(--candycane-white) 1rem,
+    var(--candycane-red) 1.1rem,
+    var(--candycane-red) 2rem,
+    var(--candycane-white) 2.1rem
+  );
+  border-radius: 3rem 3rem 0 0;
+  transform: scale(0.35) translateY(-7rem) translateX(0rem);
+}
+
+@media only screen and (min-width: 576px) {
+  .candycane {
+    transform: scale(0.5) translateY(-3rem) translateX(2rem);
+  }
+}
+
+.candycane::before {
+  content: "";
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  width: 2rem;
+  height: 3rem;
+  background-color: var(--candycane-background);
+  border-radius: 1rem 1rem 0 0;
+}
+
+.candycane::after {
+  content: "";
+  position: absolute;
+  top: 5rem;
+  left: 0;
+  width: 4rem;
+  height: 7rem;
+  background-color: var(--candycane-background);
+}
+
+.candycane .candycane__end {
+  position: absolute;
+  width: 2rem;
+  height: 1rem;
+  background: yellow;
+  overflow: hidden;
+  background: radial-gradient(
+    circle at 50% 0%,
+    transparent 69%,
+    var(--candycane-background) 70%
+  );
+  background-size: 100% 100%;
+}
+
+.candycane .candycane__end--top {
+  left: 0;
+  top: 4rem;
+}
+
+.candycane .candycane__end--bottom {
+  left: 4rem;
+  top: 11rem;
+}
