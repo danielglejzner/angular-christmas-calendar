@@ -1,0 +1,177 @@
+.snowman-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at center, #ffcdb2 40%, #f08080 100%);
+  margin: 0;
+}
+
+.snowman {
+  --snowman: #ffffff;
+  --snowman-button: #03071e;
+  --snowman-nose: #f72585;
+  --snowman-arm: #6d597a;
+
+  font-family: "Verdana", sans-serif;
+  width: 10rem;
+  height: 21rem;
+  position: relative;
+  transform: scale(0.32) translateX(-2rem) translateY(-23rem);
+}
+
+@media only screen and (min-width: 576px) {
+  .snowman {
+    transform: scale(0.38) translateX(-1rem) translateY(-16.3rem);
+  }
+}
+
+.snowman .snowman__leg {
+  color: var(--snowman);
+  font-size: 12rem;
+  position: absolute;
+  bottom: -1rem;
+  left: 0.8rem;
+  line-height: 11rem;
+  transform: rotate(75deg);
+  text-shadow: 1px -1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.snowman .snowman__stomach {
+  color: var(--snowman);
+  font-size: 8rem;
+  position: absolute;
+  bottom: 7.4rem;
+  left: 1.5rem;
+  line-height: 7rem;
+  transform: rotate(-85deg);
+  text-shadow: -1px -1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.snowman .snowman__head {
+  color: var(--snowman);
+  font-size: 6rem;
+  position: absolute;
+  bottom: 11.7rem;
+  left: 2.5rem;
+  transform: rotate(-95deg);
+  text-shadow: -1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.snowman .snowman__button {
+  color: var(--snowman-button);
+  font-weight: 900;
+  position: absolute;
+}
+
+.snowman .snowman__button-1 {
+  font-size: 1.2rem;
+  bottom: 4.3rem;
+  left: 4.5rem;
+  transform: rotate(-60deg);
+  text-shadow: -2px 1px 4px;
+}
+
+.snowman .snowman__button-2 {
+  font-size: 1.2rem;
+  bottom: 6.6rem;
+  left: 4.6rem;
+  transform: rotate(120deg);
+  text-shadow: -2px -2px 4px;
+}
+
+.snowman .snowman__button-3 {
+  font-size: 1.1rem;
+  bottom: 9rem;
+  left: 4.6rem;
+  transform: rotate(120deg);
+  text-shadow: 1px -2px 4px;
+}
+
+.snowman .snowman__button-4 {
+  font-size: 1rem;
+  bottom: 11rem;
+  left: 4.5rem;
+  transform: rotate(120deg);
+  text-shadow: 1px -2px 4px;
+}
+
+.snowman .snowman__nose {
+  position: absolute;
+  color: var(--snowman-nose);
+  left: 4rem;
+  bottom: 13.3rem;
+  font-size: 1.6rem;
+  transform: rotate(20deg) scaleX(1) scaleY(2);
+  text-shadow: 1px 1px 2px;
+}
+
+.snowman .snowman__left-eye {
+  position: absolute;
+  left: 3.6rem;
+  bottom: 15.2rem;
+  font-weight: 900;
+  color: var(--snowman-button);
+  font-size: 0.8rem;
+  text-shadow: 1px 1px 2px;
+}
+
+.snowman .snowman__right-eye {
+  position: absolute;
+  left: 5.4rem;
+  bottom: 15.3rem;
+  font-weight: 900;
+  color: var(--snowman-button);
+  font-size: 0.8rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  transform: rotate(20deg);
+}
+
+.snowman .snowman__left-arm {
+  position: absolute;
+  font-size: 3rem;
+  bottom: 8.5rem;
+  left: -0.7rem;
+  color: var(--snowman-arm);
+  transform: rotate(-120deg) scaleY(2);
+}
+
+.snowman .snowman__right-arm {
+  position: absolute;
+  font-size: 3rem;
+  bottom: 8rem;
+  left: 8.5rem;
+  color: var(--snowman-arm);
+  transform: rotate(120deg) scaleY(2);
+}
+
+.snowman .snowman__hat {
+  position: absolute;
+  font-weight: 900;
+  color: var(--snowman-button);
+  bottom: 16.6rem;
+  left: 2.4rem;
+  width: 5rem;
+  height: 4rem;
+  transform: rotate(10deg);
+}
+
+.snowman .snowman__hat--base {
+  position: absolute;
+  font-size: 3.5rem;
+  left: 1.5rem;
+}
+
+.snowman .snowman__hat--left {
+  position: absolute;
+  font-size: 2.4rem;
+  top: 1.5rem;
+  transform: rotate(-90deg);
+}
+
+.snowman .snowman__hat--right {
+  position: absolute;
+  font-size: 2.4rem;
+  left: 4.9rem;
+  top: 1.5rem;
+  transform: rotate(90deg);
+}
