@@ -9,6 +9,7 @@ import { SledgeComponent } from './sledge/sledge.component';
 import { SantaComponent } from './santa/santa.component';
 import { CandleComponent } from './candle/candle.component';
 import { CandycaneComponent } from './candycane/candycane.component';
+import { HotChocolateComponent } from './hot-chocolate/hot-chocolate.component';
 
 export const christmasCardsFactoryMap: Record<ChristmasCardType, Type<ChristmasCard>> = {
   [ChristmasCardType.GingerbreadMan]: GingerbreadManCardComponent,
@@ -19,7 +20,7 @@ export const christmasCardsFactoryMap: Record<ChristmasCardType, Type<ChristmasC
   [ChristmasCardType.Santa]: SantaComponent,
   [ChristmasCardType.Candle]: CandleComponent,
   [ChristmasCardType.Candycane]: CandycaneComponent,
-  [ChristmasCardType.HotChocolate]: NotImplementedComponent,
+  [ChristmasCardType.HotChocolate]: HotChocolateComponent,
   [ChristmasCardType.Snowman]: NotImplementedComponent,
   [ChristmasCardType.ChristmasLights]: NotImplementedComponent,
   [ChristmasCardType.PolarBear]: NotImplementedComponent,
