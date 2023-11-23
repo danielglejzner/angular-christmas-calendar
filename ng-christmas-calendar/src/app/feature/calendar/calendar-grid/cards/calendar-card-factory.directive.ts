@@ -16,6 +16,7 @@ import { PolarBearComponent } from './polar-bear/polar-bear.component';
 import { ElfHatComponent } from './elf-hat/elf-hat.component';
 import { OrnamentsComponent } from './ornaments/ornaments.component';
 import { NorthPoleComponent } from './north-pole/north-pole.component';
+import { SkateComponent } from './skate/skate.component';
 
 export const christmasCardsFactoryMap: Record<ChristmasCardType, Type<ChristmasCard>> = {
   [ChristmasCardType.GingerbreadMan]: GingerbreadManCardComponent,
@@ -33,7 +34,7 @@ export const christmasCardsFactoryMap: Record<ChristmasCardType, Type<ChristmasC
   [ChristmasCardType.ElfHat]: ElfHatComponent,
   [ChristmasCardType.Ornaments]: OrnamentsComponent,
   [ChristmasCardType.NorthPole]: NorthPoleComponent,
-  [ChristmasCardType.Skate]: NotImplementedComponent,
+  [ChristmasCardType.Skate]: SkateComponent,
   [ChristmasCardType.ShootingStar]: NotImplementedComponent,
   [ChristmasCardType.Drum]: NotImplementedComponent,
   [ChristmasCardType.Sparkler]: NotImplementedComponent,
