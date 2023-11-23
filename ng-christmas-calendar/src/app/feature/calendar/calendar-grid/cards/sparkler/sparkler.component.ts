@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { ChristmasCard, ChristmasCardType } from '../christmas-card';
 
 @Component({
   selector: 'app-sparkler',
   standalone: true,
-  imports: [CommonModule],
+  imports: [],
   templateUrl: './sparkler.component.html',
   styleUrl: './sparkler.component.css'
 })
-export class SparklerComponent {
-
+export class SparklerComponent implements ChristmasCard {
+  readonly type = ChristmasCardType.Sparkler;
 }
