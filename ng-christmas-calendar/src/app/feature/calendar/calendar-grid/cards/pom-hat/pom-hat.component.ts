@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { ChristmasCard, ChristmasCardType } from '../christmas-card';
 
 @Component({
   selector: 'app-pom-hat',
   standalone: true,
-  imports: [CommonModule],
+  imports: [],
   templateUrl: './pom-hat.component.html',
   styleUrl: './pom-hat.component.css'
 })
-export class PomHatComponent {
-
+export class PomHatComponent implements ChristmasCard{
+  readonly type = ChristmasCardType.PomHat;
 }
