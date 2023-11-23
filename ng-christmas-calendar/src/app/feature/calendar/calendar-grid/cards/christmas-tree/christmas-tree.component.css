@@ -1,0 +1,230 @@
+/**
+ * Day 24 - 3D CSS Christmas tree
+ * https://codepen.io/johnnyfekete/pen/YzGEMKx
+ */
+.christmas-tree-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #454545;
+  min-height: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+.christmas-tree-container {
+  --christmas-tree-green-1: #047a07;
+  --christmas-tree-green-2: #0b6e4f;
+  --christmas-tree-green-3: #08a045;
+  --christmas-tree-green-4: #073b3a;
+  --christmas-tree-ornament-1: #ffba08;
+  --christmas-tree-ornament-2: #4cc9f0;
+  --christmas-tree-ornament-3: #ffffff;
+  --christmas-tree-ornament-4: #f72585;
+
+  perspective: 400px;
+  position: relative;
+  width: 340px;
+  height: 360px;
+  transform: translateX(0px) translateY(-110px) scale(0.28);
+}
+
+@media only screen and (min-width: 576px) {
+  .christmas-tree-container {
+    transform: scale(0.7);
+  }
+}
+
+.christmas-tree-container .glow {
+  position: absolute;
+  top: -60px;
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(circle at center, white, transparent 50px);
+  -webkit-animation: christmas-tree-glow 5s infinite linear;
+  animation: christmas-tree-glow 5s infinite linear;
+}
+
+.christmas-tree-container .shadow {
+  position: absolute;
+  top: 225px;
+  left: -20px;
+  width: 140px;
+  height: 70px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+@media only screen and (min-width: 576px) {
+  .christmas-tree-container .glow {
+    left: 100px;
+  }
+
+  .christmas-tree-container .shadow {
+    left: 80px;
+  }
+}
+
+.christmas-tree {
+  position: relative;
+  margin-top: 240px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  transform-style: preserve-3d;
+  -webkit-animation: christmas-tree-rotate-mobile 10s infinite linear;
+  animation: christmas-tree-rotate-mobile 10s infinite linear;
+}
+
+@media only screen and (min-width: 576px) {
+  .christmas-tree {
+    -webkit-animation: christmas-tree-rotate 10s infinite linear;
+    animation: christmas-tree-rotate 10s infinite linear;
+  }
+}
+
+.christmas-tree .branches,
+.christmas-tree .ct-ornaments,
+.christmas-tree .tree-top {
+  transform-style: preserve-3d;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.christmas-tree .branch {
+  position: absolute;
+  border-radius: 5px;
+  background-color: var(--christmas-tree-green-1);
+  transform-origin: center center;
+}
+
+.christmas-tree .branch:nth-child(3n + 2) {
+  background-color: var(--christmas-tree-green-2);
+}
+.christmas-tree .branch:nth-child(3n + 1) {
+  background-color: var(--christmas-tree-green-3);
+}
+.christmas-tree .branch:nth-child(4n + 2) {
+  background-color: var(--christmas-tree-green-4);
+}
+
+.christmas-tree .ct-ornament {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--christmas-tree-ornament-1);
+  transform-origin: center center;
+  transform-style: preserve-3d;
+}
+
+.christmas-tree .ct-ornament:nth-child(4n + 0) {
+  background-color: var(--christmas-tree-ornament-2);
+}
+.christmas-tree .ct-ornament:nth-child(4n + 1) {
+  background-color: var(--christmas-tree-ornament-3);
+}
+.christmas-tree .ct-ornament:nth-child(4n + 2) {
+  background-color: var(--christmas-tree-ornament-4);
+}
+
+.christmas-tree .star {
+  transform-style: preserve-3d;
+  transform: translateZ(225px) translateY(-4px) rotateX(-90deg);
+}
+
+.christmas-tree .star,
+.christmas-tree .star:before,
+.christmas-tree .star:after {
+  position: absolute;
+  content: "";
+  height: 0;
+  width: 0;
+  border-top: solid 10px yellow;
+  border-left: solid 15px transparent;
+  border-right: solid 15px transparent;
+  position: absolute;
+  top: 0;
+  left: calc(50% - 15px);
+}
+
+.christmas-tree .star:before {
+  transform: rotate(72deg);
+  top: -11px;
+  left: -15px;
+}
+
+.christmas-tree .star:after {
+  transform: rotate(287deg);
+  top: -11px;
+  left: -15px;
+}
+
+@-webkit-keyframes christmas-tree-rotate {
+  0% {
+    transform: translateX(100px) rotateX(60deg) rotateZ(0);
+  }
+  99.99999% {
+    transform: translateX(100px) rotateX(60deg) rotateZ(360deg);
+  }
+}
+
+@keyframes christmas-tree-rotate {
+  0% {
+    transform: translateX(100px) rotateX(60deg) rotateZ(0);
+  }
+  99.99999% {
+    transform: translateX(100px) rotateX(60deg) rotateZ(360deg);
+  }
+}
+
+@-webkit-keyframes christmas-tree-rotate-mobile {
+  0% {
+    transform: rotateX(60deg) rotateZ(0);
+  }
+  99.99999% {
+    transform: rotateX(60deg) rotateZ(360deg);
+  }
+}
+
+@keyframes christmas-tree-rotate-mobile {
+  0% {
+    transform: rotateX(60deg) rotateZ(0);
+  }
+  99.99999% {
+    transform: rotateX(60deg) rotateZ(360deg);
+  }
+}
+
+@-webkit-keyframes christmas-tree-glow {
+  0% {
+    transform: scale(1.1);
+    opacity: 0.15;
+  }
+  50% {
+    transform: scale(0.7);
+    opacity: 0.25;
+  }
+  100% {
+    transform: scale(1.1);
+    opacity: 0.15;
+  }
+}
+
+@keyframes christmas-tree-glow {
+  0% {
+    transform: scale(1.1);
+    opacity: 0.15;
+  }
+  50% {
+    transform: scale(0.7);
+    opacity: 0.25;
+  }
+  100% {
+    transform: scale(1.1);
+    opacity: 0.15;
+  }
+}

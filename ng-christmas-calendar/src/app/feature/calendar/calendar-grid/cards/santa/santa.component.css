@@ -1,0 +1,368 @@
+/**
+ * Day 6 - Santa
+ * https://codepen.io/johnnyfekete/pen/oNzxMPW
+ */
+.santa-container {
+  display: flex;
+  background: repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 1rem,
+      rgba(154, 140, 152, 0.3) 1rem,
+      rgba(154, 140, 152, 0.3) 2rem
+    ),
+    repeating-linear-gradient(
+      -45deg,
+      transparent,
+      transparent 1rem,
+      rgba(154, 140, 152, 0.3) 1rem,
+      rgba(154, 140, 152, 0.3) 2rem
+    ),
+    linear-gradient(to bottom, #f2e9e4, #f2e9e4);
+  align-items: center;
+  justify-content: center;
+}
+
+.santa {
+  --santa-face: #f9dcc4;
+  --santa-beard: #ffffff;
+  --santa-moustache: #e0e0e0;
+  --santa-nose: #ffb5a7;
+  --santa-hat: #e63946;
+  --santa-border: #03071e;
+
+  width: 14rem;
+  height: 16rem;
+  position: relative;
+
+  filter: drop-shadow(6px 6px 0 rgba(0, 0, 0, 0.3));
+
+  transform: scale(0.33) translateY(-13rem) translateX(-3rem);
+}
+
+@media only screen and (min-width: 576px) {
+  .santa {
+    transform: scale(0.4) translateY(-8rem) translateX(-2rem);
+  }
+}
+
+.santa .santa-head {
+  position: absolute;
+  top: 4rem;
+  left: 1rem;
+  width: 12rem;
+  height: 12rem;
+  filter: drop-shadow(2px 2px 0 var(--santa-border))
+    drop-shadow(-2px 2px 0 var(--santa-border))
+    drop-shadow(2px -2px 0 var(--santa-border))
+    drop-shadow(-2px -2px 0 var(--santa-border));
+}
+
+.santa .santa-beard {
+  position: absolute;
+  left: 5rem;
+  width: 2rem;
+  height: 12rem;
+  background-color: var(--santa-beard);
+  border-radius: 1rem;
+  transform-origin: center center;
+  height: 12rem;
+}
+
+.santa .santa-beard:nth-child(2) {
+  transform: rotate(15deg);
+}
+.santa .santa-beard:nth-child(3) {
+  transform: rotate(30deg);
+}
+.santa .santa-beard:nth-child(4) {
+  transform: rotate(45deg);
+}
+.santa .santa-beard:nth-child(5) {
+  transform: rotate(60deg);
+}
+.santa .santa-beard:nth-child(6) {
+  transform: rotate(75deg);
+}
+.santa .santa-beard:nth-child(7) {
+  transform: rotate(90deg);
+}
+.santa .santa-beard:nth-child(8) {
+  transform: rotate(105deg);
+}
+.santa .santa-beard:nth-child(9) {
+  transform: rotate(120deg);
+}
+.santa .santa-beard:nth-child(10) {
+  transform: rotate(135deg);
+}
+.santa .santa-beard:nth-child(11) {
+  transform: rotate(150deg);
+}
+.santa .santa-beard:nth-child(12) {
+  transform: rotate(165deg);
+}
+
+.santa .santa-face {
+  position: absolute;
+  left: 2rem;
+  top: 3rem;
+  width: 8rem;
+  height: 3rem;
+  overflow: hidden;
+}
+
+.santa .santa-face::before {
+  display: block;
+  content: "";
+  position: relative;
+  box-sizing: border-box;
+  z-index: 1;
+  top: -2rem;
+  width: 8rem;
+  height: 8rem;
+  background-color: var(--santa-face);
+  border-radius: 50%;
+  border: 2px solid var(--santa-border);
+}
+
+.santa .santa-moustache {
+  position: absolute;
+  z-index: 3;
+  top: 5rem;
+  width: 2rem;
+  height: 2rem;
+  background-color: var(--santa-moustache);
+  border-radius: 50%;
+  border: 2px solid var(--santa-border);
+}
+
+.santa .santa-moustache::after {
+  display: block;
+  content: "";
+  position: absolute;
+  left: -2rem;
+  width: 3rem;
+  height: 2rem;
+  background: radial-gradient(
+    farthest-side,
+    transparent 33.3%,
+    var(--santa-border) 33.3%,
+    var(--santa-border) 37%,
+    var(--santa-moustache) 38%
+  );
+  background-position: -3rem -2rem;
+  background-size: 300% 200%;
+  border-radius: 0 100% 0 100%;
+  border-bottom: 2px solid var(--santa-border);
+}
+
+.santa .santa-moustache--left {
+  left: 4rem;
+  transform: rotate(-10deg) translateX(-0.4rem) translateY(-0.2rem);
+}
+
+.santa .santa-moustache--right {
+  left: 6rem;
+  transform: scaleX(-1) rotate(-10deg) translateX(-0.1rem) translateY(-0.2rem);
+}
+
+.santa .santa-nose {
+  position: absolute;
+  z-index: 3;
+  left: calc(50% - 0.9rem);
+  top: 4.5rem;
+  width: 1.8rem;
+  height: 1.4rem;
+  border-radius: 50%;
+  border: 2px solid var(--santa-border);
+  box-sizing: border-box;
+  background-color: var(--santa-nose);
+}
+
+.santa .santa-eye {
+  position: absolute;
+  z-index: 4;
+  top: 3.2rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  background-color: var(--santa-border);
+}
+
+.santa .santa-eye::before {
+  position: absolute;
+  display: block;
+  content: "";
+  top: 0.8rem;
+  left: 0.3rem;
+  width: 0.3rem;
+  height: 0.3rem;
+  border-radius: 50%;
+  background-color: var(--santa-beard);
+}
+
+.santa .santa-eye::after {
+  position: absolute;
+  display: block;
+  content: "";
+  top: 0.2rem;
+  left: 0.5rem;
+  width: 0.6rem;
+  height: 0.6rem;
+  border-radius: 50%;
+  background-color: var(--santa-beard);
+}
+
+.santa .santa-eye--left {
+  left: 4rem;
+}
+
+.santa .santa-eye--right {
+  left: 6.4rem;
+}
+
+.santa .santa-hat {
+  position: absolute;
+  top: -2rem;
+  left: -1rem;
+  width: 12rem;
+  height: 6rem;
+}
+
+.santa .santa-hat-background {
+  position: absolute;
+  width: 12rem;
+  height: 6rem;
+  border-radius: 6rem 6rem 0 0;
+  background: radial-gradient(
+    circle at 20% 100%,
+    transparent 14%,
+    var(--santa-hat) 14%
+  );
+  filter: drop-shadow(1px 1px 0 var(--santa-border))
+    drop-shadow(-1px 1px 0 var(--santa-border))
+    drop-shadow(1px -1px 0 var(--santa-border))
+    drop-shadow(-1px -1px 0 var(--santa-border));
+}
+
+.santa .santa-hat-front {
+  position: absolute;
+  top: 5.8rem;
+  left: 3rem;
+  width: 10rem;
+  height: 3rem;
+  filter: drop-shadow(1px 1px 0 var(--santa-border))
+    drop-shadow(-1px 1px 0 var(--santa-border))
+    drop-shadow(1px -1px 0 var(--santa-border))
+    drop-shadow(-1px -1px 0 var(--santa-border));
+}
+
+.santa .santa-hat-front-bg {
+  position: absolute;
+  width: 0.666rem;
+  height: 3rem;
+  border-radius: 0.333rem 0.333rem 0 0;
+  background: var(--santa-moustache);
+}
+
+.santa .santa-hat-front-bg:nth-child(1) {
+  left: 0.666rem;
+}
+.santa .santa-hat-front-bg:nth-child(2) {
+  left: 1.333rem;
+}
+.santa .santa-hat-front-bg:nth-child(3) {
+  left: 2rem;
+}
+.santa .santa-hat-front-bg:nth-child(4) {
+  left: 2.666rem;
+}
+.santa .santa-hat-front-bg:nth-child(5) {
+  left: 3.333rem;
+}
+.santa .santa-hat-front-bg:nth-child(6) {
+  left: 4rem;
+}
+.santa .santa-hat-front-bg:nth-child(7) {
+  left: 4.666rem;
+}
+.santa .santa-hat-front-bg:nth-child(8) {
+  left: 5.333rem;
+}
+.santa .santa-hat-front-bg:nth-child(9) {
+  left: 6rem;
+}
+.santa .santa-hat-front-bg:nth-child(10) {
+  left: 6.666rem;
+}
+.santa .santa-hat-front-bg:nth-child(11) {
+  left: 7.333rem;
+}
+.santa .santa-hat-front-bg:nth-child(12) {
+  left: 8rem;
+}
+.santa .santa-hat-front-bg:nth-child(13) {
+  left: 8.666rem;
+}
+.santa .santa-hat-front-bg:nth-child(14) {
+  left: 9.333rem;
+}
+
+.santa .santa-hat-front-side {
+  position: absolute;
+  left: -0.333rem;
+  width: 10.666rem;
+  height: 1rem;
+  border-radius: 0.5rem;
+  background: var(--santa-moustache);
+}
+
+.santa .santa-hat-front-side:nth-child(1) {
+  top: 0.333rem;
+}
+.santa .santa-hat-front-side:nth-child(2) {
+  top: 0.999rem;
+}
+.santa .santa-hat-front-side:nth-child(3) {
+  top: 1.555rem;
+}
+.santa .santa-hat-front-side:nth-child(4) {
+  top: 2.111rem;
+}
+
+.santa .santa-hat-pompom {
+  position: absolute;
+  top: 5.2rem;
+  width: 2rem;
+  height: 2rem;
+  filter: drop-shadow(1px 1px 0 var(--santa-border))
+    drop-shadow(-1px 1px 0 var(--santa-border))
+    drop-shadow(1px -1px 0 var(--santa-border))
+    drop-shadow(-1px -1px 0 var(--santa-border));
+}
+
+.santa .santa-hat-pompom-bg {
+  position: absolute;
+  width: 0.5rem;
+  height: 2rem;
+  background-color: var(--santa-beard);
+  border-radius: 0.25rem;
+  transform-origin: center center;
+}
+
+.santa .santa-hat-pompom-bg:nth-child(2) {
+  transform: rotate(30deg);
+}
+.santa .santa-hat-pompom-bg:nth-child(3) {
+  transform: rotate(60deg);
+}
+.santa .santa-hat-pompom-bg:nth-child(4) {
+  transform: rotate(90deg);
+}
+.santa .santa-hat-pompom-bg:nth-child(5) {
+  transform: rotate(120deg);
+}
+.santa .santa-hat-pompom-bg:nth-child(6) {
+  transform: rotate(150deg);
+}

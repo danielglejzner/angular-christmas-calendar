@@ -1,0 +1,1549 @@
+/**
+ * Day 7 - candle with a flame
+ * https://codepen.io/johnnyfekete/pen/ExgyPrb
+ */
+.candle-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  background: #000000;
+}
+
+.candle {
+  --candle-light: #e8eddf;
+  --candle-dark: #e8c2ca;
+  --candle-top: #d1b3c4;
+  --candle-bottom: #b76935;
+  --candle-string: #343434;
+  --candle-flame: #ff9900;
+
+  position: relative;
+  width: 6rem;
+  height: 12rem;
+  transform: scale(0.35) translateY(-6rem);
+}
+
+@media only screen and (min-width: 576px) {
+  .candle {
+    transform: scale(0.45) translateY(-2rem);
+  }
+}
+
+.candle .candle__body {
+  width: 3rem;
+  height: 8rem;
+  position: absolute;
+  z-index: 2;
+  left: 1.5rem;
+  bottom: 2rem;
+  background: linear-gradient(
+    to right,
+    var(--candle-light) 0,
+    var(--candle-dark) 100%
+  );
+}
+
+.candle .candle__body::before {
+  display: block;
+  content: "";
+  position: absolute;
+  top: -1rem;
+  width: 3rem;
+  height: 2rem;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at 50% 0,
+    var(--candle-light) 0,
+    var(--candle-top) 100%
+  );
+}
+
+.candle .candle__body::after {
+  display: block;
+  content: "";
+  position: absolute;
+  bottom: -1rem;
+  width: 3rem;
+  height: 2rem;
+  border-radius: 50%;
+  background: linear-gradient(
+    to right,
+    var(--candle-light) 0,
+    var(--candle-dark) 100%
+  );
+}
+
+.candle .candle__wax-1 {
+  position: absolute;
+  z-index: 3;
+  top: 3.5rem;
+  left: 3rem;
+  transform: scaleY(2);
+}
+
+.candle .candle__wax-2 {
+  position: absolute;
+  z-index: 1;
+  top: 3rem;
+  left: 4rem;
+  transform: scaleY(2.5);
+}
+
+.candle .candle__wax-3 {
+  position: absolute;
+  z-index: 3;
+  top: 2.8rem;
+  left: 1rem;
+  transform: scaleX(0.5);
+}
+
+.candle .candle__wax-1::after,
+.candle .candle__wax-2::after,
+.candle .candle__wax-3::after {
+  content: "";
+  display: block;
+  width: 1rem;
+  height: 1rem;
+  background-color: var(--candle-top);
+  border-radius: 0 0.5rem 0.5rem 0.5rem;
+  transform: rotate(45deg);
+}
+
+.candle .candle__bottom {
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  left: 0;
+  width: 6rem;
+  height: 3rem;
+  background-color: var(--candle-bottom);
+  border-radius: 50%;
+}
+
+.candle-string {
+  width: 0.2rem;
+  height: 0.8rem;
+  background-color: var(--candle-string);
+  position: absolute;
+  border-radius: 1rem;
+  transform: rotate(5deg);
+  top: 1.2rem;
+  left: 3rem;
+  z-index: 5;
+}
+
+.candle .candle__light {
+  position: absolute;
+  z-index: 4;
+  top: -2rem;
+  left: 1rem;
+  width: 4rem;
+  height: 4rem;
+  margin-top: 120px;
+  transform: translate(-66px, -250px) scale(0.33);
+  mix-blend-mode: screen;
+}
+
+.candle .candle__flame {
+  position: relative;
+  width: 500px;
+  height: 500px;
+  background: var(--candle-flame);
+  filter: blur(20px) contrast(10);
+  mix-blend-mode: screen;
+  border: 250px solid #000;
+  border-bottom-color: transparent;
+  border-radius: 40%;
+  box-sizing: border-box;
+  transform: scale(0.4, 1);
+}
+
+.candle .candle__flame-burn {
+  position: absolute;
+  top: 500px;
+  left: 50px;
+  width: 100px;
+  height: 100px;
+  background: black;
+  border-radius: 100%;
+  filter: blur(1em);
+}
+
+.candle .candle__flame-burn.burn-a:nth-child(0) {
+  height: 8px;
+}
+
+.candle .candle__flame-burn.burn-a:nth-child(1) {
+  height: 4px;
+}
+
+.candle .candle__flame-burn.burn-a:nth-child(2) {
+  height: 5px;
+}
+
+.candle .candle__flame-burn.burn-a:nth-child(3) {
+  height: 4px;
+}
+
+.candle .candle__flame-burn.burn-a:nth-child(4) {
+  height: 8px;
+}
+
+.candle .candle__flame-burn.burn-a:nth-child(5) {
+  height: 4px;
+}
+
+.candle .candle__flame-burn.burn-a:nth-child(6) {
+  height: 5px;
+}
+
+.candle .candle__flame-burn.burn-a:nth-child(7) {
+  height: 7px;
+}
+
+.candle .candle__flame-burn.burn-a:nth-child(8) {
+  height: 3px;
+}
+
+.candle .candle__flame-burn.burn-a:nth-child(9) {
+  height: 7px;
+}
+
+.candle .candle__flame-burn.burn-a:nth-child(10) {
+  height: 9px;
+}
+
+.candle .candle__flame-burn.burn-a:nth-child(11) {
+  height: 3px;
+}
+
+.candle .candle__flame-burn.burn-a:nth-child(12) {
+  height: 6px;
+}
+
+.candle .candle__flame-burn.burn-a:nth-child(13) {
+  height: 9px;
+}
+
+.candle .candle__flame-burn.burn-a:nth-child(14) {
+  height: 10px;
+}
+
+.candle .candle__flame-burn.burn-a:nth-child(15) {
+  height: 8px;
+}
+
+.candle .candle__flame-burn.burn-a:nth-child(16) {
+  height: 5px;
+}
+
+.candle .candle__flame-burn.burn-a:nth-child(17) {
+  height: 7px;
+}
+
+.candle .candle__flame-burn.burn-a:nth-child(18) {
+  height: 1px;
+}
+
+.candle .candle__flame-burn.burn-a:nth-child(19) {
+  height: 1px;
+}
+
+.candle .candle__flame-burn.burn-a:nth-child(20) {
+  height: 2px;
+}
+
+.candle .candle__flame-burn.burn-a:nth-child(21) {
+  height: 2px;
+}
+
+.candle .candle__flame-burn.burn-a:nth-child(22) {
+  height: 7px;
+}
+
+.candle .candle__flame-burn.burn-a:nth-child(23) {
+  height: 10px;
+}
+
+.candle .candle__flame-burn.burn-a:nth-child(24) {
+  height: 4px;
+}
+
+.candle .candle__flame-burn.burn-a:nth-child(25) {
+  height: 4px;
+}
+
+.candle .candle__flame-burn.burn-a:nth-child(26) {
+  height: 1px;
+}
+
+.candle .candle__flame-burn.burn-a:nth-child(27) {
+  height: 4px;
+}
+
+.candle .candle__flame-burn.burn-a:nth-child(28) {
+  height: 9px;
+}
+
+.candle .candle__flame-burn.burn-a:nth-child(29) {
+  height: 5px;
+}
+
+.candle .candle__flame-burn.burn-a:nth-child(30) {
+  height: 8px;
+}
+
+.candle .candle__flame-burn.burn-a:nth-child(31) {
+  height: 1px;
+}
+
+.candle .candle__flame-burn.burn-a:nth-child(32) {
+  height: 4px;
+}
+
+.candle .candle__flame-burn.burn-a:nth-child(33) {
+  height: 7px;
+}
+
+.candle .candle__flame-burn.burn-a:nth-child(34) {
+  height: 7px;
+}
+
+.candle .candle__flame-burn.burn-a:nth-child(35) {
+  height: 3px;
+}
+
+.candle .candle__flame-burn.burn-a:nth-child(36) {
+  height: 8px;
+}
+
+.candle .candle__flame-burn.burn-a:nth-child(37) {
+  height: 8px;
+}
+
+.candle .candle__flame-burn.burn-a:nth-child(38) {
+  height: 2px;
+}
+
+.candle .candle__flame-burn.burn-a:nth-child(39) {
+  height: 10px;
+}
+
+.candle .candle__flame-burn.burn-a:nth-child(40) {
+  height: 10px;
+}
+
+.candle .candle__flame-burn.burn-a:nth-child(41) {
+  height: 6px;
+}
+
+.candle .candle__flame-burn.burn-a:nth-child(42) {
+  height: 4px;
+}
+
+.candle .candle__flame-burn.burn-a:nth-child(43) {
+  height: 1px;
+}
+
+.candle .candle__flame-burn.burn-a:nth-child(44) {
+  height: 5px;
+}
+
+.candle .candle__flame-burn.burn-a:nth-child(45) {
+  height: 9px;
+}
+
+.candle .candle__flame-burn.burn-a:nth-child(46) {
+  height: 4px;
+}
+
+.candle .candle__flame-burn.burn-a:nth-child(47) {
+  height: 10px;
+}
+
+.candle .candle__flame-burn.burn-a:nth-child(48) {
+  height: 10px;
+}
+
+.candle .candle__flame-burn.burn-a:nth-child(49) {
+  height: 1px;
+}
+
+.candle .candle__flame-burn.burn-a:nth-child(50) {
+  height: 7px;
+}
+
+.candle .candle__flame-burn.burn-a:nth-child(51) {
+  height: 8px;
+}
+
+.candle .candle__flame-burn.burn-a:nth-child(52) {
+  height: 3px;
+}
+
+.candle .candle__flame-burn.burn-a:nth-child(53) {
+  height: 7px;
+}
+
+.candle .candle__flame-burn.burn-a:nth-child(54) {
+  height: 7px;
+}
+
+.candle .candle__flame-burn.burn-a:nth-child(55) {
+  height: 2px;
+}
+
+.candle .candle__flame-burn.burn-a:nth-child(56) {
+  height: 7px;
+}
+
+.candle .candle__flame-burn.burn-a:nth-child(57) {
+  height: 2px;
+}
+
+.candle .candle__flame-burn.burn-a:nth-child(58) {
+  height: 6px;
+}
+
+.candle .candle__flame-burn.burn-a:nth-child(59) {
+  height: 8px;
+}
+
+.candle .candle__flame-burn.burn-a:nth-child(60) {
+  height: 1px;
+}
+
+.candle .candle__flame-burn.burn-a:nth-child(61) {
+  height: 3px;
+}
+
+.candle .candle__flame-burn.burn-a:nth-child(62) {
+  height: 10px;
+}
+
+.candle .candle__flame-burn.burn-a:nth-child(63) {
+  height: 10px;
+}
+
+.candle .candle__flame-burn.burn-a:nth-child(64) {
+  height: 2px;
+}
+
+.candle .candle__flame-burn.burn-a:nth-child(65) {
+  height: 7px;
+}
+
+.candle .candle__flame-burn.burn-a:nth-child(66) {
+  height: 1px;
+}
+
+.candle .candle__flame-burn.burn-a:nth-child(67) {
+  height: 6px;
+}
+
+.candle .candle__flame-burn.burn-a:nth-child(68) {
+  height: 6px;
+}
+
+.candle .candle__flame-burn.burn-a:nth-child(69) {
+  height: 4px;
+}
+
+.candle .candle__flame-burn.burn-a:nth-child(70) {
+  height: 7px;
+}
+
+.candle .candle__flame-burn.burn-a:nth-child(71) {
+  height: 7px;
+}
+
+.candle .candle__flame-burn.burn-a:nth-child(72) {
+  height: 4px;
+}
+
+.candle .candle__flame-burn.burn-a:nth-child(73) {
+  height: 3px;
+}
+
+.candle .candle__flame-burn.burn-a:nth-child(74) {
+  height: 1px;
+}
+
+.candle .candle__flame-burn.burn-a:nth-child(75) {
+  height: 10px;
+}
+
+.candle .candle__flame-burn.burn-a:nth-child(76) {
+  height: 4px;
+}
+
+.candle .candle__flame-burn.burn-a:nth-child(77) {
+  height: 10px;
+}
+
+.candle .candle__flame-burn.burn-a:nth-child(78) {
+  height: 8px;
+}
+
+.candle .candle__flame-burn.burn-a:nth-child(79) {
+  height: 7px;
+}
+
+.candle .candle__flame-burn:nth-child(0) {
+  height: 30px;
+}
+
+.candle .candle__flame-burn:nth-child(1) {
+  height: 7px;
+}
+
+.candle .candle__flame-burn:nth-child(2) {
+  height: 34px;
+}
+
+.candle .candle__flame-burn:nth-child(3) {
+  height: 31px;
+}
+
+.candle .candle__flame-burn:nth-child(4) {
+  height: 18px;
+}
+
+.candle .candle__flame-burn:nth-child(5) {
+  height: 44px;
+}
+
+.candle .candle__flame-burn:nth-child(6) {
+  height: 33px;
+}
+
+.candle .candle__flame-burn:nth-child(7) {
+  height: 41px;
+}
+
+.candle .candle__flame-burn:nth-child(8) {
+  height: 7px;
+}
+
+.candle .candle__flame-burn:nth-child(9) {
+  height: 40px;
+}
+
+.candle .candle__flame-burn:nth-child(10) {
+  height: 38px;
+}
+
+.candle .candle__flame-burn:nth-child(11) {
+  height: 21px;
+}
+
+.candle .candle__flame-burn:nth-child(12) {
+  height: 24px;
+}
+
+.candle .candle__flame-burn:nth-child(13) {
+  height: 13px;
+}
+
+.candle .candle__flame-burn:nth-child(14) {
+  height: 3px;
+}
+
+.candle .candle__flame-burn:nth-child(15) {
+  height: 26px;
+}
+
+.candle .candle__flame-burn:nth-child(16) {
+  height: 22px;
+}
+
+.candle .candle__flame-burn:nth-child(17) {
+  height: 10px;
+}
+
+.candle .candle__flame-burn:nth-child(18) {
+  height: 11px;
+}
+
+.candle .candle__flame-burn:nth-child(19) {
+  height: 45px;
+}
+
+.candle .candle__flame-burn:nth-child(20) {
+  height: 29px;
+}
+
+.candle .candle__flame-burn:nth-child(21) {
+  height: 46px;
+}
+
+.candle .candle__flame-burn:nth-child(22) {
+  height: 1px;
+}
+
+.candle .candle__flame-burn:nth-child(23) {
+  height: 37px;
+}
+
+.candle .candle__flame-burn:nth-child(24) {
+  height: 24px;
+}
+
+.candle .candle__flame-burn:nth-child(25) {
+  height: 36px;
+}
+
+.candle .candle__flame-burn:nth-child(26) {
+  height: 39px;
+}
+
+.candle .candle__flame-burn:nth-child(27) {
+  height: 23px;
+}
+
+.candle .candle__flame-burn:nth-child(28) {
+  height: 16px;
+}
+
+.candle .candle__flame-burn:nth-child(29) {
+  height: 23px;
+}
+
+.candle .candle__flame-burn:nth-child(30) {
+  height: 13px;
+}
+
+.candle .candle__flame-burn:nth-child(31) {
+  height: 19px;
+}
+
+.candle .candle__flame-burn:nth-child(32) {
+  height: 21px;
+}
+
+.candle .candle__flame-burn:nth-child(33) {
+  height: 29px;
+}
+
+.candle .candle__flame-burn:nth-child(34) {
+  height: 4px;
+}
+
+.candle .candle__flame-burn:nth-child(35) {
+  height: 37px;
+}
+
+.candle .candle__flame-burn:nth-child(36) {
+  height: 9px;
+}
+
+.candle .candle__flame-burn:nth-child(37) {
+  height: 5px;
+}
+
+.candle .candle__flame-burn:nth-child(38) {
+  height: 2px;
+}
+
+.candle .candle__flame-burn:nth-child(39) {
+  height: 29px;
+}
+
+.candle .candle__flame-burn:nth-child(40) {
+  height: 41px;
+}
+
+.candle .candle__flame-burn:nth-child(41) {
+  height: 34px;
+}
+
+.candle .candle__flame-burn:nth-child(42) {
+  height: 37px;
+}
+
+.candle .candle__flame-burn:nth-child(43) {
+  height: 12px;
+}
+
+.candle .candle__flame-burn:nth-child(44) {
+  height: 19px;
+}
+
+.candle .candle__flame-burn:nth-child(45) {
+  height: 9px;
+}
+
+.candle .candle__flame-burn:nth-child(46) {
+  height: 38px;
+}
+
+.candle .candle__flame-burn:nth-child(47) {
+  height: 44px;
+}
+
+.candle .candle__flame-burn:nth-child(48) {
+  height: 11px;
+}
+
+.candle .candle__flame-burn:nth-child(49) {
+  height: 25px;
+}
+
+.candle .candle__flame-burn:nth-child(50) {
+  height: 41px;
+}
+
+.candle .candle__flame-burn:nth-child(51) {
+  height: 34px;
+}
+
+.candle .candle__flame-burn:nth-child(52) {
+  height: 20px;
+}
+
+.candle .candle__flame-burn:nth-child(53) {
+  height: 29px;
+}
+
+.candle .candle__flame-burn:nth-child(54) {
+  height: 47px;
+}
+
+.candle .candle__flame-burn:nth-child(55) {
+  height: 10px;
+}
+
+.candle .candle__flame-burn:nth-child(56) {
+  height: 3px;
+}
+
+.candle .candle__flame-burn:nth-child(57) {
+  height: 48px;
+}
+
+.candle .candle__flame-burn:nth-child(58) {
+  height: 10px;
+}
+
+.candle .candle__flame-burn:nth-child(59) {
+  height: 45px;
+}
+
+.candle .candle__flame-burn:nth-child(60) {
+  height: 8px;
+}
+
+.candle .candle__flame-burn:nth-child(61) {
+  height: 49px;
+}
+
+.candle .candle__flame-burn:nth-child(62) {
+  height: 32px;
+}
+
+.candle .candle__flame-burn:nth-child(63) {
+  height: 45px;
+}
+
+.candle .candle__flame-burn:nth-child(64) {
+  height: 17px;
+}
+
+.candle .candle__flame-burn:nth-child(65) {
+  height: 23px;
+}
+
+.candle .candle__flame-burn:nth-child(66) {
+  height: 12px;
+}
+
+.candle .candle__flame-burn:nth-child(67) {
+  height: 38px;
+}
+
+.candle .candle__flame-burn:nth-child(68) {
+  height: 9px;
+}
+
+.candle .candle__flame-burn:nth-child(69) {
+  height: 26px;
+}
+
+.candle .candle__flame-burn:nth-child(70) {
+  height: 11px;
+}
+
+.candle .candle__flame-burn:nth-child(71) {
+  height: 45px;
+}
+
+.candle .candle__flame-burn:nth-child(72) {
+  height: 30px;
+}
+
+.candle .candle__flame-burn:nth-child(73) {
+  height: 15px;
+}
+
+.candle .candle__flame-burn:nth-child(74) {
+  height: 7px;
+}
+
+.candle .candle__flame-burn:nth-child(75) {
+  height: 23px;
+}
+
+.candle .candle__flame-burn:nth-child(76) {
+  height: 25px;
+}
+
+.candle .candle__flame-burn:nth-child(77) {
+  height: 23px;
+}
+
+.candle .candle__flame-burn:nth-child(78) {
+  height: 31px;
+}
+
+.candle .candle__flame-burn:nth-child(79) {
+  height: 20px;
+}
+
+.candle .candle__flame-burn:nth-child(0) {
+  margin-left: -49px;
+}
+
+.candle .candle__flame-burn:nth-child(1) {
+  margin-left: -22px;
+}
+
+.candle .candle__flame-burn:nth-child(2) {
+  margin-left: -188px;
+}
+
+.candle .candle__flame-burn:nth-child(3) {
+  margin-left: -238px;
+}
+
+.candle .candle__flame-burn:nth-child(4) {
+  margin-left: 29px;
+}
+
+.candle .candle__flame-burn:nth-child(5) {
+  margin-left: -88px;
+}
+
+.candle .candle__flame-burn:nth-child(6) {
+  margin-left: -137px;
+}
+
+.candle .candle__flame-burn:nth-child(7) {
+  margin-left: -43px;
+}
+
+.candle .candle__flame-burn:nth-child(8) {
+  margin-left: -244px;
+}
+
+.candle .candle__flame-burn:nth-child(9) {
+  margin-left: -150px;
+}
+
+.candle .candle__flame-burn:nth-child(10) {
+  margin-left: 78px;
+}
+
+.candle .candle__flame-burn:nth-child(11) {
+  margin-left: 130px;
+}
+
+.candle .candle__flame-burn:nth-child(12) {
+  margin-left: 155px;
+}
+
+.candle .candle__flame-burn:nth-child(13) {
+  margin-left: -36px;
+}
+
+.candle .candle__flame-burn:nth-child(14) {
+  margin-left: 230px;
+}
+
+.candle .candle__flame-burn:nth-child(15) {
+  margin-left: 74px;
+}
+
+.candle .candle__flame-burn:nth-child(16) {
+  margin-left: 31px;
+}
+
+.candle .candle__flame-burn:nth-child(17) {
+  margin-left: -237px;
+}
+
+.candle .candle__flame-burn:nth-child(18) {
+  margin-left: 154px;
+}
+
+.candle .candle__flame-burn:nth-child(19) {
+  margin-left: -236px;
+}
+
+.candle .candle__flame-burn:nth-child(20) {
+  margin-left: -168px;
+}
+
+.candle .candle__flame-burn:nth-child(21) {
+  margin-left: -69px;
+}
+
+.candle .candle__flame-burn:nth-child(22) {
+  margin-left: 70px;
+}
+
+.candle .candle__flame-burn:nth-child(23) {
+  margin-left: 187px;
+}
+
+.candle .candle__flame-burn:nth-child(24) {
+  margin-left: -78px;
+}
+
+.candle .candle__flame-burn:nth-child(25) {
+  margin-left: -231px;
+}
+
+.candle .candle__flame-burn:nth-child(26) {
+  margin-left: -20px;
+}
+
+.candle .candle__flame-burn:nth-child(27) {
+  margin-left: -8px;
+}
+
+.candle .candle__flame-burn:nth-child(28) {
+  margin-left: -234px;
+}
+
+.candle .candle__flame-burn:nth-child(29) {
+  margin-left: -196px;
+}
+
+.candle .candle__flame-burn:nth-child(30) {
+  margin-left: 69px;
+}
+
+.candle .candle__flame-burn:nth-child(31) {
+  margin-left: 210px;
+}
+
+.candle .candle__flame-burn:nth-child(32) {
+  margin-left: -45px;
+}
+
+.candle .candle__flame-burn:nth-child(33) {
+  margin-left: 113px;
+}
+
+.candle .candle__flame-burn:nth-child(34) {
+  margin-left: -240px;
+}
+
+.candle .candle__flame-burn:nth-child(35) {
+  margin-left: -156px;
+}
+
+.candle .candle__flame-burn:nth-child(36) {
+  margin-left: 22px;
+}
+
+.candle .candle__flame-burn:nth-child(37) {
+  margin-left: 192px;
+}
+
+.candle .candle__flame-burn:nth-child(38) {
+  margin-left: -148px;
+}
+
+.candle .candle__flame-burn:nth-child(39) {
+  margin-left: 7px;
+}
+
+.candle .candle__flame-burn:nth-child(40) {
+  margin-left: 92px;
+}
+
+.candle .candle__flame-burn:nth-child(41) {
+  margin-left: -107px;
+}
+
+.candle .candle__flame-burn:nth-child(42) {
+  margin-left: 83px;
+}
+
+.candle .candle__flame-burn:nth-child(43) {
+  margin-left: 19px;
+}
+
+.candle .candle__flame-burn:nth-child(44) {
+  margin-left: 14px;
+}
+
+.candle .candle__flame-burn:nth-child(45) {
+  margin-left: 46px;
+}
+
+.candle .candle__flame-burn:nth-child(46) {
+  margin-left: -145px;
+}
+
+.candle .candle__flame-burn:nth-child(47) {
+  margin-left: 54px;
+}
+
+.candle .candle__flame-burn:nth-child(48) {
+  margin-left: -209px;
+}
+
+.candle .candle__flame-burn:nth-child(49) {
+  margin-left: 221px;
+}
+
+.candle .candle__flame-burn:nth-child(50) {
+  margin-left: -107px;
+}
+
+.candle .candle__flame-burn:nth-child(51) {
+  margin-left: -101px;
+}
+
+.candle .candle__flame-burn:nth-child(52) {
+  margin-left: 10px;
+}
+
+.candle .candle__flame-burn:nth-child(53) {
+  margin-left: -215px;
+}
+
+.candle .candle__flame-burn:nth-child(54) {
+  margin-left: 39px;
+}
+
+.candle .candle__flame-burn:nth-child(55) {
+  margin-left: -3px;
+}
+
+.candle .candle__flame-burn:nth-child(56) {
+  margin-left: 21px;
+}
+
+.candle .candle__flame-burn:nth-child(57) {
+  margin-left: -216px;
+}
+
+.candle .candle__flame-burn:nth-child(58) {
+  margin-left: 132px;
+}
+
+.candle .candle__flame-burn:nth-child(59) {
+  margin-left: 61px;
+}
+
+.candle .candle__flame-burn:nth-child(60) {
+  margin-left: 17px;
+}
+
+.candle .candle__flame-burn:nth-child(61) {
+  margin-left: -129px;
+}
+
+.candle .candle__flame-burn:nth-child(62) {
+  margin-left: -231px;
+}
+
+.candle .candle__flame-burn:nth-child(63) {
+  margin-left: 78px;
+}
+
+.candle .candle__flame-burn:nth-child(64) {
+  margin-left: 219px;
+}
+
+.candle .candle__flame-burn:nth-child(65) {
+  margin-left: 195px;
+}
+
+.candle .candle__flame-burn:nth-child(66) {
+  margin-left: -15px;
+}
+
+.candle .candle__flame-burn:nth-child(67) {
+  margin-left: -85px;
+}
+
+.candle .candle__flame-burn:nth-child(68) {
+  margin-left: 60px;
+}
+
+.candle .candle__flame-burn:nth-child(69) {
+  margin-left: -8px;
+}
+
+.candle .candle__flame-burn:nth-child(70) {
+  margin-left: -146px;
+}
+
+.candle .candle__flame-burn:nth-child(71) {
+  margin-left: 128px;
+}
+
+.candle .candle__flame-burn:nth-child(72) {
+  margin-left: 18px;
+}
+
+.candle .candle__flame-burn:nth-child(73) {
+  margin-left: 33px;
+}
+
+.candle .candle__flame-burn:nth-child(74) {
+  margin-left: -193px;
+}
+
+.candle .candle__flame-burn:nth-child(75) {
+  margin-left: 74px;
+}
+
+.candle .candle__flame-burn:nth-child(76) {
+  margin-left: 210px;
+}
+
+.candle .candle__flame-burn:nth-child(77) {
+  margin-left: -211px;
+}
+
+.candle .candle__flame-burn:nth-child(78) {
+  margin-left: 247px;
+}
+
+.candle .candle__flame-burn:nth-child(79) {
+  margin-left: -113px;
+}
+
+.candle .candle__flame-burn:nth-child(0) {
+  -webkit-animation: burning 2832ms -3000ms infinite linear;
+  animation: burning 2832ms -3000ms infinite linear;
+}
+
+.candle .candle__flame-burn:nth-child(1) {
+  -webkit-animation: burning 2158ms -3000ms infinite linear;
+  animation: burning 2158ms -3000ms infinite linear;
+}
+
+.candle .candle__flame-burn:nth-child(2) {
+  -webkit-animation: burning 2133ms -3000ms infinite linear;
+  animation: burning 2133ms -3000ms infinite linear;
+}
+
+.candle .candle__flame-burn:nth-child(3) {
+  -webkit-animation: burning 2873ms -3000ms infinite linear;
+  animation: burning 2873ms -3000ms infinite linear;
+}
+
+.candle .candle__flame-burn:nth-child(4) {
+  -webkit-animation: burning 1394ms -3000ms infinite linear;
+  animation: burning 1394ms -3000ms infinite linear;
+}
+
+.candle .candle__flame-burn:nth-child(5) {
+  -webkit-animation: burning 2969ms -3000ms infinite linear;
+  animation: burning 2969ms -3000ms infinite linear;
+}
+
+.candle .candle__flame-burn:nth-child(6) {
+  -webkit-animation: burning 2225ms -3000ms infinite linear;
+  animation: burning 2225ms -3000ms infinite linear;
+}
+
+.candle .candle__flame-burn:nth-child(7) {
+  -webkit-animation: burning 1025ms -3000ms infinite linear;
+  animation: burning 1025ms -3000ms infinite linear;
+}
+
+.candle .candle__flame-burn:nth-child(8) {
+  -webkit-animation: burning 2588ms -3000ms infinite linear;
+  animation: burning 2588ms -3000ms infinite linear;
+}
+
+.candle .candle__flame-burn:nth-child(9) {
+  -webkit-animation: burning 1603ms -3000ms infinite linear;
+  animation: burning 1603ms -3000ms infinite linear;
+}
+
+.candle .candle__flame-burn:nth-child(10) {
+  -webkit-animation: burning 2294ms -3000ms infinite linear;
+  animation: burning 2294ms -3000ms infinite linear;
+}
+
+.candle .candle__flame-burn:nth-child(11) {
+  -webkit-animation: burning 2400ms -3000ms infinite linear;
+  animation: burning 2400ms -3000ms infinite linear;
+}
+
+.candle .candle__flame-burn:nth-child(12) {
+  -webkit-animation: burning 2217ms -3000ms infinite linear;
+  animation: burning 2217ms -3000ms infinite linear;
+}
+
+.candle .candle__flame-burn:nth-child(13) {
+  -webkit-animation: burning 1316ms -3000ms infinite linear;
+  animation: burning 1316ms -3000ms infinite linear;
+}
+
+.candle .candle__flame-burn:nth-child(14) {
+  -webkit-animation: burning 1142ms -3000ms infinite linear;
+  animation: burning 1142ms -3000ms infinite linear;
+}
+
+.candle .candle__flame-burn:nth-child(15) {
+  -webkit-animation: burning 1103ms -3000ms infinite linear;
+  animation: burning 1103ms -3000ms infinite linear;
+}
+
+.candle .candle__flame-burn:nth-child(16) {
+  -webkit-animation: burning 1268ms -3000ms infinite linear;
+  animation: burning 1268ms -3000ms infinite linear;
+}
+
+.candle .candle__flame-burn:nth-child(17) {
+  -webkit-animation: burning 1009ms -3000ms infinite linear;
+  animation: burning 1009ms -3000ms infinite linear;
+}
+
+.candle .candle__flame-burn:nth-child(18) {
+  -webkit-animation: burning 2948ms -3000ms infinite linear;
+  animation: burning 2948ms -3000ms infinite linear;
+}
+
+.candle .candle__flame-burn:nth-child(19) {
+  -webkit-animation: burning 2103ms -3000ms infinite linear;
+  animation: burning 2103ms -3000ms infinite linear;
+}
+
+.candle .candle__flame-burn:nth-child(20) {
+  -webkit-animation: burning 1769ms -3000ms infinite linear;
+  animation: burning 1769ms -3000ms infinite linear;
+}
+
+.candle .candle__flame-burn:nth-child(21) {
+  -webkit-animation: burning 1220ms -3000ms infinite linear;
+  animation: burning 1220ms -3000ms infinite linear;
+}
+
+.candle .candle__flame-burn:nth-child(22) {
+  -webkit-animation: burning 1355ms -3000ms infinite linear;
+  animation: burning 1355ms -3000ms infinite linear;
+}
+
+.candle .candle__flame-burn:nth-child(23) {
+  -webkit-animation: burning 2268ms -3000ms infinite linear;
+  animation: burning 2268ms -3000ms infinite linear;
+}
+
+.candle .candle__flame-burn:nth-child(24) {
+  -webkit-animation: burning 2120ms -3000ms infinite linear;
+  animation: burning 2120ms -3000ms infinite linear;
+}
+
+.candle .candle__flame-burn:nth-child(25) {
+  -webkit-animation: burning 1346ms -3000ms infinite linear;
+  animation: burning 1346ms -3000ms infinite linear;
+}
+
+.candle .candle__flame-burn:nth-child(26) {
+  -webkit-animation: burning 2650ms -3000ms infinite linear;
+  animation: burning 2650ms -3000ms infinite linear;
+}
+
+.candle .candle__flame-burn:nth-child(27) {
+  -webkit-animation: burning 2655ms -3000ms infinite linear;
+  animation: burning 2655ms -3000ms infinite linear;
+}
+
+.candle .candle__flame-burn:nth-child(28) {
+  -webkit-animation: burning 2663ms -3000ms infinite linear;
+  animation: burning 2663ms -3000ms infinite linear;
+}
+
+.candle .candle__flame-burn:nth-child(29) {
+  -webkit-animation: burning 1849ms -3000ms infinite linear;
+  animation: burning 1849ms -3000ms infinite linear;
+}
+
+.candle .candle__flame-burn:nth-child(30) {
+  -webkit-animation: burning 2888ms -3000ms infinite linear;
+  animation: burning 2888ms -3000ms infinite linear;
+}
+
+.candle .candle__flame-burn:nth-child(31) {
+  -webkit-animation: burning 1755ms -3000ms infinite linear;
+  animation: burning 1755ms -3000ms infinite linear;
+}
+
+.candle .candle__flame-burn:nth-child(32) {
+  -webkit-animation: burning 1138ms -3000ms infinite linear;
+  animation: burning 1138ms -3000ms infinite linear;
+}
+
+.candle .candle__flame-burn:nth-child(33) {
+  -webkit-animation: burning 1567ms -3000ms infinite linear;
+  animation: burning 1567ms -3000ms infinite linear;
+}
+
+.candle .candle__flame-burn:nth-child(34) {
+  -webkit-animation: burning 1600ms -3000ms infinite linear;
+  animation: burning 1600ms -3000ms infinite linear;
+}
+
+.candle .candle__flame-burn:nth-child(35) {
+  -webkit-animation: burning 1467ms -3000ms infinite linear;
+  animation: burning 1467ms -3000ms infinite linear;
+}
+
+.candle .candle__flame-burn:nth-child(36) {
+  -webkit-animation: burning 2686ms -3000ms infinite linear;
+  animation: burning 2686ms -3000ms infinite linear;
+}
+
+.candle .candle__flame-burn:nth-child(37) {
+  -webkit-animation: burning 2380ms -3000ms infinite linear;
+  animation: burning 2380ms -3000ms infinite linear;
+}
+
+.candle .candle__flame-burn:nth-child(38) {
+  -webkit-animation: burning 1005ms -3000ms infinite linear;
+  animation: burning 1005ms -3000ms infinite linear;
+}
+
+.candle .candle__flame-burn:nth-child(39) {
+  -webkit-animation: burning 1610ms -3000ms infinite linear;
+  animation: burning 1610ms -3000ms infinite linear;
+}
+
+.candle .candle__flame-burn:nth-child(40) {
+  -webkit-animation: burning 1134ms -3000ms infinite linear;
+  animation: burning 1134ms -3000ms infinite linear;
+}
+
+.candle .candle__flame-burn:nth-child(41) {
+  -webkit-animation: burning 1161ms -3000ms infinite linear;
+  animation: burning 1161ms -3000ms infinite linear;
+}
+
+.candle .candle__flame-burn:nth-child(42) {
+  -webkit-animation: burning 1790ms -3000ms infinite linear;
+  animation: burning 1790ms -3000ms infinite linear;
+}
+
+.candle .candle__flame-burn:nth-child(43) {
+  -webkit-animation: burning 1219ms -3000ms infinite linear;
+  animation: burning 1219ms -3000ms infinite linear;
+}
+
+.candle .candle__flame-burn:nth-child(44) {
+  -webkit-animation: burning 1693ms -3000ms infinite linear;
+  animation: burning 1693ms -3000ms infinite linear;
+}
+
+.candle .candle__flame-burn:nth-child(45) {
+  -webkit-animation: burning 2412ms -3000ms infinite linear;
+  animation: burning 2412ms -3000ms infinite linear;
+}
+
+.candle .candle__flame-burn:nth-child(46) {
+  -webkit-animation: burning 1140ms -3000ms infinite linear;
+  animation: burning 1140ms -3000ms infinite linear;
+}
+
+.candle .candle__flame-burn:nth-child(47) {
+  -webkit-animation: burning 2604ms -3000ms infinite linear;
+  animation: burning 2604ms -3000ms infinite linear;
+}
+
+.candle .candle__flame-burn:nth-child(48) {
+  -webkit-animation: burning 2307ms -3000ms infinite linear;
+  animation: burning 2307ms -3000ms infinite linear;
+}
+
+.candle .candle__flame-burn:nth-child(49) {
+  -webkit-animation: burning 1627ms -3000ms infinite linear;
+  animation: burning 1627ms -3000ms infinite linear;
+}
+
+.candle .candle__flame-burn:nth-child(50) {
+  -webkit-animation: burning 2490ms -3000ms infinite linear;
+  animation: burning 2490ms -3000ms infinite linear;
+}
+
+.candle .candle__flame-burn:nth-child(51) {
+  -webkit-animation: burning 2122ms -3000ms infinite linear;
+  animation: burning 2122ms -3000ms infinite linear;
+}
+
+.candle .candle__flame-burn:nth-child(52) {
+  -webkit-animation: burning 1612ms -3000ms infinite linear;
+  animation: burning 1612ms -3000ms infinite linear;
+}
+
+.candle .candle__flame-burn:nth-child(53) {
+  -webkit-animation: burning 1326ms -3000ms infinite linear;
+  animation: burning 1326ms -3000ms infinite linear;
+}
+
+.candle .candle__flame-burn:nth-child(54) {
+  -webkit-animation: burning 1416ms -3000ms infinite linear;
+  animation: burning 1416ms -3000ms infinite linear;
+}
+
+.candle .candle__flame-burn:nth-child(55) {
+  -webkit-animation: burning 2002ms -3000ms infinite linear;
+  animation: burning 2002ms -3000ms infinite linear;
+}
+
+.candle .candle__flame-burn:nth-child(56) {
+  -webkit-animation: burning 2241ms -3000ms infinite linear;
+  animation: burning 2241ms -3000ms infinite linear;
+}
+
+.candle .candle__flame-burn:nth-child(57) {
+  -webkit-animation: burning 2068ms -3000ms infinite linear;
+  animation: burning 2068ms -3000ms infinite linear;
+}
+
+.candle .candle__flame-burn:nth-child(58) {
+  -webkit-animation: burning 1079ms -3000ms infinite linear;
+  animation: burning 1079ms -3000ms infinite linear;
+}
+
+.candle .candle__flame-burn:nth-child(59) {
+  -webkit-animation: burning 1493ms -3000ms infinite linear;
+  animation: burning 1493ms -3000ms infinite linear;
+}
+
+.candle .candle__flame-burn:nth-child(60) {
+  -webkit-animation: burning 1822ms -3000ms infinite linear;
+  animation: burning 1822ms -3000ms infinite linear;
+}
+
+.candle .candle__flame-burn:nth-child(61) {
+  -webkit-animation: burning 1317ms -3000ms infinite linear;
+  animation: burning 1317ms -3000ms infinite linear;
+}
+
+.candle .candle__flame-burn:nth-child(62) {
+  -webkit-animation: burning 1644ms -3000ms infinite linear;
+  animation: burning 1644ms -3000ms infinite linear;
+}
+
+.candle .candle__flame-burn:nth-child(63) {
+  -webkit-animation: burning 2634ms -3000ms infinite linear;
+  animation: burning 2634ms -3000ms infinite linear;
+}
+
+.candle .candle__flame-burn:nth-child(64) {
+  -webkit-animation: burning 1527ms -3000ms infinite linear;
+  animation: burning 1527ms -3000ms infinite linear;
+}
+
+.candle .candle__flame-burn:nth-child(65) {
+  -webkit-animation: burning 1393ms -3000ms infinite linear;
+  animation: burning 1393ms -3000ms infinite linear;
+}
+
+.candle .candle__flame-burn:nth-child(66) {
+  -webkit-animation: burning 2391ms -3000ms infinite linear;
+  animation: burning 2391ms -3000ms infinite linear;
+}
+
+.candle .candle__flame-burn:nth-child(67) {
+  -webkit-animation: burning 2513ms -3000ms infinite linear;
+  animation: burning 2513ms -3000ms infinite linear;
+}
+
+.candle .candle__flame-burn:nth-child(68) {
+  -webkit-animation: burning 1142ms -3000ms infinite linear;
+  animation: burning 1142ms -3000ms infinite linear;
+}
+
+.candle .candle__flame-burn:nth-child(69) {
+  -webkit-animation: burning 1095ms -3000ms infinite linear;
+  animation: burning 1095ms -3000ms infinite linear;
+}
+
+.candle .candle__flame-burn:nth-child(70) {
+  -webkit-animation: burning 1684ms -3000ms infinite linear;
+  animation: burning 1684ms -3000ms infinite linear;
+}
+
+.candle .candle__flame-burn:nth-child(71) {
+  -webkit-animation: burning 1095ms -3000ms infinite linear;
+  animation: burning 1095ms -3000ms infinite linear;
+}
+
+.candle .candle__flame-burn:nth-child(72) {
+  -webkit-animation: burning 1282ms -3000ms infinite linear;
+  animation: burning 1282ms -3000ms infinite linear;
+}
+
+.candle .candle__flame-burn:nth-child(73) {
+  -webkit-animation: burning 1567ms -3000ms infinite linear;
+  animation: burning 1567ms -3000ms infinite linear;
+}
+
+.candle .candle__flame-burn:nth-child(74) {
+  -webkit-animation: burning 1855ms -3000ms infinite linear;
+  animation: burning 1855ms -3000ms infinite linear;
+}
+
+.candle .candle__flame-burn:nth-child(75) {
+  -webkit-animation: burning 2786ms -3000ms infinite linear;
+  animation: burning 2786ms -3000ms infinite linear;
+}
+
+.candle .candle__flame-burn:nth-child(76) {
+  -webkit-animation: burning 1138ms -3000ms infinite linear;
+  animation: burning 1138ms -3000ms infinite linear;
+}
+
+.candle .candle__flame-burn:nth-child(77) {
+  -webkit-animation: burning 2428ms -3000ms infinite linear;
+  animation: burning 2428ms -3000ms infinite linear;
+}
+
+.candle .candle__flame-burn:nth-child(78) {
+  -webkit-animation: burning 1436ms -3000ms infinite linear;
+  animation: burning 1436ms -3000ms infinite linear;
+}
+
+.candle .candle__flame-burn:nth-child(79) {
+  -webkit-animation: burning 1011ms -3000ms infinite linear;
+  animation: burning 1011ms -3000ms infinite linear;
+}
+
+@-webkit-keyframes burning {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-600px);
+  }
+}
+
+@keyframes burning {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-600px);
+  }
+}

@@ -1,0 +1,346 @@
+/**
+ * Day 12 - polar bear
+ * https://codepen.io/johnnyfekete/pen/qBaRZXV
+ */
+.polar-bear-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  margin: 0;
+  background-color: #64b6ac;
+}
+
+.polar-bear {
+  --polar-bear: #ffffff;
+  --polar-bear-highlight: #bfcde0;
+  --polar-bear-face: #1e2019;
+  --polar-bear-scarf: #ce4257;
+  --polar-bear-scarf-end: #bd3146;
+  --polar-bear-scarf-dark: #720026;
+
+  width: 20rem;
+  height: 20rem;
+  position: relative;
+  transform: scale(0.27) translateX(-7rem);
+}
+
+@media only screen and (min-width: 576px) {
+  .polar-bear {
+    transform: scale(0.35) translateX(-6rem);
+  }
+}
+
+.polar-bear .polar-bear__body {
+  position: absolute;
+  top: 6rem;
+  left: 3rem;
+  width: 14rem;
+  height: 14rem;
+  background-color: var(--polar-bear);
+  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+}
+
+.polar-bear .polar-bear__foot {
+  position: absolute;
+  background-color: var(--polar-bear);
+  bottom: 0;
+  width: 3.8rem;
+  height: 4.6rem;
+  border-top: 0.3rem solid var(--polar-bear-highlight);
+  border-radius: 50%;
+}
+
+.polar-bear .polar-bear__print {
+  position: absolute;
+  bottom: 1rem;
+  left: 0.8rem;
+  width: 2.2rem;
+  height: 1.8rem;
+  background-color: var(--polar-bear-highlight);
+  border-radius: 50% 50% 50% 50% / 60% 60% 50% 50%;
+}
+
+.polar-bear .polar-bear__fingers {
+  position: absolute;
+  bottom: 3.2rem;
+  left: 1.45rem;
+  width: 0.7rem;
+  height: 0.9rem;
+  background-color: var(--polar-bear-highlight);
+  border-radius: 50%;
+}
+
+.polar-bear .polar-bear__fingers::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: -0.9rem;
+  top: 0.4rem;
+  width: 0.6rem;
+  height: 0.8rem;
+  background-color: var(--polar-bear-highlight);
+  border-radius: 50%;
+  transform: rotate(-20deg);
+}
+
+.polar-bear .polar-bear__fingers::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 1rem;
+  top: 0.4rem;
+  width: 0.6rem;
+  height: 0.8rem;
+  background-color: var(--polar-bear-highlight);
+  border-radius: 50%;
+  transform: rotate(20deg);
+}
+
+.polar-bear .polar-bear__foot.polar-bear__foot--left {
+  transform: rotate(-10deg);
+}
+
+.polar-bear .polar-bear__foot.polar-bear__foot--right {
+  left: 10rem;
+  transform: rotate(10deg);
+}
+
+.polar-bear__arm--left {
+  position: absolute;
+  width: 3rem;
+  height: 4rem;
+  background-color: var(--polar-bear);
+  top: 4.5rem;
+  left: -0.2rem;
+  box-sizing: border-box;
+  border-bottom: 0.3rem solid var(--polar-bear-highlight);
+  border-radius: 0 0 50% 50% / 0 0 100% 30%;
+  transform: rotate(30deg);
+}
+
+.polar-bear__arm--right {
+  position: absolute;
+  width: 3rem;
+  height: 4rem;
+  background-color: var(--polar-bear);
+  top: 4.5rem;
+  right: -0.2rem;
+  box-sizing: border-box;
+  border-bottom: 0.3rem solid var(--polar-bear-highlight);
+  border-radius: 0 0 50% 50% / 0 0 30% 100%;
+  transform: rotate(-30deg);
+}
+
+.polar-bear .polar-bear__head {
+  position: absolute;
+  z-index: 2;
+  width: 10rem;
+  height: 10rem;
+  left: 5rem;
+}
+
+.polar-bear .polar-bear__face {
+  position: absolute;
+  width: 10rem;
+  height: 10rem;
+  background-color: var(--polar-bear);
+  border-radius: 50%;
+}
+
+.polar-bear .polar-bear__ear {
+  position: absolute;
+  z-index: -1;
+  width: 4rem;
+  height: 4rem;
+  background-color: var(--polar-bear);
+  border-radius: 50%;
+}
+
+.polar-bear .polar-bear__ear::after {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: 1;
+  left: 0.8rem;
+  top: 0.8rem;
+  width: 2.4rem;
+  height: 2.4rem;
+  background-color: var(--polar-bear-highlight);
+  border-radius: 50%;
+}
+
+.polar-bear .polar-bear__ear--left {
+  left: -1.2rem;
+}
+
+.polar-bear .polar-bear__ear--right {
+  left: 7.2rem;
+}
+
+.polar-bear .polar-bear__eye {
+  position: absolute;
+  width: 2rem;
+  height: 2rem;
+  box-sizing: border-box;
+  border-radius: 50%;
+  border: 0.5rem solid var(--polar-bear-face);
+  transform: scaleY(0.9);
+}
+.polar-bear .polar-bear__eye::after {
+  position: absolute;
+  content: "";
+  display: block;
+  bottom: -0.5rem;
+  left: -0.5rem;
+  width: 2.2rem;
+  height: 1rem;
+  background: radial-gradient(
+      circle at 0.25rem 0.03rem,
+      var(--polar-bear-face) 0.25rem,
+      transparent 0.25rem
+    ),
+    radial-gradient(
+      circle at 1.75rem 0.03rem,
+      var(--polar-bear-face) 0.25rem,
+      var(--polar-bear) 0.25rem
+    );
+}
+
+.polar-bear .polar-bear__eye.polar-bear__eye--left {
+  top: 4rem;
+  left: 1.7rem;
+}
+
+.polar-bear .polar-bear__eye.polar-bear__eye--right {
+  top: 4rem;
+  right: 1.7rem;
+}
+
+.polar-bear .polar-bear__lip {
+  position: absolute;
+  width: 2rem;
+  height: 2rem;
+  box-sizing: border-box;
+  border-radius: 50%;
+  border: 0.5rem solid var(--polar-bear-face);
+  transform: scaleY(0.9);
+}
+.polar-bear .polar-bear__lip::after {
+  position: absolute;
+  content: "";
+  display: block;
+  top: -0.5rem;
+  left: -0.5rem;
+  width: 2.2rem;
+  height: 1rem;
+  background: radial-gradient(
+      circle at 0.25rem 0.97rem,
+      var(--polar-bear-face) 0.25rem,
+      transparent 0.25rem
+    ),
+    radial-gradient(
+      circle at 1.75rem 0.97rem,
+      var(--polar-bear-face) 0.25rem,
+      var(--polar-bear) 0.25rem
+    );
+}
+
+.polar-bear .polar-bear__lip.polar-bear__lip--left {
+  top: 6rem;
+  left: 3.25rem;
+}
+
+.polar-bear .polar-bear__lip.polar-bear__lip--right {
+  top: 6rem;
+  right: 3.25rem;
+}
+
+.polar-bear .polar-bear__nose {
+  position: absolute;
+  width: 1.8rem;
+  height: 1.2rem;
+  background-color: var(--polar-bear-face);
+  border-radius: 50%;
+  top: 5.5rem;
+  left: 4.1rem;
+}
+
+.polar-bear .polar-bear__nose::after {
+  position: absolute;
+  content: "";
+  display: block;
+  top: 0.5rem;
+  left: 0.65rem;
+  width: 0.5rem;
+  height: 1.2rem;
+  background-color: var(--polar-bear-face);
+}
+
+.polar-bear__scarf {
+  position: absolute;
+  top: 4rem;
+  left: -0.5rem;
+  width: 11rem;
+  height: 8rem;
+  border-radius: 50%;
+}
+
+.polar-bear__scarf::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 9.8rem;
+  height: 6rem;
+  background-color: var(--polar-bear);
+  border-radius: 50%;
+  left: 0.6rem;
+  top: -1rem;
+}
+
+.polar-bear__scarf-line {
+  position: absolute;
+  top: 4rem;
+  left: -0.5rem;
+  width: 11rem;
+  height: 8rem;
+  border-radius: 50%;
+  background-color: var(--polar-bear-scarf);
+  overflow: hidden;
+}
+
+.polar-bear .polar-bear__scarf-line::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 14rem;
+  height: 8rem;
+  border-radius: 50%;
+  top: -1rem;
+  left: 1rem;
+  border: 0.4rem solid var(--polar-bear-scarf-dark);
+}
+
+.polar-bear__scarf-end--left {
+  position: absolute;
+  z-index: -1;
+  top: 11rem;
+  left: 1.5rem;
+  background-color: var(--polar-bear-scarf-end);
+  width: 3rem;
+  height: 3rem;
+  border-radius: 0 0 0.5rem 0.5rem;
+  transform: rotate(20deg);
+}
+
+.polar-bear__scarf-end--right {
+  position: absolute;
+  z-index: -1;
+  top: 11rem;
+  left: 5.5rem;
+  background-color: var(--polar-bear-scarf-end);
+  width: 3rem;
+  height: 2.2rem;
+  border-radius: 0 0 0.5rem 0.5rem;
+  transform: rotate(-20deg);
+}
