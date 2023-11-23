@@ -1,0 +1,89 @@
+{
+  "data": [
+    {
+      "day": 1,
+      "content": {
+        "author": {
+          "name": "John Doe",
+          "twitterUrl": "https://twitter.com/home"
+        },
+        "videoSrc": "https://www.youtube.com/watch?v=d0daPe9q35w"
+      }
+    },
+    {
+      "day": 2,
+      "content": {
+        "author": {
+          "name": "Angular Dev"
+        },
+        "descriptionHtml": "<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>"
+      }
+    },
+    {
+      "day": 3
+    },
+    {
+      "day": 4
+    },
+    {
+      "day": 5
+    },
+    {
+      "day": 6
+    },
+    {
+      "day": 7
+    },
+    {
+      "day": 8
+    },
+    {
+      "day": 9
+    },
+    {
+      "day": 10
+    },
+    {
+      "day": 11
+    },
+    {
+      "day": 12
+    },
+    {
+      "day": 13
+    },
+    {
+      "day": 14
+    },
+    {
+      "day": 15
+    },
+    {
+      "day": 16
+    },
+    {
+      "day": 17
+    },
+    {
+      "day": 18
+    },
+    {
+      "day": 19
+    },
+    {
+      "day": 20
+    },
+    {
+      "day": 21
+    },
+    {
+      "day": 22
+    },
+    {
+      "day": 23
+    },
+    {
+      "day": 24
+    }
+  ]
+}

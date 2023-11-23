@@ -5,19 +5,26 @@
     <span class="title-3">Calendar</span>
   </h1>
 </div>
-@for (day of days; track $index) {
-  <div class="day day-{{$index + 1}}">
+@for (card of cards; track $index) {
+  <div class="day day-{{card.day}}">
     <label>
       <input type="checkbox"/>
       <div class="door">
-        <div class="front">{{ $index + 1 }}</div>
+        <div class="front">{{ card.day }}</div>
         <div class="back"></div>
       </div>
       <div class="inside">
-        <ng-template [xmasCalendarCardFactory] [type]="day"></ng-template>
+        <ng-template [xmasCalendarCardFactory] [type]="card.day"></ng-template>
       </div>
-      <div class="title-container"><a href="https://codepen.io/johnnyfekete/pen/ZEpGerj" target="_blank" title="Link to source code">TODO</a>
-      </div>
+      @if (card.content?.author) {
+        <div class="title-container">
+          @if (!card.content?.author?.twitterUrl) {
+            <p>{{ card.content?.author?.name}}</p>
+          } @else {
+            <a [href]="card.content?.author?.twitterUrl" target="_blank" title="Link to author's twitter account">{{ card.content?.author?.name}}</a>
+          }
+        </div>
+      }
     </label>
   </div>
 }

@@ -157,6 +157,7 @@ label:hover .door {
   pointer-events: all;
 }
 
+.title-container p,
 .title-container a {
   position: relative;
   display: inline-block;
@@ -169,6 +170,7 @@ label:hover .door {
   text-decoration: none;
 }
 
+.title-container p::before,
 .title-container a::before {
   content: "";
   display: block;
@@ -194,6 +196,7 @@ label:hover .door {
   animation-play-state: paused;
 }
 
+.title-container p:hover::before,
 .title-container a:hover::before {
   -webkit-animation-play-state: running;
   animation-play-state: running;

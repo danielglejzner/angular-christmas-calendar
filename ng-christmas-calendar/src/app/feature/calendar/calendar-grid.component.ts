@@ -1,7 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CalendarCardFactoryDirective } from './cards/calendar-card-factory.directive';
-import { ChristmasCardType } from './enums/christmas-card-type';
+import { CalendarService } from './services/calendar.service';
 
 @Component({
   selector: 'xmas-calendar-grid',
@@ -11,6 +11,7 @@ import { ChristmasCardType } from './enums/christmas-card-type';
   styleUrl: './calendar-grid.component.css'
 })
 export class CalendarGridComponent {
-  // TODO: build based on content json
-  days = Object.values(ChristmasCardType).filter(value => typeof value === 'number') as ChristmasCardType[];
+  private readonly calendarService = inject(CalendarService);
+
+  cards = this.calendarService.cards;
 }
