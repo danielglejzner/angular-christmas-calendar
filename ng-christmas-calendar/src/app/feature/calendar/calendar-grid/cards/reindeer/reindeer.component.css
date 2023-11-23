@@ -157,7 +157,7 @@
 
 .reindeer .ear::after {
   content: "";
-  diplay: block;
+  display: block;
   position: absolute;
   left: 1rem;
   top: 0.5rem;
