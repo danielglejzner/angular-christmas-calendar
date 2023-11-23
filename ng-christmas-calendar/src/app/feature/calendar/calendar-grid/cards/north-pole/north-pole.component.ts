@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { ChristmasCard, ChristmasCardType } from '../christmas-card';
 
 @Component({
   selector: 'app-north-pole',
   standalone: true,
-  imports: [CommonModule],
+  imports: [],
   templateUrl: './north-pole.component.html',
   styleUrl: './north-pole.component.css'
 })
-export class NorthPoleComponent {
-
+export class NorthPoleComponent implements ChristmasCard {
+  readonly type = ChristmasCardType.NorthPole;
 }
