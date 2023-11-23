@@ -1,3 +1,7 @@
+/**
+ * Day 10 - snowman made of letters and characters
+ * https://codepen.io/johnnyfekete/pen/OJRbWJM
+ */
 .snowman-container {
   display: flex;
   align-items: center;

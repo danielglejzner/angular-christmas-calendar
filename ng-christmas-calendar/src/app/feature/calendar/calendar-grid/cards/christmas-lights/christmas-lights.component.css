@@ -1,3 +1,7 @@
+/**
+ * Day 11 - flickering Christmas lights
+ * https://codepen.io/johnnyfekete/pen/NWRdKjQ
+ */
 .christmas-lights-container {
   display: flex;
   align-items: flex-start;

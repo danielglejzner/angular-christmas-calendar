@@ -1,3 +1,7 @@
+/**
+ * Day 5 - Sledge in the snow
+ * https://codepen.io/johnnyfekete/pen/wvzGoRr
+ */
 .sledge-container {
   background: linear-gradient(-20deg, #f8f9fa 60%, #3d405b 60%);
   display: flex;

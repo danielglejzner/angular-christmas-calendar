@@ -1,3 +1,7 @@
+/**
+ * Day 20 - pom hat with a single div
+ * https://codepen.io/johnnyfekete/pen/KKgvrJK
+ */
 .pom-hat-container {
   display: flex;
   align-items: center;
