@@ -102,7 +102,7 @@ footer a {
   color: #ffffff;
 }
 
-app-calendar-grid {
+xmas-calendar-grid {
   :checked ~ .inside .jingle-bells .staff-lines,
   :checked ~ .inside .jingle-bells .note {
     -webkit-animation-play-state: running;

@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { ChristmasCard, ChristmasCardType } from '../christmas-card';
 
 @Component({
-  selector: 'app-gift-box',
+  selector: 'xmas-gift-box',
   standalone: true,
   imports: [],
   templateUrl: './gift-box.component.html',

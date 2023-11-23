@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { ChristmasCard, ChristmasCardType } from '../christmas-card';
 
 @Component({
-  selector: 'app-snowflake',
+  selector: 'xmas-snowflake',
   standalone: true,
   imports: [],
   templateUrl: './snowflake.component.html',

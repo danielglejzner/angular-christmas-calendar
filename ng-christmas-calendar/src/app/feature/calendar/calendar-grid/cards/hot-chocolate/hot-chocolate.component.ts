@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { ChristmasCard, ChristmasCardType } from '../christmas-card';
 
 @Component({
-  selector: 'app-hot-chocolate',
+  selector: 'xmas-hot-chocolate',
   standalone: true,
   imports: [],
   templateUrl: './hot-chocolate.component.html',

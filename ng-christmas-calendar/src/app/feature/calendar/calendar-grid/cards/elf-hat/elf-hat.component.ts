@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { ChristmasCard, ChristmasCardType } from '../christmas-card';
 
 @Component({
-  selector: 'app-elf-hat',
+  selector: 'xmas-elf-hat',
   standalone: true,
   imports: [],
   templateUrl: './elf-hat.component.html',

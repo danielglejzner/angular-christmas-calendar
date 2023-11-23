@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { ChristmasCard, ChristmasCardType } from '../christmas-card';
 
 @Component({
-  selector: 'app-shooting-star',
+  selector: 'xmas-shooting-star',
   standalone: true,
   imports: [],
   templateUrl: './shooting-star.component.html',
