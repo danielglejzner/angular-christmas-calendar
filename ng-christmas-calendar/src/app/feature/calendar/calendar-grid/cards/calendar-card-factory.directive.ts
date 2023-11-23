@@ -5,13 +5,14 @@ import { NotImplementedComponent } from './not-implemented/not-implemented.compo
 import { SnowflakeComponent } from './snowflake/snowflake.component';
 import { StockingComponent } from './stocking/stocking.component';
 import { GiftBoxComponent } from './gift-box/gift-box.component';
+import { SledgeComponent } from './sledge/sledge.component';
 
 export const christmasCardsFactoryMap: Record<ChristmasCardType, Type<ChristmasCard>> = {
   [ChristmasCardType.GingerbreadMan]: GingerbreadManCardComponent,
   [ChristmasCardType.Snowflake]: SnowflakeComponent,
   [ChristmasCardType.Stocking]: StockingComponent,
   [ChristmasCardType.GiftBox]: GiftBoxComponent,
-  [ChristmasCardType.Sledge]: NotImplementedComponent,
+  [ChristmasCardType.Sledge]: SledgeComponent,
   [ChristmasCardType.Santa]: NotImplementedComponent,
   [ChristmasCardType.Candle]: NotImplementedComponent,
   [ChristmasCardType.Candycane]: NotImplementedComponent,
