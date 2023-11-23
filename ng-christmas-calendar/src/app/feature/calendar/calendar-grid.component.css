@@ -152,8 +152,8 @@ label:hover .door {
   position: absolute;
   z-index: 1000;
   bottom: -3.7rem;
-  left: -10rem;
-  right: -10rem;
+  left: -1rem;
+  right: -1rem;
   transition: all 400ms ease-in-out;
 }
 

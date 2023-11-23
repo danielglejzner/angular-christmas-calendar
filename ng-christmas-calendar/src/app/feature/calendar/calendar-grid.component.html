@@ -6,11 +6,11 @@
   </h1>
 </div>
 @for (card of cards; track $index) {
-  <div class="day day-{{card.day}}">
+  <div class="day day-{{card.day}}" (click)="tryToOpenDialog(card)">
     <label>
-      <input type="checkbox" [checked]="card.revealed" [disabled]="!card.canReveal"/>
+      <input type="checkbox" [checked]="card.revealed" [disabled]="!card.canReveal" (change)="card.revealed = !card.revealed"/>
 
-      @if (!card.revealed) {
+      @if (!card.revealed || (card.revealed && card.canReveal)) {
         <div class="door" [class.door--can-reveal]="card.canReveal">
           <div class="front">{{ card.day }}</div>
           <div class="back"></div>
