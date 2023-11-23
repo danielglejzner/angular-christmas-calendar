@@ -53,7 +53,7 @@ export const christmasCardsFactoryMap: Record<ChristmasCardType, Type<ChristmasC
 };
 
 @Directive({
-  selector: '[appCalendarCardFactory]',
+  selector: '[xmasCalendarCardFactory]',
   standalone: true
 })
 export class CalendarCardFactoryDirective implements OnInit {
