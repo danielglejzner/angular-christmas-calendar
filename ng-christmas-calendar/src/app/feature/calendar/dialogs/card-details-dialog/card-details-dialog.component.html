@@ -3,16 +3,22 @@
     <img [src]="data.content?.author?.avatarUrl" alt="{{data.content?.author}} thoughts about Angular in 2023!">
 
     <div class="xmas-dialog-header-details">
-      <h2>{{data.content?.author?.name}}</h2>
-
       @if (data.content?.author && data.content?.author?.twitterHandle) {
-        <a [href]="data.content?.author?.twitterHandle! | twitterUrl">{{ "@" + data.content?.author?.twitterHandle }}</a>
+        <a [href]="data.content?.author?.twitterHandle! | twitterUrl">{{data.content?.author?.name}}</a>
+      } @else {
+        <h1>{{data.content?.author?.name}}</h1>
       }
+    </div>
+
+    <div class="xmas-dialog-header-card-wrapper">
+      <div class="xmas-dialog-header-card">
+        <ng-template [xmasCalendarCardFactory] [type]="data.day"></ng-template>
+      </div>
     </div>
   </header>
   <div class="xmas-dialog-content">
     @if (data.content?.videoSrc) {
-      <p>Todo video</p>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/1z02twTX5iU?si=55gYKNPCDbm4OJhz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     } @else if (data.content?.descriptionHtml) {
       <div [innerHTML]="data.content?.descriptionHtml"></div>
     } @else {
