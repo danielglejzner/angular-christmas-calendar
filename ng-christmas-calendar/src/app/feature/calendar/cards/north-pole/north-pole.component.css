@@ -158,8 +158,8 @@
   background-color: var(--north-pole-white);
   border-radius: 0.5rem;
   border: 0.35rem solid var(--north-pole-pole);
-  font-family: "Amatic SC", cursive;
-  font-size: 3rem;
+  font-family: 'Inter Tight', sans-serif;
+  font-size: 2rem;
   color: var(--north-pole-text);
 }
 
