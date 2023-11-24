@@ -21,10 +21,10 @@
       </div>
       @if (card.content?.author) {
         <div class="title-container">
-          @if (!card.content?.author?.twitterUrl) {
+          @if (!card.content?.author?.twitterHandle) {
             <p>{{ card.content?.author?.name}}</p>
           } @else {
-            <a [href]="card.content?.author?.twitterUrl" target="_blank" title="Link to author's twitter account">{{ card.content?.author?.name}}</a>
+            <a [href]="card.content?.author?.twitterHandle! | twitterUrl" target="_blank" title="Link to author's twitter account">{{ card.content?.author?.name}}</a>
           }
         </div>
       }

@@ -1,0 +1,81 @@
+.xmas-dialog {
+  width: 75vw;
+  height: 80vh;
+  background-color: var(--white);
+  padding: 1rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.xmas-dialog-header {
+  display: flex;
+  gap: 2.5rem;
+}
+
+.xmas-dialog-header-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+img {
+  height: 8rem;
+  border-radius: 50%;
+}
+
+@media only screen and (min-width: 576px) {
+  .xmas-dialog {
+    width: 75vw;
+    max-width: 700px;
+    height: unset;
+  }
+}
+
+.xmas-dialog-content {
+  overflow-y: auto;
+}
+
+.xmas-dialog-content::before {
+  content: "";
+  display: block;
+  border-radius: 0.75rem;
+  background: repeating-linear-gradient(
+    -45deg,
+    #f1faee 0,
+    #f1faee 0.5rem,
+    #e63946 0.5rem,
+    #e63946 1rem
+  );
+  background-size: 1.44rem 1.44rem;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.5);
+  position: absolute;
+  z-index: -1;
+  top: -0.5rem;
+  right: -0.5rem;
+  bottom: -0.5rem;
+  left: -0.5rem;
+  -webkit-animation: calendar-item-link 0.6s infinite linear;
+  animation: calendar-item-link 0.6s infinite linear;
+  -webkit-animation-play-state: running;
+  animation-play-state: running;
+}
+
+/* TODO: share animations */
+@-webkit-keyframes calendar-item-link {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 1.44rem 0;
+  }
+}
+
+@keyframes calendar-item-link {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 1.44rem 0;
+  }
+}

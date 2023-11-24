@@ -5,10 +5,11 @@ export interface CalendarCard {
   content?: {
     author: {
       name: string,
-      twitterUrl?: string;
+      avatarUrl: string;
+      twitterHandle?: string;
     };
     videoSrc?: string;
-    description?: string;
+    descriptionHtml?: string;
   }
 }
 
