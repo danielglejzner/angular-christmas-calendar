@@ -18,7 +18,10 @@
   </header>
   <div class="xmas-dialog-content">
     @if (data.content?.videoSrc) {
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/1z02twTX5iU?si=55gYKNPCDbm4OJhz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      <video width="640" height="360" controls>
+        <source [src]="data.content?.videoSrc" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
     } @else if (data.content?.descriptionHtml) {
       <div [innerHTML]="data.content?.descriptionHtml"></div>
     } @else {
