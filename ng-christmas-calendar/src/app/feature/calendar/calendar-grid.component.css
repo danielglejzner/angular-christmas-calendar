@@ -70,7 +70,6 @@
 }
 
 .day {
-  font-family: "Mountains of Christmas", cursive;
   transform: translate3d(0px, 0px, 0px);
   position: relative;
   background: #0000001c;
