@@ -47,3 +47,62 @@ xmas-calendar-grid {
     animation-play-state: running;
   }
 }
+
+footer {
+  margin-bottom: 1rem;
+  margin-left: auto;
+  margin-right: 1rem;
+  opacity: 0.5;
+  transition: opacity 400ms ease-in-out;
+}
+
+footer:hover {
+  opacity: 1;
+}
+
+footer div {
+  display: flex;
+  align-items: center;
+  background-color: #161e2b;
+  border-radius: 0.4rem;
+  overflow: hidden;
+}
+
+footer .footer-info {
+  width: 2.8rem;
+  text-align: center;
+  font-family: "Times New Roman", serif;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 2.6rem;
+  color: #ffffff;
+}
+
+footer div div {
+  position: relative;
+  margin-right: -15.3rem;
+  display: inline-block;
+  border-radius: 0.4rem;
+  padding: 0.6rem 0.8rem 0.6rem 0.2rem;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.8rem;
+  color: #80a7e7;
+  line-height: 1.6rem;
+  transition: all 500ms ease-in-out;
+}
+
+@media only screen and (min-width: 576px) {
+  footer div div {
+    font-size: 1rem;
+    margin-right: -18.5rem;
+  }
+}
+
+footer:hover div div {
+  margin-right: 0px;
+}
+
+footer a {
+  margin-left: 0.2rem;
+  color: #ffffff;
+}
