@@ -4,6 +4,7 @@ import {
   Component,
   ElementRef,
   NgZone,
+  Renderer2,
   ViewChild,
   ViewEncapsulation,
   inject,
@@ -27,14 +28,14 @@ function calcAnimationDelay(flakeIndex: number, totalSnowCount: number) {
   imports: [],
   templateUrl: "./snowflakes.component.html",
   styleUrl: "./snowflakes.component.css",
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  encapsulation: ViewEncapsulation.None,
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class SnowflakesComponent implements AfterViewInit {
   @ViewChild("snowArea") snowArea!: ElementRef<HTMLSpanElement>;
 
   #zone = inject(NgZone);
   #document = inject(DOCUMENT);
+  #renderer = inject(Renderer2);
 
   ngAfterViewInit(): void {
     this.letItSnow();
@@ -50,13 +51,13 @@ export class SnowflakesComponent implements AfterViewInit {
         const animationDelay = calcAnimationDelay(i, totalSnowCount);
         snowflakie.style.animationDelay = `${animationDelay}s`;
 
-        this.snowArea.nativeElement.appendChild(snowflakie);
+        this.#renderer.appendChild(this.snowArea.nativeElement, snowflakie);
       }
     });
   }
 
   private createSnowflakie() {
-    const snowflakie = this.#document.createElement("span");
+    const snowflakie = this.#renderer.createElement("span") as HTMLSpanElement;
     const size = randomize(0.15, 0.85);
 
     const leftPos = randomize(0, 100);
