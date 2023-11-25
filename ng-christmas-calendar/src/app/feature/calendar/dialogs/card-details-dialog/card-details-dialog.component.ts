@@ -13,10 +13,15 @@ import { CalendarCardFactoryDirective } from '../../cards/calendar-card-factory.
   styleUrl: './card-details-dialog.component.css'
 })
 export class CardDetailsDialogComponent implements OnInit {
+
   public dialogRef = inject(DialogRef<string>);
   public data = inject<UiCalendarCard>(DIALOG_DATA);
 
   ngOnInit(): void {
     console.log(this.data);
+  }
+
+  closeDialog() {
+    this.dialogRef.close();
   }
 }
