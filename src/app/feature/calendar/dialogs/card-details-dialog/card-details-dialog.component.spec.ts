@@ -1,6 +1,6 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { CardDetailsDialogComponent } from './card-details-dialog.component';
+import {CardDetailsDialogComponent} from './card-details-dialog.component';
 
 describe('CardDetailsDialogComponent', () => {
   let component: CardDetailsDialogComponent;
@@ -8,10 +8,9 @@ describe('CardDetailsDialogComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [CardDetailsDialogComponent]
-    })
-    .compileComponents();
-    
+      imports: [CardDetailsDialogComponent],
+    }).compileComponents();
+
     fixture = TestBed.createComponent(CardDetailsDialogComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

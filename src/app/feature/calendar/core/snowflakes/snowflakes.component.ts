@@ -6,10 +6,9 @@ import {
   NgZone,
   Renderer2,
   ViewChild,
-  ViewEncapsulation,
   inject,
-} from "@angular/core";
-import { DOCUMENT } from "@angular/common";
+} from '@angular/core';
+import {DOCUMENT} from '@angular/common';
 
 function randomize(min: number, max: number, round = false) {
   const randomPick = Math.random() * (max - min) + min;
@@ -17,21 +16,19 @@ function randomize(min: number, max: number, round = false) {
 }
 
 function calcAnimationDelay(flakeIndex: number, totalSnowCount: number) {
-  return flakeIndex < totalSnowCount * 0.1
-    ? randomize(0, 0.5)
-    : randomize(0.35, 18);
+  return flakeIndex < totalSnowCount * 0.1 ? randomize(0, 0.5) : randomize(0.35, 18);
 }
 
 @Component({
-  selector: "xmas-snowflakes",
+  selector: 'xmas-snowflakes',
   standalone: true,
   imports: [],
-  templateUrl: "./snowflakes.component.html",
-  styleUrl: "./snowflakes.component.css",
-  changeDetection: ChangeDetectionStrategy.OnPush
+  templateUrl: './snowflakes.component.html',
+  styleUrl: './snowflakes.component.css',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class SnowflakesComponent implements AfterViewInit {
-  @ViewChild("snowArea") snowArea!: ElementRef<HTMLSpanElement>;
+  @ViewChild('snowArea') snowArea!: ElementRef<HTMLSpanElement>;
 
   #zone = inject(NgZone);
   #document = inject(DOCUMENT);
@@ -41,33 +38,33 @@ export class SnowflakesComponent implements AfterViewInit {
     this.letItSnow();
   }
 
-  letItSnow() {
+  private letItSnow() {
     this.#zone.runOutsideAngular(() => {
-      var totalSnowCount = this.#document.body.clientWidth * 0.25;
+      const totalSnowCount = this.#document.body.clientWidth * 0.25;
 
-      for (var i = 0; i <= totalSnowCount; i++) {
-        const snowflakie = this.createSnowflakie();
+      for (let i = 0; i <= totalSnowCount; i++) {
+        const snowflake = this.createsnowflake();
 
         const animationDelay = calcAnimationDelay(i, totalSnowCount);
-        snowflakie.style.animationDelay = `${animationDelay}s`;
+        snowflake.style.animationDelay = `${animationDelay}s`;
 
-        this.#renderer.appendChild(this.snowArea.nativeElement, snowflakie);
+        this.#renderer.appendChild(this.snowArea.nativeElement, snowflake);
       }
     });
   }
 
-  private createSnowflakie() {
-    const snowflakie = this.#renderer.createElement("span") as HTMLSpanElement;
+  private createsnowflake() {
+    const snowflake = this.#renderer.createElement('span') as HTMLSpanElement;
     const size = randomize(0.15, 0.85);
 
     const leftPos = randomize(0, 100);
-    snowflakie.classList.add("snowflakie");
-    snowflakie.classList.add(`c${randomize(1, 3, true)}`);
-    snowflakie.style.left = `${leftPos}%`;
-    snowflakie.style.width = `${size}vw`;
-    snowflakie.style.height = `${size}vw`;
-    snowflakie.style.setProperty("--drift", `${leftPos + 2}%`);
+    snowflake.classList.add('snowflake');
+    snowflake.classList.add(`c${randomize(1, 3, true)}`);
+    snowflake.style.left = `${leftPos}%`;
+    snowflake.style.width = `${size}vw`;
+    snowflake.style.height = `${size}vw`;
+    snowflake.style.setProperty('--drift', `${leftPos + 2}%`);
 
-    return snowflakie;
+    return snowflake;
   }
 }

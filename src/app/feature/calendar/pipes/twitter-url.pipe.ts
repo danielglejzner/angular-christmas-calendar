@@ -1,8 +1,8 @@
-import { Pipe, PipeTransform } from '@angular/core';
+import {Pipe, PipeTransform} from '@angular/core';
 
 @Pipe({
   name: 'twitterUrl',
-  standalone: true
+  standalone: true,
 })
 export class TwitterUrlPipe implements PipeTransform {
   private readonly twitterBaseUrl = 'https://twitter.com/';

@@ -1,6 +1,6 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { SnowflakesComponent } from './snowflakes.component';
+import {SnowflakesComponent} from './snowflakes.component';
 
 describe('SnowflakesComponent', () => {
   let component: SnowflakesComponent;
@@ -8,10 +8,9 @@ describe('SnowflakesComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [SnowflakesComponent]
-    })
-    .compileComponents();
-    
+      imports: [SnowflakesComponent],
+    }).compileComponents();
+
     fixture = TestBed.createComponent(SnowflakesComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
