@@ -1,4 +1,4 @@
-import { Component, OnInit, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DIALOG_DATA, DialogRef } from '@angular/cdk/dialog';
 import { UiCalendarCard } from '../../interfaces/christmas-calendar-data';
@@ -10,7 +10,8 @@ import { CalendarCardFactoryDirective } from '../../cards/calendar-card-factory.
   standalone: true,
   imports: [CommonModule, CalendarCardFactoryDirective, TwitterUrlPipe],
   templateUrl: './card-details-dialog.component.html',
-  styleUrl: './card-details-dialog.component.css'
+  styleUrl: './card-details-dialog.component.css',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class CardDetailsDialogComponent implements OnInit {
 
