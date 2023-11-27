@@ -1,4 +1,4 @@
-import { TwitterUrlPipe } from './twitter-url.pipe';
+import {TwitterUrlPipe} from './twitter-url.pipe';
 
 describe('TwitterUrlPipe', () => {
   it('create an instance', () => {
