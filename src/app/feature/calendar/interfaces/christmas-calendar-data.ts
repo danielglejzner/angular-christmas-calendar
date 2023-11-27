@@ -1,16 +1,16 @@
-import { ChristmasCardType } from "../enums/christmas-card-type";
+import {ChristmasCardType} from '../enums/christmas-card-type';
 
 export interface CalendarCard {
-  day: ChristmasCardType,
+  day: ChristmasCardType;
   content?: {
     author: {
-      name: string,
+      name: string;
       avatarUrl: string;
       twitterHandle?: string;
     };
     videoSrc?: string;
     descriptionHtml?: string;
-  }
+  };
 }
 
 export interface UiCalendarCard extends CalendarCard {

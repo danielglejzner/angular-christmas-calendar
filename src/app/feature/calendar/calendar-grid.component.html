@@ -6,9 +6,18 @@
   </h1>
 </div>
 @for (card of cards; track $index) {
-  <div class="day day-{{card.day}}" (click)="tryToOpenDialog(card)" [class.pulse]="card.canReveal && !card.revealed">
+  <div
+    class="day day-{{ card.day }}"
+    (click)="tryToOpenDialog(card)"
+    [class.pulse]="card.canReveal && !card.revealed"
+  >
     <label>
-      <input type="checkbox" [checked]="card.revealed" [disabled]="!card.canReveal" (change)="card.revealed = !card.revealed"/>
+      <input
+        type="checkbox"
+        [checked]="card.revealed"
+        [disabled]="!card.canReveal"
+        (change)="card.revealed = !card.revealed"
+      />
 
       @if (!card.revealed || (card.revealed && card.canReveal)) {
         <div class="door" [class.door--can-reveal]="card.canReveal">
@@ -24,9 +33,15 @@
       @if (card.content?.author) {
         <div class="title-container">
           @if (!card.content?.author?.twitterHandle) {
-            <p>{{ card.content?.author?.name}}</p>
+            <p>{{ card.content?.author?.name }}</p>
           } @else {
-            <a [href]="card.content?.author?.twitterHandle! | twitterUrl" target="_blank" title="Link to author's twitter account">{{ card.content?.author?.name}}</a>
+            <a
+              [href]="card.content?.author?.twitterHandle! | twitterUrl"
+              target="_blank"
+              title="Link to author's twitter account"
+            >
+              {{ card.content?.author?.name }}
+            </a>
           }
         </div>
       }

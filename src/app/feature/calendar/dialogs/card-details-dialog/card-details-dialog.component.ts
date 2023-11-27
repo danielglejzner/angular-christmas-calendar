@@ -14,7 +14,6 @@ import { CalendarCardFactoryDirective } from '../../cards/calendar-card-factory.
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class CardDetailsDialogComponent {
-
   public dialogRef = inject(DialogRef<string>);
   public data = inject<UiCalendarCard>(DIALOG_DATA);
 

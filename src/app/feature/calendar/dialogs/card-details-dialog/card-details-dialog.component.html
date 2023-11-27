@@ -1,12 +1,15 @@
 <div class="xmas-dialog">
   <header class="xmas-dialog-header">
-    <img [src]="data.content?.author?.avatarUrl" alt="{{data.content?.author}} thoughts about Angular in 2023!">
+    <img
+      [src]="data.content?.author?.avatarUrl"
+      alt="{{ data.content?.author }} thoughts about Angular in 2023!"
+    />
 
     <div class="xmas-dialog-header-details">
       @if (data.content?.author && data.content?.author?.twitterHandle) {
         <a [href]="data.content?.author?.twitterHandle! | twitterUrl" tabindex="-1">{{data.content?.author?.name}}</a>
       } @else {
-        <h1>{{data.content?.author?.name}}</h1>
+        <h1>{{ data.content?.author?.name }}</h1>
       }
     </div>
 
@@ -20,7 +23,7 @@
   <div class="xmas-dialog-content">
     @if (data.content?.videoSrc) {
       <video width="640" height="360" controls>
-        <source [src]="data.content?.videoSrc" type="video/mp4">
+        <source [src]="data.content?.videoSrc" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
     } @else if (data.content?.descriptionHtml) {
@@ -34,3 +37,4 @@
     <button type="button" (click)="closeDialog()" tabindex="0" class="button">Close</button>
   </div>
 </div>
+

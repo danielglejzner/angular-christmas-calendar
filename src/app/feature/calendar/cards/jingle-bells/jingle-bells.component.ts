@@ -1,6 +1,6 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { ChristmasCard } from '../../interfaces/christmas-card';
-import { ChristmasCardType } from '../../enums/christmas-card-type';
+import {ChangeDetectionStrategy, Component} from '@angular/core';
+import {ChristmasCard} from '../../interfaces/christmas-card';
+import {ChristmasCardType} from '../../enums/christmas-card-type';
 
 @Component({
   selector: 'xmas-jingle-bells',
