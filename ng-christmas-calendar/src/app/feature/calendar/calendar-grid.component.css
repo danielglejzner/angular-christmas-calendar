@@ -2,7 +2,7 @@
   display: grid;
   width: 94%;
   max-width: 900px;
-  margin: 3% auto 2rem auto;
+  margin: 3% auto 3.5rem auto;
 
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: auto;
@@ -147,7 +147,7 @@ label:hover .door {
 
 .title-container {
   opacity: 0;
-  transform: translateY(-1rem);
+  transform: translateY(0);
   pointer-events: none;
   display: flex;
   align-items: center;
@@ -162,8 +162,12 @@ label:hover .door {
 
 :checked ~ .title-container {
   opacity: 1;
-  transform: translateY(0);
+  transform: translateY(-1rem);
   pointer-events: all;
+}
+
+.title-container p {
+  margin: 0;
 }
 
 .title-container p,

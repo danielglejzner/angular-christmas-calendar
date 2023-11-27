@@ -1,5 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
-@import '@angular/cdk/overlay-prebuilt.css';
+@import "@angular/cdk/overlay-prebuilt.css";
 
 :root {
   --bright-blue: oklch(51.01% 0.274 263.83);
@@ -34,11 +34,31 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, #ff3366, #33ccff);
+  border-radius: 5px;
+}
+
 body {
-  background: url(https://i.ibb.co/4SPwtVN/pexels-photo-1303094.png) no-repeat top center #8ac1d6;
+  background: url(https://i.ibb.co/4SPwtVN/pexels-photo-1303094.png) no-repeat
+    top center #8ac1d6;
   background-size: cover;
-  display: flex;
-  flex-direction: column;
+}
+
+xmas-calendar-grid {
+  :checked ~ .inside .jingle-bells .staff-lines,
+  :checked ~ .inside .jingle-bells .note {
+    -webkit-animation-play-state: running;
+    animation-play-state: running;
+  }
 }
 
 footer {
@@ -98,12 +118,4 @@ footer:hover div div {
 footer a {
   margin-left: 0.2rem;
   color: #ffffff;
-}
-
-xmas-calendar-grid {
-  :checked ~ .inside .jingle-bells .staff-lines,
-  :checked ~ .inside .jingle-bells .note {
-    -webkit-animation-play-state: running;
-    animation-play-state: running;
-  }
 }

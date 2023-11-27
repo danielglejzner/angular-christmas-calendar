@@ -30,7 +30,9 @@
 }
 
 .xmas-dialog-header img {
-  height: 4rem;
+  width: 4rem;
+  aspect-ratio: 1;
+  object-fit: cover;
   border-radius: 50%;
 }
 
@@ -44,7 +46,7 @@
   width: 8rem;
   height: 8rem;
   border-radius: 50%;
-  overflow: auto;
+  overflow: hidden;
 }
 
 @media only screen and (min-width: 576px) {
@@ -59,7 +61,7 @@
   }
 
   .xmas-dialog-header img {
-    height: 8rem;
+    width: 8rem;
   }
 
   .xmas-dialog-header h1,
@@ -70,11 +72,18 @@
 
 .xmas-dialog-content {
   font-size: 0.875rem;
-  font-family: 'Inter Tight', sans-serif;
+  font-family: "Inter Tight", sans-serif;
   color: var(--gray-700);
   display: flex;
   justify-content: center;
   overflow-y: auto;
+  scroll-behavior: smooth;
+  max-height: calc(100vh - 350px);
+
+  & > div p {
+    font-size: 1rem;
+    line-height: 1.4;
+  }
 }
 
 .xmas-dialog-content::before {
@@ -96,4 +105,23 @@
   right: -0.5rem;
   bottom: -0.5rem;
   left: -0.5rem;
+}
+
+.button {
+  background-color: #cc0000;
+  color: #ffffff;
+  border: 2px solid #cc0000;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.1s;
+}
+
+.button:hover {
+  background-color: #ffffff;
+  color: #cc0000;
 }
