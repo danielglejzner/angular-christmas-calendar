@@ -4,7 +4,7 @@
 
     <div class="xmas-dialog-header-details">
       @if (data.content?.author && data.content?.author?.twitterHandle) {
-        <a [href]="data.content?.author?.twitterHandle! | twitterUrl">{{data.content?.author?.name}}</a>
+        <a [href]="data.content?.author?.twitterHandle! | twitterUrl" tabindex="-1">{{data.content?.author?.name}}</a>
       } @else {
         <h1>{{data.content?.author?.name}}</h1>
       }
@@ -16,6 +16,7 @@
       </div>
     </div>
   </header>
+
   <div class="xmas-dialog-content">
     @if (data.content?.videoSrc) {
       <video width="640" height="360" controls>
@@ -29,7 +30,7 @@
     }
   </div>
 
-  <footer class="xmas-dialog-actions">
-    <button type="button" (click)="closeDialog()" class="button">Close</button>
-  </footer>
+  <div class="xmas-dialog-actions">
+    <button type="button" (click)="closeDialog()" tabindex="0" class="button">Close</button>
+  </div>
 </div>

@@ -16,11 +16,12 @@
 
 .xmas-dialog-header h1,
 .xmas-dialog-header a {
-  background-image: var(--red-to-pink-to-purple-horizontal-gradient);
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
+  color: #cc0000;
   font-size: 1.75rem;
+}
+
+.xmas-dialog-header-details a:hover {
+  opacity: 0.6;
 }
 
 .xmas-dialog-header-details {
@@ -78,7 +79,7 @@
   justify-content: center;
   overflow-y: auto;
   scroll-behavior: smooth;
-  max-height: calc(100vh - 350px);
+  max-height: calc(100vh - 400px);
 
   & > div p {
     font-size: 1rem;
@@ -119,9 +120,15 @@
   text-decoration: none;
   display: inline-block;
   transition: background-color 0.1s;
+  outline-color: lightcoral;
 }
 
 .button:hover {
   background-color: #ffffff;
   color: #cc0000;
+}
+
+div.xmas-dialog-actions {
+  display: flex;
+  justify-content: flex-end;
 }
