@@ -48,8 +48,8 @@
 }
 
 body {
-  background: url(https://i.ibb.co/4SPwtVN/pexels-photo-1303094.png) no-repeat
-    top center #8ac1d6;
+  background: url('./assets/content/images/background.jpg') no-repeat
+    top center var(--white);
   background-size: cover;
 }
 
