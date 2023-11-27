@@ -8,7 +8,7 @@
   overflow: hidden;
 }
 
-.snowflakie {
+.snowflake {
   opacity: 0.4;
   pointer-events: none;
   will-change: transform, opacity, left;
@@ -26,17 +26,17 @@
   transform: translateY(-10px);
 }
 
-.snowflakie.c1 {
+.snowflake.c1 {
   background-color: rgba(255, 255, 255, 0.9);
 }
 
-.snowflakie.c2 {
+.snowflake.c2 {
   background-color: #d6ffff;
   -webkit-animation-duration: 18s;
   animation-duration: 18s;
 }
 
-.snowflakie.c3 {
+.snowflake.c3 {
   background-color: #fff;
   -webkit-animation-duration: 22s;
   animation-duration: 22s;
