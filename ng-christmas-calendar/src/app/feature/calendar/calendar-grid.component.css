@@ -74,6 +74,7 @@
   position: relative;
   background: #0000001c;
   border-radius: 8px;
+  will-change: box-shadow;
 }
 
 input {
@@ -98,9 +99,10 @@ label {
 }
 
 .door {
+  --_door-transition-time: 300ms;
   width: 100%;
   transform-style: preserve-3d;
-  transition: all 300ms;
+  transition: all var(--_door-transition-time);
   border-radius: 0.6rem;
   transform-origin: 0% 50%;
 }
@@ -131,6 +133,7 @@ label {
 }
 
 .door .front {
+  -webkit-backdrop-filter: blur(2px);
   backdrop-filter: blur(2px);
 }
 
@@ -235,7 +238,7 @@ label:hover .door {
   border-radius: 0.6rem;
   overflow: hidden;
   opacity: 0;
-  transition: opacity 300ms ease-in-out;
+  transition: opacity var(--_door-transition-time) ease-in-out;
 }
 
 .inside-empty {
@@ -453,4 +456,25 @@ label:hover .door {
     left: auto;
     right: 0;
   }
+}
+
+@keyframes pulse {
+  from {
+    transform: scale3d(1, 1, 1);
+    box-shadow: 0 0 10px red;
+  }
+
+  50% {
+    transform: scale3d(1.1, 1.1, 1.1);
+    box-shadow: 0 0 25px red;
+  }
+
+  to {
+    transform: scale3d(1, 1, 1);
+    box-shadow: 0 0 10px red;
+  }
+}
+
+.pulse {
+  animation: pulse 2s infinite;
 }
