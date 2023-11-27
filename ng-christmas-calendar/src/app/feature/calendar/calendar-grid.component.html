@@ -6,7 +6,7 @@
   </h1>
 </div>
 @for (card of cards; track $index) {
-  <div class="day day-{{card.day}}" (click)="tryToOpenDialog(card)">
+  <div class="day day-{{card.day}}" (click)="tryToOpenDialog(card)" [class.pulse]="card.canReveal && !card.revealed">
     <label>
       <input type="checkbox" [checked]="card.revealed" [disabled]="!card.canReveal" (change)="card.revealed = !card.revealed"/>
 
@@ -16,9 +16,11 @@
           <div class="back"></div>
         </div>
       }
+
       <div class="inside">
         <ng-template [xmasCalendarCardFactory] [type]="card.day"></ng-template>
       </div>
+
       @if (card.content?.author) {
         <div class="title-container">
           @if (!card.content?.author?.twitterHandle) {
