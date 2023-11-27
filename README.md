@@ -1,4 +1,8 @@
-# AngularChristmasCalendar
+# Angular Christmas Calendar
+
+We express our gratitude to [Johnny Fekete](https://twitter.com/FullStackMaker) for his outstanding contributions to the development of the 'CSS Christmas Calendar,' serving as the inspiration for the creation of the 'Angular Christmas Calendar.'
+
+[CSS Christmas Calendar](https://github.com/johnnyfekete/CSSChristmasCalendar) is an experiment with 24 festive CSS-art hidden under each day in the calendar.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.0.
 
