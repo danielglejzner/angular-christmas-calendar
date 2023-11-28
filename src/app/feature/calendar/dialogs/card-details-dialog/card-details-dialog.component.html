@@ -7,7 +7,9 @@
 
     <div class="xmas-dialog-header-details">
       @if (data.content?.author && data.content?.author?.twitterHandle) {
-        <a [href]="data.content?.author?.twitterHandle! | twitterUrl" tabindex="-1">{{data.content?.author?.name}}</a>
+        <a [href]="data.content?.author?.twitterHandle! | twitterUrl" tabindex="-1">
+          {{ data.content?.author?.name }}
+        </a>
       } @else {
         <h1>{{ data.content?.author?.name }}</h1>
       }
@@ -37,4 +39,3 @@
     <button type="button" (click)="closeDialog()" tabindex="0" class="button">Close</button>
   </div>
 </div>
-
