@@ -67,7 +67,7 @@
   transform: rotate(-5deg);
 }
 
-.day {
+.card {
   transform: translate3d(0px, 0px, 0px);
   position: relative;
   background: #0000001c;

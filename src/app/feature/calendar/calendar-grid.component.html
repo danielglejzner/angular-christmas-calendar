@@ -7,7 +7,7 @@
 </div>
 @for (card of cards; track $index) {
   <div
-    class="day day-{{ card.day }}"
+    class="card day-{{ card.day }}"
     (click)="tryToOpenDialog(card)"
     [class.pulse]="card.canReveal && !card.revealed"
   >
@@ -48,3 +48,5 @@
     </label>
   </div>
 }
+
+<div class="card space">space</div>
