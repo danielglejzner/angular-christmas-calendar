@@ -42,7 +42,7 @@
 }
 
 .north-pole .ground::before {
-  content: "";
+  content: '';
   display: block;
   position: absolute;
   width: 5rem;
@@ -55,7 +55,7 @@
 }
 
 .north-pole .ground::after {
-  content: "";
+  content: '';
   display: block;
   position: absolute;
   width: 5rem;
@@ -84,7 +84,7 @@
 }
 
 .north-pole .pole::before {
-  content: "";
+  content: '';
   display: block;
   position: absolute;
   left: 0;
@@ -101,7 +101,7 @@
 }
 
 .north-pole .pole::after {
-  content: "";
+  content: '';
   display: block;
   position: absolute;
   left: 0.7rem;
@@ -123,7 +123,7 @@
 }
 
 .north-pole .top::before {
-  content: "";
+  content: '';
   display: block;
   position: absolute;
   top: 2rem;
@@ -135,7 +135,7 @@
 }
 
 .north-pole .top::after {
-  content: "";
+  content: '';
   display: block;
   position: absolute;
   top: 0.4rem;
@@ -173,7 +173,7 @@
 }
 
 .north-pole .icicle::after {
-  content: "";
+  content: '';
   display: block;
   position: absolute;
   top: -3.5rem;
@@ -220,7 +220,7 @@
 }
 
 .north-pole .ice-left::after {
-  content: "";
+  content: '';
   display: block;
   position: absolute;
   width: 5.5rem;
@@ -242,7 +242,7 @@
 }
 
 .north-pole .ice-right::after {
-  content: "";
+  content: '';
   display: block;
   position: absolute;
   z-index: -1;
@@ -268,7 +268,7 @@
 }
 
 .north-pole .snow::before {
-  content: "";
+  content: '';
   display: block;
   position: absolute;
   width: 5rem;
@@ -281,7 +281,7 @@
 }
 
 .north-pole .snow::after {
-  content: "";
+  content: '';
   display: block;
   position: absolute;
   width: 5rem;

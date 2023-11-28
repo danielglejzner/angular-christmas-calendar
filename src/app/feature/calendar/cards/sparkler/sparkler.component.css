@@ -49,7 +49,7 @@
 }
 
 .sparkler .gun-powder::before {
-  content: "";
+  content: '';
   display: block;
   position: absolute;
   bottom: 0;
@@ -76,7 +76,7 @@
 }
 
 .sparkler .sparkler-light::after {
-  content: "";
+  content: '';
   display: block;
   border-radius: 50%;
   width: 9rem;
@@ -96,7 +96,7 @@
 }
 
 .sparkler .spark::after {
-  content: "";
+  content: '';
   display: block;
   position: absolute;
   bottom: 0;

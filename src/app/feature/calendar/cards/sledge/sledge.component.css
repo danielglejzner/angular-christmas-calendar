@@ -35,7 +35,7 @@
   top: 6rem;
 }
 .sledge .sledge-runner__front::after {
-  content: "";
+  content: '';
   display: block;
   margin-top: -4rem;
   width: 8rem;
@@ -103,11 +103,7 @@
   box-sizing: border-box;
   width: 15rem;
   height: 0.8rem;
-  background: linear-gradient(
-    to bottom,
-    var(--sledge-wood-light) 0%,
-    var(--sledge-wood-dark) 100%
-  );
+  background: linear-gradient(to bottom, var(--sledge-wood-light) 0%, var(--sledge-wood-dark) 100%);
   border: 1.5px solid var(--sledge-edge);
 }
 
@@ -115,19 +111,15 @@
   position: absolute;
   right: 0;
   top: 0;
-  transform: skewY(-50deg) rotate(90deg) scaleX(1.8) scaleY(0.85)
-    translateX(0.6rem) translateY(-0.4rem);
+  transform: skewY(-50deg) rotate(90deg) scaleX(1.8) scaleY(0.85) translateX(0.6rem)
+    translateY(-0.4rem);
 }
 
 .sledge .sledge-back__piece {
   box-sizing: border-box;
   width: 0.8rem;
   height: 0.8rem;
-  background: linear-gradient(
-    to bottom,
-    var(--sledge-wood-light) 0%,
-    var(--sledge-wood-dark) 100%
-  );
+  background: linear-gradient(to bottom, var(--sledge-wood-light) 0%, var(--sledge-wood-dark) 100%);
   border: 1.5px solid var(--sledge-edge);
 }
 

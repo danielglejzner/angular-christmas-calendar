@@ -6,13 +6,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: radial-gradient(
-    circle at 100%,
-    #6930c3 0%,
-    #56cfe1 40%,
-    #72efdd 70%,
-    #80ffdb 100%
-  );
+  background: radial-gradient(circle at 100%, #6930c3 0%, #56cfe1 40%, #72efdd 70%, #80ffdb 100%);
   height: 100%;
   margin: 0;
 }
@@ -60,7 +54,7 @@
 }
 
 .ornaments .branch::before {
-  content: "";
+  content: '';
   display: block;
   border-radius: 50%;
   position: absolute;
@@ -117,15 +111,11 @@
   position: absolute;
   top: -0.8rem;
   left: -0.8rem;
-  content: "";
+  content: '';
   display: block;
   width: 14rem;
   height: 14rem;
-  background: repeating-conic-gradient(
-    from 0deg,
-    #006600 0deg 2deg,
-    transparent 2deg 9deg
-  );
+  background: repeating-conic-gradient(from 0deg, #006600 0deg 2deg, transparent 2deg 9deg);
 }
 
 .ornaments .ornament {
@@ -141,7 +131,7 @@
 
 .ornaments .ornament::before {
   position: absolute;
-  content: "";
+  content: '';
   display: block;
   width: 3rem;
   height: 2rem;
@@ -154,18 +144,14 @@
 
 .ornaments .ornament::after {
   position: absolute;
-  content: "";
+  content: '';
   display: block;
   width: 6rem;
   height: 6rem;
   top: 0.4rem;
   left: 0.5rem;
   border-radius: 50%;
-  background: linear-gradient(
-    to bottom,
-    rgba(255, 255, 255, 0.5),
-    transparent 100%
-  );
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), transparent 100%);
   transform: rotate(-20deg);
 }
 
@@ -212,7 +198,7 @@
 
 .ornaments .hanger::before {
   position: absolute;
-  content: "";
+  content: '';
   display: block;
   border-left: 0.1rem solid black;
   height: 3rem;
@@ -222,7 +208,7 @@
 
 .ornaments .hanger::after {
   position: absolute;
-  content: "";
+  content: '';
   display: block;
   border-left: 0.1rem solid black;
   border-top: 0.1rem solid black;

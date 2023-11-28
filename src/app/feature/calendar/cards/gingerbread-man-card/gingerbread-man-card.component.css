@@ -40,7 +40,7 @@
 }
 
 .gingerbread-man .head::after {
-  content: "";
+  content: '';
   display: block;
   position: absolute;
   width: 5rem;
@@ -76,7 +76,8 @@
   height: 0.3rem;
   border-radius: 0.3rem;
   background-color: var(--green-color);
-  box-shadow: -1px 1px 1px 0 rgba(0, 0, 0, 0.5),
+  box-shadow:
+    -1px 1px 1px 0 rgba(0, 0, 0, 0.5),
     inset -1px 1px 1px 0 rgba(255, 255, 255, 0.5);
 }
 
@@ -119,7 +120,7 @@
 }
 
 .gingerbread-man .mouth__lower-lip::after {
-  content: "";
+  content: '';
   display: block;
   width: 3rem;
   height: 3rem;
@@ -136,7 +137,7 @@
 }
 
 .gingerbread-man .mouth__left-lip::after {
-  content: "";
+  content: '';
   display: block;
   width: 0.75rem;
   height: 0.75rem;
@@ -154,7 +155,7 @@
 }
 
 .gingerbread-man .mouth__right-lip::after {
-  content: "";
+  content: '';
   display: block;
   width: 0.5rem;
   height: 0.5rem;
@@ -172,7 +173,7 @@
 }
 
 .gingerbread-man .mouth__upper-lip::after {
-  content: "";
+  content: '';
   display: block;
   width: 1.8rem;
   height: 1rem;
@@ -191,17 +192,13 @@
   width: 5rem;
   height: 2.2rem;
   background-color: var(--ginger-color);
-  background: linear-gradient(
-    to right,
-    var(--dark-ginger-color) 0%,
-    var(--ginger-color) 50%
-  );
+  background: linear-gradient(to right, var(--dark-ginger-color) 0%, var(--ginger-color) 50%);
   border-radius: 1rem;
   position: absolute;
 }
 
 .gingerbread-man .arm::after {
-  content: "\00a0\00a0\00a0\00a0\00a0";
+  content: '\00a0\00a0\00a0\00a0\00a0';
   width: 2.2rem;
   height: 1rem;
   overflow: hidden;
@@ -226,17 +223,13 @@
   width: 2.2rem;
   height: 8rem;
   background-color: var(--ginger-color);
-  background: linear-gradient(
-    to top,
-    var(--dark-ginger-color) 0%,
-    var(--ginger-color) 40%
-  );
+  background: linear-gradient(to top, var(--dark-ginger-color) 0%, var(--ginger-color) 40%);
   border-radius: 1rem;
   position: absolute;
 }
 
 .gingerbread-man .leg::after {
-  content: "\00a0\00a0\00a0\00a0\00a0";
+  content: '\00a0\00a0\00a0\00a0\00a0';
   width: 2.2rem;
   height: 1rem;
   overflow: hidden;
@@ -258,7 +251,7 @@
 }
 
 .gingerbread-man .belt::after {
-  content: "\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0";
+  content: '\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0';
   width: 4.1rem;
   height: 2rem;
   overflow: hidden;
@@ -283,13 +276,14 @@
 }
 
 .gingerbread-man .button::after {
-  content: "";
+  content: '';
   display: block;
   width: 0.9rem;
   height: 0.9rem;
   border-radius: 50%;
   background: var(--green-color);
-  box-shadow: -1px 1px 1px 0 rgba(0, 0, 0, 0.3),
+  box-shadow:
+    -1px 1px 1px 0 rgba(0, 0, 0, 0.3),
     inset -3px 3px 5px 0 rgba(255, 255, 255, 0.2);
   margin-left: 0.15rem;
 }

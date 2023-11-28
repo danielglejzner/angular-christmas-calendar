@@ -97,7 +97,7 @@
 }
 
 .reindeer .antler .hook::before {
-  content: "";
+  content: '';
   display: block;
   position: absolute;
   top: -0.35rem;
@@ -125,7 +125,7 @@
 }
 
 .reindeer .head .face::after {
-  content: "";
+  content: '';
   display: block;
   position: absolute;
   top: 0.05rem;
@@ -156,7 +156,7 @@
 }
 
 .reindeer .ear::after {
-  content: "";
+  content: '';
   display: block;
   position: absolute;
   left: 1rem;
@@ -200,7 +200,7 @@
 }
 
 .reindeer .nose::before {
-  content: "";
+  content: '';
   display: block;
   position: absolute;
   top: 0.3rem;
@@ -212,7 +212,7 @@
 }
 
 .reindeer .nose::after {
-  content: "";
+  content: '';
   display: block;
   position: absolute;
   top: 0.6rem;
@@ -234,7 +234,7 @@
 }
 
 .reindeer .body::after {
-  content: "";
+  content: '';
   display: block;
   position: absolute;
   width: 3rem;
@@ -264,7 +264,7 @@
 }
 
 .reindeer .hand::after {
-  content: "";
+  content: '';
   display: block;
   position: absolute;
   top: 1.2rem;
@@ -290,7 +290,7 @@
 }
 
 .reindeer .legs::before {
-  content: "";
+  content: '';
   display: block;
   position: absolute;
   top: 1rem;
@@ -303,7 +303,7 @@
 }
 
 .reindeer .legs::after {
-  content: "";
+  content: '';
   display: block;
   position: absolute;
   top: 1rem;
