@@ -54,6 +54,12 @@ body {
   background-size: cover;
 }
 
+@media only screen and (max-width: 576px) {
+  body {
+    background-position-x: right;
+  }
+}
+
 xmas-calendar-grid {
   :checked ~ .inside .jingle-bells .staff-lines,
   :checked ~ .inside .jingle-bells .note {

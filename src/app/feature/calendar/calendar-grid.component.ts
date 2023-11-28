@@ -1,17 +1,24 @@
 import {ChangeDetectionStrategy, Component, inject} from '@angular/core';
-import {CommonModule} from '@angular/common';
+import {CommonModule, NgOptimizedImage} from '@angular/common';
 import {CalendarCardFactoryDirective} from './cards/calendar-card-factory.directive';
 import {CalendarService} from './services/calendar.service';
 import {Dialog, DialogModule} from '@angular/cdk/dialog';
 import {UiCalendarCard} from './interfaces/christmas-calendar-data';
 import {CardDetailsDialogComponent} from './dialogs/card-details-dialog/card-details-dialog.component';
 import {TwitterUrlPipe} from './pipes/twitter-url.pipe';
-import { ShakeWhenDisabledDirective } from './directives/shake-on-click.directive';
+import {ShakeWhenDisabledDirective} from './directives/shake-on-click.directive';
 
 @Component({
   selector: 'xmas-calendar-grid',
   standalone: true,
-  imports: [CommonModule, CalendarCardFactoryDirective, DialogModule, TwitterUrlPipe, ShakeWhenDisabledDirective],
+  imports: [
+    CommonModule,
+    CalendarCardFactoryDirective,
+    DialogModule,
+    NgOptimizedImage,
+    TwitterUrlPipe,
+    ShakeWhenDisabledDirective,
+  ],
   templateUrl: './calendar-grid.component.html',
   styleUrl: './calendar-grid.component.css',
   changeDetection: ChangeDetectionStrategy.OnPush,

@@ -1,28 +1,27 @@
-import { Directive, ElementRef, HostListener, Input, Renderer2, inject } from "@angular/core";
-import { fromEvent, take } from "rxjs";
-
+import {Directive, ElementRef, HostListener, Input, Renderer2, inject} from '@angular/core';
+import {fromEvent, take} from 'rxjs';
 
 @Directive({
-	selector: '[shakeWhenDisabled]',
-	standalone: true
+  selector: '[shakeWhenDisabled]',
+  standalone: true,
 })
 export class ShakeWhenDisabledDirective {
-	private readonly elRef = inject(ElementRef<HTMLLabelElement>);
-	private readonly renderer = inject(Renderer2);
+  private readonly elRef = inject(ElementRef<HTMLLabelElement>);
+  private readonly renderer = inject(Renderer2);
 
-	@Input()
-	shakeWhenDisabled: boolean = false;
+  @Input()
+  shakeWhenDisabled: boolean = false;
 
-	@HostListener('click', ['$event'])
-	onClick(event: EventTarget) {
-		if (this.shakeWhenDisabled) {
-			this.renderer.addClass(this.elRef.nativeElement, 'shakeX');
+  @HostListener('click', ['$event'])
+  onClick() {
+    if (this.shakeWhenDisabled) {
+      this.renderer.addClass(this.elRef.nativeElement, 'shakeX');
 
-			fromEvent(this.elRef.nativeElement, 'animationend')
-				.pipe(take(1))
-				.subscribe(() => {
-					this.renderer.removeClass(this.elRef.nativeElement, 'shakeX');
-				});
-		}
-	}
+      fromEvent(this.elRef.nativeElement, 'animationend')
+        .pipe(take(1))
+        .subscribe(() => {
+          this.renderer.removeClass(this.elRef.nativeElement, 'shakeX');
+        });
+    }
+  }
 }

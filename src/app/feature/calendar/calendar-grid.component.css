@@ -1,6 +1,6 @@
 :host {
   display: grid;
-  width: 94%;
+  width: 100%;
   max-width: 1100px;
   margin: 3% auto 3.5rem auto;
 
@@ -38,36 +38,35 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+}
+
+.title svg {
+  width: 350px;
 }
 
 .title h1 {
-  font-size: 2rem;
+  font-size: 2.75rem;
   text-align: center;
   text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.2);
   display: flex;
   flex-direction: row;
 }
 
-.title-1 {
-  color: #9c163f;
-  display: block;
-  transform: rotate(-10deg);
-  margin-right: 1rem;
-}
-
-.title-2 {
-  color: #413486;
+.title-christmas {
+  color: #e63946;
   display: block;
   transform: rotate(5deg);
   margin-right: 1rem;
 }
 
-.title-3 {
+.title-calendar {
+  color: #413486;
   display: block;
   transform: rotate(-5deg);
 }
 
-.day {
+.card {
   transform: translate3d(0px, 0px, 0px);
   position: relative;
   background: #0000001c;
@@ -503,6 +502,54 @@ label:hover .door {
 
 .pulse {
   animation: pulse 2s infinite;
+}
+
+
+.space,
+.space a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.space img {
+  max-width: 100px;
+}
+
+.space:hover {
+  position: relative;
+  background: var(--red-to-pink-to-purple-horizontal-gradient);
+}
+
+.year {
+  grid-area: year;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  font-size: 5rem;
+}
+
+.year span {
+  display: block;
+}
+
+.year span:nth-child(odd) {
+  transform: rotate(5deg);
+  color: #e63946;
+}
+
+.year span:nth-child(even) {
+  color: #413486;
+  transform: rotate(-5deg);
+}
+
+@media only screen and (max-width: 900px) {
+  .year,
+  .space.card {
+    display: none;
+  }
 }
 
 @keyframes shakeX {
