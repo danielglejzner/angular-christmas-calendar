@@ -1,7 +1,7 @@
 :host {
   display: grid;
   width: 94%;
-  max-width: 900px;
+  max-width: 1100px;
   margin: 3% auto 3.5rem auto;
 
   grid-template-columns: repeat(3, 1fr);
@@ -12,26 +12,24 @@
 
   grid-template-areas:
     "title  title  title"
-    "day22  day3   day8"
-    "day9   day18  day11"
-    "day2   day24  day13"
-    "day12  day10  day4"
-    "day20  day1   day7"
-    "day5   day14  day17"
-    "day16  day23  day6"
-    "day15  day21  day19";
+    "day5   day17  day15"
+    "day19  day12  day11"
+    "day24  day20  day1"
+    "day9   day16  day6"
+    "day22  day14  day4"
+    "day13  day10  day21"
+    "day2   day23  day3"
+    "day8   day7   day18";
 
   /* media query */
-  @media only screen and (min-width: 576px) {
-      grid-template-columns: repeat(6, 1fr);
+  @media only screen and (min-width: 900px) {
+      grid-template-columns: repeat(8, 1fr);
       grid-template-areas:
-        "title  title  title  day5   day17  day15"
-        "title  title  title  day11  day20  day16"
-        "title  title  title  day1   day18  day12"
-        "day6   day22  day14  day24  day24  day4  "
-        "day10  day21  day2   day24  day24  day8"
-        "day3   day9   day7   day13  day23  day19";
-    
+        "title  title  title  day5   day17  day15 day19 day12"
+        "title  title  title  day11  day24  day24 space day20"
+        "title  title  title  day1   day24  day24 day9 day16"
+        "day6   day22  day14  day4   year   year  year day13"
+        "day10  day21  day2   day23  day3   day8  day7 day18";
   }
 }
 
@@ -266,43 +264,43 @@ label:hover .door {
 /* Calendar day positions and z-indexes */
 .day-1 {
   grid-area: day1;
-  z-index: 11;
+  z-index: 18;
 }
 .day-2 {
   grid-area: day2;
-  z-index: 16;
+  z-index: 4;
 }
 .day-3 {
   grid-area: day3;
-  z-index: 23;
+  z-index: 6;
 }
 .day-4 {
   grid-area: day4;
-  z-index: 15;
+  z-index: 12;
 }
 .day-5 {
   grid-area: day5;
-  z-index: 7;
+  z-index: 22;
 }
 .day-6 {
   grid-area: day6;
-  z-index: 6;
+  z-index: 15;
 }
 .day-7 {
   grid-area: day7;
-  z-index: 12;
+  z-index: 2;
 }
 .day-8 {
   grid-area: day8;
-  z-index: 24;
+  z-index: 1;
 }
 .day-9 {
   grid-area: day9;
-  z-index: 19;
+  z-index: 13;
 }
 .day-10 {
   grid-area: day10;
-  z-index: 14;
+  z-index: 8;
 }
 .day-11 {
   grid-area: day11;
@@ -310,47 +308,47 @@ label:hover .door {
 }
 .day-12 {
   grid-area: day12;
-  z-index: 13;
+  z-index: 20;
 }
 .day-13 {
   grid-area: day13;
-  z-index: 18;
+  z-index: 7;
 }
 .day-14 {
   grid-area: day14;
-  z-index: 8;
+  z-index: 11;
 }
 .day-15 {
   grid-area: day15;
-  z-index: 1;
+  z-index: 24;
 }
 .day-16 {
   grid-area: day16;
-  z-index: 4;
+  z-index: 14;
 }
 .day-17 {
   grid-area: day17;
-  z-index: 9;
+  z-index: 23;
 }
 .day-18 {
   grid-area: day18;
-  z-index: 20;
+  z-index: 3;
 }
 .day-19 {
   grid-area: day19;
-  z-index: 3;
+  z-index: 19;
 }
 .day-20 {
   grid-area: day20;
-  z-index: 10;
+  z-index: 17;
 }
 .day-21 {
   grid-area: day21;
-  z-index: 2;
+  z-index: 9;
 }
 .day-22 {
   grid-area: day22;
-  z-index: 22;
+  z-index: 10;
 }
 .day-23 {
   grid-area: day23;
@@ -358,82 +356,106 @@ label:hover .door {
 }
 .day-24 {
   grid-area: day24;
-  z-index: 17;
+  z-index: 16;
 }
 
 @media only screen and (min-width: 576px) {
-  .day-1 {
-    z-index: 16;
-  }
-  .day-2 {
-    z-index: 9;
-  }
-  .day-3 {
-    z-index: 1;
-  }
-  .day-4 {
-    z-index: 15;
-  }
-  .day-5 {
-    z-index: 22;
-  }
-  .day-6 {
-    z-index: 11;
-  }
-  .day-7 {
-    z-index: 3;
-  }
-  .day-8 {
-    z-index: 10;
-  }
-  .day-9 {
-    z-index: 2;
-  }
-  .day-10 {
-    z-index: 7;
-  }
-  .day-11 {
-    z-index: 19;
-  }
-  .day-12 {
-    z-index: 18;
-  }
-  .day-13 {
-    z-index: 4;
-  }
-  .day-14 {
-    z-index: 13;
-  }
-  .day-15 {
-    z-index: 24;
-  }
-  .day-16 {
-    z-index: 21;
-  }
-  .day-17 {
-    z-index: 23;
-  }
-  .day-18 {
-    z-index: 17;
-  }
-  .day-19 {
-    z-index: 6;
-  }
-  .day-20 {
-    z-index: 20;
-  }
-  .day-21 {
-    z-index: 8;
-  }
-  .day-22 {
-    z-index: 12;
-  }
-  .day-23 {
-    z-index: 5;
-  }
-  .day-24 {
-    z-index: 14;
-  }
+.day-1 {
+  grid-area: day1;
+  z-index: 14;
+}
+.day-2 {
+  grid-area: day2;
+  z-index: 19;
+}
+.day-3 {
+  grid-area: day3;
+  z-index: 5;
+}
+.day-4 {
+  grid-area: day4;
+  z-index: 12;
+}
+.day-5 {
+  grid-area: day5;
+  z-index: 20;
+}
+.day-6 {
+  grid-area: day6;
+  z-index: 9;
+}
+.day-7 {
+  grid-area: day7;
+  z-index: 7;
+}
+.day-8 {
+  grid-area: day8;
+  z-index: 6;
+}
+.day-9 {
+  grid-area: day9;
+  z-index: 17;
+}
+.day-10 {
+  grid-area: day10;
+  z-index: 1;
+}
+.day-11 {
+  grid-area: day11;
+  z-index: 15;
+}
+.day-12 {
+  grid-area: day12;
+  z-index: 24;
+}
+.day-13 {
+  grid-area: day13;
+  z-index: 13;
+}
+.day-14 {
+  grid-area: day14;
+  z-index: 11;
+}
+.day-15 {
+  grid-area: day15;
+  z-index: 22;
+}
+.day-16 {
+  grid-area: day16;
+  z-index: 18;
+}
+.day-17 {
+  grid-area: day17;
+  z-index: 21;
+}
+.day-18 {
+  grid-area: day18;
+  z-index: 8;
+}
+.day-19 {
+  grid-area: day19;
+  z-index: 23;
+}
+.day-20 {
+  grid-area: day20;
+  z-index: 19;
+}
+.day-21 {
+  grid-area: day21;
+  z-index: 2;
+}
+.day-22 {
+  grid-area: day22;
+  z-index: 10;
+}
+.day-23 {
+  grid-area: day23;
+  z-index: 4;
+}
+.day-24 {
+  grid-area: day24;
+  z-index: 16;
+}
 }
 
 @media only screen and (max-width: 575px) {
