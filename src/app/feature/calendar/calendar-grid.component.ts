@@ -6,6 +6,7 @@ import {Dialog, DialogModule} from '@angular/cdk/dialog';
 import {UiCalendarCard} from './interfaces/christmas-calendar-data';
 import {CardDetailsDialogComponent} from './dialogs/card-details-dialog/card-details-dialog.component';
 import {TwitterUrlPipe} from './pipes/twitter-url.pipe';
+import {ShakeWhenDisabledDirective} from './directives/shake-on-click.directive';
 
 @Component({
   selector: 'xmas-calendar-grid',
@@ -16,6 +17,7 @@ import {TwitterUrlPipe} from './pipes/twitter-url.pipe';
     DialogModule,
     NgOptimizedImage,
     TwitterUrlPipe,
+    ShakeWhenDisabledDirective,
   ],
   templateUrl: './calendar-grid.component.html',
   styleUrl: './calendar-grid.component.css',
