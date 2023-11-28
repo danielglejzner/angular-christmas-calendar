@@ -130,5 +130,15 @@
 
 div.xmas-dialog-actions {
   display: flex;
-  justify-content: flex-end;
+
+  button {
+    margin-left: auto;
+  }
+
+  img {
+    margin-right: auto;
+    height: 42px;
+    object-fit: fill;
+    padding: 0 0.5rem;
+  }
 }
