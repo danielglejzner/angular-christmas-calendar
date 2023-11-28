@@ -1,6 +1,6 @@
 :host {
   display: grid;
-  width: 94%;
+  width: 100%;
   max-width: 1100px;
   margin: 3% auto 3.5rem auto;
 
@@ -46,7 +46,7 @@
 }
 
 .title h1 {
-  font-size: 2rem;
+  font-size: 2.75rem;
   text-align: center;
   text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.2);
   display: flex;
@@ -521,7 +521,32 @@ label:hover .door {
   background: var(--red-to-pink-to-purple-horizontal-gradient);
 }
 
-@media only screen and (max-width: 576px) {
+.year {
+  grid-area: year;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  font-size: 5rem;
+}
+
+.year span {
+  display: block;
+}
+
+.year span:nth-child(odd) {
+  transform: rotate(5deg);
+  color: #e63946;
+}
+
+.year span:nth-child(even) {
+  color: #413486;
+  transform: rotate(-5deg);
+}
+
+@media only screen and (max-width: 900px) {
+  .year,
   .space.card {
     display: none;
   }
