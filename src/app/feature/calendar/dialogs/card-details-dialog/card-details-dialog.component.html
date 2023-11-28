@@ -29,7 +29,7 @@
         Your browser does not support the video tag.
       </video>
     } @else if (data.content?.descriptionHtml) {
-      <div [innerHTML]="data.content?.descriptionHtml"></div>
+      <div class="embedded-content" [innerHTML]="data.content?.descriptionHtml"></div>
     } @else {
       <p>No content provided</p>
     }
