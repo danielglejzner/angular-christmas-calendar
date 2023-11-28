@@ -9,7 +9,7 @@
   <div
     class="day day-{{ card.day }}"
     (click)="tryToOpenDialog(card)"
-    [class.pulse]="card.canReveal && !card.revealed"
+    [class.pulse]="card.isCardOfDay"
   >
     <label>
       <input

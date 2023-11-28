@@ -139,7 +139,7 @@ label:hover .door {
   border-color: #10303c;
 }
 
-:checked + .door {
+:checked:not(.opened) + .door {
   transform: rotateY(-180deg);
 }
 
