@@ -17,7 +17,7 @@
 .xmas-dialog-header h1,
 .xmas-dialog-header a {
   color: #cc0000;
-  font-size: 1.75rem;
+  font-size: clamp(1rem, 2vw + 1.1rem ,2.5rem);
 }
 
 .xmas-dialog-header-details a:hover {
@@ -63,11 +63,6 @@
 
   .xmas-dialog-header img {
     width: 8rem;
-  }
-
-  .xmas-dialog-header h1,
-  .xmas-dialog-header a {
-    font-size: 2.5rem;
   }
 }
 
