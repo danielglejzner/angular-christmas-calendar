@@ -2,7 +2,7 @@
   <header class="xmas-dialog-header">
     <img
       [src]="data.content?.author?.avatarUrl"
-      alt="{{ data.content?.author }} thoughts about Angular in 2023!"
+      alt="{{ data.content?.author?.name }} thoughts about Angular in 2023!"
     />
 
     <div class="xmas-dialog-header-details">
@@ -36,6 +36,10 @@
   </div>
 
   <div class="xmas-dialog-actions">
+    @if (data.content?.author?.brandUrl) {
+      <img [src]="data.content?.author?.brandUrl" alt="{{ data.content?.author?.name }} brand" />
+    }
+
     <button type="button" (click)="closeDialog()" tabindex="0" class="button">Close</button>
   </div>
 </div>
