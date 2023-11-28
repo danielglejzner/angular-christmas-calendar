@@ -6,8 +6,7 @@
         "author": {
           "name": "Pawel Kubiak",
           "avatarUrl": "https://pbs.twimg.com/profile_images/1633189328095531009/boistFbq_400x400.jpg",
-          "twitterHandle": "pawelkubiakdev",
-          "brandUrl": "assets/content/images/angular-experts.png"
+          "twitterHandle": "pawelkubiakdev"
         },
         "videoSrc": "assets/content/videos/IMG_0165.MOV"
       }
@@ -18,8 +17,7 @@
         "author": {
           "name": "Daniel Glejzner",
           "avatarUrl": "https://pbs.twimg.com/profile_images/1722302317129555968/83t3Fa-v_400x400.jpg",
-          "twitterHandle": "DanielGlejzner",
-          "brandUrl": "https://www.angulararchitects.io/wp-content/uploads/2023/06/angular-header-logo.svg"
+          "twitterHandle": "DanielGlejzner"
         },
         "descriptionHtml": "<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p><p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>"
       }
