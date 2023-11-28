@@ -38,6 +38,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+}
+
+.title img {
+  width: 350px;
 }
 
 .title h1 {
@@ -48,21 +53,15 @@
   flex-direction: row;
 }
 
-.title-1 {
-  color: #9c163f;
-  display: block;
-  transform: rotate(-10deg);
-  margin-right: 1rem;
-}
-
-.title-2 {
-  color: #413486;
+.title-christmas {
+  color: #e63946;
   display: block;
   transform: rotate(5deg);
   margin-right: 1rem;
 }
 
-.title-3 {
+.title-calendar {
+  color: #413486;
   display: block;
   transform: rotate(-5deg);
 }
@@ -505,9 +504,6 @@ label:hover .door {
   animation: pulse 2s infinite;
 }
 
-.space {
-  box-shadow: 0 0 10px var(--red-to-pink-to-purple-horizontal-gradient);
-}
 
 .space,
 .space a {
@@ -523,4 +519,10 @@ label:hover .door {
 .space:hover {
   position: relative;
   background: var(--red-to-pink-to-purple-horizontal-gradient);
+}
+
+@media only screen and (max-width: 576px) {
+  .space.card {
+    display: none;
+  }
 }
