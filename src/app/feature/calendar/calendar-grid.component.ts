@@ -1,5 +1,5 @@
 import {ChangeDetectionStrategy, Component, inject} from '@angular/core';
-import {CommonModule} from '@angular/common';
+import {CommonModule, NgOptimizedImage} from '@angular/common';
 import {CalendarCardFactoryDirective} from './cards/calendar-card-factory.directive';
 import {CalendarService} from './services/calendar.service';
 import {Dialog, DialogModule} from '@angular/cdk/dialog';
@@ -10,7 +10,13 @@ import {TwitterUrlPipe} from './pipes/twitter-url.pipe';
 @Component({
   selector: 'xmas-calendar-grid',
   standalone: true,
-  imports: [CommonModule, CalendarCardFactoryDirective, DialogModule, TwitterUrlPipe],
+  imports: [
+    CommonModule,
+    CalendarCardFactoryDirective,
+    DialogModule,
+    NgOptimizedImage,
+    TwitterUrlPipe,
+  ],
   templateUrl: './calendar-grid.component.html',
   styleUrl: './calendar-grid.component.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
