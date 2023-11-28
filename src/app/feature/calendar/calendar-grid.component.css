@@ -504,3 +504,23 @@ label:hover .door {
 .pulse {
   animation: pulse 2s infinite;
 }
+
+.space {
+  box-shadow: 0 0 10px var(--red-to-pink-to-purple-horizontal-gradient);
+}
+
+.space,
+.space a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.space img {
+  max-width: 100px;
+}
+
+.space:hover {
+  position: relative;
+  background: var(--red-to-pink-to-purple-horizontal-gradient);
+}
