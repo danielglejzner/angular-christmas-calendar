@@ -42,7 +42,7 @@
 }
 
 .hot-chocolate .mug__contents::before {
-  content: "";
+  content: '';
   display: block;
   width: 10rem;
   height: 3rem;
@@ -53,7 +53,7 @@
 }
 
 .hot-chocolate .mug__contents::after {
-  content: "";
+  content: '';
   display: block;
   width: 10rem;
   height: 3rem;
@@ -125,7 +125,7 @@
 }
 
 .hot-chocolate .mug__shine--bottom::before {
-  content: "";
+  content: '';
   display: block;
   width: 10rem;
   height: 3rem;
@@ -148,20 +148,12 @@
   width: 2.4rem;
   height: 1.6rem;
   border-radius: 0.8rem / 1.2rem;
-  background: radial-gradient(
-    circle at 0 0,
-    var(--marshmallow) 0%,
-    #ffffff 100%
-  );
+  background: radial-gradient(circle at 0 0, var(--marshmallow) 0%, #ffffff 100%);
   box-shadow: 2px 2px 0 2px rgba(0, 0, 0, 0.3);
 }
 
 .hot-chocolate .marshmallow:nth-child(odd) {
-  background: radial-gradient(
-    circle at 0 0,
-    var(--pink-marshmallow) 0%,
-    #ffffff 100%
-  );
+  background: radial-gradient(circle at 0 0, var(--pink-marshmallow) 0%, #ffffff 100%);
 }
 
 .hot-chocolate .marshmallow:nth-child(4) {

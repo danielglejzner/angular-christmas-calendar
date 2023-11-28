@@ -73,7 +73,7 @@
 
 .xmas-dialog-content {
   font-size: 0.875rem;
-  font-family: "Inter Tight", sans-serif;
+  font-family: 'Inter Tight', sans-serif;
   color: var(--gray-700);
   display: flex;
   justify-content: center;
@@ -88,7 +88,7 @@
 }
 
 .xmas-dialog-content::before {
-  content: "";
+  content: '';
   display: block;
   border-radius: 0.75rem;
   background: repeating-linear-gradient(

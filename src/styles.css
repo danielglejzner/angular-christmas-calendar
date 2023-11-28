@@ -1,5 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
-@import "@angular/cdk/overlay-prebuilt.css";
+@import '@angular/cdk/overlay-prebuilt.css';
 
 :root {
   --bright-blue: oklch(51.01% 0.274 263.83);
@@ -28,7 +28,7 @@
     var(--electric-violet) 100%
   );
 
-  font-family: "Mountains of Christmas", cursive;
+  font-family: 'Mountains of Christmas', cursive;
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -44,13 +44,17 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(45deg, #ff3366, #33ccff);
+  background: linear-gradient(
+    45deg,
+    var(--electric-violet) 0%,
+    var(--vivid-pink) 50%,
+    var(--orange-red) 100%
+  );
   border-radius: 5px;
 }
 
 body {
-  background: url('./assets/content/images/background.jpg') no-repeat
-    top center var(--white);
+  background: url('./assets/content/images/background.jpg') no-repeat top center var(--white);
   background-size: cover;
 }
 
@@ -91,7 +95,7 @@ footer div {
 footer .footer-info {
   width: 2.8rem;
   text-align: center;
-  font-family: "Times New Roman", serif;
+  font-family: 'Times New Roman', serif;
   font-weight: bold;
   font-style: italic;
   font-size: 2.6rem;
@@ -104,7 +108,7 @@ footer div div {
   display: inline-block;
   border-radius: 0.4rem;
   padding: 0.6rem 0.8rem 0.6rem 0.2rem;
-  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
   font-size: 0.8rem;
   color: #80a7e7;
   line-height: 1.6rem;

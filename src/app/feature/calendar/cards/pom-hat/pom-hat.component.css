@@ -19,8 +19,8 @@
   width: 8rem;
   height: 10rem;
   border-radius: 4rem 4rem 0 0;
-  background: linear-gradient(135deg, var(--pom-hat-green) 25%, transparent 25%) -0.5rem
-      0,
+  background:
+    linear-gradient(135deg, var(--pom-hat-green) 25%, transparent 25%) -0.5rem 0,
     linear-gradient(225deg, var(--pom-hat-green) 25%, transparent 25%) -0.5rem 0,
     linear-gradient(315deg, var(--pom-hat-green) 25%, transparent 25%),
     linear-gradient(45deg, var(--pom-hat-green) 25%, transparent 25%);
@@ -30,7 +30,7 @@
 }
 
 .pom-hat::before {
-  content: "";
+  content: '';
   display: block;
   width: 8rem;
   height: 10rem;
@@ -54,7 +54,7 @@
 }
 
 .pom-hat::after {
-  content: "";
+  content: '';
   display: block;
   position: absolute;
   left: -1rem;

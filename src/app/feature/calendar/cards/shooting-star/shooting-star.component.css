@@ -97,7 +97,7 @@
 }
 
 .shooting-star .shooting-star__star span::before {
-  content: "";
+  content: '';
   display: block;
   width: 2rem;
   height: 2rem;

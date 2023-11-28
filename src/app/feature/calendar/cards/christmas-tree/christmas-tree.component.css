@@ -140,7 +140,7 @@
 .christmas-tree .star:before,
 .christmas-tree .star:after {
   position: absolute;
-  content: "";
+  content: '';
   height: 0;
   width: 0;
   border-top: solid 10px yellow;

@@ -46,7 +46,7 @@
 }
 
 .drum .side__bottom::before {
-  content: "";
+  content: '';
   display: block;
   position: absolute;
   top: -3rem;
@@ -57,7 +57,7 @@
 }
 
 .drum .side__bottom::after {
-  content: "";
+  content: '';
   display: block;
   position: absolute;
   top: -3.2rem;
@@ -74,7 +74,7 @@
 }
 
 .drum .side__top::before {
-  content: "";
+  content: '';
   display: block;
   position: absolute;
   width: 16rem;
@@ -84,7 +84,7 @@
 }
 
 .drum .side__top::after {
-  content: "";
+  content: '';
   display: block;
   position: absolute;
   top: -1.2rem;
@@ -102,7 +102,7 @@
 
 .drum .side .pattern::after,
 .drum .side .pattern.pattern-6::before {
-  content: "";
+  content: '';
   display: block;
   width: 1.2rem;
   height: 1.2rem;
@@ -173,7 +173,7 @@
 }
 
 .drum .top::before {
-  content: "";
+  content: '';
   display: block;
   position: absolute;
   top: 1rem;
@@ -184,7 +184,7 @@
 }
 
 .drum .top::after {
-  content: "";
+  content: '';
   display: block;
   position: absolute;
   top: -0.1rem;
@@ -207,7 +207,7 @@
 }
 
 .drum .drum-stick::before {
-  content: "";
+  content: '';
   display: block;
   position: absolute;
   width: 0.8rem;

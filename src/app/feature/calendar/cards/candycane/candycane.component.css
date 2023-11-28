@@ -38,7 +38,7 @@
 }
 
 .candycane::before {
-  content: "";
+  content: '';
   position: absolute;
   top: 2rem;
   left: 2rem;
@@ -49,7 +49,7 @@
 }
 
 .candycane::after {
-  content: "";
+  content: '';
   position: absolute;
   top: 5rem;
   left: 0;
@@ -64,11 +64,7 @@
   height: 1rem;
   background: yellow;
   overflow: hidden;
-  background: radial-gradient(
-    circle at 50% 0%,
-    transparent 69%,
-    var(--candycane-background) 70%
-  );
+  background: radial-gradient(circle at 50% 0%, transparent 69%, var(--candycane-background) 70%);
   background-size: 100% 100%;
 }
 

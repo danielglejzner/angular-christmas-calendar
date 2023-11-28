@@ -57,7 +57,7 @@
 }
 
 .toy-train .locomotive .chimney::before {
-  content: "";
+  content: '';
   display: block;
   position: absolute;
   top: 1rem;
@@ -69,7 +69,7 @@
 }
 
 .toy-train .locomotive .chimney::after {
-  content: "";
+  content: '';
   display: block;
   position: absolute;
   top: 2.5rem;
@@ -147,7 +147,7 @@
 }
 
 .toy-train .locomotive .boiler::before {
-  content: "";
+  content: '';
   display: block;
   position: absolute;
   top: -2rem;
@@ -159,7 +159,7 @@
 }
 
 .toy-train .locomotive .boiler::after {
-  content: "";
+  content: '';
   display: block;
   position: absolute;
   top: -2.5rem;
@@ -184,7 +184,7 @@
 }
 
 .toy-train .car-cabin::before {
-  content: "";
+  content: '';
   display: block;
   position: absolute;
   z-index: 4;
@@ -269,7 +269,7 @@
 }
 
 .toy-train .bumper::after {
-  content: "";
+  content: '';
   display: block;
   position: absolute;
   right: 0rem;
@@ -311,7 +311,7 @@
 }
 
 .toy-train .snow-breaker::before {
-  content: "";
+  content: '';
   display: block;
   position: absolute;
   bottom: -0.5rem;
@@ -325,7 +325,7 @@
 }
 
 .toy-train .snow-breaker::after {
-  content: "";
+  content: '';
   display: block;
   position: absolute;
   bottom: -0.5rem;
