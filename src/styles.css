@@ -34,25 +34,6 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-::-webkit-scrollbar {
-  width: 8px;
-}
-
-::-webkit-scrollbar-track {
-  background: #f1f1f1;
-  border-radius: 5px;
-}
-
-::-webkit-scrollbar-thumb {
-  background: linear-gradient(
-    45deg,
-    var(--electric-violet) 0%,
-    var(--vivid-pink) 50%,
-    var(--orange-red) 100%
-  );
-  border-radius: 5px;
-}
-
 body {
   background: url('./assets/content/images/background.jpg') no-repeat top center var(--white);
   background-size: cover;
