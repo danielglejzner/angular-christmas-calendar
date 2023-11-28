@@ -1,11 +1,11 @@
 import {
-  AfterViewInit,
   ChangeDetectionStrategy,
   Component,
   ElementRef,
   NgZone,
   Renderer2,
   ViewChild,
+  afterNextRender,
   inject,
 } from '@angular/core';
 import {DOCUMENT} from '@angular/common';
@@ -27,34 +27,36 @@ function calcAnimationDelay(flakeIndex: number, totalSnowCount: number) {
   styleUrl: './snowflakes.component.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class SnowflakesComponent implements AfterViewInit {
+export class SnowflakesComponent {
   @ViewChild('snowArea') snowArea!: ElementRef<HTMLSpanElement>;
 
-  #zone = inject(NgZone);
-  #document = inject(DOCUMENT);
-  #renderer = inject(Renderer2);
+  private readonly document = inject(DOCUMENT);
+  private readonly renderer = inject(Renderer2);
+  private readonly zone = inject(NgZone);
 
-  ngAfterViewInit(): void {
-    this.letItSnow();
+  constructor() {
+    afterNextRender(() => {
+      this.letItSnow();
+    });
   }
 
   private letItSnow() {
-    this.#zone.runOutsideAngular(() => {
-      const totalSnowCount = this.#document.body.clientWidth * 0.25;
+    this.zone.runOutsideAngular(() => {
+      const totalSnowCount = this.document.body.clientWidth * 0.25;
 
       for (let i = 0; i <= totalSnowCount; i++) {
-        const snowflake = this.createsnowflake();
+        const snowflake = this.createSnowflake();
 
         const animationDelay = calcAnimationDelay(i, totalSnowCount);
         snowflake.style.animationDelay = `${animationDelay}s`;
 
-        this.#renderer.appendChild(this.snowArea.nativeElement, snowflake);
+        this.renderer.appendChild(this.snowArea.nativeElement, snowflake);
       }
     });
   }
 
-  private createsnowflake() {
-    const snowflake = this.#renderer.createElement('span') as HTMLSpanElement;
+  private createSnowflake() {
+    const snowflake = this.renderer.createElement('span') as HTMLSpanElement;
     const size = randomize(0.15, 0.85);
 
     const leftPos = randomize(0, 100);
