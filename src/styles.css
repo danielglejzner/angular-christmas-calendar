@@ -35,7 +35,7 @@
 }
 
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 8px;
 }
 
 ::-webkit-scrollbar-track {
@@ -56,6 +56,7 @@
 body {
   background: url('./assets/content/images/background.jpg') no-repeat top center var(--white);
   background-size: cover;
+  overflow-x: hidden;
 }
 
 @media only screen and (max-width: 576px) {
