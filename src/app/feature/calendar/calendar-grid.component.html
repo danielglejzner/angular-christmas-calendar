@@ -31,9 +31,15 @@
         </div>
       }
 
-      <div class="inside">
-        <ng-template [xmasCalendarCardFactory] [type]="card.day"></ng-template>
-      </div>
+      @defer (on viewport) {
+        <div class="inside">
+          @if (card.revealed || card.canReveal) {
+            <ng-template [xmasCalendarCardFactory] [type]="card.day"></ng-template>
+          }
+        </div>
+      } @placeholder {
+        <span></span>
+      }
 
       @if (card.content?.author) {
         <div class="title-container">
