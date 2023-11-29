@@ -518,6 +518,8 @@ label:hover .door {
 }
 
 .year h1 {
+  display: flex;
+  align-items: center;
   background-image: var(--red-to-pink-to-purple-horizontal-gradient);
   color: transparent;
   -webkit-background-clip: text;
