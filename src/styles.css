@@ -28,7 +28,7 @@
     var(--electric-violet) 100%
   );
 
-  font-family: 'Mountains of Christmas', cursive;
+  font-family: 'Mountains of Christmas';
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -40,9 +40,9 @@ body {
   overflow-x: hidden;
 }
 
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 900px) {
   body {
-    background-position-x: right;
+    background-position-x: -2000px;
   }
 }
 
