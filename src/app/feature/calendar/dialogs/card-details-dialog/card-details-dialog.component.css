@@ -125,6 +125,7 @@
 
 div.xmas-dialog-actions {
   display: flex;
+  align-items: center;
 
   button {
     margin-left: auto;
@@ -132,7 +133,7 @@ div.xmas-dialog-actions {
 
   img {
     margin-right: auto;
-    height: 42px;
+    height: 60px;
     object-fit: fill;
     padding: 0 0.5rem;
   }
@@ -140,4 +141,8 @@ div.xmas-dialog-actions {
 
 .no-outline {
   outline: none;
+}
+
+.no-underline {
+  text-decoration: none;
 }

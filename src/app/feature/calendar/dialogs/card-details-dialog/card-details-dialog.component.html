@@ -7,8 +7,12 @@
 
     <div class="xmas-dialog-header-details">
       @if (data.content?.author && data.content?.author?.twitterHandle) {
-        <a [href]="data.content?.author?.twitterHandle! | twitterUrl" tabindex="-1">
-          {{ data.content?.author?.name }}
+        <a
+          class="no-underline"
+          [href]="data.content?.author?.twitterHandle! | twitterUrl"
+          tabindex="-1"
+        >
+          <span>{{ data.content?.author?.name }}</span>
         </a>
       } @else {
         <h1>{{ data.content?.author?.name }}</h1>
@@ -37,6 +41,7 @@
 
   <div class="xmas-dialog-actions">
     @if (data.content?.author?.brandImageUrl && data.content?.author?.brandExternalUrl) {
+      <span>Resources:</span>
       <a class="no-outline" [href]="data.content?.author?.brandExternalUrl" target="_blank">
         <img
           [src]="data.content?.author?.brandImageUrl"
