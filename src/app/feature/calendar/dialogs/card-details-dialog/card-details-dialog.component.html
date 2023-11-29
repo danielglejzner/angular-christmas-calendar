@@ -36,8 +36,18 @@
   </div>
 
   <div class="xmas-dialog-actions">
-    @if (data.content?.author?.brandUrl) {
-      <img [src]="data.content?.author?.brandUrl" alt="{{ data.content?.author?.name }} brand" />
+    @if (data.content?.author?.brandImageUrl && data.content?.author?.brandExternalUrl) {
+      <a class="no-outline" [href]="data.content?.author?.brandExternalUrl" target="_blank">
+        <img
+          [src]="data.content?.author?.brandImageUrl"
+          alt="{{ data.content?.author?.name }} brand"
+        />
+      </a>
+    } @else if (data.content?.author?.brandImageUrl) {
+      <img
+        [src]="data.content?.author?.brandImageUrl"
+        alt="{{ data.content?.author?.name }} brand"
+      />
     }
 
     <button type="button" (click)="closeDialog()" tabindex="0" class="button">Close</button>

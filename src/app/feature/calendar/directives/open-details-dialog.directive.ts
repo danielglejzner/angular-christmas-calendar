@@ -29,7 +29,7 @@ export class OpenDetailsDialogDirective {
         if (this.dialog.openDialogs.length === 0 && this.card.revealed) {
           this.openDialog();
         }
-      }, 300);
+      }, 500);
     }
   }
 
