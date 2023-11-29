@@ -60,7 +60,7 @@
 .card {
   transform: translate3d(0px, 0px, 0px);
   position: relative;
-  background: #0000001c;
+  background: #00000038;
   border-radius: 8px;
   will-change: box-shadow;
 }
@@ -109,7 +109,7 @@ label {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #10303c;
+  color: #fff;
   font-size: 3em;
   font-weight: bold;
   text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.2);
