@@ -7,7 +7,8 @@ export interface CalendarCard {
       name: string;
       avatarUrl: string;
       twitterHandle?: string;
-      brandUrl?: string;
+      brandExternalUrl?: string;
+      brandImageUrl?: string;
     };
     videoSrc?: string;
     descriptionHtml?: string;

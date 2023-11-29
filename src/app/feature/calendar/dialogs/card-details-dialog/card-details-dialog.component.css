@@ -17,7 +17,7 @@
 .xmas-dialog-header h1,
 .xmas-dialog-header a {
   color: #cc0000;
-  font-size: clamp(1rem, 2vw + 1.1rem ,2.5rem);
+  font-size: clamp(1rem, 2vw + 1.1rem, 2.5rem);
 }
 
 .xmas-dialog-header-details a:hover {
@@ -136,4 +136,8 @@ div.xmas-dialog-actions {
     object-fit: fill;
     padding: 0 0.5rem;
   }
+}
+
+.no-outline {
+  outline: none;
 }

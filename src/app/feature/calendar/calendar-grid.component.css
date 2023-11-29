@@ -43,17 +43,18 @@
 }
 
 .title svg {
-  width: 350px;
+  width: 400px;
 }
 
 .title h1 {
-  font-size: 2.75rem;
+  font-size: 3.75rem;
   text-align: center;
   display: flex;
   flex-direction: row;
   background-image: var(--red-to-pink-to-purple-horizontal-gradient);
   color: transparent;
   -webkit-background-clip: text;
+  margin: 0px;
 }
 
 .card {
@@ -521,7 +522,7 @@ label:hover .door {
   color: transparent;
   -webkit-background-clip: text;
   margin: 0;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 5rem;
 }
 
