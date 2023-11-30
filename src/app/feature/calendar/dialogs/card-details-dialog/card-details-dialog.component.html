@@ -28,10 +28,13 @@
 
   <div class="xmas-dialog-content">
     @if (data.content?.videoSrc) {
-      <video width="640" height="360" controls>
-        <source [src]="data.content?.videoSrc" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
+      <iframe
+        [src]="data.content?.videoSrc! | safe: 'resourceUrl'"
+        frameborder="0"
+        width="640"
+        height="360"
+        allowfullscreen
+      ></iframe>
     } @else if (data.content?.descriptionHtml) {
       <div class="embedded-content" [innerHTML]="data.content?.descriptionHtml"></div>
     } @else {
