@@ -40,9 +40,24 @@ body {
   overflow-x: hidden;
 }
 
+footer {
+  background: linear-gradient(to top, rgba(255, 255, 255, 0.8), rgba(240, 240, 240, 0.8));
+  padding: 20px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-family: 'Sans-serif';
+  bottom: 0;
+}
+
 @media only screen and (max-width: 900px) {
   body {
     background-position-x: -2000px;
+  }
+
+  footer {
+    flex-direction: column;
+    gap: 1rem;
   }
 }
 
