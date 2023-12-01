@@ -4,6 +4,28 @@ We express our gratitude to [Johnny Fekete](https://twitter.com/FullStackMaker) 
 
 [CSS Christmas Calendar](https://github.com/johnnyfekete/CSSChristmasCalendar) is an experiment with 24 festive CSS-art hidden under each day in the calendar.
 
+Project we created isCommunity-driven summary
+of #Angular events in 2023.
+
+24 Guests.
+24 Windows.
+Each opening over 24 days.
+
+Starting December 1st 2023.
+
+A new window opens every day.
+Leading up to Christmas Eve.
+
+Each guest will share their personal insights on Angular as seen in 2023.
+
+Angular Christmas Calendar 2023 https://angularchristmascalendar.com
+
+Expect to find educational materials, personal viewpoints, and more!
+
+New materials will be unlocked daily and are exclusively available on the calendar website.
+
+I hope this project makes your December more fun and festive, offering a fantastic flashback of the epic year 2023 with Angular!
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.0.
 
 ## Development server
