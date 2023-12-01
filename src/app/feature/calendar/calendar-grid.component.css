@@ -451,26 +451,26 @@ label:hover .door {
 @media only screen and (max-width: 575px) {
   .day-2 .title-container,
   .day-5 .title-container,
+  .day-8 .title-container,
   .day-9 .title-container,
-  .day-12 .title-container,
-  .day-15 .title-container,
-  .day-16 .title-container,
-  .day-20 .title-container,
-  .day-22 .title-container {
-    left: 0;
-    right: auto;
+  .day-13 .title-container,
+  .day-19 .title-container,
+  .day-22 .title-container,
+  .day-24 .title-container {
+    left: 5rem;
+    right: 0;
   }
 
+  .day-1 .title-container,
+  .day-3 .title-container,
   .day-4 .title-container,
   .day-6 .title-container,
-  .day-7 .title-container,
-  .day-8 .title-container,
   .day-11 .title-container,
-  .day-13 .title-container,
-  .day-17 .title-container,
-  .day-19 .title-container {
-    left: auto;
-    right: 0;
+  .day-15 .title-container,
+  .day-18 .title-container,
+  .day-21 .title-container {
+    left: 0;
+    right: 5rem;
   }
 }
 
