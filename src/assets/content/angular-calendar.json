@@ -27,7 +27,17 @@
       }
     },
     {
-      "day": 3
+      "day": 3,
+      "content": {
+        "author": {
+          "name": "Santosh Yadav",
+          "avatarUrl": "https://pbs.twimg.com/profile_images/1728529898581397504/TjA91A7s_400x400.jpg",
+          "twitterHandle": "SantoshYadavDev",
+          "brandImageUrl": "https://pbs.twimg.com/profile_images/1328074924037169157/5QDVC3lY_400x400.png",
+          "brandExternalUrl": "https://twitter.com/Thisis_Learning"
+        },
+        "videoSrc": "https://streamable.com/e/h64400"
+      }
     },
     {
       "day": 4
