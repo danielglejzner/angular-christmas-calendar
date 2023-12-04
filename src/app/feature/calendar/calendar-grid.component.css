@@ -148,7 +148,7 @@ label:hover .door {
   transition: all 400ms ease-in-out;
 }
 
-:checked ~ .title-container {
+:hover ~ .title-container {
   opacity: 1;
   transform: translateY(-1rem);
   pointer-events: all;
