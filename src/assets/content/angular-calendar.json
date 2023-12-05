@@ -53,7 +53,17 @@
       }
     },
     {
-      "day": 5
+      "day": 5,
+      "content": {
+        "author": {
+          "name": "Alex Okrushko",
+          "avatarUrl": "https://pbs.twimg.com/profile_images/1236099635279732738/TNMmIP9p_400x400.jpg",
+          "twitterHandle": "AlexOkrushko",
+          "brandImageUrl": "https://ngrx.io/assets/images/badge.svg",
+          "brandExternalUrl": "https://ngrx.io/workshops"
+        },
+        "videoSrc": "https://streamable.com/e/eqv58g"
+      }
     },
     {
       "day": 6
