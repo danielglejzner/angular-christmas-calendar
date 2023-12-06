@@ -564,7 +564,7 @@ label:hover .door {
 }
 
 @media only screen and (max-width: 900px) {
-  .title-container{
+  .title-container {
     display: none;
   }
 }

@@ -66,11 +66,35 @@
       />
     }
 
-    <button type="button" (click)="closeDialog()" tabindex="0" class="button">Close</button>
+    @if (data.contents?.length === 1) {
+      <button type="button" (click)="closeDialog()" tabindex="0" class="button">Close</button>
+    } @else {
+      <button type="button" (click)="selectedContent.set(null)" tabindex="0" class="button">
+        Back
+      </button>
+    }
   </div>
 </ng-template>
 
-
 <ng-template #selectAngularExpert>
-  <p>Select</p>
+  <header class="xmas-dialog-header">
+    <h1>Remember to click on everyone 🙃🎅🎄</h1>
+  </header>
+
+  <div class="xmas-dialog-content xmas-dialog-select-expert">
+    @for (content of data.contents; track $index) {
+      <div class="xmas-dialog-card-wrapper" (click)="selectedContent.set(content)">
+        <img
+          class="xmas-dialog-select-expert-avatar"
+          [src]="content.author.avatarUrl"
+          alt="{{ content.author.name }}"
+        />
+        <p class="xmas-dialog-select-expert-name">{{ content.author.name }}</p>
+      </div>
+    }
+  </div>
+
+  <div class="xmas-dialog-actions">
+    <button type="button" (click)="closeDialog()" tabindex="0" class="button">Close</button>
+  </div>
 </ng-template>

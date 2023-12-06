@@ -18,6 +18,7 @@
 .xmas-dialog-header a {
   color: #cc0000;
   font-size: clamp(1rem, 2vw + 1.1rem, 2.5rem);
+  text-align: center;
 }
 
 .xmas-dialog-header-details a:hover {
@@ -145,4 +146,36 @@ div.xmas-dialog-actions {
 
 .no-underline {
   text-decoration: none;
+}
+
+.xmas-dialog-select-expert {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.xmas-dialog-card-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+
+.xmas-dialog-card-wrapper:hover {
+  cursor: pointer;
+}
+
+.xmas-dialog-card-wrapper:hover .xmas-dialog-select-expert-name {
+  font-weight: bold;
+}
+
+.xmas-dialog-select-expert-avatar {
+  width: 75%;
+  border-radius: 50%;
+}
+
+.xmas-dialog-select-expert-name {
+  color: #cc0000;
+  font-size: 1.5rem;
 }
