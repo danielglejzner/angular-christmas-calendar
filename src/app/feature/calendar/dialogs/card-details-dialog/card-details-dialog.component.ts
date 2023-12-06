@@ -1,7 +1,7 @@
-import {ChangeDetectionStrategy, Component, inject} from '@angular/core';
+import {ChangeDetectionStrategy, Component, inject, signal} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {DIALOG_DATA, DialogRef} from '@angular/cdk/dialog';
-import {UiCalendarCard} from '../../interfaces/christmas-calendar-data';
+import {Content, UiCalendarCard} from '../../interfaces/christmas-calendar-data';
 import {TwitterUrlPipe} from '../../pipes/twitter-url.pipe';
 import {CalendarCardFactoryDirective} from '../../cards/calendar-card-factory.directive';
 import {SafePipe} from '../../pipes/safe.pipe';
@@ -17,6 +17,10 @@ import {SafePipe} from '../../pipes/safe.pipe';
 export class CardDetailsDialogComponent {
   public dialogRef = inject(DialogRef<void>);
   public data = inject<UiCalendarCard>(DIALOG_DATA);
+
+  protected selectedContent = signal<Content | null>(
+    this.data.contents?.length === 1 ? this.data.contents[0] : null,
+  );
 
   closeDialog() {
     this.dialogRef.close();

@@ -42,19 +42,23 @@
         <span></span>
       }
 
-      @if (card.content?.author) {
+      @if (card.contents) {
         <div class="title-container">
-          @if (!card.content?.author?.twitterHandle) {
-            <p>{{ card.content?.author?.name }}</p>
-          } @else {
-            <a
-              [href]="card.content?.author?.twitterHandle! | twitterUrl"
-              target="_blank"
-              title="Link to author's twitter account"
-            >
-              {{ card.content?.author?.name }}
-            </a>
-          }
+          <div class="title-container-content">
+            @for (content of card.contents; track $index) {
+              @if (!content.author.twitterHandle) {
+                <p>{{ content.author.name }}</p>
+              } @else {
+                <a
+                  [href]="content.author.twitterHandle! | twitterUrl"
+                  target="_blank"
+                  title="Link to author's twitter account"
+                >
+                  {{ content.author.name }}
+                </a>
+              }
+            }
+          </div>
         </div>
       }
     </label>

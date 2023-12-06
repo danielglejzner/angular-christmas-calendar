@@ -1,21 +1,29 @@
 <div class="xmas-dialog">
+  @if (selectedContent()) {
+    <ng-container *ngTemplateOutlet="angularExpertThoughts"></ng-container>
+  } @else {
+    <ng-container *ngTemplateOutlet="selectAngularExpert"></ng-container>
+  }
+</div>
+
+<ng-template #angularExpertThoughts>
   <header class="xmas-dialog-header">
     <img
-      [src]="data.content?.author?.avatarUrl"
-      alt="{{ data.content?.author?.name }} thoughts about Angular in 2023!"
+      [src]="selectedContent()!.author.avatarUrl"
+      alt="{{ selectedContent()!.author.name }} thoughts about Angular in 2023!"
     />
 
     <div class="xmas-dialog-header-details">
-      @if (data.content?.author && data.content?.author?.twitterHandle) {
+      @if (selectedContent()!.author && selectedContent()!.author.twitterHandle) {
         <a
           class="no-underline"
-          [href]="data.content?.author?.twitterHandle! | twitterUrl"
+          [href]="selectedContent()!.author.twitterHandle! | twitterUrl"
           tabindex="-1"
         >
-          <span>{{ data.content?.author?.name }}</span>
+          <span>{{ selectedContent()!.author.name }}</span>
         </a>
       } @else {
-        <h1>{{ data.content?.author?.name }}</h1>
+        <h1>{{ selectedContent()!.author.name }}</h1>
       }
     </div>
 
@@ -27,37 +35,66 @@
   </header>
 
   <div class="xmas-dialog-content">
-    @if (data.content?.videoSrc) {
+    @if (selectedContent()!.videoSrc) {
       <iframe
-        [src]="data.content?.videoSrc! | safe: 'resourceUrl'"
+        [src]="selectedContent()!.videoSrc! | safe: 'resourceUrl'"
         frameborder="0"
         width="640"
         height="360"
         allowfullscreen
       ></iframe>
-    } @else if (data.content?.descriptionHtml) {
-      <div class="embedded-content" [innerHTML]="data.content?.descriptionHtml"></div>
+    } @else if (selectedContent()!.descriptionHtml) {
+      <div class="embedded-content" [innerHTML]="selectedContent()!.descriptionHtml"></div>
     } @else {
       <p>No content provided</p>
     }
   </div>
 
   <div class="xmas-dialog-actions">
-    @if (data.content?.author?.brandImageUrl && data.content?.author?.brandExternalUrl) {
+    @if (selectedContent()!.author.brandImageUrl && selectedContent()!.author.brandExternalUrl) {
       <span>Resources:</span>
-      <a class="no-outline" [href]="data.content?.author?.brandExternalUrl" target="_blank">
+      <a class="no-outline" [href]="selectedContent()!.author.brandExternalUrl" target="_blank">
         <img
-          [src]="data.content?.author?.brandImageUrl"
-          alt="{{ data.content?.author?.name }} brand"
+          [src]="selectedContent()!.author.brandImageUrl"
+          alt="{{ selectedContent()!.author.name }} brand"
         />
       </a>
-    } @else if (data.content?.author?.brandImageUrl) {
+    } @else if (selectedContent()!.author.brandImageUrl) {
       <img
-        [src]="data.content?.author?.brandImageUrl"
-        alt="{{ data.content?.author?.name }} brand"
+        [src]="selectedContent()!.author.brandImageUrl"
+        alt="{{ selectedContent()!.author.name }} brand"
       />
     }
 
+    @if (data.contents?.length === 1) {
+      <button type="button" (click)="closeDialog()" tabindex="0" class="button">Close</button>
+    } @else {
+      <button type="button" (click)="selectedContent.set(null)" tabindex="0" class="button">
+        Back
+      </button>
+    }
+  </div>
+</ng-template>
+
+<ng-template #selectAngularExpert>
+  <header class="xmas-dialog-header">
+    <h1>Remember to click on everyone 🙃🎅🎄</h1>
+  </header>
+
+  <div class="xmas-dialog-content xmas-dialog-select-expert">
+    @for (content of data.contents; track $index) {
+      <div class="xmas-dialog-card-wrapper" (click)="selectedContent.set(content)">
+        <img
+          class="xmas-dialog-select-expert-avatar"
+          [src]="content.author.avatarUrl"
+          alt="{{ content.author.name }}"
+        />
+        <p class="xmas-dialog-select-expert-name">{{ content.author.name }}</p>
+      </div>
+    }
+  </div>
+
+  <div class="xmas-dialog-actions">
     <button type="button" (click)="closeDialog()" tabindex="0" class="button">Close</button>
   </div>
-</div>
+</ng-template>
