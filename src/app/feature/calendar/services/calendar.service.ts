@@ -11,7 +11,7 @@ export class CalendarService {
     optional: true,
   });
   private readonly cardIndexToReveal =
-    this.overrideCardIndexToReveal ?? calendarData.data.filter((day) => !!day.content).length;
+    this.overrideCardIndexToReveal ?? calendarData.data.filter((day) => !!day.contents).length;
 
   readonly cards: UiCalendarCard[] = calendarData.data.map((card) => ({
     ...card,

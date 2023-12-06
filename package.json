@@ -7,8 +7,8 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "format:check": "npx prettier --check \"src/**/*.+(ts|html|css)\"",
-    "format:write": "npx prettier --write \"src/**/*.+(ts|html|css)\"",
+    "format:check": "npx prettier --check \"src/**/*.+(ts|html|css|json)\"",
+    "format:write": "npx prettier --write \"src/**/*.+(ts|html|css|json)\"",
     "lint": "npx eslint ./src",
     "prepare": "husky install"
   },
