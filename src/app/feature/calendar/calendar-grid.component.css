@@ -142,7 +142,7 @@ label:hover .door {
   justify-content: center;
   position: absolute;
   z-index: 1000;
-  bottom: -3.7rem;
+  top: 10rem;
   left: -1rem;
   right: -1rem;
   transition: all 400ms ease-in-out;
@@ -158,21 +158,29 @@ label:hover .door {
   margin: 0;
 }
 
-.title-container p,
-.title-container a {
+.title-container-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.title-container .title-container-content p,
+.title-container .title-container-content a {
   position: relative;
   display: inline-block;
   border-radius: 0.25rem;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 0;
   background-color: #1d3557;
   color: #f1faee;
   font-size: 1.2rem;
   white-space: nowrap;
   text-decoration: none;
+  width: auto;
+  text-align: center;
 }
 
-.title-container p::before,
-.title-container a::before {
+.title-container-content::before {
   content: '';
   display: block;
   border-radius: 0.75rem;
@@ -193,12 +201,6 @@ label:hover .door {
   left: -0.5rem;
   -webkit-animation: calendar-item-link 0.6s infinite linear;
   animation: calendar-item-link 0.6s infinite linear;
-  -webkit-animation-play-state: paused;
-  animation-play-state: paused;
-}
-
-.title-container p:hover::before,
-.title-container a:hover::before {
   -webkit-animation-play-state: running;
   animation-play-state: running;
 }
@@ -356,7 +358,7 @@ label:hover .door {
   }
   .day-2 {
     grid-area: day2;
-    z-index: 19;
+    z-index: 3;
   }
   .day-3 {
     grid-area: day3;
@@ -559,4 +561,10 @@ label:hover .door {
 
 .shakeX {
   animation: shakeX 0.5s ease-in-out;
+}
+
+@media only screen and (max-width: 900px) {
+  .title-container{
+    display: none;
+  }
 }
