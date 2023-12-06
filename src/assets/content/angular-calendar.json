@@ -66,7 +66,16 @@
       }
     },
     {
-      "day": 6
+      "day": 6,
+      "content": {
+        "author": {
+          "name": "Jessica Janiuk",
+          "avatarUrl": "https://media.licdn.com/dms/image/C4E03AQHD5u6Q08_vYA/profile-displayphoto-shrink_800_800/0/1567708929664?e=1707350400&v=beta&t=iVrpzLAPB9VXzMJqhIVbNoBdoeBB8LR3qN-OxYFnFQY",
+          "brandImageUrl": "https://miro.medium.com/v2/resize:fit:2680/1*jlg3PXZ6PYdUGy40tXybKw.gif",
+          "brandExternalUrl": "https://angular.dev"
+        },
+        "videoSrc": "https://streamable.com/e/m1bx3r"
+      }
     },
     {
       "day": 7
