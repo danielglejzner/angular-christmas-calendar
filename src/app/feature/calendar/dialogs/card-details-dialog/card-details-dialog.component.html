@@ -14,10 +14,10 @@
     />
 
     <div class="xmas-dialog-header-details">
-      @if (selectedContent()!.author && selectedContent()!.author.twitterHandle) {
+      @if (selectedContent()!.author && selectedContent()!.author.socialAccountsData) {
         <a
           class="no-underline"
-          [href]="selectedContent()!.author.twitterHandle! | twitterUrl"
+          [href]="selectedContent()!.author.socialAccountsData! | socialProfileUrl"
           tabindex="-1"
         >
           <span>{{ selectedContent()!.author.name }}</span>

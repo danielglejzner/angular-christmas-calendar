@@ -46,11 +46,11 @@
         <div class="title-container">
           <div class="title-container-content">
             @for (content of card.contents; track $index) {
-              @if (!content.author.twitterHandle) {
+              @if (!content.author.socialAccountsData) {
                 <p>{{ content.author.name }}</p>
               } @else {
                 <a
-                  [href]="content.author.twitterHandle! | twitterUrl"
+                  [href]="content.author.socialAccountsData! | socialProfileUrl"
                   target="_blank"
                   title="Link to author's twitter account"
                 >

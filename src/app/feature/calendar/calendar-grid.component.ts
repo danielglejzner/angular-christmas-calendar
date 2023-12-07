@@ -3,7 +3,7 @@ import {CommonModule, NgOptimizedImage} from '@angular/common';
 import {CalendarCardFactoryDirective} from './cards/calendar-card-factory.directive';
 import {CalendarService} from './services/calendar.service';
 import {DialogModule} from '@angular/cdk/dialog';
-import {TwitterUrlPipe} from './pipes/twitter-url.pipe';
+import {SocialProfileUrlPipe} from './pipes/social-profile-url.pipe';
 import {ShakeWhenDisabledDirective} from './directives/shake-on-click.directive';
 import {OpenDetailsDialogDirective} from './directives/open-details-dialog.directive';
 
@@ -16,8 +16,8 @@ import {OpenDetailsDialogDirective} from './directives/open-details-dialog.direc
     DialogModule,
     NgOptimizedImage,
     OpenDetailsDialogDirective,
-    TwitterUrlPipe,
     ShakeWhenDisabledDirective,
+    SocialProfileUrlPipe,
   ],
   templateUrl: './calendar-grid.component.html',
   styleUrl: './calendar-grid.component.css',
