@@ -1,9 +1,14 @@
 import {ChristmasCardType} from '../enums/christmas-card-type';
 
+export interface SocialAccountsData {
+  twitterHandle?: string;
+  linkedInUrl?: string;
+}
+
 interface Author {
   name: string;
   avatarUrl: string;
-  twitterHandle?: string;
+  socialAccountsData?: SocialAccountsData;
   brandExternalUrl?: string;
   brandImageUrl?: string;
 }

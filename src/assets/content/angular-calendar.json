@@ -7,9 +7,11 @@
           "author": {
             "name": "Juri Strumpflohner",
             "avatarUrl": "https://pbs.twimg.com/profile_images/1554187592744243200/yDYSs6on_400x400.jpg",
-            "twitterHandle": "juristr",
             "brandImageUrl": "https://cdn-images-1.medium.com/max/1200/1*WKgsSIGP_n6acei-mDWsOA.png",
-            "brandExternalUrl": "https://t.co/lJU8AH0rxU"
+            "brandExternalUrl": "https://t.co/lJU8AH0rxU",
+            "socialAccountsData": {
+              "twitterHandle": "juristr"
+            }
           },
           "videoSrc": "https://streamable.com/e/2hpsam"
         }
@@ -21,10 +23,12 @@
         {
           "author": {
             "name": "Mike F. Pearson",
-            "twitterHandle": "mfpears",
             "avatarUrl": "https://pbs.twimg.com/profile_images/1532790299134525440/adVKlx0A_400x400.jpg",
             "brandImageUrl": "https://state-adapt.github.io/assets/sa3-3.svg",
-            "brandExternalUrl": "https://state-adapt.github.io/angular"
+            "brandExternalUrl": "https://state-adapt.github.io/angular",
+            "socialAccountsData": {
+              "twitterHandle": "mfpears"
+            }
           },
           "descriptionHtml": "<article>\n <h2>Auto Signals Pattern</h2> <p>In my mind signals have gone from a bad idea, to a good idea but with limited use in components, to perfect for almost all derived state in Angular.</p>\n    <p>Every developer I've known who has learned how to think reactively hasn't wanted to go back to imperative state management. Once it clicks, state management becomes much, much simpler.</p>\n    <p>RxJS has carried reactivity in Angular for a long time. We Angular developers who love it have asked for better integration since almost the beginning of the Angular 2 era. So when I heard the Angular team was considering signals, I was upset. I was afraid the community would abandon RxJS and never fully adopt reactive patterns.</p>\n    <p>However, I was also aware that RxJS has some rough edges that make it a difficult introduction to reactivity for beginners, and also really cumbersome for synchronously derived state. Ryan Carniato helped me realize that signals weren't a replacement for RxJS, but for selectors, which I had been using to compliment RxJS by handling synchronously derived states efficiently.</p>\n    <p>So, signals compliment RxJS. In SolidJS and now in Angular, there are even utilities for converting between observables and signals.</p>\n    <p>But there is a problem with these utilities that made me recommend signals for only local component state and not for shared state. Most people may not be aware of how awesome RxJS is at preventing imperative setup and teardown spaghetti boilerplate code, so they may see no problem with calling <code>toSignal</code> in a service. But <code>toSignal</code> immediately subscribes, which blocks RxJS from automatically handling setup and cleanup. I explain all of this in the article linked at the end.</p>\n    <p>But thanks to a challenge from Thomas Laforge, I took another look at how RxJS and signals could be integrated, and eventually figured out a pattern I call \"auto signals\". I hope you look into this pattern and use it to achieve the best of both worlds with signals and RxJS!</p>\n    <p>Also, check out StateAdapt, the state management library I created to make reactive programming as easy as possible. I plan on integrating the auto-signal pattern into StateAdapt as well.</p>\n    <p>Angular has some exciting times ahead! <a href=\"https://t.co/MyBFthShXC\" rel=\"noopener noreferrer\" title=\"Read more about Angular's future developments\">https://t.co/MyBFthShXC</a></p>\n</article>"
         }
@@ -37,9 +41,11 @@
           "author": {
             "name": "Santosh Yadav",
             "avatarUrl": "https://pbs.twimg.com/profile_images/1728529898581397504/TjA91A7s_400x400.jpg",
-            "twitterHandle": "SantoshYadavDev",
             "brandImageUrl": "https://pbs.twimg.com/profile_images/1328074924037169157/5QDVC3lY_400x400.png",
-            "brandExternalUrl": "https://twitter.com/Thisis_Learning"
+            "brandExternalUrl": "https://twitter.com/Thisis_Learning",
+            "socialAccountsData": {
+              "twitterHandle": "SantoshYadavDev"
+            }
           },
           "videoSrc": "https://streamable.com/e/h64400"
         }
@@ -52,9 +58,11 @@
           "author": {
             "name": "Brecht Billiet",
             "avatarUrl": "https://pbs.twimg.com/profile_images/1731255790143422464/6tLl9XeR_400x400.jpg",
-            "twitterHandle": "brechtbilliet",
             "brandImageUrl": "https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/themes/2151810890/settings_images/uzwTSdvJR5C8lsA2kzuA_simplified-logo.png",
-            "brandExternalUrl": "https://t.co/lqLQ7VgKnh"
+            "brandExternalUrl": "https://t.co/lqLQ7VgKnh",
+            "socialAccountsData": {
+              "twitterHandle": "brechtbilliet"
+            }
           },
           "videoSrc": "https://streamable.com/e/h9vm6v"
         }
@@ -67,9 +75,11 @@
           "author": {
             "name": "Alex Okrushko",
             "avatarUrl": "https://pbs.twimg.com/profile_images/1236099635279732738/TNMmIP9p_400x400.jpg",
-            "twitterHandle": "AlexOkrushko",
             "brandImageUrl": "https://ngrx.io/assets/images/badge.svg",
-            "brandExternalUrl": "https://ngrx.io/workshops"
+            "brandExternalUrl": "https://ngrx.io/workshops",
+            "socialAccountsData": {
+              "twitterHandle": "AlexOkrushko"
+            }
           },
           "videoSrc": "https://streamable.com/e/eqv58g"
         }
@@ -96,16 +106,21 @@
           "author": {
             "name": "Lars Gyrup Brink Nielsen",
             "avatarUrl": "https://avatars.githubusercontent.com/u/6364586?v=4",
+            "socialAccountsData": {
+              "linkedInUrl": "https://www.linkedin.com/in/larsgbn/"
+            },
             "brandImageUrl": "https://dev-to-uploads.s3.amazonaws.com/uploads/organization/profile_image/3316/b77c881d-527b-4295-9e3c-3aa9072a4671.png",
-            "brandExternalUrl": "https://dev.to/this-is-angular/testing-routed-components-with-routertestingharness-22dl"
+            "brandExternalUrl": "https://dev.to/this-is-angular/testing-routed-components-with-routertestingharness-22dl",
           },
           "videoSrc": "https://streamable.com/e/zc1tlp"
         },
         {
           "author": {
             "name": "Corbin Crutchley",
-            "twitterHandle": "crutchcorn",
             "avatarUrl": "https://avatars.githubusercontent.com/u/9100169?v=4",
+            "socialAccountsData": {
+              "twitterHandle": "crutchcorn"
+            },
             "brandImageUrl": "https://avatars.githubusercontent.com/u/53884590?v=4",
             "brandExternalUrl": "https://framework.guide"
           },

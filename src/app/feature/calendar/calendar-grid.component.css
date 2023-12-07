@@ -74,6 +74,7 @@ label {
   transform-style: preserve-3d;
   cursor: pointer;
   display: flex;
+  justify-content: center;
   min-height: 100%;
   width: 100%;
   height: calc(85vw / 3);
@@ -134,17 +135,13 @@ label:hover .door {
 }
 
 .title-container {
+  width: fit-content;
+  min-width: 10rem;
   opacity: 0;
   transform: translateY(0);
   pointer-events: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   position: absolute;
-  z-index: 1000;
   top: 10rem;
-  left: -1rem;
-  right: -1rem;
   transition: all 400ms ease-in-out;
 }
 
@@ -170,7 +167,7 @@ label:hover .door {
   position: relative;
   display: inline-block;
   border-radius: 0.25rem;
-  padding: 0.5rem 0;
+  padding: 0.5rem;
   background-color: #1d3557;
   color: #f1faee;
   font-size: 1.2rem;
