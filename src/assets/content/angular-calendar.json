@@ -9,6 +9,7 @@
             "avatarUrl": "https://pbs.twimg.com/profile_images/1554187592744243200/yDYSs6on_400x400.jpg",
             "brandImageUrl": "https://cdn-images-1.medium.com/max/1200/1*WKgsSIGP_n6acei-mDWsOA.png",
             "brandExternalUrl": "https://t.co/lJU8AH0rxU",
+            "resourceName":"Resources",
             "socialAccountsData": {
               "twitterHandle": "juristr"
             }
@@ -26,6 +27,7 @@
             "avatarUrl": "https://pbs.twimg.com/profile_images/1532790299134525440/adVKlx0A_400x400.jpg",
             "brandImageUrl": "https://state-adapt.github.io/assets/sa3-3.svg",
             "brandExternalUrl": "https://state-adapt.github.io/angular",
+            "resourceName":"Resources",
             "socialAccountsData": {
               "twitterHandle": "mfpears"
             }
@@ -43,6 +45,7 @@
             "avatarUrl": "https://pbs.twimg.com/profile_images/1728529898581397504/TjA91A7s_400x400.jpg",
             "brandImageUrl": "https://pbs.twimg.com/profile_images/1328074924037169157/5QDVC3lY_400x400.png",
             "brandExternalUrl": "https://twitter.com/Thisis_Learning",
+            "resourceName":"Resources",
             "socialAccountsData": {
               "twitterHandle": "SantoshYadavDev"
             }
@@ -60,6 +63,7 @@
             "avatarUrl": "https://pbs.twimg.com/profile_images/1731255790143422464/6tLl9XeR_400x400.jpg",
             "brandImageUrl": "https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/themes/2151810890/settings_images/uzwTSdvJR5C8lsA2kzuA_simplified-logo.png",
             "brandExternalUrl": "https://t.co/lqLQ7VgKnh",
+            "resourceName":"Resources",
             "socialAccountsData": {
               "twitterHandle": "brechtbilliet"
             }
@@ -77,6 +81,7 @@
             "avatarUrl": "https://pbs.twimg.com/profile_images/1236099635279732738/TNMmIP9p_400x400.jpg",
             "brandImageUrl": "https://ngrx.io/assets/images/badge.svg",
             "brandExternalUrl": "https://ngrx.io/workshops",
+            "resourceName":"Resources",
             "socialAccountsData": {
               "twitterHandle": "AlexOkrushko"
             }
@@ -93,7 +98,8 @@
             "name": "Jessica Janiuk",
             "avatarUrl": "https://media.licdn.com/dms/image/C4E03AQHD5u6Q08_vYA/profile-displayphoto-shrink_800_800/0/1567708929664?e=1707350400&v=beta&t=iVrpzLAPB9VXzMJqhIVbNoBdoeBB8LR3qN-OxYFnFQY",
             "brandImageUrl": "https://miro.medium.com/v2/resize:fit:2680/1*jlg3PXZ6PYdUGy40tXybKw.gif",
-            "brandExternalUrl": "https://angular.dev"
+            "brandExternalUrl": "https://angular.dev",
+            "resourceName":"Resources"
           },
           "videoSrc": "https://streamable.com/e/m1bx3r"
         }
@@ -110,7 +116,8 @@
               "linkedInUrl": "https://www.linkedin.com/in/larsgbn/"
             },
             "brandImageUrl": "https://dev-to-uploads.s3.amazonaws.com/uploads/organization/profile_image/3316/b77c881d-527b-4295-9e3c-3aa9072a4671.png",
-            "brandExternalUrl": "https://dev.to/this-is-angular/testing-routed-components-with-routertestingharness-22dl"
+            "brandExternalUrl": "https://dev.to/this-is-angular/testing-routed-components-with-routertestingharness-22dl",
+            "resourceName":"Resources"
           },
           "videoSrc": "https://streamable.com/e/zc1tlp"
         },
@@ -122,14 +129,27 @@
               "twitterHandle": "crutchcorn"
             },
             "brandImageUrl": "https://avatars.githubusercontent.com/u/53884590?v=4",
-            "brandExternalUrl": "https://framework.guide"
+            "brandExternalUrl": "https://framework.guide",
+            "resourceName":"Resources"
           },
           "videoSrc": "https://streamable.com/e/ii63t7"
         }
       ]
     },
     {
-      "day": 8
+      "day": 8,
+      "contents": [
+        {
+          "author": {
+            "name": "Tomas Trajan",
+            "avatarUrl": "https://pbs.twimg.com/profile_images/1639029300169961474/sHx2h_Qh_400x400.jpg",
+            "brandImageUrl": "https://angularexperts.io/assets/images/logo/angular-experts.svg",
+            "brandExternalUrl": "https://t.co/N2t1XqU2Jg",
+            "resourceName":"In-depth Angular Signals -->"
+          },
+          "videoSrc": "https://streamable.com/e/6w7jz5"
+        }
+      ]
     },
     {
       "day": 9
