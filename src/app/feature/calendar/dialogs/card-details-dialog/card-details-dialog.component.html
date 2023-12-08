@@ -52,7 +52,7 @@
 
   <div class="xmas-dialog-actions">
     @if (selectedContent()!.author.brandImageUrl && selectedContent()!.author.brandExternalUrl) {
-      <span>Resources:</span>
+      <span>{{selectedContent()!.author.resourceName}}</span>
       <a class="no-outline" [href]="selectedContent()!.author.brandExternalUrl" target="_blank">
         <img
           [src]="selectedContent()!.author.brandImageUrl"

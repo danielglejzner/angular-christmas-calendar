@@ -11,6 +11,7 @@ interface Author {
   socialAccountsData?: SocialAccountsData;
   brandExternalUrl?: string;
   brandImageUrl?: string;
+  resourceName: string;
 }
 
 export interface Content {
