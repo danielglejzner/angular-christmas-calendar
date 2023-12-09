@@ -152,7 +152,22 @@
       ]
     },
     {
-      "day": 9
+      "day": 9,
+      "contents": [
+        {
+          "author": {
+            "name": "Ady Ngom",
+            "avatarUrl": "https://pbs.twimg.com/profile_images/1645300860921032704/vIREzvpI_400x400.jpg",
+            "brandImageUrl": "https://www.angulartinyconf.com/assets/img/tinyco-red-round-big.png",
+            "brandExternalUrl": "https://www.angulartinyconf.com/",
+            "resourceName":"Resources:",
+            "socialAccountsData": {
+              "twitterHandle": "adyngom"
+            }
+          },
+          "videoSrc": "https://streamable.com/e/evnl3y"
+        }
+      ]
     },
     {
       "day": 10
