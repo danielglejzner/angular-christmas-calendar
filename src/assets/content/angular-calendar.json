@@ -188,7 +188,35 @@
       ]
     },
     {
-      "day": 11
+      "day": 11,
+      "contents": [
+        {
+          "author": {
+            "name": "Manfred Steyer",
+            "avatarUrl": "https://pbs.twimg.com/profile_images/906558599140442113/Qsjm6OCJ_400x400.jpg",
+            "socialAccountsData": {
+              "twitterHandle": "ManfredSteyer"
+            },
+            "brandImageUrl": "https://www.angulararchitects.io/wp-content/uploads/2023/07/Angular-Architects-Logo-Signet-white.svg",
+            "brandExternalUrl": "https://www.angulararchitects.io/en/",
+            "resourceName":"Resources:"
+          },
+          "videoSrc": "https://streamable.com/e/u24mx0"
+        },
+        {
+          "author": {
+            "name": "Rainer Hahnekamp",
+            "avatarUrl": "https://pbs.twimg.com/profile_images/1639743133276598273/GIETC-bW_400x400.jpg",
+            "socialAccountsData": {
+              "twitterHandle": "rainerhahnekamp"
+            },
+            "brandImageUrl": "https://pbs.twimg.com/profile_images/1722192487932964864/tJ8E-0rj_400x400.jpg",
+            "brandExternalUrl": "https://www.youtube.com/@ng-news",
+            "resourceName":"Resources:"
+          },
+          "videoSrc": "https://streamable.com/e/2cy2i3"
+        }
+      ]
     },
     {
       "day": 12
