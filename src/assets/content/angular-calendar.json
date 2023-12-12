@@ -219,7 +219,19 @@
       ]
     },
     {
-      "day": 12
+      "day": 12,
+      "contents": [
+        {
+          "author": {
+            "name": "Mark Thompson",
+            "avatarUrl": "https://pbs.twimg.com/profile_images/1533220491636375553/I4FE_WXb_400x400.jpg",
+            "brandImageUrl": "https://miro.medium.com/v2/resize:fit:2680/1*jlg3PXZ6PYdUGy40tXybKw.gif",
+            "brandExternalUrl": "https://angular.dev",
+            "resourceName":"Resources"
+          },
+          "videoSrc": "https://streamable.com/e/9u3841"
+        }
+      ]
     },
     {
       "day": 13
