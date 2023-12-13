@@ -234,7 +234,22 @@
       ]
     },
     {
-      "day": 13
+      "day": 13,
+      "contents": [
+        {
+          "author": {
+            "name": "Thomas Laforge",
+           "socialAccountsData": {
+              "twitterHandle": "laforge_toma"
+            },
+            "avatarUrl": "https://pbs.twimg.com/profile_images/1656926066949124096/MADhQX2A_400x400.jpg",
+            "brandImageUrl": "https://angular-challenges.vercel.app/_astro/angular-challenge.e012bd8c.webp",
+            "brandExternalUrl": "https://angular-challenges.vercel.app/challenges/performance/40-christmas-web-worker/",
+            "resourceName":"Click here to view Challange --->"
+          },
+          "videoSrc": "https://streamable.com/e/9u3841"
+        }
+      ]
     },
     {
       "day": 14
