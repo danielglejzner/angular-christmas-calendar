@@ -252,7 +252,22 @@
       ]
     },
     {
-      "day": 14
+      "day": 14,
+      "contents": [
+        {
+          "author": {
+            "name": "Lara Newsom",
+           "socialAccountsData": {
+              "linkedInUrl": "https://www.linkedin.com/in/lara-newsom/"
+            },
+            "avatarUrl": "https://media.licdn.com/dms/image/D4E03AQFZXDep4bGiuw/profile-displayphoto-shrink_800_800/0/1676954042988?e=1707955200&v=beta&t=uwW_KEFy2Lwa579U1FarQDg9VYbGL3XUwhU0GKL8u4E",
+            "brandImageUrl": "https://d3wo5wojvuv7l.cloudfront.net/t_square_limited_720/images.spreaker.com/original/0271956aa05833cb43519105dd2a9266.jpg",
+            "brandExternalUrl": "https://www.spreaker.com/show/angular-show",
+            "resourceName":"Resources:"
+          },
+          "videoSrc": "https://streamable.com/e/opygtd"
+        }
+      ]
     },
     {
       "day": 15
