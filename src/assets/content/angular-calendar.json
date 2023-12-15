@@ -270,7 +270,22 @@
       ]
     },
     {
-      "day": 15
+      "day": 15,
+      "contents": [
+        {
+          "author": {
+            "name": "Alyssa Nicoll",
+           "socialAccountsData": {
+              "twitterHandle": "AlyssaNicoll"
+            },
+            "avatarUrl": "https://pbs.twimg.com/profile_images/1717455185201491968/ZF2suPcm_400x400.jpg",
+            "brandImageUrl": "https://yt3.googleusercontent.com/Ilm0WXV012yNUe97pCK8uBXg99EY7GSeXczGAjm3XTZs-4WzbSnvTSlBoOwrojj75cmNGfU=s176-c-k-c0x00ffffff-no-rj",
+            "brandExternalUrl": "https://www.youtube.com/AngularAirPodcast",
+            "resourceName":"Resources:"
+          },
+          "videoSrc": "https://streamable.com/e/chm1g9"
+        }
+      ]
     },
     {
       "day": 16
