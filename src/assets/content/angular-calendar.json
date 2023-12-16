@@ -288,7 +288,22 @@
       ]
     },
     {
-      "day": 16
+      "day": 16,
+      "contents": [
+        {
+          "author": {
+            "name": "Anikta Sood",
+           "socialAccountsData": {
+              "twitterHandle": "GuacamoleAnkita"
+            },
+            "avatarUrl": "https://pbs.twimg.com/profile_images/1680304021712642048/nT1uGzkN_400x400.jpg",
+            "brandImageUrl": "https://d3wo5wojvuv7l.cloudfront.net/t_square_limited_720/images.spreaker.com/original/0271956aa05833cb43519105dd2a9266.jpg",
+            "brandExternalUrl": "https://www.spreaker.com/show/angular-show",
+            "resourceName":"Resources:"
+          },
+          "videoSrc": "https://streamable.com/e/34xcjb"
+        }
+      ]
     },
     {
       "day": 17
