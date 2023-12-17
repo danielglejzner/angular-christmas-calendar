@@ -306,7 +306,35 @@
       ]
     },
     {
-      "day": 17
+      "day": 17,
+      "contents": [
+        {
+          "author": {
+            "name": "Brooke Avery",
+            "avatarUrl": "https://pbs.twimg.com/profile_images/1586810137330606080/WEViz7pL_400x400.jpg",
+            "socialAccountsData": {
+              "twitterHandle": "JediBravery"
+            },
+            "brandImageUrl": "https://pbs.twimg.com/profile_images/1506428397097873410/Gw0AvITz_400x400.jpg",
+            "brandExternalUrl": "https://open.spotify.com/show/1PrLErQHBqBhZsRV1KHhGM",
+            "resourceName":"Resources:"
+          },
+          "videoSrc": "https://streamable.com/e/40x8ki"
+        },
+        {
+          "author": {
+            "name": "Vojtech Masek",
+            "avatarUrl": "https://pbs.twimg.com/profile_images/1659555772995387394/dfDYq-h7_400x400.jpg",
+            "socialAccountsData": {
+              "twitterHandle": "VojtechMasek"
+            },
+            "brandImageUrl": "https://pbs.twimg.com/profile_images/1051841853665005568/dbVYS-Ng_400x400.jpg",
+            "brandExternalUrl": "https://flowup.cz/en/homepage",
+            "resourceName":"Resources:"
+          },
+          "videoSrc": "https://streamable.com/e/n196au"
+        }
+      ]
     },
     {
       "day": 18
