@@ -412,7 +412,35 @@
       ]
     },
     {
-      "day": 22
+      "day": 22,
+      "contents": [
+        {
+          "author": {
+            "name": "Michael Hladky",
+            "avatarUrl": "https://pbs.twimg.com/profile_images/1496487803894575104/dmK29pN8_400x400.jpg",
+            "socialAccountsData": {
+              "twitterHandle": "Michael_Hladky"
+            },
+            "brandImageUrl": "https://push-based.io/assets/img/PB_logo.svg",
+            "brandExternalUrl": "https://push-based.io/",
+            "resourceName":"Resources:"
+          },
+          "videoSrc": "https://streamable.com/e/309rxj"
+        },
+        {
+          "author": {
+            "name": "Julian Jandl",
+            "avatarUrl": "https://pbs.twimg.com/profile_images/1255680968138133504/pe7P1jh1_400x400.jpg",
+            "socialAccountsData": {
+              "twitterHandle": "hoebbelsB"
+            },
+            "brandImageUrl": "https://push-based.io/assets/img/PB_logo.svg",
+            "brandExternalUrl": "https://push-based.io/",
+            "resourceName":"Resources:"
+          },
+          "videoSrc": "https://streamable.com/e/n1r29j"
+        }
+      ]
     },
     {
       "day": 23
