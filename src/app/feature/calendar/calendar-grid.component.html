@@ -47,14 +47,14 @@
           <div class="title-container-content">
             @for (content of card.contents; track $index) {
               @if (!content.author.socialAccountsData) {
-                <p>Day {{content.day}} {{.name}} {{ content.author.name }}</p>
+                <p>{{ content.author.name }}</p>
               } @else {
                 <a
                   [href]="content.author.socialAccountsData! | socialProfileUrl"
                   target="_blank"
                   title="Link to author's twitter account"
                 >
-                 Day 10 - {{ content.author.name }}
+                 {{ content.author.name }}
                 </a>
               }
             }
