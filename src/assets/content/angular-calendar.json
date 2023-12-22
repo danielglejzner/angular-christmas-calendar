@@ -391,7 +391,22 @@
       ]
     },
     {
-      "day": 21
+      "day": 21,
+      "contents": [
+        {
+          "author": {
+            "name": "Dmytro Mezhenskyi",
+            "avatarUrl": "https://pbs.twimg.com/profile_images/1428302019777998855/FePGJNv5_400x400.jpg",
+            "socialAccountsData": {
+              "twitterHandle": "DecodedFrontend"
+            },
+            "brandImageUrl": "https://www.decodedfrontend.io/wp-content/uploads/2021/01/logo-01-1.png",
+            "brandExternalUrl": "https://www.decodedfrontend.io/",
+            "resourceName":"Resources"
+          },
+          "videoSrc": "https://streamable.com/e/mnzbws"
+        }
+      ]
     },
     {
       "day": 22
