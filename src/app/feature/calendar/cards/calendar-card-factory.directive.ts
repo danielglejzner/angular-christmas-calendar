@@ -47,7 +47,7 @@ export const christmasCardsFactoryMap: Record<ChristmasCardType, Type<ChristmasC
   [ChristmasCardType.Sparkler]: SparklerComponent,
   [ChristmasCardType.PomHat]: PomHatComponent,
   [ChristmasCardType.ToyTrain]: ToyTrainComponent,
-  [ChristmasCardType.JingleBells]: SantaComponent,
+  [ChristmasCardType.JingleBells]: PolarBearComponent,
   [ChristmasCardType.Reindeer]: ReindeerComponent,
   [ChristmasCardType.ChristmasTree]: ChristmasTreeComponent,
 };
