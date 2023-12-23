@@ -443,7 +443,35 @@
       ]
     },
     {
-      "day": 23
+      "day": 23,
+      "contents": [
+        {
+          "author": {
+            "name": "Paweł Kubiak",
+            "avatarUrl": "https://pbs.twimg.com/profile_images/1496487803894575104/dmK29pN8_400x400.jpg",
+            "socialAccountsData": {
+              "twitterHandle": "Michael_Hladky"
+            },
+            "brandImageUrl": "https://push-based.io/assets/img/PB_logo.svg",
+            "brandExternalUrl": "https://push-based.io/",
+            "resourceName":"Resources:"
+          },
+          "videoSrc": "https://streamable.com/e/309rxj"
+        },
+        {
+          "author": {
+            "name": "Armen Vardanyan",
+            "avatarUrl": "https://pbs.twimg.com/profile_images/1513478511008403456/RRUaF4lv_400x400.jpg",
+            "socialAccountsData": {
+              "twitterHandle": "Armandotrue"
+            },
+            "brandImageUrl": "https://pbs.twimg.com/media/GALKHoXWQAEY5Ma?format=jpg&name=medium",
+            "brandExternalUrl": "https://www.manning.com/books/modern-angular?utm_source=vardanyan&utm_medium=affiliate&utm_campaign=book_vardanyan_modern_11_29_23&a_aid=vardanyan&a_bid=38046b78&chan=mm_twitter",
+            "resourceName":"Resources:"
+          },
+          "videoSrc": "https://streamable.com/e/n1r29j"
+        }
+      ]
     },
     {
       "day": 24
