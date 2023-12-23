@@ -448,15 +448,15 @@
         {
           "author": {
             "name": "Paweł Kubiak",
-            "avatarUrl": "https://pbs.twimg.com/profile_images/1496487803894575104/dmK29pN8_400x400.jpg",
+            "avatarUrl": "https://pbs.twimg.com/profile_images/1633189328095531009/boistFbq_400x400.jpg",
             "socialAccountsData": {
-              "twitterHandle": "Michael_Hladky"
+              "twitterHandle": "pawelkubiakdev"
             },
-            "brandImageUrl": "https://push-based.io/assets/img/PB_logo.svg",
-            "brandExternalUrl": "https://push-based.io/",
+            "brandImageUrl": "https://www.angularwroclaw.pl/wp-content/uploads/2023/05/angularbros_stacked.png",
+            "brandExternalUrl": "https://www.angularwroclaw.pl/",
             "resourceName":"Resources:"
           },
-          "videoSrc": "https://streamable.com/e/309rxj"
+          "videoSrc": "https://streamable.com/e/8cei9n"
         },
         {
           "author": {
@@ -469,7 +469,7 @@
             "brandExternalUrl": "https://www.manning.com/books/modern-angular?utm_source=vardanyan&utm_medium=affiliate&utm_campaign=book_vardanyan_modern_11_29_23&a_aid=vardanyan&a_bid=38046b78&chan=mm_twitter",
             "resourceName":"Resources:"
           },
-          "videoSrc": "https://streamable.com/e/n1r29j"
+          "videoSrc": "https://streamable.com/e/622zy1"
         }
       ]
     },
