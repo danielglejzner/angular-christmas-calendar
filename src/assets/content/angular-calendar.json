@@ -474,7 +474,22 @@
       ]
     },
     {
-      "day": 24
+      "day": 24,
+      "contents": [
+        {
+          "author": {
+            "name": "Minko Gechev",
+            "socialAccountsData": {
+              "twitterHandle": "mgechev"
+            },
+            "avatarUrl": "https://pbs.twimg.com/profile_images/1628839422165917696/FaWkwcBP_400x400.jpg",
+            "brandImageUrl": "https://miro.medium.com/v2/resize:fit:2680/1*jlg3PXZ6PYdUGy40tXybKw.gif",
+            "brandExternalUrl": "https://angular.dev",
+            "resourceName":"Resources"
+          },
+          "videoSrc": "https://streamable.com/e/qshfe8"
+        }
+      ]
     }
   ]
 }
