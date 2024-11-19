@@ -42,7 +42,7 @@
         <span></span>
       }
 
-      @if (card.contents) {
+      @if (card.contents && card.contents.length > 1) {
         <div class="title-container">
           <div class="title-container-content">
             @for (content of card.contents; track $index) {
