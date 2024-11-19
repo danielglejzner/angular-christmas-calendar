@@ -1,495 +1,76 @@
 {
-  "data": [
-    {
-      "day": 1,
-      "contents": [
-        {
-          "author": {
-            "name": "Juri Strumpflohner",
-            "avatarUrl": "https://pbs.twimg.com/profile_images/1554187592744243200/yDYSs6on_400x400.jpg",
-            "brandImageUrl": "https://cdn-images-1.medium.com/max/1200/1*WKgsSIGP_n6acei-mDWsOA.png",
-            "brandExternalUrl": "https://t.co/lJU8AH0rxU",
-            "resourceName":"Resources",
-            "socialAccountsData": {
-              "twitterHandle": "juristr"
-            }
-          },
-          "videoSrc": "https://streamable.com/e/2hpsam"
-        }
-      ]
-    },
-    {
-      "day": 2,
-      "contents": [
-        {
-          "author": {
-            "name": "Mike F. Pearson",
-            "avatarUrl": "https://pbs.twimg.com/profile_images/1532790299134525440/adVKlx0A_400x400.jpg",
-            "brandImageUrl": "https://state-adapt.github.io/assets/sa3-3.svg",
-            "brandExternalUrl": "https://state-adapt.github.io/angular",
-            "resourceName":"Resources",
-            "socialAccountsData": {
-              "twitterHandle": "mfpears"
-            }
-          },
-          "descriptionHtml": "<article>\n <h2>Auto Signals Pattern</h2> <p>In my mind signals have gone from a bad idea, to a good idea but with limited use in components, to perfect for almost all derived state in Angular.</p>\n    <p>Every developer I've known who has learned how to think reactively hasn't wanted to go back to imperative state management. Once it clicks, state management becomes much, much simpler.</p>\n    <p>RxJS has carried reactivity in Angular for a long time. We Angular developers who love it have asked for better integration since almost the beginning of the Angular 2 era. So when I heard the Angular team was considering signals, I was upset. I was afraid the community would abandon RxJS and never fully adopt reactive patterns.</p>\n    <p>However, I was also aware that RxJS has some rough edges that make it a difficult introduction to reactivity for beginners, and also really cumbersome for synchronously derived state. Ryan Carniato helped me realize that signals weren't a replacement for RxJS, but for selectors, which I had been using to compliment RxJS by handling synchronously derived states efficiently.</p>\n    <p>So, signals compliment RxJS. In SolidJS and now in Angular, there are even utilities for converting between observables and signals.</p>\n    <p>But there is a problem with these utilities that made me recommend signals for only local component state and not for shared state. Most people may not be aware of how awesome RxJS is at preventing imperative setup and teardown spaghetti boilerplate code, so they may see no problem with calling <code>toSignal</code> in a service. But <code>toSignal</code> immediately subscribes, which blocks RxJS from automatically handling setup and cleanup. I explain all of this in the article linked at the end.</p>\n    <p>But thanks to a challenge from Thomas Laforge, I took another look at how RxJS and signals could be integrated, and eventually figured out a pattern I call \"auto signals\". I hope you look into this pattern and use it to achieve the best of both worlds with signals and RxJS!</p>\n    <p>Also, check out StateAdapt, the state management library I created to make reactive programming as easy as possible. I plan on integrating the auto-signal pattern into StateAdapt as well.</p>\n    <p>Angular has some exciting times ahead! <a href=\"https://t.co/MyBFthShXC\" rel=\"noopener noreferrer\" title=\"Read more about Angular's future developments\">https://t.co/MyBFthShXC</a></p>\n</article>"
-        }
-      ]
-    },
-    {
-      "day": 3,
-      "contents": [
-        {
-          "author": {
-            "name": "Santosh Yadav",
-            "avatarUrl": "https://pbs.twimg.com/profile_images/1728529898581397504/TjA91A7s_400x400.jpg",
-            "brandImageUrl": "https://pbs.twimg.com/profile_images/1328074924037169157/5QDVC3lY_400x400.png",
-            "brandExternalUrl": "https://twitter.com/Thisis_Learning",
-            "resourceName":"Resources",
-            "socialAccountsData": {
-              "twitterHandle": "SantoshYadavDev"
-            }
-          },
-          "videoSrc": "https://streamable.com/e/h64400"
-        }
-      ]
-    },
-    {
-      "day": 4,
-      "contents": [
-        {
-          "author": {
-            "name": "Brecht Billiet",
-            "avatarUrl": "https://pbs.twimg.com/profile_images/1731255790143422464/6tLl9XeR_400x400.jpg",
-            "brandImageUrl": "https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/themes/2151810890/settings_images/uzwTSdvJR5C8lsA2kzuA_simplified-logo.png",
-            "brandExternalUrl": "https://t.co/lqLQ7VgKnh",
-            "resourceName":"Resources",
-            "socialAccountsData": {
-              "twitterHandle": "brechtbilliet"
-            }
-          },
-          "videoSrc": "https://streamable.com/e/h9vm6v"
-        }
-      ]
-    },
-    {
-      "day": 5,
-      "contents": [
-        {
-          "author": {
-            "name": "Alex Okrushko",
-            "avatarUrl": "https://pbs.twimg.com/profile_images/1236099635279732738/TNMmIP9p_400x400.jpg",
-            "brandImageUrl": "https://ngrx.io/assets/images/badge.svg",
-            "brandExternalUrl": "https://ngrx.io/workshops",
-            "resourceName":"Resources",
-            "socialAccountsData": {
-              "twitterHandle": "AlexOkrushko"
-            }
-          },
-          "videoSrc": "https://streamable.com/e/eqv58g"
-        }
-      ]
-    },
-    {
-      "day": 6,
-      "contents": [
-        {
-          "author": {
-            "name": "Jessica Janiuk",
-            "avatarUrl": "https://media.licdn.com/dms/image/C4E03AQHD5u6Q08_vYA/profile-displayphoto-shrink_800_800/0/1567708929664?e=1707350400&v=beta&t=iVrpzLAPB9VXzMJqhIVbNoBdoeBB8LR3qN-OxYFnFQY",
-            "brandImageUrl": "https://miro.medium.com/v2/resize:fit:2680/1*jlg3PXZ6PYdUGy40tXybKw.gif",
-            "brandExternalUrl": "https://angular.dev",
-            "resourceName":"Resources"
-          },
-          "videoSrc": "https://streamable.com/e/m1bx3r"
-        }
-      ]
-    },
-    {
-      "day": 7,
-      "contents": [
-        {
-          "author": {
-            "name": "Lars Gyrup Brink Nielsen",
-            "avatarUrl": "https://avatars.githubusercontent.com/u/6364586?v=4",
-            "socialAccountsData": {
-              "linkedInUrl": "https://www.linkedin.com/in/larsgbn/"
-            },
-            "brandImageUrl": "https://dev-to-uploads.s3.amazonaws.com/uploads/organization/profile_image/3316/b77c881d-527b-4295-9e3c-3aa9072a4671.png",
-            "brandExternalUrl": "https://dev.to/this-is-angular/testing-routed-components-with-routertestingharness-22dl",
-            "resourceName":"Resources"
-          },
-          "videoSrc": "https://streamable.com/e/zc1tlp"
-        },
-        {
-          "author": {
-            "name": "Corbin Crutchley",
-            "avatarUrl": "https://avatars.githubusercontent.com/u/9100169?v=4",
-            "socialAccountsData": {
-              "twitterHandle": "crutchcorn"
-            },
-            "brandImageUrl": "https://avatars.githubusercontent.com/u/53884590?v=4",
-            "brandExternalUrl": "https://framework.guide",
-            "resourceName":"Resources"
-          },
-          "videoSrc": "https://streamable.com/e/ii63t7"
-        }
-      ]
-    },
-    {
-      "day": 8,
-      "contents": [
-        {
-          "author": {
-            "name": "Tomas Trajan",
-            "avatarUrl": "https://pbs.twimg.com/profile_images/1639029300169961474/sHx2h_Qh_400x400.jpg",
-            "brandImageUrl": "https://angularexperts.io/assets/images/logo/angular-experts.svg",
-            "brandExternalUrl": "https://t.co/N2t1XqU2Jg",
-            "resourceName":"In-depth Angular Signals -->"
-          },
-          "videoSrc": "https://streamable.com/e/6w7jz5"
-        }
-      ]
-    },
-    {
-      "day": 9,
-      "contents": [
-        {
-          "author": {
-            "name": "Ady Ngom",
-            "avatarUrl": "https://pbs.twimg.com/profile_images/1645300860921032704/vIREzvpI_400x400.jpg",
-            "brandImageUrl": "https://www.angulartinyconf.com/assets/img/tinyco-red-round-big.png",
-            "brandExternalUrl": "https://www.angulartinyconf.com/",
-            "resourceName":"Resources:",
-            "socialAccountsData": {
-              "twitterHandle": "adyngom"
-            }
-          },
-          "videoSrc": "https://streamable.com/e/evnl3y"
-        }
-      ]
-    },
-    {
-      "day": 10,
-      "contents": [
-        {
-          "author": {
-            "name": "Deborah Kurata",
-            "avatarUrl": "https://pbs.twimg.com/profile_images/1490563187527192580/a8_HIjDf.jpg",
-            "brandImageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Logo_of_YouTube_%282015-2017%29.svg/502px-Logo_of_YouTube_%282015-2017%29.svg.png",
-            "brandExternalUrl": "https://www.youtube.com/@deborah_kurata",
-            "resourceName":"Resources:",
-            "socialAccountsData": {
-              "twitterHandle": "DeborahKurata"
-            }
-          },
-          "videoSrc": "https://streamable.com/e/vq1dc2"
-        }
-      ]
-    },
-    {
-      "day": 11,
-      "contents": [
-        {
-          "author": {
-            "name": "Manfred Steyer",
-            "avatarUrl": "https://pbs.twimg.com/profile_images/906558599140442113/Qsjm6OCJ_400x400.jpg",
-            "socialAccountsData": {
-              "twitterHandle": "ManfredSteyer"
-            },
-            "brandImageUrl": "https://avatars.githubusercontent.com/u/61938637?s=280&v=4",
-            "brandExternalUrl": "https://www.angulararchitects.io/en/",
-            "resourceName":"Resources:"
-          },
-          "videoSrc": "https://streamable.com/e/u24mx0"
-        },
-        {
-          "author": {
-            "name": "Rainer Hahnekamp",
-            "avatarUrl": "https://pbs.twimg.com/profile_images/1639743133276598273/GIETC-bW_400x400.jpg",
-            "socialAccountsData": {
-              "twitterHandle": "rainerhahnekamp"
-            },
-            "brandImageUrl": "https://pbs.twimg.com/profile_images/1722192487932964864/tJ8E-0rj_400x400.jpg",
-            "brandExternalUrl": "https://www.youtube.com/@ng-news",
-            "resourceName":"Resources:"
-          },
-          "videoSrc": "https://streamable.com/e/2cy2i3"
-        }
-      ]
-    },
-    {
-      "day": 12,
-      "contents": [
-        {
-          "author": {
-            "name": "Mark Thompson",
-            "socialAccountsData": {
-              "twitterHandle": "marktechson"
-            },
-            "avatarUrl": "https://pbs.twimg.com/profile_images/1533220491636375553/I4FE_WXb_400x400.jpg",
-            "brandImageUrl": "https://miro.medium.com/v2/resize:fit:2680/1*jlg3PXZ6PYdUGy40tXybKw.gif",
-            "brandExternalUrl": "https://angular.dev",
-            "resourceName":"Resources"
-          },
-          "videoSrc": "https://streamable.com/e/9u3841"
-        }
-      ]
-    },
-    {
-      "day": 13,
-      "contents": [
-        {
-          "author": {
-            "name": "Thomas Laforge",
-           "socialAccountsData": {
-              "twitterHandle": "laforge_toma"
-            },
-            "avatarUrl": "https://pbs.twimg.com/profile_images/1656926066949124096/MADhQX2A_400x400.jpg",
-            "brandImageUrl": "https://angular-challenges.vercel.app/_astro/angular-challenge.e012bd8c.webp",
-            "brandExternalUrl": "https://angular-challenges.vercel.app/challenges/performance/40-christmas-web-worker/",
-            "resourceName":"Click here to view Challange --->"
-          },
-          "videoSrc": "https://streamable.com/e/xw7kqz"
-        }
-      ]
-    },
-    {
-      "day": 14,
-      "contents": [
-        {
-          "author": {
-            "name": "Lara Newsom",
-           "socialAccountsData": {
-              "linkedInUrl": "https://www.linkedin.com/in/lara-newsom/"
-            },
-            "avatarUrl": "https://media.licdn.com/dms/image/D4E03AQFZXDep4bGiuw/profile-displayphoto-shrink_800_800/0/1676954042988?e=1707955200&v=beta&t=uwW_KEFy2Lwa579U1FarQDg9VYbGL3XUwhU0GKL8u4E",
-            "brandImageUrl": "https://d3wo5wojvuv7l.cloudfront.net/t_square_limited_720/images.spreaker.com/original/0271956aa05833cb43519105dd2a9266.jpg",
-            "brandExternalUrl": "https://www.spreaker.com/show/angular-show",
-            "resourceName":"Resources:"
-          },
-          "videoSrc": "https://streamable.com/e/opygtd"
-        }
-      ]
-    },
-    {
-      "day": 15,
-      "contents": [
-        {
-          "author": {
-            "name": "Alyssa Nicoll",
-           "socialAccountsData": {
-              "twitterHandle": "AlyssaNicoll"
-            },
-            "avatarUrl": "https://pbs.twimg.com/profile_images/1717455185201491968/ZF2suPcm_400x400.jpg",
-            "brandImageUrl": "https://yt3.googleusercontent.com/Ilm0WXV012yNUe97pCK8uBXg99EY7GSeXczGAjm3XTZs-4WzbSnvTSlBoOwrojj75cmNGfU=s176-c-k-c0x00ffffff-no-rj",
-            "brandExternalUrl": "https://www.youtube.com/AngularAirPodcast",
-            "resourceName":"Resources:"
-          },
-          "videoSrc": "https://streamable.com/e/chm1g9"
-        }
-      ]
-    },
-    {
-      "day": 16,
-      "contents": [
-        {
-          "author": {
-            "name": "Ankita Sood",
-           "socialAccountsData": {
-              "twitterHandle": "GuacamoleAnkita"
-            },
-            "avatarUrl": "https://pbs.twimg.com/profile_images/1680304021712642048/nT1uGzkN_400x400.jpg",
-            "brandImageUrl": "https://d3wo5wojvuv7l.cloudfront.net/t_square_limited_720/images.spreaker.com/original/0271956aa05833cb43519105dd2a9266.jpg",
-            "brandExternalUrl": "https://www.spreaker.com/show/angular-show",
-            "resourceName":"Resources:"
-          },
-          "videoSrc": "https://streamable.com/e/34xcjb"
-        }
-      ]
-    },
-    {
-      "day": 17,
-      "contents": [
-        {
-          "author": {
-            "name": "Brooke Avery",
-            "avatarUrl": "https://pbs.twimg.com/profile_images/1586810137330606080/WEViz7pL_400x400.jpg",
-            "socialAccountsData": {
-              "twitterHandle": "JediBravery"
-            },
-            "brandImageUrl": "https://pbs.twimg.com/profile_images/1506428397097873410/Gw0AvITz_400x400.jpg",
-            "brandExternalUrl": "https://open.spotify.com/show/1PrLErQHBqBhZsRV1KHhGM",
-            "resourceName":"Resources:"
-          },
-          "videoSrc": "https://streamable.com/e/40x8ki"
-        },
-        {
-          "author": {
-            "name": "Vojtech Masek",
-            "avatarUrl": "https://pbs.twimg.com/profile_images/1659555772995387394/dfDYq-h7_400x400.jpg",
-            "socialAccountsData": {
-              "twitterHandle": "VojtechMasek"
-            },
-            "brandImageUrl": "https://pbs.twimg.com/profile_images/1051841853665005568/dbVYS-Ng_400x400.jpg",
-            "brandExternalUrl": "https://flowup.cz/en/homepage",
-            "resourceName":"Resources:"
-          },
-          "videoSrc": "https://streamable.com/e/n196au"
-        }
-      ]
-    },
-    {
-      "day": 18,
-      "contents": [
-        {
-          "author": {
-            "name": "Emma Twersky",
-            "avatarUrl": "https://pbs.twimg.com/profile_images/1493490522941374464/gBSPV40P_400x400.jpg",
-            "socialAccountsData": {
-              "twitterHandle": "twerske"
-            },
-            "brandImageUrl": "https://miro.medium.com/v2/resize:fit:2680/1*jlg3PXZ6PYdUGy40tXybKw.gif",
-            "brandExternalUrl": "https://angular.dev",
-            "resourceName":"Resources"
-          },
-          "videoSrc": "https://streamable.com/e/8b3cku"
-        }
-      ]
-    },
-    {
-      "day": 19,
-      "contents": [
-        {
-          "author": {
-            "name": "Brandon Roberts",
-            "avatarUrl": "https://res.cloudinary.com/practicaldev/image/fetch/s--aFW0xr2M--/c_fill,f_auto,fl_progressive,h_320,q_auto,w_320/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/466270/57db4360-a676-4c59-9fd9-80d7265951aa.jpeg",
-            "socialAccountsData": {
-              "twitterHandle": "brandonroberts"
-            },
-            "brandImageUrl": "https://avatars.githubusercontent.com/u/96443982?s=200&v=4",
-            "brandExternalUrl": "https://analogjs.org",
-            "resourceName":"Resources"
-          },
-          "videoSrc": "https://streamable.com/e/bg5ps1"
-        }
-      ]
-    },
-    {
-      "day": 20,
-      "contents": [
-        {
-          "author": {
-            "name": "Lamis Chebbi",
-            "avatarUrl": "https://pbs.twimg.com/profile_images/1329531701886939145/bLk0ywxs_400x400.jpg",
-            "socialAccountsData": {
-              "twitterHandle": "LamisChebbi"
-            },
-            "brandImageUrl": "https://content.packt.com/B17797/cover_image_small.jpeg",
-            "brandExternalUrl": "https://www.packtpub.com/product/reactive-patterns-with-rxjs-for-angular/9781801811514",
-            "resourceName":"Get the book here -->"
-          },
-          "videoSrc": "https://streamable.com/e/uh1u3i"
-        }
-      ]
-    },
-    {
-      "day": 21,
-      "contents": [
-        {
-          "author": {
-            "name": "Dmytro Mezhenskyi",
-            "avatarUrl": "https://pbs.twimg.com/profile_images/1428302019777998855/FePGJNv5_400x400.jpg",
-            "socialAccountsData": {
-              "twitterHandle": "DecodedFrontend"
-            },
-            "brandImageUrl": "https://yt3.googleusercontent.com/ytc/AIf8zZTRoigTcsSuPli2yB_VX5Z17fsOEd0Do1A9Ikb6Pg=s900-c-k-c0x00ffffff-no-rj",
-            "brandExternalUrl": "https://www.decodedfrontend.io/",
-            "resourceName":"Resources"
-          },
-          "videoSrc": "https://streamable.com/e/mnzbws"
-        }
-      ]
-    },
-    {
-      "day": 22,
-      "contents": [
-        {
-          "author": {
-            "name": "Michael Hladky",
-            "avatarUrl": "https://pbs.twimg.com/profile_images/1496487803894575104/dmK29pN8_400x400.jpg",
-            "socialAccountsData": {
-              "twitterHandle": "Michael_Hladky"
-            },
-            "brandImageUrl": "https://push-based.io/assets/img/PB_logo.svg",
-            "brandExternalUrl": "https://push-based.io/",
-            "resourceName":"Resources:"
-          },
-          "videoSrc": "https://streamable.com/e/309rxj"
-        },
-        {
-          "author": {
-            "name": "Julian Jandl",
-            "avatarUrl": "https://pbs.twimg.com/profile_images/1255680968138133504/pe7P1jh1_400x400.jpg",
-            "socialAccountsData": {
-              "twitterHandle": "hoebbelsB"
-            },
-            "brandImageUrl": "https://push-based.io/assets/img/PB_logo.svg",
-            "brandExternalUrl": "https://push-based.io/",
-            "resourceName":"Resources:"
-          },
-          "videoSrc": "https://streamable.com/e/n1r29j"
-        }
-      ]
-    },
-    {
-      "day": 23,
-      "contents": [
-        {
-          "author": {
-            "name": "Paweł Kubiak",
-            "avatarUrl": "https://pbs.twimg.com/profile_images/1633189328095531009/boistFbq_400x400.jpg",
-            "socialAccountsData": {
-              "twitterHandle": "pawelkubiakdev"
-            },
-            "brandImageUrl": "https://www.angularwroclaw.pl/wp-content/uploads/2023/05/angularbros_stacked.png",
-            "brandExternalUrl": "https://www.angularwroclaw.pl/",
-            "resourceName":"Resources:"
-          },
-          "videoSrc": "https://streamable.com/e/8cei9n"
-        },
-        {
-          "author": {
-            "name": "Armen Vardanyan",
-            "avatarUrl": "https://pbs.twimg.com/profile_images/1513478511008403456/RRUaF4lv_400x400.jpg",
-            "socialAccountsData": {
-              "twitterHandle": "Armandotrue"
-            },
-            "brandImageUrl": "https://pbs.twimg.com/media/GALKHoXWQAEY5Ma?format=jpg&name=medium",
-            "brandExternalUrl": "https://www.manning.com/books/modern-angular?utm_source=vardanyan&utm_medium=affiliate&utm_campaign=book_vardanyan_modern_11_29_23&a_aid=vardanyan&a_bid=38046b78&chan=mm_twitter",
-            "resourceName":"Resources:"
-          },
-          "videoSrc": "https://streamable.com/e/622zy1"
-        }
-      ]
-    },
-    {
-      "day": 24,
-      "contents": [
-        {
-          "author": {
-            "name": "Minko Gechev",
-            "socialAccountsData": {
-              "twitterHandle": "mgechev"
-            },
-            "avatarUrl": "https://pbs.twimg.com/profile_images/1628839422165917696/FaWkwcBP_400x400.jpg",
-            "brandImageUrl": "https://miro.medium.com/v2/resize:fit:2680/1*jlg3PXZ6PYdUGy40tXybKw.gif",
-            "brandExternalUrl": "https://angular.dev",
-            "resourceName":"Resources"
-          },
-          "videoSrc": "https://streamable.com/e/qshfe8"
-        }
-      ]
-    }
-  ]
-}
+    "data": [
+      {
+        "day": 1
+      },
+      {
+        "day": 2
+      },
+      {
+        "day": 3
+      },
+      {
+        "day": 4
+      },
+      {
+        "day": 5
+      },
+      {
+        "day": 6
+      },
+      {
+        "day": 7
+      },
+      {
+        "day": 8
+      },
+      {
+        "day": 9
+      },
+      {
+        "day": 10
+      },
+      {
+        "day": 11
+      },
+      {
+        "day": 12
+      },
+      {
+        "day": 13
+      },
+      {
+        "day": 14
+      },
+      {
+        "day": 15
+      },
+      {
+        "day": 16
+      },
+      {
+        "day": 17
+      },
+      {
+        "day": 18
+      },
+      {
+        "day": 19
+      },
+      {
+        "day": 20
+      },
+      {
+        "day": 21
+      },
+      {
+        "day": 22
+      },
+      {
+        "day": 23
+      },
+      {
+        "day": 24
+      }
+    ]
+  }
