@@ -7,12 +7,11 @@ import {CalendarCardFactoryDirective} from '../../cards/calendar-card-factory.di
 import {SafePipe} from '../../pipes/safe.pipe';
 
 @Component({
-  selector: 'xmas-card-details-dialog',
-  standalone: true,
-  imports: [CommonModule, CalendarCardFactoryDirective, SafePipe, SocialProfileUrlPipe],
-  templateUrl: './card-details-dialog.component.html',
-  styleUrl: './card-details-dialog.component.css',
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    selector: 'xmas-card-details-dialog',
+    imports: [CommonModule, CalendarCardFactoryDirective, SafePipe, SocialProfileUrlPipe],
+    templateUrl: './card-details-dialog.component.html',
+    styleUrl: './card-details-dialog.component.css',
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class CardDetailsDialogComponent {
   public dialogRef = inject(DialogRef<void>);
