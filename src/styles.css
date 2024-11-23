@@ -49,6 +49,11 @@ footer {
   font-family: 'Sans-serif';
   bottom: 0;
 }
+@media only screen and (min-width: 900px) {
+  body {
+    height: 100vh;
+  }
+}
 
 @media only screen and (max-width: 900px) {
   body {
