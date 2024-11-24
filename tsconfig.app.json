@@ -10,7 +10,7 @@
   "files": [
     "src/main.ts",
     "src/main.server.ts",
-    "server.ts"
+    "server"
   ],
   "include": [
     "src/**/*.d.ts"
