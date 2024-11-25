@@ -8,8 +8,12 @@ import {SafePipe} from '../../pipes/safe.pipe';
 
 @Component({
   selector: 'xmas-card-details-dialog',
-  standalone: true,
-  imports: [CommonModule, CalendarCardFactoryDirective, SafePipe, SocialProfileUrlPipe],
+  imports: [
+    CommonModule,
+    CalendarCardFactoryDirective,
+    SafePipe,
+    SocialProfileUrlPipe
+  ],
   templateUrl: './card-details-dialog.component.html',
   styleUrl: './card-details-dialog.component.css',
   changeDetection: ChangeDetectionStrategy.OnPush,

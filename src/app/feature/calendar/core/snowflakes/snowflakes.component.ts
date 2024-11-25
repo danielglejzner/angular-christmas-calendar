@@ -20,12 +20,11 @@ function calcAnimationDelay(flakeIndex: number, totalSnowCount: number) {
 }
 
 @Component({
-  selector: 'xmas-snowflakes',
-  standalone: true,
-  imports: [],
-  templateUrl: './snowflakes.component.html',
-  styleUrl: './snowflakes.component.css',
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    selector: 'xmas-snowflakes',
+    imports: [],
+    templateUrl: './snowflakes.component.html',
+    styleUrl: './snowflakes.component.css',
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class SnowflakesComponent {
   @ViewChild('snowArea') snowArea!: ElementRef<HTMLSpanElement>;
