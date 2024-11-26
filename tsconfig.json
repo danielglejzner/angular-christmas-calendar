@@ -13,11 +13,11 @@
     "sourceMap": true,
     "declaration": false,
     "experimentalDecorators": true,
-    "moduleResolution": "node",
+    "moduleResolution": "node16",
     "resolveJsonModule": true,
     "importHelpers": true,
     "target": "ES2022",
-    "module": "ES2022",
+    "module": "node16",
     "useDefineForClassFields": false,
     "lib": [
       "ES2022",
