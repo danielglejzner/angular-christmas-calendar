@@ -10,7 +10,6 @@ import {OpenDetailsDialogDirective} from './directives/open-details-dialog.direc
 @Component({
     selector: 'xmas-calendar-grid',
     imports: [
-        CommonModule,
         CalendarCardFactoryDirective,
         DialogModule,
         NgOptimizedImage,

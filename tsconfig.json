@@ -12,7 +12,6 @@
     "esModuleInterop": true,
     "sourceMap": true,
     "declaration": false,
-    "experimentalDecorators": true,
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "importHelpers": true,

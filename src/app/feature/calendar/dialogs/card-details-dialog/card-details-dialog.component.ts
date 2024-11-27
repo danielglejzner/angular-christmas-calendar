@@ -9,7 +9,6 @@ import {SafePipe} from '../../pipes/safe.pipe';
 @Component({
   selector: 'xmas-card-details-dialog',
   imports: [
-    CommonModule,
     CalendarCardFactoryDirective,
     SafePipe,
     SocialProfileUrlPipe
