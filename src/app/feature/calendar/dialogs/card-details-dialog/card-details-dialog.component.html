@@ -22,18 +22,11 @@
     </a>
   }
   <header class="xmas-dialog-header">
-    <img
-      [src]="selectedContent()!.author.avatarUrl"
-      alt="{{ selectedContent()!.author.name }} thoughts about Angular in 2024!"
-    />
+    <img [src]="selectedContent()!.author.avatarUrl" alt="{{ selectedContent()!.author.name }} thoughts about Angular in 2024!" />
 
     <div class="xmas-dialog-header-details">
       @if (selectedContent()!.author && selectedContent()!.author.socialAccountsData) {
-        <a
-          class="no-underline"
-          [href]="selectedContent()!.author.socialAccountsData! | socialProfileUrl"
-          tabindex="-1"
-        >
+        <a class="no-underline" [href]="selectedContent()!.author.socialAccountsData! | socialProfileUrl" tabindex="-1">
           <span>{{ selectedContent()!.author.name }}</span>
         </a>
       } @else {
@@ -50,13 +43,7 @@
 
   <div class="xmas-dialog-content">
     @if (selectedContent()!.videoSrc) {
-      <iframe
-        [src]="selectedContent()!.videoSrc! | safe: 'resourceUrl'"
-        frameborder="0"
-        width="640"
-        height="360"
-        allowfullscreen
-      ></iframe>
+      <iframe [src]="selectedContent()!.videoSrc! | safe: 'resourceUrl'" frameborder="0" width="640" height="360" allowfullscreen></iframe>
     } @else if (selectedContent()!.descriptionHtml) {
       <div class="embedded-content" [innerHTML]="selectedContent()!.descriptionHtml"></div>
     } @else {
@@ -68,24 +55,16 @@
     @if (selectedContent()!.author.brandImageUrl && selectedContent()!.author.brandExternalUrl) {
       <span>{{ selectedContent()!.author.resourceName }}</span>
       <a class="no-outline" [href]="selectedContent()!.author.brandExternalUrl" target="_blank">
-        <img
-          [src]="selectedContent()!.author.brandImageUrl"
-          alt="{{ selectedContent()!.author.name }} brand"
-        />
+        <img [src]="selectedContent()!.author.brandImageUrl" alt="{{ selectedContent()!.author.name }} brand" />
       </a>
     } @else if (selectedContent()!.author.brandImageUrl) {
-      <img
-        [src]="selectedContent()!.author.brandImageUrl"
-        alt="{{ selectedContent()!.author.name }} brand"
-      />
+      <img [src]="selectedContent()!.author.brandImageUrl" alt="{{ selectedContent()!.author.name }} brand" />
     }
 
     @if (data.contents?.length === 1) {
       <button type="button" (click)="closeDialog()" tabindex="0" class="button">Close</button>
     } @else {
-      <button type="button" (click)="selectedContent.set(null)" tabindex="0" class="button">
-        Back
-      </button>
+      <button type="button" (click)="selectedContent.set(null)" tabindex="0" class="button">Back</button>
     }
   </div>
 </ng-template>
@@ -98,11 +77,7 @@
   <div class="xmas-dialog-content xmas-dialog-select-expert">
     @for (content of data.contents; track $index) {
       <div class="xmas-dialog-card-wrapper" (click)="selectedContent.set(content)">
-        <img
-          class="xmas-dialog-select-expert-avatar"
-          [src]="content.author.avatarUrl"
-          alt="{{ content.author.name }}"
-        />
+        <img class="xmas-dialog-select-expert-avatar" [src]="content.author.avatarUrl" alt="{{ content.author.name }}" />
         <p class="xmas-dialog-select-expert-name">{{ content.author.name }}</p>
       </div>
     }

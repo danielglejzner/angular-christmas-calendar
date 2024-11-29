@@ -1,5 +1,5 @@
-import {Pipe, PipeTransform} from '@angular/core';
-import {SocialAccountsData} from '../interfaces/christmas-calendar-data';
+import { Pipe, PipeTransform } from '@angular/core';
+import { SocialAccountsData } from '../interfaces/christmas-calendar-data';
 
 @Pipe({
   name: 'socialProfileUrl',
@@ -18,8 +18,6 @@ export class SocialProfileUrlPipe implements PipeTransform {
       return socialAccountsData.linkedInUrl;
     }
 
-    throw new Error(
-      `Invalid configuration of socialAccountsData. You have to provide twitterHandle or linkedInUrl`,
-    );
+    throw new Error(`Invalid configuration of socialAccountsData. You have to provide twitterHandle or linkedInUrl`);
   }
 }

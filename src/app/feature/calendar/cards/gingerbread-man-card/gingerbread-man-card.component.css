@@ -6,13 +6,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: repeating-linear-gradient(
-      75deg,
-      transparent,
-      transparent 20px,
-      #9e1628 10px,
-      #9e1628 40px
-    ),
+  background: repeating-linear-gradient(75deg, transparent, transparent 20px, #9e1628 10px, #9e1628 40px),
     linear-gradient(to bottom, #b11e31, #c23446);
 }
 

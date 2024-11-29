@@ -1,14 +1,5 @@
-import {
-  ChangeDetectionStrategy,
-  Component,
-  ElementRef,
-  NgZone,
-  Renderer2,
-  ViewChild,
-  afterNextRender,
-  inject,
-} from '@angular/core';
-import {DOCUMENT} from '@angular/common';
+import { ChangeDetectionStrategy, Component, ElementRef, NgZone, Renderer2, ViewChild, afterNextRender, inject } from '@angular/core';
+import { DOCUMENT } from '@angular/common';
 
 function randomize(min: number, max: number, round = false) {
   const randomPick = Math.random() * (max - min) + min;

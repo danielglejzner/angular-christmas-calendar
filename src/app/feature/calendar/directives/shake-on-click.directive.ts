@@ -1,6 +1,6 @@
-import {DestroyRef, Directive, ElementRef, Input, Renderer2, inject} from '@angular/core';
-import {fromEvent, take} from 'rxjs';
-import {takeUntilDestroyed} from '@angular/core/rxjs-interop';
+import { DestroyRef, Directive, ElementRef, Input, Renderer2, inject } from '@angular/core';
+import { fromEvent, take } from 'rxjs';
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { SoundService } from '../services/sound.service';
 
 @Directive({

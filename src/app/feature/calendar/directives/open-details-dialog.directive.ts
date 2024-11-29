@@ -1,7 +1,7 @@
-import {Dialog} from '@angular/cdk/dialog';
-import {Directive, Input, inject} from '@angular/core';
-import {CardDetailsDialogComponent} from '../dialogs/card-details-dialog/card-details-dialog.component';
-import {UiCalendarCard} from '../interfaces/christmas-calendar-data';
+import { Dialog } from '@angular/cdk/dialog';
+import { Directive, Input, inject } from '@angular/core';
+import { CardDetailsDialogComponent } from '../dialogs/card-details-dialog/card-details-dialog.component';
+import { UiCalendarCard } from '../interfaces/christmas-calendar-data';
 
 @Directive({
   selector: '[openDetailsDialog]',
@@ -13,7 +13,7 @@ import {UiCalendarCard} from '../interfaces/christmas-calendar-data';
 export class OpenDetailsDialogDirective {
   private readonly dialog = inject(Dialog);
 
-  @Input({required: true}) card!: UiCalendarCard;
+  @Input({ required: true }) card!: UiCalendarCard;
 
   protected cardClicked() {
     if (this.dialog.openDialogs.length !== 0) {

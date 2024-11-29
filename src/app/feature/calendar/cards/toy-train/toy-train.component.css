@@ -85,42 +85,12 @@
   left: 1rem;
   width: 5rem;
   height: 3rem;
-  background: radial-gradient(
-      circle at 1rem 1.5rem,
-      var(--toy-train-gray) 0,
-      var(--toy-train-gray) 0.5rem,
-      transparent 1rem
-    ),
-    radial-gradient(
-      circle at 2rem 1rem,
-      var(--toy-train-gray) 0,
-      var(--toy-train-gray) 0.5rem,
-      transparent 1rem
-    ),
-    radial-gradient(
-      circle at 3rem 1rem,
-      var(--toy-train-gray) 0,
-      var(--toy-train-gray) 0.5rem,
-      transparent 1rem
-    ),
-    radial-gradient(
-      circle at 4rem 1.5rem,
-      var(--toy-train-gray) 0,
-      var(--toy-train-gray) 0.5rem,
-      transparent 1rem
-    ),
-    radial-gradient(
-      circle at 2rem 2rem,
-      var(--toy-train-gray) 0,
-      var(--toy-train-gray) 0.5rem,
-      transparent 1rem
-    ),
-    radial-gradient(
-      circle at 3rem 2rem,
-      var(--toy-train-gray) 0,
-      var(--toy-train-gray) 0.5rem,
-      transparent 1rem
-    );
+  background: radial-gradient(circle at 1rem 1.5rem, var(--toy-train-gray) 0, var(--toy-train-gray) 0.5rem, transparent 1rem),
+    radial-gradient(circle at 2rem 1rem, var(--toy-train-gray) 0, var(--toy-train-gray) 0.5rem, transparent 1rem),
+    radial-gradient(circle at 3rem 1rem, var(--toy-train-gray) 0, var(--toy-train-gray) 0.5rem, transparent 1rem),
+    radial-gradient(circle at 4rem 1.5rem, var(--toy-train-gray) 0, var(--toy-train-gray) 0.5rem, transparent 1rem),
+    radial-gradient(circle at 2rem 2rem, var(--toy-train-gray) 0, var(--toy-train-gray) 0.5rem, transparent 1rem),
+    radial-gradient(circle at 3rem 2rem, var(--toy-train-gray) 0, var(--toy-train-gray) 0.5rem, transparent 1rem);
   opacity: 0;
   -webkit-animation: train-smoke 3s infinite linear;
   animation: train-smoke 3s infinite linear;

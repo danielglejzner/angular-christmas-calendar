@@ -1,11 +1,5 @@
 <div class="title">
-  <img
-    ngSrc="content/images/angular_wordmark_gradient.png"
-    width="400"
-    height="125"
-    priority="true"
-    alt="Angular Wordmark Gradient"
-  />
+  <img ngSrc="content/images/angular_wordmark_gradient.png" width="400" height="125" priority="true" alt="Angular Wordmark Gradient" />
   <h1>Christmas Calendar</h1>
 </div>
 
@@ -48,11 +42,7 @@
               @if (!content.author.socialAccountsData) {
                 <p>{{ content.author.name }}</p>
               } @else {
-                <a
-                  [href]="content.author.socialAccountsData! | socialProfileUrl"
-                  target="_blank"
-                  title="Link to author's twitter account"
-                >
+                <a [href]="content.author.socialAccountsData! | socialProfileUrl" target="_blank" title="Link to author's twitter account">
                   {{ content.author.name }}
                 </a>
               }

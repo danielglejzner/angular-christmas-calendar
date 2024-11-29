@@ -181,13 +181,7 @@ label:hover .door {
   content: '';
   display: block;
   border-radius: 0.75rem;
-  background: repeating-linear-gradient(
-    -45deg,
-    #f1faee 0,
-    #f1faee 0.5rem,
-    #e63946 0.5rem,
-    #e63946 1rem
-  );
+  background: repeating-linear-gradient(-45deg, #f1faee 0, #f1faee 0.5rem, #e63946 0.5rem, #e63946 1rem);
   background-size: 1.44rem 1.44rem;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.5);
   position: absolute;

@@ -71,13 +71,7 @@
   left: 4rem;
   width: 17rem;
   height: 4rem;
-  background: repeating-linear-gradient(
-    to right,
-    #006600,
-    #006600 0.2rem,
-    transparent 0.2rem,
-    transparent 0.7rem
-  );
+  background: repeating-linear-gradient(to right, #006600, #006600 0.2rem, transparent 0.2rem, transparent 0.7rem);
   transform: skewX(-45deg);
 }
 .ornaments .spikes-lower {
@@ -86,13 +80,7 @@
   left: 4rem;
   width: 17rem;
   height: 4rem;
-  background: repeating-linear-gradient(
-    to right,
-    #006600,
-    #006600 0.2rem,
-    transparent 0.2rem,
-    transparent 0.7rem
-  );
+  background: repeating-linear-gradient(to right, #006600, #006600 0.2rem, transparent 0.2rem, transparent 0.7rem);
   transform: skewX(45deg);
 }
 
@@ -158,33 +146,18 @@
 .ornament-1 {
   top: 12.7rem;
   left: 5rem;
-  background: radial-gradient(
-    circle at 75% 75%,
-    var(--ornament-1),
-    40%,
-    var(--ornament-1-light) 80%
-  );
+  background: radial-gradient(circle at 75% 75%, var(--ornament-1), 40%, var(--ornament-1-light) 80%);
 }
 
 .ornament-2 {
   top: 16.8rem;
   left: 15rem;
-  background: radial-gradient(
-    circle at 75% 75%,
-    var(--ornament-2),
-    40%,
-    var(--ornament-2-light) 80%
-  );
+  background: radial-gradient(circle at 75% 75%, var(--ornament-2), 40%, var(--ornament-2-light) 80%);
 }
 .ornament-3 {
   top: 15.8rem;
   left: 25rem;
-  background: radial-gradient(
-    circle at 75% 75%,
-    var(--ornament-3),
-    40%,
-    var(--ornament-3-light) 80%
-  );
+  background: radial-gradient(circle at 75% 75%, var(--ornament-3), 40%, var(--ornament-3-light) 80%);
 }
 
 .ornaments .hanger {

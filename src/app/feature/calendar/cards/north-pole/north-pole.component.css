@@ -91,13 +91,7 @@
   right: 0;
   top: 0;
   bottom: 0;
-  background: linear-gradient(
-    to right,
-    rgba(0, 0, 0, 0.2) 0,
-    rgba(0, 0, 0, 0) 20%,
-    rgba(0, 0, 0, 0) 70%,
-    rgba(0, 0, 0, 0.3) 100%
-  );
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.2) 0, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0) 70%, rgba(0, 0, 0, 0.3) 100%);
 }
 
 .north-pole .pole::after {

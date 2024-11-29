@@ -64,20 +64,8 @@
   width: 6rem;
   height: 10rem;
   border-radius: 0 0 0 2rem;
-  background: repeating-linear-gradient(
-      20deg,
-      transparent,
-      transparent 10px,
-      var(--stocking-blue) 5px,
-      var(--stocking-blue) 20px
-    ),
-    repeating-linear-gradient(
-      110deg,
-      transparent,
-      transparent 10px,
-      var(--stocking-blue) 5px,
-      var(--stocking-blue) 20px
-    );
+  background: repeating-linear-gradient(20deg, transparent, transparent 10px, var(--stocking-blue) 5px, var(--stocking-blue) 20px),
+    repeating-linear-gradient(110deg, transparent, transparent 10px, var(--stocking-blue) 5px, var(--stocking-blue) 20px);
   background-color: var(--stocking-red);
   overflow: hidden;
 }
@@ -87,20 +75,8 @@
   width: 5rem;
   height: 10rem;
   border-radius: 2rem;
-  background: repeating-linear-gradient(
-      20deg,
-      transparent,
-      transparent 10px,
-      var(--stocking-blue) 5px,
-      var(--stocking-blue) 20px
-    ),
-    repeating-linear-gradient(
-      110deg,
-      transparent,
-      transparent 10px,
-      var(--stocking-blue) 5px,
-      var(--stocking-blue) 20px
-    );
+  background: repeating-linear-gradient(20deg, transparent, transparent 10px, var(--stocking-blue) 5px, var(--stocking-blue) 20px),
+    repeating-linear-gradient(110deg, transparent, transparent 10px, var(--stocking-blue) 5px, var(--stocking-blue) 20px);
   background-color: var(--stocking-red);
   transform-origin: top left;
   transform: rotate(-70deg) translateY(-0.6rem);
