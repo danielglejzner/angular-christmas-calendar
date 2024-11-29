@@ -8,7 +8,7 @@ import bootstrap from './main.server';
 
 const commonEngine = new CommonEngine();
 
-export async function netlifyCommonEngineHandler(request: Request, context: any): Promise<Response> {
+export async function netlifyCommonEngineHandler(_request: Request, _context: unknown): Promise<Response> {
   // Example API endpoints can be defined here.
   // Uncomment and define endpoints as necessary.
   // const pathname = new URL(request.url).pathname;

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { SnowflakesComponent } from './feature/calendar/core/snowflakes/snowflakes.component';
 
@@ -7,5 +7,6 @@ import { SnowflakesComponent } from './feature/calendar/core/snowflakes/snowflak
   imports: [RouterOutlet, SnowflakesComponent],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AppComponent {}

@@ -1,10 +1,10 @@
 import { Dialog } from '@angular/cdk/dialog';
 import { Directive, Input, inject } from '@angular/core';
 import { CardDetailsDialogComponent } from '../dialogs/card-details-dialog/card-details-dialog.component';
-import { UiCalendarCard } from '../interfaces/christmas-calendar-data';
+import type { UiCalendarCard } from '../interfaces/christmas-calendar-data';
 
 @Directive({
-  selector: '[openDetailsDialog]',
+  selector: '[xmasOpenDetailsDialog]',
   standalone: true,
   host: {
     '(click)': 'cardClicked()',
@@ -15,7 +15,7 @@ export class OpenDetailsDialogDirective {
 
   @Input({ required: true }) card!: UiCalendarCard;
 
-  protected cardClicked() {
+  protected cardClicked(): void {
     if (this.dialog.openDialogs.length !== 0) {
       return;
     }

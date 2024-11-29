@@ -6,9 +6,9 @@
 @for (card of cards; track $index) {
   <div
     class="card day-{{ card.day }}"
-    openDetailsDialog
+    xmasOpenDetailsDialog
     [card]="card"
-    [shakeWhenDisabled]="!card.canReveal && !card.revealed"
+    [xmasShakeWhenDisabled]="!card.canReveal && !card.revealed"
     [class.pulse]="card.canReveal && !card.revealed"
   >
     <label>

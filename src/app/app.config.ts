@@ -1,4 +1,5 @@
-import { ApplicationConfig, provideZoneChangeDetection } from '@angular/core';
+import type { ApplicationConfig } from '@angular/core';
+import { provideZoneChangeDetection } from '@angular/core';
 import { provideRouter } from '@angular/router';
 
 import { provideClientHydration, withEventReplay } from '@angular/platform-browser';

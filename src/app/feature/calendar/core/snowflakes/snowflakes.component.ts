@@ -1,12 +1,13 @@
-import { ChangeDetectionStrategy, Component, ElementRef, NgZone, Renderer2, ViewChild, afterNextRender, inject } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
+import type { ElementRef } from '@angular/core';
+import { ChangeDetectionStrategy, Component, NgZone, Renderer2, ViewChild, afterNextRender, inject } from '@angular/core';
 
-function randomize(min: number, max: number, round = false) {
+function randomize(min: number, max: number, round = false): number {
   const randomPick = Math.random() * (max - min) + min;
   return round ? Math.round(randomPick) : randomPick;
 }
 
-function calcAnimationDelay(flakeIndex: number, totalSnowCount: number) {
+function calcAnimationDelay(flakeIndex: number, totalSnowCount: number): number {
   return flakeIndex < totalSnowCount * 0.1 ? randomize(0, 0.5) : randomize(0.35, 18);
 }
 
@@ -30,7 +31,7 @@ export class SnowflakesComponent {
     });
   }
 
-  private letItSnow() {
+  private letItSnow(): void {
     this.zone.runOutsideAngular(() => {
       const totalSnowCount = this.document.body.clientWidth * 0.25;
 
@@ -45,7 +46,7 @@ export class SnowflakesComponent {
     });
   }
 
-  private createSnowflake() {
+  private createSnowflake(): HTMLSpanElement {
     const snowflake = this.renderer.createElement('span') as HTMLSpanElement;
     const size = randomize(0.15, 0.85);
 

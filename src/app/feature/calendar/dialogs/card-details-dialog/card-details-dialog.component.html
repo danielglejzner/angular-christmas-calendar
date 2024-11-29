@@ -76,7 +76,7 @@
 
   <div class="xmas-dialog-content xmas-dialog-select-expert">
     @for (content of data.contents; track $index) {
-      <div class="xmas-dialog-card-wrapper" (click)="selectedContent.set(content)">
+      <div role="presentation" class="xmas-dialog-card-wrapper" (click)="selectedContent.set(content)">
         <img class="xmas-dialog-select-expert-avatar" [src]="content.author.avatarUrl" alt="{{ content.author.name }}" />
         <p class="xmas-dialog-select-expert-name">{{ content.author.name }}</p>
       </div>

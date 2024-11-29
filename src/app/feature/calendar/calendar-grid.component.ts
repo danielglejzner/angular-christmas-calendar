@@ -1,11 +1,11 @@
-import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
-import { CommonModule, NgOptimizedImage } from '@angular/common';
-import { CalendarCardFactoryDirective } from './cards/calendar-card-factory.directive';
-import { CalendarService } from './services/calendar.service';
 import { DialogModule } from '@angular/cdk/dialog';
-import { SocialProfileUrlPipe } from './pipes/social-profile-url.pipe';
-import { ShakeWhenDisabledDirective } from './directives/shake-on-click.directive';
+import { NgOptimizedImage } from '@angular/common';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
+import { CalendarCardFactoryDirective } from './cards/calendar-card-factory.directive';
 import { OpenDetailsDialogDirective } from './directives/open-details-dialog.directive';
+import { ShakeWhenDisabledDirective } from './directives/shake-on-click.directive';
+import { SocialProfileUrlPipe } from './pipes/social-profile-url.pipe';
+import { CalendarService } from './services/calendar.service';
 import { SoundService } from './services/sound.service';
 
 @Component({

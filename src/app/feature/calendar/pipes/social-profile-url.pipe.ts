@@ -1,5 +1,6 @@
-import { Pipe, PipeTransform } from '@angular/core';
-import { SocialAccountsData } from '../interfaces/christmas-calendar-data';
+import type { PipeTransform } from '@angular/core';
+import { Pipe } from '@angular/core';
+import type { SocialAccountsData } from '../interfaces/christmas-calendar-data';
 
 @Pipe({
   name: 'socialProfileUrl',
