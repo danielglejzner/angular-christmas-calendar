@@ -8,20 +8,18 @@ import {ShakeWhenDisabledDirective} from './directives/shake-on-click.directive'
 import {OpenDetailsDialogDirective} from './directives/open-details-dialog.directive';
 
 @Component({
-  selector: 'xmas-calendar-grid',
-  standalone: true,
-  imports: [
-    CommonModule,
-    CalendarCardFactoryDirective,
-    DialogModule,
-    NgOptimizedImage,
-    OpenDetailsDialogDirective,
-    ShakeWhenDisabledDirective,
-    SocialProfileUrlPipe,
-  ],
-  templateUrl: './calendar-grid.component.html',
-  styleUrl: './calendar-grid.component.css',
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    selector: 'xmas-calendar-grid',
+    imports: [
+        CalendarCardFactoryDirective,
+        DialogModule,
+        NgOptimizedImage,
+        OpenDetailsDialogDirective,
+        ShakeWhenDisabledDirective,
+        SocialProfileUrlPipe,
+    ],
+    templateUrl: './calendar-grid.component.html',
+    styleUrl: './calendar-grid.component.css',
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class CalendarGridComponent {
   private readonly calendarService = inject(CalendarService);
