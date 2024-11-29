@@ -14,7 +14,7 @@ import type { UiCalendarCard } from '../interfaces/christmas-calendar-data';
 export class OpenDetailsDialogDirective {
   private readonly dialog = inject(Dialog);
 
-  card: InputSignal<UiCalendarCard> = input.required<UiCalendarCard>();
+  readonly card: InputSignal<UiCalendarCard> = input.required<UiCalendarCard>();
 
   protected cardClicked(): void {
     if (this.dialog.openDialogs.length !== 0) {

@@ -17,7 +17,7 @@ export class ShakeWhenDisabledDirective {
   private readonly renderer = inject(Renderer2);
   private readonly soundService = inject(SoundService);
 
-  xmasShakeWhenDisabled: InputSignal<boolean> = input(false);
+  readonly xmasShakeWhenDisabled: InputSignal<boolean> = input(false);
 
   protected cardClicked(): void {
     if (this.xmasShakeWhenDisabled()) {

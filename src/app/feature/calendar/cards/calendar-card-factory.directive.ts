@@ -58,7 +58,7 @@ export const christmasCardsFactoryMap: Record<ChristmasCardType, Type<ChristmasC
   standalone: true,
 })
 export class CalendarCardFactoryDirective implements OnInit {
-  type: InputSignal<ChristmasCardType> = input.required<ChristmasCardType>();
+  readonly type: InputSignal<ChristmasCardType> = input.required<ChristmasCardType>();
 
   private readonly container = inject(ViewContainerRef);
 
