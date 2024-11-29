@@ -3,11 +3,11 @@ import {ChristmasCard} from '../../interfaces/christmas-card';
 import {ChristmasCardType} from '../../enums/christmas-card-type';
 
 @Component({
-    selector: 'xmas-stocking',
-    imports: [],
-    templateUrl: './stocking.component.html',
-    styleUrl: './stocking.component.css',
-    changeDetection: ChangeDetectionStrategy.OnPush
+  selector: 'xmas-stocking',
+  imports: [],
+  templateUrl: './stocking.component.html',
+  styleUrl: './stocking.component.css',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class StockingComponent implements ChristmasCard {
   readonly type = ChristmasCardType.Stocking;

@@ -9,18 +9,18 @@ import {OpenDetailsDialogDirective} from './directives/open-details-dialog.direc
 import { SoundService } from './services/sound.service';
 
 @Component({
-    selector: 'xmas-calendar-grid',
-    imports: [
-        CalendarCardFactoryDirective,
-        DialogModule,
-        NgOptimizedImage,
-        OpenDetailsDialogDirective,
-        ShakeWhenDisabledDirective,
-        SocialProfileUrlPipe
-    ],
-    templateUrl: './calendar-grid.component.html',
-    styleUrl: './calendar-grid.component.css',
-    changeDetection: ChangeDetectionStrategy.OnPush
+  selector: 'xmas-calendar-grid',
+  imports: [
+    CalendarCardFactoryDirective,
+    DialogModule,
+    NgOptimizedImage,
+    OpenDetailsDialogDirective,
+    ShakeWhenDisabledDirective,
+    SocialProfileUrlPipe,
+  ],
+  templateUrl: './calendar-grid.component.html',
+  styleUrl: './calendar-grid.component.css',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class CalendarGridComponent {
   private readonly soundService = inject(SoundService);

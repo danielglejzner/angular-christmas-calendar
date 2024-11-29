@@ -1,7 +1,7 @@
-import { Dialog } from '@angular/cdk/dialog';
-import { Directive, Input, inject } from '@angular/core';
-import { CardDetailsDialogComponent } from '../dialogs/card-details-dialog/card-details-dialog.component';
-import { UiCalendarCard } from '../interfaces/christmas-calendar-data';
+import {Dialog} from '@angular/cdk/dialog';
+import {Directive, Input, inject} from '@angular/core';
+import {CardDetailsDialogComponent} from '../dialogs/card-details-dialog/card-details-dialog.component';
+import {UiCalendarCard} from '../interfaces/christmas-calendar-data';
 
 @Directive({
   selector: '[openDetailsDialog]',
