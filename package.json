@@ -6,7 +6,6 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test",
     "format:check": "prettier --check \"src/**/*.+(ts|html|css|json)\"",
     "format:write": "prettier --write \"src/**/*.+(ts|html|css|json)\""
   },
@@ -34,14 +33,7 @@
     "@angular/compiler-cli": "19.0.1",
     "@netlify/angular-runtime": "2.2.1",
     "@types/express": "5.0.0",
-    "@types/jasmine": "5.1.5",
     "@types/node": "20.17.9",
-    "jasmine-core": "5.4.0",
-    "karma": "6.4.4",
-    "karma-chrome-launcher": "3.2.0",
-    "karma-coverage": "2.2.1",
-    "karma-jasmine": "5.1.0",
-    "karma-jasmine-html-reporter": "2.1.0",
     "prettier": "3.4.1",
     "typescript": "5.6.3"
   }
