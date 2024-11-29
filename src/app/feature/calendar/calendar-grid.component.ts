@@ -25,7 +25,7 @@ import { SoundService } from './services/sound.service';
 export class CalendarGridComponent {
   private readonly soundService = inject(SoundService);
   private readonly calendarService = inject(CalendarService);
-  cards = this.calendarService.cards;
+  protected cards = this.calendarService.cards;
 
   constructor() {
     afterNextRender(() => {
