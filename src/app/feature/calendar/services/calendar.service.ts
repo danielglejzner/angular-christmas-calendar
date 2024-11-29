@@ -1,7 +1,7 @@
-import {Injectable, inject} from '@angular/core';
-import calendarData from './../../../../assets/content/angular-calendar.json';
-import {UiCalendarCard} from '../interfaces/christmas-calendar-data';
-import {OVERRIDE_CARD_INDEX_TO_REVEAL} from '../providers/date-range';
+import { Injectable, inject } from '@angular/core';
+import { UiCalendarCard } from '../interfaces/christmas-calendar-data';
+import { OVERRIDE_CARD_INDEX_TO_REVEAL } from '../providers/date-range';
+import calendarData from './../../../../../public/content/angular-calendar.json';
 
 @Injectable({
   providedIn: 'root',

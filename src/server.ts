@@ -1,12 +1,10 @@
 import { APP_BASE_HREF } from '@angular/common';
 import { CommonEngine } from '@angular/ssr/node';
-// @ts-ignore
 import { render } from '@netlify/angular-runtime/common-engine';
 import express from 'express';
-import { fileURLToPath } from 'node:url';
 import { dirname, join, resolve } from 'node:path';
-import bootstrap from './src/main.server';
-
+import { fileURLToPath } from 'node:url';
+import bootstrap from './main.server';
 
 const commonEngine = new CommonEngine()
 
