@@ -1,5 +1,5 @@
-import type { OnInit, Type } from '@angular/core';
-import { Directive, Input, ViewContainerRef, inject } from '@angular/core';
+import type { InputSignal, OnInit, Type } from '@angular/core';
+import { Directive, ViewContainerRef, inject, input } from '@angular/core';
 import { ChristmasCardType } from '../enums/christmas-card-type';
 import type { ChristmasCard } from '../interfaces/christmas-card';
 import { CandleComponent } from './candle/candle.component';
@@ -58,12 +58,12 @@ export const christmasCardsFactoryMap: Record<ChristmasCardType, Type<ChristmasC
   standalone: true,
 })
 export class CalendarCardFactoryDirective implements OnInit {
-  @Input({ required: true }) type!: ChristmasCardType;
+  type: InputSignal<ChristmasCardType> = input.required<ChristmasCardType>();
 
   private readonly container = inject(ViewContainerRef);
 
   ngOnInit(): void {
-    const cardType: Type<ChristmasCard> = christmasCardsFactoryMap[this.type];
+    const cardType: Type<ChristmasCard> = christmasCardsFactoryMap[this.type()];
 
     this.container.createComponent(cardType);
   }
