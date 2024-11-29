@@ -1,6 +1,6 @@
 import { DOCUMENT } from '@angular/common';
 import type { ElementRef } from '@angular/core';
-import { ChangeDetectionStrategy, Component, NgZone, Renderer2, ViewChild, afterNextRender, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Renderer2, ViewChild, afterNextRender, inject } from '@angular/core';
 
 function randomize(min: number, max: number, round = false): number {
   const randomPick = Math.random() * (max - min) + min;
@@ -23,7 +23,6 @@ export class SnowflakesComponent {
 
   private readonly document = inject(DOCUMENT);
   private readonly renderer = inject(Renderer2);
-  private readonly zone = inject(NgZone);
 
   constructor() {
     afterNextRender(() => {
@@ -32,18 +31,16 @@ export class SnowflakesComponent {
   }
 
   private letItSnow(): void {
-    this.zone.runOutsideAngular(() => {
-      const totalSnowCount = this.document.body.clientWidth * 0.25;
+    const totalSnowCount = this.document.body.clientWidth * 0.25;
 
-      for (let i = 0; i <= totalSnowCount; i++) {
-        const snowflake = this.createSnowflake();
+    for (let i = 0; i <= totalSnowCount; i++) {
+      const snowflake = this.createSnowflake();
 
-        const animationDelay = calcAnimationDelay(i, totalSnowCount);
-        snowflake.style.animationDelay = `${animationDelay}s`;
+      const animationDelay = calcAnimationDelay(i, totalSnowCount);
+      snowflake.style.animationDelay = `${animationDelay}s`;
 
-        this.renderer.appendChild(this.snowArea.nativeElement, snowflake);
-      }
-    });
+      this.renderer.appendChild(this.snowArea.nativeElement, snowflake);
+    }
   }
 
   private createSnowflake(): HTMLSpanElement {
