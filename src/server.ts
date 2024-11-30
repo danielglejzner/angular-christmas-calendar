@@ -7,11 +7,10 @@ import fastify from 'fastify';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
+const angularAppEngine = new AngularAppEngine();
 const netlifyContext = getNetlifyContext();
 
 export async function netlifyAppEngineHandler(request: Request): Promise<Response> {
-  const angularAppEngine = new AngularAppEngine();
-
   const result = await angularAppEngine.handle(request, netlifyContext);
   return result || new Response('Not found', { status: 404 });
 }
