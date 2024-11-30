@@ -32,14 +32,14 @@
     "@angular-devkit/build-angular": "19.0.2",
     "@angular/cli": "19.0.2",
     "@angular/compiler-cli": "19.0.1",
-    "@eslint/js": "9.15.0",
+    "@eslint/js": "9.16.0",
     "@netlify/angular-runtime": "2.2.1",
     "@nx/eslint-plugin": "20.1.4",
     "@types/express": "5.0.0",
     "@types/node": "20.17.9",
     "@typescript-eslint/utils": "8.16.0",
     "angular-eslint": "18.4.2",
-    "eslint": "9.15.0",
+    "eslint": "9.16.0",
     "eslint-config-prettier": "9.1.0",
     "husky": "9.1.7",
     "nano-staged": "0.8.0",
@@ -47,6 +47,5 @@
     "serve": "14.2.4",
     "typescript": "5.6.3",
     "typescript-eslint": "8.16.0"
-  },
-  "packageManager": "pnpm@9.14.4+sha512.c8180b3fbe4e4bca02c94234717896b5529740a6cbadf19fa78254270403ea2f27d4e1d46a08a0f56c89b63dc8ebfd3ee53326da720273794e6200fcf0d184ab"
+  }
 }
