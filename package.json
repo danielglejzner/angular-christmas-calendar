@@ -25,8 +25,7 @@
     "@angular/platform-server": "19.0.1",
     "@angular/router": "19.0.1",
     "@angular/ssr": "19.0.2",
-    "@fastify/static": "8.0.3",
-    "fastify": "5.1.0",
+    "express": "4.21.1",
     "rxjs": "7.8.1",
     "tslib": "2.8.1"
   },
@@ -37,6 +36,7 @@
     "@eslint/js": "9.16.0",
     "@netlify/angular-runtime": "2.2.1",
     "@nx/eslint-plugin": "20.1.4",
+    "@types/express": "4.17.21",
     "@types/node": "20.17.9",
     "@typescript-eslint/utils": "8.16.0",
     "angular-eslint": "19.0.0",

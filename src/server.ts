@@ -1,9 +1,7 @@
 import { AngularAppEngine, createRequestHandler } from '@angular/ssr';
 import { AngularNodeAppEngine, createNodeRequestHandler, isMainModule, writeResponseToNodeResponse } from '@angular/ssr/node';
-import fastifyStatic from '@fastify/static';
 import { getContext as getNetlifyContext } from '@netlify/angular-runtime/context';
-import type { FastifyInstance } from 'fastify';
-import fastify from 'fastify';
+import express from 'express';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -15,38 +13,34 @@ export async function netlifyAppEngineHandler(request: Request): Promise<Respons
   return result || new Response('Not found', { status: 404 });
 }
 
-export function createServer(): FastifyInstance {
+// eslint-disable-next-line @typescript-eslint/explicit-function-return-type
+export function createServer() {
   const serverDistFolder = dirname(fileURLToPath(import.meta.url));
   const browserDistFolder = resolve(serverDistFolder, '../browser');
 
-  const server = fastify({
-    disableRequestLogging: true,
-  });
+  const server = express();
 
-  server.register(fastifyStatic, {
-    root: browserDistFolder,
-    maxAge: '1y',
-    // If set to true it will create a '/' get route and we don't want that
-    index: false,
-    // Need to be false, else we won't be able to create a wildcard route
-    wildcard: false,
-  });
+  /**
+   * Serve static files from /browser
+   */
+  server.use(
+    express.static(browserDistFolder, {
+      maxAge: '1y',
+      index: false,
+      redirect: false,
+    }),
+  );
 
   const angularNodeAppEngine = new AngularNodeAppEngine();
 
   /**
    * Handle all requests by rendering the Angular application.
    */
-  server.get('*', async (req, reply) => {
-    try {
-      const response = await angularNodeAppEngine.handle(req.raw);
-
-      if (response) {
-        await writeResponseToNodeResponse(response, reply.raw);
-      }
-    } catch (error) {
-      reply.send(error);
-    }
+  server.use('/**', (req, res, next) => {
+    angularNodeAppEngine
+      .handle(req)
+      .then((response) => (response ? writeResponseToNodeResponse(response, res) : next()))
+      .catch(next);
   });
 
   return server;
@@ -61,8 +55,8 @@ const server = createServer();
 if (isMainModule(import.meta.url)) {
   const port = parseInt(process.env['PORT'] ?? '4000', 10) || 4000;
 
-  server.listen({ port }, () => {
-    console.log(`Fastify server listening on http://localhost:${port}`);
+  server.listen(port, () => {
+    console.log(`Node Express server listening on http://localhost:${port}`);
   });
 }
 
@@ -70,12 +64,7 @@ if (isMainModule(import.meta.url)) {
  * The request handler used by the Angular CLI (dev-server and during build).
  */
 
-const nodeRequestHandle = createNodeRequestHandler(async (req, res) => {
-  await server.ready();
-
-  server.server.emit('request', req, res);
-});
-
+const nodeRequestHandle = createNodeRequestHandler(server);
 const netlifyRequestHandler = createRequestHandler(netlifyAppEngineHandler);
 
 export const reqHandler = netlifyContext ? netlifyRequestHandler : nodeRequestHandle;
