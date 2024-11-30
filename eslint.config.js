@@ -12,13 +12,13 @@ module.exports = [
     // Override or add rules here
     rules: {
       '@typescript-eslint/no-unused-vars': [
-          'error',
-          {
-            'vars': 'all',
-            'args': 'after-used',
-            'argsIgnorePattern': '^_'
-          }
-        ]
+        'error',
+        {
+          vars: 'all',
+          args: 'after-used',
+          argsIgnorePattern: '^_',
+        },
+      ],
     },
   },
   ...nx.configs['flat/angular'],
@@ -63,7 +63,6 @@ module.exports = [
       '@angular-eslint/prefer-on-push-component-change-detection': ['error'],
       '@angular-eslint/use-lifecycle-interface': ['error'],
       '@angular-eslint/use-pipe-transform-interface': ['error'],
-      '@angular-eslint/no-host-metadata-property': ['off'],
     },
   },
   {
@@ -81,7 +80,7 @@ module.exports = [
       '@angular-eslint/template/no-autofocus': ['error'],
       '@angular-eslint/template/no-negated-async': ['error'],
       '@angular-eslint/template/use-track-by-function': ['error'],
-      '@angular-eslint/template/prefer-control-flow': ['error']
+      '@angular-eslint/template/prefer-control-flow': ['error'],
     },
   },
 ];
