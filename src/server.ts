@@ -1,17 +1,18 @@
-import { AngularAppEngine } from '@angular/ssr';
+import { AngularAppEngine, createRequestHandler } from '@angular/ssr';
 import { AngularNodeAppEngine, createNodeRequestHandler, isMainModule, writeResponseToNodeResponse } from '@angular/ssr/node';
 import fastifyStatic from '@fastify/static';
-import { getContext } from '@netlify/angular-runtime/context';
+import { getContext as getNetlifyContext } from '@netlify/angular-runtime/context';
 import type { FastifyInstance } from 'fastify';
 import fastify from 'fastify';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
+const netlifyContext = getNetlifyContext();
+
 export async function netlifyAppEngineHandler(request: Request): Promise<Response> {
-  const context = getContext();
   const angularAppEngine = new AngularAppEngine();
 
-  const result = await angularAppEngine.handle(request, context);
+  const result = await angularAppEngine.handle(request, netlifyContext);
   return result || new Response('Not found', { status: 404 });
 }
 
@@ -69,8 +70,13 @@ if (isMainModule(import.meta.url)) {
 /**
  * The request handler used by the Angular CLI (dev-server and during build).
  */
-export const reqHandler = createNodeRequestHandler(async (req, res) => {
+
+const nodeRequestHandle = createNodeRequestHandler(async (req, res) => {
   await server.ready();
 
   server.server.emit('request', req, res);
 });
+
+const netlifyRequestHandler = createRequestHandler(netlifyAppEngineHandler);
+
+export const reqHandler = netlifyContext ? netlifyRequestHandler : nodeRequestHandle;
