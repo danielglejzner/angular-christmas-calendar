@@ -6,7 +6,8 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "serve": "serve --single ./dist/angular-christmas-calendar/browser",
+    "serve:ssr": "node dist/angular-christmas-calendar/server/server.mjs",
+    "serve": "serve --single dist/angular-christmas-calendar/browser",
     "format:check": "prettier --check \"src/**/*.+(ts|html|css|json)\"",
     "format:write": "prettier --write \"src/**/*.+(ts|html|css|json)\"",
     "lint": "eslint ./src",
@@ -24,7 +25,8 @@
     "@angular/platform-server": "19.0.1",
     "@angular/router": "19.0.1",
     "@angular/ssr": "19.0.2",
-    "express": "5.0.1",
+    "@fastify/static": "8.0.3",
+    "fastify": "5.1.0",
     "rxjs": "7.8.1",
     "tslib": "2.8.1"
   },
@@ -35,7 +37,6 @@
     "@eslint/js": "9.16.0",
     "@netlify/angular-runtime": "2.2.1",
     "@nx/eslint-plugin": "20.1.4",
-    "@types/express": "5.0.0",
     "@types/node": "20.17.9",
     "@typescript-eslint/utils": "8.16.0",
     "angular-eslint": "19.0.0",
@@ -47,5 +48,6 @@
     "serve": "14.2.4",
     "typescript": "5.6.3",
     "typescript-eslint": "8.16.0"
-  }
+  },
+  "packageManager": "pnpm@9.14.4+sha512.c8180b3fbe4e4bca02c94234717896b5529740a6cbadf19fa78254270403ea2f27d4e1d46a08a0f56c89b63dc8ebfd3ee53326da720273794e6200fcf0d184ab"
 }

@@ -1,73 +1,66 @@
-import { APP_BASE_HREF } from '@angular/common';
-import { CommonEngine } from '@angular/ssr/node';
-import { render } from '@netlify/angular-runtime/common-engine';
-import express from 'express';
-import { dirname, join, resolve } from 'node:path';
+import { AngularNodeAppEngine, createNodeRequestHandler, isMainModule, writeResponseToNodeResponse } from '@angular/ssr/node';
+import fastifyStatic from '@fastify/static';
+import type { FastifyInstance } from 'fastify';
+import fastify from 'fastify';
+import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import bootstrap from './main.server';
 
-const commonEngine = new CommonEngine();
-
-export async function netlifyCommonEngineHandler(_request: Request, _context: unknown): Promise<Response> {
-  // Example API endpoints can be defined here.
-  // Uncomment and define endpoints as necessary.
-  // const pathname = new URL(request.url).pathname;
-  // if (pathname === '/api/hello') {
-  //   return Response.json({ message: 'Hello from the API' });
-  // }
-
-  return await render(commonEngine);
-}
-
-// The Express app is exported so that it can be used by serverless Functions.
-export function app(): express.Express {
-  const server = express();
+export function createServer(): FastifyInstance {
   const serverDistFolder = dirname(fileURLToPath(import.meta.url));
   const browserDistFolder = resolve(serverDistFolder, '../browser');
-  const indexHtml = join(serverDistFolder, 'index.server.html');
 
-  const commonEngine = new CommonEngine();
+  const server = fastify({
+    disableRequestLogging: true,
+  });
 
-  server.set('view engine', 'html');
-  server.set('views', browserDistFolder);
+  server.register(fastifyStatic, {
+    root: browserDistFolder,
+    maxAge: '1y',
+    // If set to true it will create a '/' get route and we don't want that
+    index: false,
+    // Need to be false, else we won't be able to create a wildcard route
+    wildcard: false,
+  });
 
-  // Example Express Rest API endpoints
-  // server.get('/api/**', (req, res) => { });
-  // Serve static files from /browser
-  server.get(
-    '*.*',
-    express.static(browserDistFolder, {
-      maxAge: '1y',
-    }),
-  );
+  const angularNodeAppEngine = new AngularNodeAppEngine();
 
-  // All regular routes use the Angular engine
-  server.get('*', (req, res, next) => {
-    const { protocol, originalUrl, baseUrl, headers } = req;
+  /**
+   * Handle all requests by rendering the Angular application.
+   */
+  server.get('*', async (req, reply) => {
+    try {
+      const response = await angularNodeAppEngine.handle(req.raw);
 
-    commonEngine
-      .render({
-        bootstrap,
-        documentFilePath: indexHtml,
-        url: `${protocol}://${headers.host}${originalUrl}`,
-        publicPath: browserDistFolder,
-        providers: [{ provide: APP_BASE_HREF, useValue: baseUrl }],
-      })
-      .then((html) => res.send(html))
-      .catch((err) => next(err));
+      if (response) {
+        await writeResponseToNodeResponse(response, reply.raw);
+      }
+    } catch (error) {
+      reply.send(error);
+    }
   });
 
   return server;
 }
 
-function run(): void {
-  const port = process.env['PORT'] || 4000;
+const server = createServer();
 
-  // Start up the Node server
-  const server = app();
-  server.listen(port, () => {
-    console.log(`Node Express server listening on http://localhost:${port}`);
+/**
+ * Start the server if this module is the main entry point.
+ * The server listens on the port defined by the `PORT` environment variable, or defaults to 4000.
+ */
+if (isMainModule(import.meta.url)) {
+  const port = parseInt(process.env['PORT'] ?? '4000', 10) || 4000;
+
+  server.listen({ port }, () => {
+    console.log(`Fastify server listening on http://localhost:${port}`);
   });
 }
 
-run();
+/**
+ * The request handler used by the Angular CLI (dev-server and during build).
+ */
+export const reqHandler = createNodeRequestHandler(async (req, res) => {
+  await server.ready();
+
+  server.server.emit('request', req, res);
+});
