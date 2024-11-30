@@ -1,9 +1,19 @@
+import { AngularAppEngine } from '@angular/ssr';
 import { AngularNodeAppEngine, createNodeRequestHandler, isMainModule, writeResponseToNodeResponse } from '@angular/ssr/node';
 import fastifyStatic from '@fastify/static';
+import { getContext } from '@netlify/angular-runtime/context';
 import type { FastifyInstance } from 'fastify';
 import fastify from 'fastify';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
+
+export async function netlifyAppEngineHandler(request: Request): Promise<Response> {
+  const context = getContext();
+  const angularAppEngine = new AngularAppEngine();
+
+  const result = await angularAppEngine.handle(request, context);
+  return result || new Response('Not found', { status: 404 });
+}
 
 export function createServer(): FastifyInstance {
   const serverDistFolder = dirname(fileURLToPath(import.meta.url));
