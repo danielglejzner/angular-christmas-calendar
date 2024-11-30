@@ -6,7 +6,6 @@ import type { UiCalendarCard } from '../interfaces/christmas-calendar-data';
 
 @Directive({
   selector: '[xmasOpenDetailsDialog]',
-  standalone: true,
   host: {
     '(click)': 'cardClicked()',
   },

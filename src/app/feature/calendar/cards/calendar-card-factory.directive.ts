@@ -55,7 +55,6 @@ export const christmasCardsFactoryMap: Record<ChristmasCardType, Type<ChristmasC
 
 @Directive({
   selector: '[xmasCalendarCardFactory]',
-  standalone: true,
 })
 export class CalendarCardFactoryDirective implements OnInit {
   readonly type: InputSignal<ChristmasCardType> = input.required<ChristmasCardType>();

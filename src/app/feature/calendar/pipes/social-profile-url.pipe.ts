@@ -4,7 +4,6 @@ import type { SocialAccountsData } from '../interfaces/christmas-calendar-data';
 
 @Pipe({
   name: 'socialProfileUrl',
-  standalone: true,
 })
 export class SocialProfileUrlPipe implements PipeTransform {
   private readonly twitterBaseUrl = 'https://twitter.com/';

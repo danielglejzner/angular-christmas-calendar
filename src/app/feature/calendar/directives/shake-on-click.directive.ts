@@ -6,7 +6,6 @@ import { SoundService } from '../services/sound.service';
 
 @Directive({
   selector: '[xmasShakeWhenDisabled]',
-  standalone: true,
   host: {
     '(click)': 'cardClicked()',
   },
