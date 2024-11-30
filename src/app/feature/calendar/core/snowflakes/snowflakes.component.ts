@@ -1,6 +1,6 @@
 import { DOCUMENT } from '@angular/common';
-import type { ElementRef } from '@angular/core';
-import { ChangeDetectionStrategy, Component, Renderer2, ViewChild, afterNextRender, inject } from '@angular/core';
+import type { Signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, ElementRef, Renderer2, afterNextRender, inject, viewChild } from '@angular/core';
 
 function randomize(min: number, max: number, round = false): number {
   const randomPick = Math.random() * (max - min) + min;
@@ -19,7 +19,9 @@ function calcAnimationDelay(flakeIndex: number, totalSnowCount: number): number 
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class SnowflakesComponent {
-  @ViewChild('snowArea') snowArea!: ElementRef<HTMLSpanElement>;
+  snowArea: Signal<ElementRef<HTMLSpanElement>> = viewChild.required<string, ElementRef<HTMLSpanElement>>('snowArea', {
+    read: ElementRef<HTMLSpanElement>,
+  });
 
   private readonly document = inject(DOCUMENT);
   private readonly renderer = inject(Renderer2);
@@ -39,7 +41,7 @@ export class SnowflakesComponent {
       const animationDelay = calcAnimationDelay(i, totalSnowCount);
       snowflake.style.animationDelay = `${animationDelay}s`;
 
-      this.renderer.appendChild(this.snowArea.nativeElement, snowflake);
+      this.renderer.appendChild(this.snowArea().nativeElement, snowflake);
     }
   }
 
