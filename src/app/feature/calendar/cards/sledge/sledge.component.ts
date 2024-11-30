@@ -1,10 +1,9 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import type { ChristmasCard } from '../../interfaces/christmas-card';
 import { ChristmasCardType } from '../../enums/christmas-card-type';
+import type { ChristmasCard } from '../../interfaces/christmas-card';
 
 @Component({
   selector: 'xmas-sledge',
-  imports: [],
   templateUrl: './sledge.component.html',
   styleUrl: './sledge.component.css',
   changeDetection: ChangeDetectionStrategy.OnPush,

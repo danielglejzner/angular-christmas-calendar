@@ -13,7 +13,6 @@ function calcAnimationDelay(flakeIndex: number, totalSnowCount: number): number 
 
 @Component({
   selector: 'xmas-snowflakes',
-  imports: [],
   templateUrl: './snowflakes.component.html',
   styleUrl: './snowflakes.component.css',
   changeDetection: ChangeDetectionStrategy.OnPush,

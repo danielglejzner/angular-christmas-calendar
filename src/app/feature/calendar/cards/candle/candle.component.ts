@@ -4,7 +4,6 @@ import type { ChristmasCard } from '../../interfaces/christmas-card';
 
 @Component({
   selector: 'xmas-candle',
-  imports: [],
   templateUrl: './candle.component.html',
   styleUrl: './candle.component.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
