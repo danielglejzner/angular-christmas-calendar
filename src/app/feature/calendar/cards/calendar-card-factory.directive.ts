@@ -1,4 +1,4 @@
-import type { InputSignal, OnInit, Type } from '@angular/core';
+import type { OnInit, Type } from '@angular/core';
 import { Directive, ViewContainerRef, inject, input } from '@angular/core';
 import { ChristmasCardType } from '../enums/christmas-card-type';
 import { CandleComponent } from './candle/candle.component';
@@ -56,7 +56,7 @@ export const christmasCardsFactoryMap: Record<ChristmasCardType, Type<unknown>> 
   selector: '[xmasCalendarCardFactory]',
 })
 export class CalendarCardFactoryDirective implements OnInit {
-  readonly type: InputSignal<ChristmasCardType> = input.required<ChristmasCardType>();
+  readonly type = input.required<ChristmasCardType>();
 
   private readonly container = inject(ViewContainerRef);
 

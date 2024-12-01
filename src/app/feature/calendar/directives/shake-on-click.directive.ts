@@ -1,4 +1,3 @@
-import type { InputSignal } from '@angular/core';
 import { DestroyRef, Directive, ElementRef, Renderer2, inject, input } from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { fromEvent, take } from 'rxjs';
@@ -16,7 +15,7 @@ export class ShakeWhenDisabledDirective {
   private readonly renderer = inject(Renderer2);
   private readonly soundService = inject(SoundService);
 
-  readonly xmasShakeWhenDisabled: InputSignal<boolean> = input(false);
+  readonly xmasShakeWhenDisabled = input(false);
 
   protected cardClicked(): void {
     if (this.xmasShakeWhenDisabled()) {

@@ -1,5 +1,4 @@
 import { Dialog } from '@angular/cdk/dialog';
-import type { InputSignal } from '@angular/core';
 import { Directive, inject, input } from '@angular/core';
 import { CardDetailsDialogComponent } from '../dialogs/card-details-dialog/card-details-dialog.component';
 import type { UiCalendarCard } from '../interfaces/christmas-calendar-data';
@@ -13,7 +12,7 @@ import type { UiCalendarCard } from '../interfaces/christmas-calendar-data';
 export class OpenDetailsDialogDirective {
   private readonly dialog = inject(Dialog);
 
-  readonly card: InputSignal<UiCalendarCard> = input.required<UiCalendarCard>();
+  readonly card = input.required<UiCalendarCard>();
 
   protected cardClicked(): void {
     if (this.dialog.openDialogs.length !== 0) {
