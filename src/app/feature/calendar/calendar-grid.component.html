@@ -12,12 +12,7 @@
     [class.pulse]="card.canReveal && !card.revealed"
   >
     <label>
-      <input
-        type="checkbox"
-        [checked]="card.revealed"
-        [disabled]="!card.canReveal"
-        (change)="card.revealed = !card.revealed"
-      />
+      <input type="checkbox" [checked]="card.revealed" [disabled]="!card.canReveal" (change)="card.revealed = !card.revealed" />
       @if (!card.revealed || (card.revealed && card.canReveal)) {
         <div class="door" [class.door--can-reveal]="card.canReveal">
           <div class="front">{{ card.day }}</div>

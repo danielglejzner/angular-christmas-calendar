@@ -8,12 +8,7 @@ import { NgTemplateOutlet } from '@angular/common';
 
 @Component({
   selector: 'xmas-card-details-dialog',
-  imports: [
-    CalendarCardFactoryDirective,
-    SafePipe,
-    SocialProfileUrlPipe,
-    NgTemplateOutlet
-  ],
+  imports: [CalendarCardFactoryDirective, SafePipe, SocialProfileUrlPipe, NgTemplateOutlet],
   templateUrl: './card-details-dialog.component.html',
   styleUrl: './card-details-dialog.component.css',
   changeDetection: ChangeDetectionStrategy.OnPush,

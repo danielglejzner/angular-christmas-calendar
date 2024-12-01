@@ -18,7 +18,7 @@ export class CalendarService {
     return {
       ...card,
       revealed: hasContents && card.day <= this.cardIndexToReveal,
-      canReveal: hasContents
+      canReveal: hasContents,
     };
   });
 

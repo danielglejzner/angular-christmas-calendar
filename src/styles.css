@@ -49,8 +49,8 @@ footer {
   bottom: 0;
 }
 @media (min-width: 1400px) {
-  .footer-container{
-    display:flex;
+  .footer-container {
+    display: flex;
     align-items: center;
   }
 }
