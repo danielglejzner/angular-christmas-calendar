@@ -1,7 +1,6 @@
 import type { InputSignal, OnInit, Type } from '@angular/core';
 import { Directive, ViewContainerRef, inject, input } from '@angular/core';
 import { ChristmasCardType } from '../enums/christmas-card-type';
-import type { ChristmasCard } from '../interfaces/christmas-card';
 import { CandleComponent } from './candle/candle.component';
 import { CandycaneComponent } from './candycane/candycane.component';
 import { ChristmasLightsComponent } from './christmas-lights/christmas-lights.component';
@@ -26,7 +25,7 @@ import { SparklerComponent } from './sparkler/sparkler.component';
 import { StockingComponent } from './stocking/stocking.component';
 import { ToyTrainComponent } from './toy-train/toy-train.component';
 
-export const christmasCardsFactoryMap: Record<ChristmasCardType, Type<ChristmasCard>> = {
+export const christmasCardsFactoryMap: Record<ChristmasCardType, Type<unknown>> = {
   [ChristmasCardType.GingerbreadMan]: GingerbreadManCardComponent,
   [ChristmasCardType.Snowflake]: SnowflakeComponent,
   [ChristmasCardType.Stocking]: StockingComponent,
@@ -62,7 +61,7 @@ export class CalendarCardFactoryDirective implements OnInit {
   private readonly container = inject(ViewContainerRef);
 
   ngOnInit(): void {
-    const cardType: Type<ChristmasCard> = christmasCardsFactoryMap[this.type()];
+    const cardType: Type<unknown> = christmasCardsFactoryMap[this.type()];
 
     this.container.createComponent(cardType);
   }

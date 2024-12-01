@@ -1,6 +1,4 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { ChristmasCardType } from '../../enums/christmas-card-type';
-import type { ChristmasCard } from '../../interfaces/christmas-card';
 
 @Component({
   selector: 'xmas-santa',
@@ -8,6 +6,4 @@ import type { ChristmasCard } from '../../interfaces/christmas-card';
   styleUrl: './santa.component.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class SantaComponent implements ChristmasCard {
-  readonly type = ChristmasCardType.Santa;
-}
+export class SantaComponent {}
