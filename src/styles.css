@@ -48,6 +48,13 @@ footer {
   font-family: 'Sans-serif';
   bottom: 0;
 }
+@media (min-width: 1400px) {
+  .footer-container{
+    display:flex;
+    align-items: center;
+  }
+}
+
 @media only screen and (min-width: 900px) {
   body {
     height: 100vh;
@@ -62,6 +69,10 @@ footer {
   footer {
     flex-direction: column;
     gap: 1rem;
+    width: 96vw;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
   }
 }
 

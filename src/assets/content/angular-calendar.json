@@ -2,7 +2,21 @@
     "data": [
       {
         "day": 1,
-        "contents": []
+        "contents": [
+          {
+            "author": {
+              "name": "Muhammad Ahsan Ayaz",
+              "avatarUrl": "https://pbs.twimg.com/profile_images/1856068988599410688/bae3mW-B_400x400.jpg",
+              "brandImageUrl": "https://ng-cookbook.com/assets/images/ng-cookbook-black.jpg",
+              "brandExternalUrl": "https://ng-cookbook.com",
+              "resourceName":"Checkout my book here :) --->",
+              "socialAccountsData": {
+                "twitterHandle": "codewith_ahsan"
+              }
+            },
+            "videoSrc": "https://streamable.com/e/khn33q?"
+          }
+        ]
       },
       {
         "day": 2,
