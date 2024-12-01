@@ -11,16 +11,24 @@ export class CalendarService {
     optional: true,
   });
 
-  private readonly cardIndexToReveal =
-    this.overrideCardIndexToReveal ??
-    calendarData.data.findIndex((day) => day.contents.length > 0);
+  private readonly cardIndexToReveal = this.overrideCardIndexToReveal ?? this.getLastContentIndex();
 
   readonly cards: UiCalendarCard[] = calendarData.data.map((card) => {
     const hasContents = card.contents.length > 0;
     return {
       ...card,
-      revealed: hasContents && card.day < this.cardIndexToReveal,
-      canReveal: hasContents && card.day === this.cardIndexToReveal,
+      revealed: hasContents && card.day <= this.cardIndexToReveal,
+      canReveal: hasContents
     };
   });
+
+  private getLastContentIndex(): number {
+    let lastIndex = -1;
+    calendarData.data.forEach((card, index) => {
+      if (card.contents.length > 0) {
+        lastIndex = index;
+      }
+    });
+    return lastIndex;
+  }
 }

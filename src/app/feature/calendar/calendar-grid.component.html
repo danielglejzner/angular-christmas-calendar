@@ -24,7 +24,6 @@
         [disabled]="!card.canReveal"
         (change)="card.revealed = !card.revealed"
       />
-
       @if (!card.revealed || (card.revealed && card.canReveal)) {
         <div class="door" [class.door--can-reveal]="card.canReveal">
           <div class="front">{{ card.day }}</div>
@@ -42,7 +41,7 @@
         <span></span>
       }
 
-      @if (card.contents && card.contents.length > 1) {
+      @if (card.contents && card.contents.length === 1) {
         <div class="title-container">
           <div class="title-container-content">
             @for (content of card.contents; track $index) {

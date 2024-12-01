@@ -1,5 +1,5 @@
 import {ChangeDetectionStrategy, Component, inject} from '@angular/core';
-import {CommonModule, NgOptimizedImage} from '@angular/common';
+import {NgOptimizedImage} from '@angular/common';
 import {CalendarCardFactoryDirective} from './cards/calendar-card-factory.directive';
 import {CalendarService} from './services/calendar.service';
 import {DialogModule} from '@angular/cdk/dialog';
@@ -15,7 +15,7 @@ import {OpenDetailsDialogDirective} from './directives/open-details-dialog.direc
         NgOptimizedImage,
         OpenDetailsDialogDirective,
         ShakeWhenDisabledDirective,
-        SocialProfileUrlPipe,
+        SocialProfileUrlPipe
     ],
     templateUrl: './calendar-grid.component.html',
     styleUrl: './calendar-grid.component.css',
