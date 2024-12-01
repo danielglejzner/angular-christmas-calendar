@@ -64,7 +64,7 @@ if (isMainModule(import.meta.url)) {
  * The request handler used by the Angular CLI (dev-server and during build).
  */
 
-const nodeRequestHandle = createNodeRequestHandler(server);
+const nodeRequestHandler = createNodeRequestHandler(server);
 const netlifyRequestHandler = createRequestHandler(netlifyAppEngineHandler);
 
-export const reqHandler = netlifyContext ? netlifyRequestHandler : nodeRequestHandle;
+export const reqHandler = netlifyContext ? netlifyRequestHandler : nodeRequestHandler;
