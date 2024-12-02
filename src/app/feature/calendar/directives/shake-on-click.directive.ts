@@ -1,6 +1,7 @@
 import {DestroyRef, Directive, ElementRef, Input, Renderer2, inject} from '@angular/core';
 import {fromEvent, take} from 'rxjs';
 import {takeUntilDestroyed} from '@angular/core/rxjs-interop';
+import { SoundService } from '../services/sound.service';
 
 @Directive({
   selector: '[shakeWhenDisabled]',
@@ -13,6 +14,7 @@ export class ShakeWhenDisabledDirective {
   private readonly destroyRef = inject(DestroyRef);
   private readonly elRef = inject(ElementRef<HTMLLabelElement>);
   private readonly renderer = inject(Renderer2);
+  private readonly soundService = inject(SoundService);
 
   @Input() shakeWhenDisabled: boolean = false;
 
@@ -25,6 +27,8 @@ export class ShakeWhenDisabledDirective {
         .subscribe(() => {
           this.renderer.removeClass(this.elRef.nativeElement, 'shakeX');
         });
+
+      this.soundService.playSound();
     }
   }
 }
