@@ -7,6 +7,20 @@
 </div>
 
 <ng-template #angularExpertThoughts>
+  @if(selectedContent()!.gift){
+    <a
+    href="https://polarized-pram-52c.notion.site/What-s-the-First-Name-of-Angular-Veteran-who-has-become-AI-Expert-150d2d2ccbe0800bb4d1e8aab045f89c?pvs=4"
+    target="_blank"
+    class="gift">
+    <img
+    src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExN3dvNXFoOGh6bTF4MGRhdHRkMHlkajdjamFqcHN2dmxtZmk1MHJxMiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/WUR1sMAkdlpqqdP0E5/giphy.gif"
+    width="50"
+    height="50"
+    priority="true"
+    alt="Gift"
+  />
+    </a>
+  }
   <header class="xmas-dialog-header">
     <img
       [src]="selectedContent()!.author.avatarUrl"

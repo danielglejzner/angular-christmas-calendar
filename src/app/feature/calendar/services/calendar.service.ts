@@ -23,7 +23,7 @@ export class CalendarService {
   });
 
   private getLastContentIndex(): number {
-    let lastIndex = -1;
+    let lastIndex = 0;
     calendarData.data.forEach((card, index) => {
       if (card.contents.length > 0) {
         lastIndex = index;

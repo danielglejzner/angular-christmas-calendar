@@ -14,13 +14,29 @@
                 "twitterHandle": "codewith_ahsan"
               }
             },
-            "videoSrc": "https://streamable.com/e/khn33q?"
+            "videoSrc": "https://streamable.com/e/khn33q?",
+            "gift": false
           }
         ]
       },
       {
         "day": 2,
-        "contents": []
+        "contents": [
+          {
+            "author": {
+              "name": "Tomas Trajan",
+              "avatarUrl": "https://pbs.twimg.com/profile_images/1777007964588498944/4ZSKA6d9_400x400.jpg",
+              "brandImageUrl": "https://angularexperts.io/assets/images/logo/angular-experts-white.svg",
+              "brandExternalUrl": "https://angularexperts.io/products/ebook-angular-enterprise-architecture",
+              "resourceName":"Checkout Angular Enterprise Architecture book I made :) --->",
+              "socialAccountsData": {
+                "twitterHandle": "tomastrajan"
+              }
+            },
+            "videoSrc": "https://streamable.com/e/ivusrf?",
+            "gift": true
+          }
+        ]
       },
       {
         "day": 3,

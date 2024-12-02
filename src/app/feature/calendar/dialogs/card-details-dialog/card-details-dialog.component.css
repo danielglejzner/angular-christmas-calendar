@@ -180,3 +180,8 @@ div.xmas-dialog-actions {
   color: #cc0000;
   font-size: 1.5rem;
 }
+.gift{
+  position: absolute;
+  top: -12vh;
+  left: -10vw;
+}
