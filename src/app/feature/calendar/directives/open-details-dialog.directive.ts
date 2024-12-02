@@ -1,11 +1,10 @@
-import {Directive, Input, inject} from '@angular/core';
-import {UiCalendarCard} from '../interfaces/christmas-calendar-data';
-import {Dialog} from '@angular/cdk/dialog';
-import {CardDetailsDialogComponent} from '../dialogs/card-details-dialog/card-details-dialog.component';
+import { Dialog } from '@angular/cdk/dialog';
+import { Directive, inject, input } from '@angular/core';
+import { CardDetailsDialogComponent } from '../dialogs/card-details-dialog/card-details-dialog.component';
+import type { UiCalendarCard } from '../interfaces/christmas-calendar-data';
 
 @Directive({
-  selector: '[openDetailsDialog]',
-  standalone: true,
+  selector: '[xmasOpenDetailsDialog]',
   host: {
     '(click)': 'cardClicked()',
   },
@@ -13,20 +12,19 @@ import {CardDetailsDialogComponent} from '../dialogs/card-details-dialog/card-de
 export class OpenDetailsDialogDirective {
   private readonly dialog = inject(Dialog);
 
-  @Input({required: true}) card!: UiCalendarCard;
+  readonly card = input.required<UiCalendarCard>();
 
-  protected cardClicked() {
+  protected cardClicked(): void {
     if (this.dialog.openDialogs.length !== 0) {
       return;
     }
 
-    if (this.card.revealed && !this.card.canReveal) {
+    if (this.card().revealed && !this.card().canReveal) {
       this.openDialog();
-    } else if (this.card.canReveal) {
+    } else if (this.card().canReveal) {
       // Note: we used set timeout because we would like to display 'open cards door' animation, otherwise it'll be overlapped by dialog.
-      // eslint-disable-next-line angular/timeout-service
       setTimeout(() => {
-        if (this.dialog.openDialogs.length === 0 && this.card.revealed) {
+        if (this.dialog.openDialogs.length === 0 && this.card().revealed) {
           this.openDialog();
         }
       }, 500);
@@ -35,7 +33,7 @@ export class OpenDetailsDialogDirective {
 
   private openDialog(): void {
     this.dialog.open<UiCalendarCard>(CardDetailsDialogComponent, {
-      data: this.card,
+      data: this.card(),
     });
   }
 }

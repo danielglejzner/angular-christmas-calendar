@@ -107,12 +107,7 @@
   top: 0;
   left: 0;
   z-index: 2;
-  background: linear-gradient(
-    to right,
-    rgba(255, 255, 255, 0) 0%,
-    rgba(255, 255, 255, 0.3) 33%,
-    rgba(255, 255, 255, 0) 100%
-  );
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 33%, rgba(255, 255, 255, 0) 100%);
 }
 
 .hot-chocolate .mug__shine--bottom {
@@ -131,12 +126,7 @@
   height: 3rem;
   position: absolute;
   top: -1.5rem;
-  background: linear-gradient(
-    to right,
-    rgba(255, 255, 255, 0) 0%,
-    rgba(255, 255, 255, 0.3) 33%,
-    rgba(255, 255, 255, 0) 100%
-  );
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 33%, rgba(255, 255, 255, 0) 100%);
   border-radius: 50%;
 }
 

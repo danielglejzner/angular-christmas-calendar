@@ -49,13 +49,7 @@
   left: 13rem;
   width: 3rem;
   height: 3rem;
-  background: radial-gradient(
-    circle at 0 0,
-    transparent 1.5rem,
-    var(--skate-blade) 1.5rem,
-    var(--skate-blade) 3rem,
-    transparent 3rem
-  );
+  background: radial-gradient(circle at 0 0, transparent 1.5rem, var(--skate-blade) 1.5rem, var(--skate-blade) 3rem, transparent 3rem);
 }
 
 .skate .skate-blade::after {
@@ -79,13 +73,7 @@
   left: 1rem;
   width: 3rem;
   height: 3rem;
-  background: radial-gradient(
-    circle at 0 0,
-    transparent 1.5rem,
-    var(--skate-gray) 1.5rem,
-    var(--skate-gray) 3rem,
-    transparent 3rem
-  );
+  background: radial-gradient(circle at 0 0, transparent 1.5rem, var(--skate-gray) 1.5rem, var(--skate-gray) 3rem, transparent 3rem);
 }
 
 .skate .skate-blade-holder-left::before {
@@ -109,13 +97,7 @@
   left: 10rem;
   width: 3rem;
   height: 3rem;
-  background: radial-gradient(
-    circle at 3rem 0,
-    transparent 1.5rem,
-    var(--skate-gray) 1.5rem,
-    var(--skate-gray) 3rem,
-    transparent 3rem
-  );
+  background: radial-gradient(circle at 3rem 0, transparent 1.5rem, var(--skate-gray) 1.5rem, var(--skate-gray) 3rem, transparent 3rem);
 }
 
 .skate .skate-blade-holder-right::before {

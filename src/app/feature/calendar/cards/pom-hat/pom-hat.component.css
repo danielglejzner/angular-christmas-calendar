@@ -62,151 +62,25 @@
   width: 10rem;
   height: 13.8rem;
 
-  background: radial-gradient(
-      circle at 5rem 1.7rem,
-      white 0,
-      white 1.5rem,
-      transparent 1.5rem,
-      transparent 100%
-    ),
-    radial-gradient(
-      circle at 1rem 10.5rem,
-      var(--pom-hat-purple) 0,
-      var(--pom-hat-purple) 0.5rem,
-      transparent 0.5rem,
-      transparent 100%
-    ),
-    radial-gradient(
-      circle at 1rem 11rem,
-      var(--pom-hat-purple) 0,
-      var(--pom-hat-purple) 0.5rem,
-      transparent 0.5rem,
-      transparent 100%
-    ),
-    radial-gradient(
-      circle at 1rem 11.5rem,
-      var(--pom-hat-purple) 0,
-      var(--pom-hat-purple) 0.5rem,
-      transparent 0.5rem,
-      transparent 100%
-    ),
-    radial-gradient(
-      circle at 1rem 12rem,
-      var(--pom-hat-purple) 0,
-      var(--pom-hat-purple) 0.5rem,
-      transparent 0.5rem,
-      transparent 100%
-    ),
-    radial-gradient(
-      circle at 1rem 12.5rem,
-      var(--pom-hat-purple) 0,
-      var(--pom-hat-purple) 0.5rem,
-      transparent 0.5rem,
-      transparent 100%
-    ),
-    radial-gradient(
-      circle at 9rem 10.5rem,
-      var(--pom-hat-purple) 0,
-      var(--pom-hat-purple) 0.5rem,
-      transparent 0.5rem,
-      transparent 100%
-    ),
-    radial-gradient(
-      circle at 9rem 11rem,
-      var(--pom-hat-purple) 0,
-      var(--pom-hat-purple) 0.5rem,
-      transparent 0.5rem,
-      transparent 100%
-    ),
-    radial-gradient(
-      circle at 9rem 11.5rem,
-      var(--pom-hat-purple) 0,
-      var(--pom-hat-purple) 0.5rem,
-      transparent 0.5rem,
-      transparent 100%
-    ),
-    radial-gradient(
-      circle at 9rem 12rem,
-      var(--pom-hat-purple) 0,
-      var(--pom-hat-purple) 0.5rem,
-      transparent 0.5rem,
-      transparent 100%
-    ),
-    radial-gradient(
-      circle at 9rem 12.5rem,
-      var(--pom-hat-purple) 0,
-      var(--pom-hat-purple) 0.5rem,
-      transparent 0.5rem,
-      transparent 100%
-    ),
-    radial-gradient(
-      circle at 1.5rem 10.5rem,
-      var(--pom-hat-purple) 0,
-      var(--pom-hat-purple) 0.5rem,
-      transparent 0.5rem,
-      transparent 100%
-    ),
-    radial-gradient(
-      circle at 1.5rem 12.2rem,
-      var(--pom-hat-purple) 0,
-      var(--pom-hat-purple) 0.8rem,
-      transparent 0.8rem,
-      transparent 100%
-    ),
-    radial-gradient(
-      circle at 8.5rem 10.5rem,
-      var(--pom-hat-purple) 0,
-      var(--pom-hat-purple) 0.5rem,
-      transparent 0.5rem,
-      transparent 100%
-    ),
-    radial-gradient(
-      circle at 8.5rem 12.2rem,
-      var(--pom-hat-purple) 0,
-      var(--pom-hat-purple) 0.8rem,
-      transparent 0.8rem,
-      transparent 100%
-    ),
-    radial-gradient(
-      circle at 2.5rem 11.4rem,
-      var(--pom-hat-purple) 0,
-      var(--pom-hat-purple) 1.5rem,
-      transparent 1.5rem,
-      transparent 100%
-    ),
-    radial-gradient(
-      circle at 3.5rem 11.4rem,
-      var(--pom-hat-purple) 0,
-      var(--pom-hat-purple) 1.5rem,
-      transparent 1.5rem,
-      transparent 100%
-    ),
-    radial-gradient(
-      circle at 4.5rem 11.4rem,
-      var(--pom-hat-purple) 0,
-      var(--pom-hat-purple) 1.5rem,
-      transparent 1.5rem,
-      transparent 100%
-    ),
-    radial-gradient(
-      circle at 5.5rem 11.4rem,
-      var(--pom-hat-purple) 0,
-      var(--pom-hat-purple) 1.5rem,
-      transparent 1.5rem,
-      transparent 100%
-    ),
-    radial-gradient(
-      circle at 6.5rem 11.4rem,
-      var(--pom-hat-purple) 0,
-      var(--pom-hat-purple) 1.5rem,
-      transparent 1.5rem,
-      transparent 100%
-    ),
-    radial-gradient(
-      circle at 7.5rem 11.4rem,
-      var(--pom-hat-purple) 0,
-      var(--pom-hat-purple) 1.5rem,
-      transparent 1.5rem,
-      transparent 100%
-    );
+  background: radial-gradient(circle at 5rem 1.7rem, white 0, white 1.5rem, transparent 1.5rem, transparent 100%),
+    radial-gradient(circle at 1rem 10.5rem, var(--pom-hat-purple) 0, var(--pom-hat-purple) 0.5rem, transparent 0.5rem, transparent 100%),
+    radial-gradient(circle at 1rem 11rem, var(--pom-hat-purple) 0, var(--pom-hat-purple) 0.5rem, transparent 0.5rem, transparent 100%),
+    radial-gradient(circle at 1rem 11.5rem, var(--pom-hat-purple) 0, var(--pom-hat-purple) 0.5rem, transparent 0.5rem, transparent 100%),
+    radial-gradient(circle at 1rem 12rem, var(--pom-hat-purple) 0, var(--pom-hat-purple) 0.5rem, transparent 0.5rem, transparent 100%),
+    radial-gradient(circle at 1rem 12.5rem, var(--pom-hat-purple) 0, var(--pom-hat-purple) 0.5rem, transparent 0.5rem, transparent 100%),
+    radial-gradient(circle at 9rem 10.5rem, var(--pom-hat-purple) 0, var(--pom-hat-purple) 0.5rem, transparent 0.5rem, transparent 100%),
+    radial-gradient(circle at 9rem 11rem, var(--pom-hat-purple) 0, var(--pom-hat-purple) 0.5rem, transparent 0.5rem, transparent 100%),
+    radial-gradient(circle at 9rem 11.5rem, var(--pom-hat-purple) 0, var(--pom-hat-purple) 0.5rem, transparent 0.5rem, transparent 100%),
+    radial-gradient(circle at 9rem 12rem, var(--pom-hat-purple) 0, var(--pom-hat-purple) 0.5rem, transparent 0.5rem, transparent 100%),
+    radial-gradient(circle at 9rem 12.5rem, var(--pom-hat-purple) 0, var(--pom-hat-purple) 0.5rem, transparent 0.5rem, transparent 100%),
+    radial-gradient(circle at 1.5rem 10.5rem, var(--pom-hat-purple) 0, var(--pom-hat-purple) 0.5rem, transparent 0.5rem, transparent 100%),
+    radial-gradient(circle at 1.5rem 12.2rem, var(--pom-hat-purple) 0, var(--pom-hat-purple) 0.8rem, transparent 0.8rem, transparent 100%),
+    radial-gradient(circle at 8.5rem 10.5rem, var(--pom-hat-purple) 0, var(--pom-hat-purple) 0.5rem, transparent 0.5rem, transparent 100%),
+    radial-gradient(circle at 8.5rem 12.2rem, var(--pom-hat-purple) 0, var(--pom-hat-purple) 0.8rem, transparent 0.8rem, transparent 100%),
+    radial-gradient(circle at 2.5rem 11.4rem, var(--pom-hat-purple) 0, var(--pom-hat-purple) 1.5rem, transparent 1.5rem, transparent 100%),
+    radial-gradient(circle at 3.5rem 11.4rem, var(--pom-hat-purple) 0, var(--pom-hat-purple) 1.5rem, transparent 1.5rem, transparent 100%),
+    radial-gradient(circle at 4.5rem 11.4rem, var(--pom-hat-purple) 0, var(--pom-hat-purple) 1.5rem, transparent 1.5rem, transparent 100%),
+    radial-gradient(circle at 5.5rem 11.4rem, var(--pom-hat-purple) 0, var(--pom-hat-purple) 1.5rem, transparent 1.5rem, transparent 100%),
+    radial-gradient(circle at 6.5rem 11.4rem, var(--pom-hat-purple) 0, var(--pom-hat-purple) 1.5rem, transparent 1.5rem, transparent 100%),
+    radial-gradient(circle at 7.5rem 11.4rem, var(--pom-hat-purple) 0, var(--pom-hat-purple) 1.5rem, transparent 1.5rem, transparent 100%);
 }

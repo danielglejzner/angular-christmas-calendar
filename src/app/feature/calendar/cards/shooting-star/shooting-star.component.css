@@ -7,55 +7,14 @@
   align-items: center;
   justify-content: center;
   background-color: #001122;
-  background: repeating-radial-gradient(
-      circle at 1rem 1rem,
-      rgba(255, 255, 255, 0.3) 0,
-      transparent 0.2rem,
-      transparent 100%
-    ),
-    repeating-radial-gradient(
-      circle at 4rem 2rem,
-      rgba(255, 255, 255, 0.5) 0,
-      transparent 0.1rem,
-      transparent 100%
-    ),
-    repeating-radial-gradient(
-      circle at 9rem 7rem,
-      rgba(255, 255, 255, 0.5) 0,
-      transparent 0.1rem,
-      transparent 100%
-    ),
-    repeating-radial-gradient(
-      circle at 7rem 4.5rem,
-      rgba(255, 255, 255, 0.5) 0,
-      transparent 0.15rem,
-      transparent 100%
-    ),
-    repeating-radial-gradient(
-      circle at 3rem 9rem,
-      rgba(255, 255, 255, 0.5) 0,
-      transparent 0.1rem,
-      transparent 100%
-    ),
-    repeating-radial-gradient(
-      circle at 12rem 2.5rem,
-      rgba(255, 255, 255, 0.5) 0,
-      transparent 0.25rem,
-      transparent 100%
-    ),
-    repeating-radial-gradient(
-      circle at 11rem 8rem,
-      rgba(255, 255, 255, 0.2) 0,
-      transparent 0.25rem,
-      transparent 100%
-    ),
-    repeating-radial-gradient(
-      circle at 2rem 5rem,
-      rgba(255, 255, 255, 0.2) 0,
-      transparent 0.25rem,
-      transparent 100%
-    ),
-    #001122;
+  background: repeating-radial-gradient(circle at 1rem 1rem, rgba(255, 255, 255, 0.3) 0, transparent 0.2rem, transparent 100%),
+    repeating-radial-gradient(circle at 4rem 2rem, rgba(255, 255, 255, 0.5) 0, transparent 0.1rem, transparent 100%),
+    repeating-radial-gradient(circle at 9rem 7rem, rgba(255, 255, 255, 0.5) 0, transparent 0.1rem, transparent 100%),
+    repeating-radial-gradient(circle at 7rem 4.5rem, rgba(255, 255, 255, 0.5) 0, transparent 0.15rem, transparent 100%),
+    repeating-radial-gradient(circle at 3rem 9rem, rgba(255, 255, 255, 0.5) 0, transparent 0.1rem, transparent 100%),
+    repeating-radial-gradient(circle at 12rem 2.5rem, rgba(255, 255, 255, 0.5) 0, transparent 0.25rem, transparent 100%),
+    repeating-radial-gradient(circle at 11rem 8rem, rgba(255, 255, 255, 0.2) 0, transparent 0.25rem, transparent 100%),
+    repeating-radial-gradient(circle at 2rem 5rem, rgba(255, 255, 255, 0.2) 0, transparent 0.25rem, transparent 100%), #001122;
   background-size: 14rem 10rem;
   height: 100%;
   margin: 0;
@@ -70,8 +29,7 @@
   position: relative;
   width: 12rem;
   height: 10rem;
-  filter: drop-shadow(1px 1px 3px rgba(255, 255, 255, 0.5))
-    drop-shadow(1px -1px 3px rgba(255, 255, 255, 0.5));
+  filter: drop-shadow(1px 1px 3px rgba(255, 255, 255, 0.5)) drop-shadow(1px -1px 3px rgba(255, 255, 255, 0.5));
   transform: scale(0.5) translateX(-0.7rem) translateY(2.5rem);
 }
 

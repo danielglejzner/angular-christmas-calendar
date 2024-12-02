@@ -1,14 +1,9 @@
-import {ChangeDetectionStrategy, Component} from '@angular/core';
-import {ChristmasCard} from '../../interfaces/christmas-card';
-import {ChristmasCardType} from '../../enums/christmas-card-type';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
-    selector: 'xmas-snowman',
-    imports: [],
-    templateUrl: './snowman.component.html',
-    styleUrl: './snowman.component.css',
-    changeDetection: ChangeDetectionStrategy.OnPush
+  selector: 'xmas-snowman',
+  templateUrl: './snowman.component.html',
+  styleUrl: './snowman.component.css',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class SnowmanComponent implements ChristmasCard {
-  readonly type = ChristmasCardType.Snowman;
-}
+export class SnowmanComponent {}

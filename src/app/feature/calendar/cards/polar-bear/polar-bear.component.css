@@ -195,16 +195,8 @@
   left: -0.5rem;
   width: 2.2rem;
   height: 1rem;
-  background: radial-gradient(
-      circle at 0.25rem 0.03rem,
-      var(--polar-bear-face) 0.25rem,
-      transparent 0.25rem
-    ),
-    radial-gradient(
-      circle at 1.75rem 0.03rem,
-      var(--polar-bear-face) 0.25rem,
-      var(--polar-bear) 0.25rem
-    );
+  background: radial-gradient(circle at 0.25rem 0.03rem, var(--polar-bear-face) 0.25rem, transparent 0.25rem),
+    radial-gradient(circle at 1.75rem 0.03rem, var(--polar-bear-face) 0.25rem, var(--polar-bear) 0.25rem);
 }
 
 .polar-bear .polar-bear__eye.polar-bear__eye--left {
@@ -234,16 +226,8 @@
   left: -0.5rem;
   width: 2.2rem;
   height: 1rem;
-  background: radial-gradient(
-      circle at 0.25rem 0.97rem,
-      var(--polar-bear-face) 0.25rem,
-      transparent 0.25rem
-    ),
-    radial-gradient(
-      circle at 1.75rem 0.97rem,
-      var(--polar-bear-face) 0.25rem,
-      var(--polar-bear) 0.25rem
-    );
+  background: radial-gradient(circle at 0.25rem 0.97rem, var(--polar-bear-face) 0.25rem, transparent 0.25rem),
+    radial-gradient(circle at 1.75rem 0.97rem, var(--polar-bear-face) 0.25rem, var(--polar-bear) 0.25rem);
 }
 
 .polar-bear .polar-bear__lip.polar-bear__lip--left {

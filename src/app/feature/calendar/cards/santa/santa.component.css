@@ -4,20 +4,8 @@
  */
 .santa-container {
   display: flex;
-  background: repeating-linear-gradient(
-      45deg,
-      transparent,
-      transparent 1rem,
-      rgba(154, 140, 152, 0.3) 1rem,
-      rgba(154, 140, 152, 0.3) 2rem
-    ),
-    repeating-linear-gradient(
-      -45deg,
-      transparent,
-      transparent 1rem,
-      rgba(154, 140, 152, 0.3) 1rem,
-      rgba(154, 140, 152, 0.3) 2rem
-    ),
+  background: repeating-linear-gradient(45deg, transparent, transparent 1rem, rgba(154, 140, 152, 0.3) 1rem, rgba(154, 140, 152, 0.3) 2rem),
+    repeating-linear-gradient(-45deg, transparent, transparent 1rem, rgba(154, 140, 152, 0.3) 1rem, rgba(154, 140, 152, 0.3) 2rem),
     linear-gradient(to bottom, #f2e9e4, #f2e9e4);
   align-items: center;
   justify-content: center;
@@ -52,8 +40,8 @@
   left: 1rem;
   width: 12rem;
   height: 12rem;
-  filter: drop-shadow(2px 2px 0 var(--santa-border)) drop-shadow(-2px 2px 0 var(--santa-border))
-    drop-shadow(2px -2px 0 var(--santa-border)) drop-shadow(-2px -2px 0 var(--santa-border));
+  filter: drop-shadow(2px 2px 0 var(--santa-border)) drop-shadow(-2px 2px 0 var(--santa-border)) drop-shadow(2px -2px 0 var(--santa-border))
+    drop-shadow(-2px -2px 0 var(--santa-border));
 }
 
 .santa .santa-beard {
@@ -234,8 +222,8 @@
   height: 6rem;
   border-radius: 6rem 6rem 0 0;
   background: radial-gradient(circle at 20% 100%, transparent 14%, var(--santa-hat) 14%);
-  filter: drop-shadow(1px 1px 0 var(--santa-border)) drop-shadow(-1px 1px 0 var(--santa-border))
-    drop-shadow(1px -1px 0 var(--santa-border)) drop-shadow(-1px -1px 0 var(--santa-border));
+  filter: drop-shadow(1px 1px 0 var(--santa-border)) drop-shadow(-1px 1px 0 var(--santa-border)) drop-shadow(1px -1px 0 var(--santa-border))
+    drop-shadow(-1px -1px 0 var(--santa-border));
 }
 
 .santa .santa-hat-front {
@@ -244,8 +232,8 @@
   left: 3rem;
   width: 10rem;
   height: 3rem;
-  filter: drop-shadow(1px 1px 0 var(--santa-border)) drop-shadow(-1px 1px 0 var(--santa-border))
-    drop-shadow(1px -1px 0 var(--santa-border)) drop-shadow(-1px -1px 0 var(--santa-border));
+  filter: drop-shadow(1px 1px 0 var(--santa-border)) drop-shadow(-1px 1px 0 var(--santa-border)) drop-shadow(1px -1px 0 var(--santa-border))
+    drop-shadow(-1px -1px 0 var(--santa-border));
 }
 
 .santa .santa-hat-front-bg {
@@ -326,8 +314,8 @@
   top: 5.2rem;
   width: 2rem;
   height: 2rem;
-  filter: drop-shadow(1px 1px 0 var(--santa-border)) drop-shadow(-1px 1px 0 var(--santa-border))
-    drop-shadow(1px -1px 0 var(--santa-border)) drop-shadow(-1px -1px 0 var(--santa-border));
+  filter: drop-shadow(1px 1px 0 var(--santa-border)) drop-shadow(-1px 1px 0 var(--santa-border)) drop-shadow(1px -1px 0 var(--santa-border))
+    drop-shadow(-1px -1px 0 var(--santa-border));
 }
 
 .santa .santa-hat-pompom-bg {

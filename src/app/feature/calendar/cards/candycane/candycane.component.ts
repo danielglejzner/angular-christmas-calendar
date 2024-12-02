@@ -1,14 +1,9 @@
-import {ChangeDetectionStrategy, Component} from '@angular/core';
-import {ChristmasCard} from '../../interfaces/christmas-card';
-import {ChristmasCardType} from '../../enums/christmas-card-type';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
-    selector: 'xmas-candycane',
-    imports: [],
-    templateUrl: './candycane.component.html',
-    styleUrl: './candycane.component.css',
-    changeDetection: ChangeDetectionStrategy.OnPush
+  selector: 'xmas-candycane',
+  templateUrl: './candycane.component.html',
+  styleUrl: './candycane.component.css',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class CandycaneComponent implements ChristmasCard {
-  type = ChristmasCardType.Candycane;
-}
+export class CandycaneComponent {}

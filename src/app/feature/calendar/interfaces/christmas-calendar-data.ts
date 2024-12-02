@@ -1,4 +1,4 @@
-import {ChristmasCardType} from '../enums/christmas-card-type';
+import type { ChristmasCardType } from '../enums/christmas-card-type';
 
 export interface SocialAccountsData {
   twitterHandle?: string;
@@ -18,7 +18,7 @@ export interface Content {
   author: Author;
   videoSrc?: string;
   descriptionHtml?: string;
-  gift:boolean;
+  gift: boolean;
 }
 
 export interface CalendarCard {

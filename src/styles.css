@@ -35,7 +35,7 @@
 }
 
 body {
-  background: url('./assets/content/images/background.jpg') no-repeat top center var(--white);
+  background: url('assets/content/images/background.jpg') no-repeat top center var(--white);
   background-size: cover;
   overflow-x: hidden;
 }
@@ -49,8 +49,8 @@ footer {
   bottom: 0;
 }
 @media (min-width: 1400px) {
-  .footer-container{
-    display:flex;
+  .footer-container {
+    display: flex;
     align-items: center;
   }
 }

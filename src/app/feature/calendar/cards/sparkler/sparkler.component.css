@@ -55,11 +55,7 @@
   bottom: 0;
   width: 0.4rem;
   height: 10rem;
-  background: linear-gradient(
-    to bottom,
-    var(--sparkler-ember) 0.3rem,
-    var(--sparkler-gun-powder) 0.4rem
-  );
+  background: linear-gradient(to bottom, var(--sparkler-ember) 0.3rem, var(--sparkler-gun-powder) 0.4rem);
   border-radius: 0.5rem;
   -webkit-animation: sparkler-burn-anim 20s infinite;
   animation: sparkler-burn-anim 20s infinite;

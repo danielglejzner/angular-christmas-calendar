@@ -1,14 +1,9 @@
-import {ChangeDetectionStrategy, Component} from '@angular/core';
-import {ChristmasCard} from '../../interfaces/christmas-card';
-import {ChristmasCardType} from '../../enums/christmas-card-type';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
-    selector: 'xmas-sparkler',
-    imports: [],
-    templateUrl: './sparkler.component.html',
-    styleUrl: './sparkler.component.css',
-    changeDetection: ChangeDetectionStrategy.OnPush
+  selector: 'xmas-sparkler',
+  templateUrl: './sparkler.component.html',
+  styleUrl: './sparkler.component.css',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class SparklerComponent implements ChristmasCard {
-  readonly type = ChristmasCardType.Sparkler;
-}
+export class SparklerComponent {}

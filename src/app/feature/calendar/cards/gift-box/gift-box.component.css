@@ -62,30 +62,12 @@
 
 .gift-box .gift-box__side,
 .gift-box .gift-box-lid__side {
-  background: linear-gradient(
-    to right,
-    var(--gift-box-color) 40%,
-    var(--wrap-color) 40%,
-    var(--wrap-color) 60%,
-    var(--gift-box-color) 60%
-  );
+  background: linear-gradient(to right, var(--gift-box-color) 40%, var(--wrap-color) 40%, var(--wrap-color) 60%, var(--gift-box-color) 60%);
 }
 .gift-box .gift-box__end,
 .gift-box .gift-box-lid__end {
-  background: linear-gradient(
-      to right,
-      transparent 40%,
-      var(--wrap-top-color) 40%,
-      var(--wrap-top-color) 60%,
-      transparent 60%
-    ),
-    linear-gradient(
-      to bottom,
-      var(--gift-box-color) 40%,
-      var(--wrap-color) 40%,
-      var(--wrap-color) 60%,
-      var(--gift-box-color) 60%
-    );
+  background: linear-gradient(to right, transparent 40%, var(--wrap-top-color) 40%, var(--wrap-top-color) 60%, transparent 60%),
+    linear-gradient(to bottom, var(--gift-box-color) 40%, var(--wrap-color) 40%, var(--wrap-color) 60%, var(--gift-box-color) 60%);
 }
 
 .gift-box .gift-box__side--front {
@@ -131,10 +113,8 @@
   border-radius: 50% 50% 0 50%;
   transform-style: preserve-3d;
   transform-origin: 50% 50%;
-  transform: rotateX(75deg) rotateY(90deg)
-    /* use a CSS variable for the translate, defined in CSS */
-    translateZ(calc(80px - var(--gift-box-position))) translateX(-85px) translateY(-75px)
-    skewY(30deg);
+  transform: rotateX(75deg) rotateY(90deg) /* use a CSS variable for the translate, defined in CSS */
+    translateZ(calc(80px - var(--gift-box-position))) translateX(-85px) translateY(-75px) skewY(30deg);
 }
 
 .gift-box .ribbon-r {
@@ -145,10 +125,8 @@
   border-radius: 50% 50% 0 50%;
   transform-style: preserve-3d;
   transform-origin: 50% 50%;
-  transform: rotateX(-5deg) rotateY(90deg)
-    /* use a CSS variable for the translate, defined in CSS */
-    translateZ(calc(80px - var(--gift-box-position))) translateX(-30px) translateY(-110px)
-    skewY(30deg);
+  transform: rotateX(-5deg) rotateY(90deg) /* use a CSS variable for the translate, defined in CSS */
+    translateZ(calc(80px - var(--gift-box-position))) translateX(-30px) translateY(-110px) skewY(30deg);
 }
 
 .ribbon-l-end {
