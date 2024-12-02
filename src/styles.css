@@ -83,3 +83,7 @@ xmas-calendar-grid {
     animation-play-state: running;
   }
 }
+
+*:focus {
+  outline: none;
+}
