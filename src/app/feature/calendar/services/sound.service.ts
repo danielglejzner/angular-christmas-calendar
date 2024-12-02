@@ -1,4 +1,4 @@
-import {Injectable} from '@angular/core';
+import { Injectable } from '@angular/core';
 
 @Injectable({
   providedIn: 'root',
@@ -6,11 +6,11 @@ import {Injectable} from '@angular/core';
 export class SoundService {
   bellRingSound: HTMLAudioElement | undefined;
 
-  init() {
+  init(): void {
     this.bellRingSound = new Audio('https://www.soundjay.com/misc/sounds/jingle-bell-1.mp3');
   }
 
-  playSound() {
+  playSound(): void {
     this.bellRingSound?.play();
   }
 }

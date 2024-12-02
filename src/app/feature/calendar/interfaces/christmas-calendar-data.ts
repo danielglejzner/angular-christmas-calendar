@@ -18,7 +18,7 @@ export interface Content {
   author: Author;
   videoSrc?: string;
   descriptionHtml?: string;
-  gift:boolean;
+  gift: boolean;
 }
 
 export interface CalendarCard {

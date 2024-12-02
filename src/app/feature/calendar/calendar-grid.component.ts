@@ -1,6 +1,6 @@
 import { DialogModule } from '@angular/cdk/dialog';
 import { NgOptimizedImage } from '@angular/common';
-import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
+import { afterNextRender, ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { CalendarCardFactoryDirective } from './cards/calendar-card-factory.directive';
 import { OpenDetailsDialogDirective } from './directives/open-details-dialog.directive';
 import { ShakeWhenDisabledDirective } from './directives/shake-on-click.directive';
@@ -30,7 +30,6 @@ export class CalendarGridComponent {
   constructor() {
     afterNextRender(() => {
       this.soundService.init();
-      
-    })
+    });
   }
 }
