@@ -40,7 +40,36 @@
       },
       {
         "day": 3,
-        "contents": []
+        "contents": [
+          {
+            "author": {
+              "name": "Armen Vardanyan",
+              "avatarUrl": "https://pbs.twimg.com/profile_images/1513478511008403456/RRUaF4lv_400x400.jpg",
+              "socialAccountsData": {
+                "twitterHandle": "Armandotrue"
+              },
+              "brandImageUrl": "https://images.manning.com/360/480/resize/book/a/d90212a-3c3b-474b-9038-770a0a50ceb2/Vardanyan-MEAP-HI.png",
+              "brandExternalUrl": "https://www.manning.com/books/modern-angular?ref=angularspace.com",
+              "resourceName": "Checkout my book here :) --->"
+            },
+            "videoSrc": "https://streamable.com/e/si1ltp?",
+            "gift": false
+          },
+          {
+            "author": {
+              "name": "Roberto Heckers",
+              "avatarUrl": "https://media.licdn.com/dms/image/v2/D4E03AQHgwJDpB_-HIw/profile-displayphoto-shrink_800_800/B4EZNo4UYfHEAk-/0/1732631414879?e=1738800000&v=beta&t=esxCLQ0RB2KQzE4bh8jk94d1uqP0fyPclTjNFAdh9-M",
+              "socialAccountsData": {
+                "linkedInUrl": "https://www.linkedin.com/in/roberto-heckers-2313453b/"
+              },
+              "brandImageUrl": "https://content.packt.com/B21625/cover_image.jpg",
+              "brandExternalUrl": "https://www.packtpub.com/en-us/product/effective-angular-9781805125532",
+              "resourceName": "Checkout my book here :) --->"
+            },
+            "videoSrc": "https://streamable.com/e/69umub?",
+            "gift": false
+          }
+        ]
       },
       {
         "day": 4,
