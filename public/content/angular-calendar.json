@@ -34,7 +34,7 @@
               }
             },
             "videoSrc": "https://streamable.com/e/ivusrf?",
-            "gift": true
+            "gift": false
           }
         ]
       },
@@ -92,7 +92,22 @@
       },
       {
         "day": 5,
-        "contents": []
+        "contents": [
+          {
+            "author": {
+              "name": "Kasia Biernat",
+              "avatarUrl": "https://media.licdn.com/dms/image/v2/C4D03AQFOe8ZqEdxjAg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1648558543647?e=1738800000&v=beta&t=ZQkvoxJN9zdlIj7fTuvrZJexNT3cv07hv4SM7-CZDPU",
+              "socialAccountsData": {
+                "linkedInUrl": "https://www.linkedin.com/in/kbiernat/"
+              },
+              "brandImageUrl": "https://cdn.icon-icons.com/icons2/3041/PNG/512/medium_logo_icon_189223.png",
+              "brandExternalUrl": "https://medium.com/@kasiabiernat",
+              "resourceName": "Checkout my Articles on Medium :)"
+            },
+            "gift": true,
+            "videoSrc": "https://streamable.com/e/9mszti"
+          }
+        ]
       },
       {
         "day": 6,
