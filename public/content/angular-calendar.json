@@ -111,7 +111,22 @@
       },
       {
         "day": 6,
-        "contents": []
+        "contents": [
+          {
+            "author": {
+              "name": "Trung Vo",
+              "avatarUrl": "https://media.licdn.com/dms/image/v2/D4D03AQEJXlh31pNhKg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1698198796890?e=1738800000&v=beta&t=B-CTHPQmiMHflYslXxpW2T8Ufbw-MSzaWPB_-3215Jk",
+              "socialAccountsData": {
+                "linkedInUrl": "https://www.linkedin.com/in/trungvose/"
+              },
+              "brandImageUrl": "https://cdn-icons-png.flaticon.com/256/25/25231.png",
+              "brandExternalUrl": "https://github.com/trungvose/angular-spotify",
+              "resourceName": "Checkout my Open Source Spotify app made with Angular!"
+            },
+            "gift": false,
+            "videoSrc": "https://streamable.com/e/udld6p"
+          }
+        ]
       },
       {
         "day": 7,
