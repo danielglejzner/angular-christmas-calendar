@@ -130,7 +130,36 @@
       },
       {
         "day": 7,
-        "contents": []
+        "contents": [
+          {
+            "author": {
+              "name": "Alain Boudard",
+              "avatarUrl": "https://media.licdn.com/dms/image/v2/D4E03AQEWKpccaRqrnQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1700234785743?e=1738800000&v=beta&t=fFvWUXdnSk38AYUSjFD3sNtvm2EDllPKvHwKTM296Ys",
+              "socialAccountsData": {
+                "linkedInUrl": "https://www.linkedin.com/in/alain-boudard-2632b631/"
+              },
+              "brandImageUrl": "",
+              "brandExternalUrl": "",
+              "resourceName": ""
+            },
+            "videoSrc": "https://streamable.com/e/5ejkn6",
+            "gift": false
+          },
+          {
+            "author": {
+              "name": "Gérôme Grignon",
+              "avatarUrl": "https://media.licdn.com/dms/image/v2/D4E03AQHJ4iONCWAfvw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1731491580423?e=1738800000&v=beta&t=hOeEtt7ku_zxPQIr1n2jA1tCfjleejKN5_BSRzPDCKg",
+              "socialAccountsData": {
+                "linkedInUrl": "https://www.linkedin.com/in/gerome-grignon-2313453b/"
+              },
+              "brandImageUrl": "https://www.angular.courses/logo.png",
+              "brandExternalUrl": "https://www.angular.courses/",
+              "resourceName": "Checkout my courses & projects --->"
+            },
+            "videoSrc": "https://streamable.com/e/gpmexb?",
+            "gift": false
+          }
+        ]
       },
       {
         "day": 8,
