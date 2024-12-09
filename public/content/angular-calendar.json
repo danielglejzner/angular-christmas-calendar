@@ -104,7 +104,7 @@
               "brandExternalUrl": "https://kasiabiernat.github.io/",
               "resourceName": "Checkout my Blog :)"
             },
-            "gift": true,
+            "gift": false,
             "videoSrc": "https://streamable.com/e/9mszti"
           }
         ]
@@ -163,11 +163,41 @@
       },
       {
         "day": 8,
-        "contents": []
+        "contents": [
+          {
+            "author": {
+              "name": "Rainer Hahnekamp",
+              "avatarUrl": "https://media.licdn.com/dms/image/v2/D4E03AQEkoqMsUrpcew/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1692872234779?e=1739404800&v=beta&t=gyxOPtjRL0ZS1aXL2XgFY9UDdPSvBeDW1DIYhKuDFME",
+              "socialAccountsData": {
+                "linkedInUrl": "https://www.linkedin.com/in/rainerhahnekamp/"
+              },
+              "brandImageUrl": "https://yt3.googleusercontent.com/jCQ_KQYefhSxwDZGRq17dJPkVtJ5XCrZkHzTFLy1DgOMXmePbjATIHzyhHJlhtXYVmyy-Qg3XmY=s160-c-k-c0x00ffffff-no-rj",
+              "brandExternalUrl": "https://www.youtube.com/@ng-news",
+              "resourceName": "Checkout my NG-NEWS YouTube Channel -->"
+            },
+            "videoSrc": "https://streamable.com/e/og9j4m",
+            "gift": true
+          }
+        ]
       },
       {
         "day": 9,
-        "contents": []
+        "contents": [
+          {
+            "author": {
+              "name": "Michael Egger-Zikes",
+              "avatarUrl": "https://media.licdn.com/dms/image/v2/D4D03AQEVU14n4_sgPA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1664815517419?e=1739404800&v=beta&t=OgDWw-hhmfq1Dm1VUov4Mztyzo2gNqQNZetkhwQyiQ0",
+              "socialAccountsData": {
+                "linkedInUrl": "https://www.linkedin.com/in/michael-egger-zikes/"
+              },
+              "brandImageUrl": "https://www.angulararchitects.io/wp-content/uploads/2023/07/arc-logo.png",
+              "brandExternalUrl": "https://www.angulararchitects.io/en/",
+              "resourceName": "Checkout Angular Architects website! --->"
+            },
+            "videoSrc": "https://streamable.com/e/jkffuu",
+            "gift": true
+          }
+        ]
       },
       {
         "day": 10,
