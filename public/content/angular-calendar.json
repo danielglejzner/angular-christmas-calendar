@@ -201,7 +201,22 @@
       },
       {
         "day": 10,
-        "contents": []
+        "contents": [
+          {
+            "author": {
+              "name": "Doug Parker",
+              "avatarUrl": "https://cdn.bsky.app/img/avatar/plain/did:plc:gimav74bq5zm6kfa5pt35ro5/bafkreidky2h6ylbg6w6hhuz5jmbamgnzv4672kle2x3ki4ou3syctwudja@jpeg",
+              "socialAccountsData": {
+                "linkedInUrl": "https://bsky.app/profile/develwithoutacause.dwac.dev"
+              },
+              "brandImageUrl": "https://repository-images.githubusercontent.com/49016322/0a1e8bee-99b1-4044-9b83-4bdb6befcde9",
+              "brandExternalUrl": "https://angular.dev/",
+              "resourceName": ""
+            },
+            "videoSrc": "https://streamable.com/e/dozwdp",
+            "gift": false
+          }
+        ]
       },
       {
         "day": 11,
