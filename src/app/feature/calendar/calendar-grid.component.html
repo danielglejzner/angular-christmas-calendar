@@ -3,13 +3,13 @@
   <h1>Christmas Calendar</h1>
 </div>
 
-@for (card of cards; track $index) {
+@for (card of cards(); track $index) {
   <div
     class="card day-{{ card.day }}"
     xmasOpenDetailsDialog
     [card]="card"
     [xmasShakeWhenDisabled]="!card.canReveal && !card.revealed"
-    [class.pulse]="card.canReveal && !card.revealed"
+    [class.pulse]="card.canAnimate"
   >
     <label>
       <input type="checkbox" [checked]="card.revealed" [disabled]="!card.canReveal" (change)="card.revealed = !card.revealed" />
