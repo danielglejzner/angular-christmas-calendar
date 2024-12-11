@@ -1,35 +1,37 @@
-import {Injectable, computed, signal} from '@angular/core';
+import { Injectable, computed, signal } from '@angular/core';
+import { VisitedDay } from '../interfaces/visited-day';
 
-@Injectable({providedIn: 'root'})
+@Injectable({ providedIn: 'root' })
 export class CardStorageService {
-  private _visitedDays = signal<string>('');
+  private _visitedDays = signal<VisitedDay[]>([]);
 
-  visitedDays = computed(() => {
-    const storedDays = this._visitedDays();
-
-    if (storedDays) {
-      return storedDays.split(',').map(Number);
-    }
-
-    return [];
-  });
+  get visitedDays() {
+    return this._visitedDays();
+  }
 
   init() {
     const visitedDays = localStorage.getItem('visitedDays');
     if (visitedDays) {
-      this._visitedDays.set(visitedDays);
+      this._visitedDays.set(JSON.parse(visitedDays));
     }
   }
 
-  storeAsVisited(day: number) {
+  storeAsVisited(day: number, status: 'open' | 'closed') {
     this._visitedDays.update((prevDays) => {
-      if (prevDays) {
-        return `${prevDays},${day}`;
+      if (prevDays.length) {
+        const existingDay = prevDays.find(prevDay => prevDay.day == day);
+        if (existingDay) {
+          existingDay.status = status;
+
+          return [...prevDays];
+        }
+
+        return [...prevDays, { day, status }];
       }
 
-      return `${day}`;
+      return [{ day, status }];
     });
 
-    localStorage.setItem('visitedDays', this._visitedDays());
+    localStorage.setItem('visitedDays', JSON.stringify(this._visitedDays()));
   }
 }

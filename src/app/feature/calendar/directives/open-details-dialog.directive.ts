@@ -21,6 +21,10 @@ export class OpenDetailsDialogDirective {
       return;
     }
 
+    if (this.card().revealed) {
+      return;
+    }
+
     if (this.card().revealed && !this.card().canReveal) {
       this.openDialog();
     } else if (this.card().canReveal) {
@@ -34,14 +38,10 @@ export class OpenDetailsDialogDirective {
   }
 
   private openDialog(): void {
-    this.storeAsVisited(this.card().day);
+    this.cardStorageService.storeAsVisited(this.card().day, this.card().status == "closed" ? "open" : "closed");
 
     this.dialog.open<UiCalendarCard>(CardDetailsDialogComponent, {
       data: this.card(),
     });
-  }
-
-  private storeAsVisited(day: number): void {
-    this.cardStorageService.storeAsVisited(day);
   }
 }
