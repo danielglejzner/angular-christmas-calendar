@@ -7,6 +7,7 @@ import { ShakeWhenDisabledDirective } from './directives/shake-on-click.directiv
 import { SocialProfileUrlPipe } from './pipes/social-profile-url.pipe';
 import { CalendarService } from './services/calendar.service';
 import { SoundService } from './services/sound.service';
+import { CardStorageService } from './services/card-storage.service';
 
 @Component({
   selector: 'xmas-calendar-grid',
@@ -25,11 +26,18 @@ import { SoundService } from './services/sound.service';
 export class CalendarGridComponent {
   private readonly soundService = inject(SoundService);
   private readonly calendarService = inject(CalendarService);
+  private readonly cardStorageService = inject(CardStorageService)
   protected cards = this.calendarService.cards;
 
   constructor() {
     afterNextRender(() => {
       this.soundService.init();
     });
+  }
+
+  onCardChange(day: number, status: "open" | "closed", revealed: boolean): void {
+    if (revealed) {
+      this.cardStorageService.storeAsVisited(day, status == "closed" ? "open" : "closed");
+    }
   }
 }
