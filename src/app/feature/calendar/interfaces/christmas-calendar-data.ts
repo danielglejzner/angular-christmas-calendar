@@ -29,4 +29,5 @@ export interface CalendarCard {
 export interface UiCalendarCard extends CalendarCard {
   revealed: boolean;
   canReveal: boolean;
+  canAnimate: boolean;
 }
