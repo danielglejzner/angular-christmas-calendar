@@ -2,6 +2,7 @@ import { Dialog } from '@angular/cdk/dialog';
 import { Directive, inject, input } from '@angular/core';
 import { CardDetailsDialogComponent } from '../dialogs/card-details-dialog/card-details-dialog.component';
 import type { UiCalendarCard } from '../interfaces/christmas-calendar-data';
+import { CardStorageService } from '../services/card-storage.service';
 
 @Directive({
   selector: '[xmasOpenDetailsDialog]',
@@ -11,6 +12,7 @@ import type { UiCalendarCard } from '../interfaces/christmas-calendar-data';
 })
 export class OpenDetailsDialogDirective {
   private readonly dialog = inject(Dialog);
+  private readonly cardStorageService = inject(CardStorageService);
 
   readonly card = input.required<UiCalendarCard>();
 
@@ -32,8 +34,14 @@ export class OpenDetailsDialogDirective {
   }
 
   private openDialog(): void {
+    this.storeAsVisited(this.card().day);
+
     this.dialog.open<UiCalendarCard>(CardDetailsDialogComponent, {
       data: this.card(),
     });
+  }
+
+  private storeAsVisited(day: number): void {
+    this.cardStorageService.storeAsVisited(day);
   }
 }
