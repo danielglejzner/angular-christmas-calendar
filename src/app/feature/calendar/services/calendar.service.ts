@@ -2,13 +2,16 @@ import type { UiCalendarCard } from '../interfaces/christmas-calendar-data';
 import calendarData from './../../../../../public/content/angular-calendar.json';
 import {Injectable, Signal, computed, inject} from '@angular/core';
 import {CardStorageService} from './card-storage.service';
+import { VisitedDay } from '../interfaces/visited-day';
 
-function processDays(visitedDays: number[], dayOfCardToReveal: number): UiCalendarCard[] {
+function processDays(visitedDays: VisitedDay[], dayOfCardToReveal: number): UiCalendarCard[] {
   return calendarData.data.map((card) => {
     const hasContents = card.contents.length > 0;
+    const visitedDayNums = visitedDays.map(visitedDay => visitedDay.day);
+    const visitedDay = visitedDays.find(visitedDay => visitedDay.day == card.day);
 
-    const canReveal = hasContents;
-    const revealed = canReveal && visitedDays.includes(card.day);
+    const canReveal = hasContents || visitedDay?.status == "open";
+    const revealed = hasContents && visitedDayNums.includes(card.day) && visitedDay?.status == "open";
     const canAnimate = dayOfCardToReveal == card.day && !revealed;
 
     return {
@@ -16,6 +19,7 @@ function processDays(visitedDays: number[], dayOfCardToReveal: number): UiCalend
       revealed,
       canReveal,
       canAnimate,
+      status: visitedDay?.status ?? "closed"
     };
   });
 }
@@ -28,7 +32,7 @@ export class CalendarService {
   private readonly dayOfCardToReveal = this.getLastContentDay();
 
   readonly cards: Signal<UiCalendarCard[]> = computed(() => {
-    const visitedDays = this.cardStorageService.visitedDays();
+    const visitedDays = this.cardStorageService.visitedDays;
     return processDays(visitedDays, this.dayOfCardToReveal)
   });
 
