@@ -258,7 +258,22 @@
       },
       {
         "day": 13,
-        "contents": []
+        "contents": [
+          {
+            "author": {
+              "name": "Brygida Fiejdasz",
+              "avatarUrl": "https://media.licdn.com/dms/image/v2/D4D03AQGqnjMTgX8VZQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1715372129501?e=1739404800&v=beta&t=0yxKQKvVw8-9aMdNzq-RHbO7_rCjNs7lty2qWadGmlI",
+              "socialAccountsData": {
+                "linkedInUrl": "https://www.linkedin.com/in/brygidafiejdasz/"
+              },
+              "brandImageUrl": "https://cdn.prod.website-files.com/65b8d9e0af2c51a8738e2bf7/6675a6c01e8dc8f84c517969_Youtube%20Logo.png",
+              "brandExternalUrl": "https://www.youtube.com/@SpeedDateWithAngular/shorts",
+              "resourceName": "Check out my YouTube channel :) -->"
+            },
+            "videoSrc": "https://streamable.com/e/u7ucs9",
+            "gift": false
+          }
+        ]
       },
       {
         "day": 14,
