@@ -277,7 +277,22 @@
       },
       {
         "day": 14,
-        "contents": []
+        "contents": [
+          {
+            "author": {
+              "name": "Brecht Billiet",
+              "avatarUrl": "https://pbs.twimg.com/profile_images/1731255790143422464/6tLl9XeR_400x400.jpg",
+              "socialAccountsData": {
+                "linkedInUrl": "https://www.linkedin.com/in/brecht-billiet-58417426/"
+              },
+              "brandImageUrl": "https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2154178170/settings_images/cc7d83b-d26b-7154-c7f5-55e617e5625_largescalearchitecture-small.jpg ",
+              "brandExternalUrl": "https://www.simplified.courses/largescale-angular-enterprise-architecture",
+              "resourceName": "Large-scale Angular Enterprise Architecture course -->"
+            },
+            "videoSrc": "https://streamable.com/e/1yl826",
+            "gift": false
+          }
+        ]
       },
       {
         "day": 15,
