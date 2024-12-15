@@ -10,16 +10,29 @@ export class CardStorageService {
   }
 
   init() {
-    const visitedDays = localStorage.getItem('visitedDays');
+    let visitedDays = localStorage.getItem('visitedDays');
     if (visitedDays) {
-      this._visitedDays.set(JSON.parse(visitedDays));
+      let parsedVisitedDays: VisitedDay[] | string = "";
+      if (visitedDays.includes("{")) {
+        parsedVisitedDays = JSON.parse(visitedDays);
+      } else {
+        parsedVisitedDays = visitedDays;
+      }
+
+      if (typeof parsedVisitedDays == 'string') {
+        const mappedVisitedDays = parsedVisitedDays.split(',').map((visitedDay) => ({ day: Number(visitedDay), status: "open" as "open" | "closed" }));
+        this._visitedDays.set(mappedVisitedDays);
+        localStorage.setItem('visitedDays', JSON.stringify(this._visitedDays()));
+      } else {
+        this._visitedDays.set(parsedVisitedDays);
+      }
     }
   }
 
   storeAsVisited(day: number, status: 'open' | 'closed') {
     this._visitedDays.update((prevDays) => {
       if (prevDays.length) {
-        const existingDay = prevDays.find(prevDay => prevDay.day == day);
+        const existingDay = prevDays.find((prevDay) => prevDay.day == day);
         if (existingDay) {
           existingDay.status = status;
 
