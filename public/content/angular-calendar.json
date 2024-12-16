@@ -176,7 +176,7 @@
               "resourceName": "Checkout my NG-NEWS YouTube Channel -->"
             },
             "videoSrc": "https://streamable.com/e/og9j4m",
-            "gift": true
+            "gift": false
           }
         ]
       },
@@ -296,11 +296,41 @@
       },
       {
         "day": 15,
-        "contents": []
+        "contents": [
+          {
+            "author": { 
+              "name": "Dmytro Mezhenskyi",
+              "avatarUrl": "https://media.licdn.com/dms/image/v2/C4E03AQGjL7lNUrk67g/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1629367677666?e=1740009600&v=beta&t=1n3siukN8zSlG2GQiXG8mpPlMbSqxt7Rz6jRT60dAvE",
+              "socialAccountsData": {
+                "linkedInUrl": "https://www.linkedin.com/in/dmezhenskyi/"
+              },
+              "brandImageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtQSRVJMugYbLKVkNImFP8kOxE3XOmxRkmYw&s",
+              "brandExternalUrl": "https://courses.decodedfrontend.io/",
+              "resourceName": "Grab Christmas 20% Discount on my courses :) -->"
+            },
+            "videoSrc": "https://streamable.com/e/40n1gi",
+            "gift": true
+          }
+        ]
       },
       {
         "day": 16,
-        "contents": []
+        "contents": [
+          {
+            "author": {
+              "name": "Alex Rickabaugh",
+              "avatarUrl": "https://cdn.bsky.app/img/avatar/plain/did:plc:yibyeu3cbjltvehik2ir44oy/bafkreigw57x54ap2z2ev7r7huw6r7hajmyqi7mqdhqncalohvjf4euotiq@jpeg",
+              "socialAccountsData": {
+                "linkedInUrl": "https://bsky.app/profile/synalx.bsky.social"
+              },
+              "brandImageUrl": "https://images.ctfassets.net/zojzzdop0fzx/2LzaUqPdXBjtAbFTaDGbW0/a8b4fbfd6ccab7d6de4c3b0803a35ae5/angular_gradient.svg?fm=webp&w=256&q=75",
+              "brandExternalUrl": "https://angular.dev/",
+              "resourceName": ""
+            },
+            "videoSrc": "https://streamable.com/e/9w2j8z",
+            "gift": false
+          }
+        ]
       },
       {
         "day": 17,
