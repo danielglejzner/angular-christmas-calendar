@@ -334,7 +334,22 @@
       },
       {
         "day": 17,
-        "contents": []
+        "contents": [
+          {
+            "author": {
+              "name": "Marcin Milewicz",
+              "avatarUrl": "https://cdn.bsky.app/img/avatar/plain/did:plc:g72sn6pwueej3abcuh5esio7/bafkreiaa23pox5lon6qx6dsumjktm3gcbnxt33fcmtdfh7kptadknngmci@jpeg",
+              "socialAccountsData": {
+                "linkedInUrl": "https://bsky.app/profile/synalx.bsky.social"
+              },
+              "brandImageUrl": "https://cdn.bsky.app/img/avatar/plain/did:plc:g72sn6pwueej3abcuh5esio7/bafkreiaa23pox5lon6qx6dsumjktm3gcbnxt33fcmtdfh7kptadknngmci@jpeg",
+              "brandExternalUrl": "https://linktr.ee/marcinmilewicz",
+              "resourceName": "Check out my work/content here :) --->"
+            },
+            "videoSrc": "https://streamable.com/e/rsb6z9",
+            "gift": false
+          }
+        ]
       },
       {
         "day": 18,
