@@ -353,11 +353,41 @@
       },
       {
         "day": 18,
-        "contents": []
+        "contents": [
+          {
+            "author": {
+              "name": "Mateusz Łędzewicz",
+              "avatarUrl": "https://media.licdn.com/dms/image/v2/D4D03AQEgRjEMHYd7Pg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1683580841160?e=1740009600&v=beta&t=hpRkuFOVyx1sk_zZ98umm4BH0Q7gEwMPQx3QLxdfXVE",
+              "socialAccountsData": {
+                "linkedInUrl": "https://www.linkedin.com/in/mateusz-%C5%82%C4%99dzewicz-36197080/"
+              },
+              "brandImageUrl": "https://lowgular.io/wp-content/uploads/2020/09/LOGO_BLUE.svg",
+              "brandExternalUrl": "https://lowgular.io/",
+              "resourceName": "Checkout Lowgular!! --->"
+            },
+            "videoSrc": "https://streamable.com/e/v77os8",
+            "gift": true
+          }
+        ]
       },
       {
         "day": 19,
-        "contents": []
+        "contents": [
+          {
+            "author": {
+              "name": "Mark Techson",
+              "avatarUrl": "https://cdn.bsky.app/img/avatar/plain/did:plc:j5sogsw5ejwwo6megyxxdwri/bafkreicb2jmlm5rgupsi7b55sduu6xxhhehnl33ju2lvfayzkzocs5uw6m@jpeg",
+              "socialAccountsData": {
+                "linkedInUrl": "https://bsky.app/profile/marktechson.com"
+              },
+              "brandImageUrl": "https://images.ctfassets.net/zojzzdop0fzx/2LzaUqPdXBjtAbFTaDGbW0/a8b4fbfd6ccab7d6de4c3b0803a35ae5/angular_gradient.svg?fm=webp&w=256&q=75",
+              "brandExternalUrl": "https://angular.dev/",
+              "resourceName": ""
+            },
+            "videoSrc": "https://streamable.com/e/aarynu",
+            "gift": false
+          }
+        ]
       },
       {
         "day": 20,
