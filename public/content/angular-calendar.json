@@ -391,11 +391,41 @@
       },
       {
         "day": 20,
-        "contents": []
+        "contents": [
+          {
+            "author": {
+              "name": "Tomasz Ducin",
+              "avatarUrl": "https://cdn.bsky.app/img/avatar/plain/did:plc:qvna4hu5w3fk3nkgsn7i6l3g/bafkreibsk4sghd6svg4pz2uxd5jcrour2mdnigi5gqyix2rbltvobwuwaq@jpeg",
+              "socialAccountsData": {
+                "linkedInUrl": "https://bsky.app/profile/ducin.dev"
+              },
+              "brandImageUrl": "https://avatars.githubusercontent.com/u/23141053?s=280&v=4",
+              "brandExternalUrl": "https://ducin.dev/",
+              "resourceName": "Checkout my website! --->"
+            },
+            "videoSrc": "https://streamable.com/e/fyp14d",
+            "gift": false
+          }
+        ]
       },
       {
         "day": 21,
-        "contents": []
+        "contents": [
+          {
+            "author": {
+              "name": "Sonu Kapoor",
+              "avatarUrl": "https://media.licdn.com/dms/image/v2/D5603AQFckw16Q4qOgQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1729557793297?e=1740009600&v=beta&t=m3Nl4Mujng_a1TK4LdD24aHJoNsghJSmKj4qfwBaG5Q",
+              "socialAccountsData": {
+                "linkedInUrl": "https://www.linkedin.com/in/sonu-kapoor/"
+              },
+              "brandImageUrl": "https://pbcdn1.podbean.com/imglogo/image-logo/18582118/angular-catch-up_1485_x_1485.png",
+              "brandExternalUrl": "https://www.podbean.com/pu/pbblog-wjhhf-11b8a66",
+              "resourceName": "Checkout Podcast I'm Co-Hosting --->"
+            },
+            "videoSrc": "https://streamable.com/e/yhl9xc",
+            "gift": true
+          }
+        ]
       },
       {
         "day": 22,
