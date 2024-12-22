@@ -429,7 +429,22 @@
       },
       {
         "day": 22,
-        "contents": []
+        "contents": [
+          {
+            "author": {
+              "name": "Manfred Steyer",
+              "avatarUrl": "https://media.licdn.com/dms/image/v2/D4D03AQFrtmNYZYFjRA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1718295084120?e=1740614400&v=beta&t=QqQcwOgmL0ee10PeQiL8FS76Ic5Ep_VrIqhfWt2_nA0",
+              "socialAccountsData": {
+                "linkedInUrl": "https://www.linkedin.com/in/manfred-steyer-84645821/"
+              },
+              "brandImageUrl": "https://www.angulararchitects.io/wp-content/uploads/2023/07/arc-logo.png",
+              "brandExternalUrl": "https://www.angulararchitects.io/en/",
+              "resourceName": "Checkout Angular Architects website! --->"
+            },
+            "videoSrc": "https://streamable.com/e/bvebyl",
+            "gift": true
+          }
+        ]
       },
       {
         "day": 23,
